@@ -41,7 +41,7 @@
     tree
     gamescope
     opentrack
-    git
+    git lazygit
   ]);
 
   catppuccin = {
