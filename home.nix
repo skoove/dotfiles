@@ -42,6 +42,7 @@
     gamescope
     opentrack aitrack
     git lazygit gh
+    prismlauncher
   ]);
 
   catppuccin = {
