@@ -111,6 +111,9 @@
       shellAliases = {
         edit-config = "hx ~/.dotfiles";
 
+        mon-2-off = "xrandr --output DVI-I-1 --off";
+        mon-2-on = "xrandr --output HDMI-0 --primary --mode 1920x1080 --rate 100 --output DVI-I-1 --auto --right-of HDMI-0"
+
         # updating things #
         upd-flake = ''
           nix flake update ~/.dotfiles
