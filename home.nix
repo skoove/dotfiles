@@ -40,8 +40,8 @@
     unzip
     tree
     gamescope
-    opentrack
-    git lazygit
+    opentrack aitrack
+    git lazygit gh
   ]);
 
   catppuccin = {
