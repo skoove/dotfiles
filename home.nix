@@ -43,6 +43,7 @@
     opentrack aitrack
     git lazygit gh
     prismlauncher
+    xpointerbarrier        # i only use this to play warthunder
   ]);
 
   catppuccin = {
