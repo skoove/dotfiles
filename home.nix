@@ -19,7 +19,6 @@
     libreoffice             # office apps
     nil                     # nix lsp
     feh                     # image viewer and background settter
-    lutris                  # vidya games
     wine protonup-ng        # windows compatibility things
     gst_all_1.gstreamer
     fastfetch cowsay blahaj # neccercary for the system to run correctly
