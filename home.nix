@@ -22,7 +22,6 @@
     wine protonup-ng        # windows compatibility things
     gst_all_1.gstreamer
     fastfetch cowsay blahaj # neccercary for the system to run correctly
-    nvtopPackages.full      # preforamnce monitor for ninvida cards
     maim xclip              # things for screenshots
     zsh                     # shell
     nix-output-monitor      # pretty nix building
@@ -37,8 +36,6 @@
     catppuccin-cursors.mochaLavender
     unzip
     tree
-    gamescope
-    opentrack aitrack
     git lazygit gh
     prismlauncher
     xpointerbarrier        # i only use this to play warthunder
@@ -52,6 +49,13 @@
 
   # --- programs config --- #
   programs = {
+    git = {
+      enable = true;
+      userName = "zie";
+      userEmail = "zac@sturges.com.au";
+      extraConfig.init.defaultBranch = "main";
+    };
+  
     rofi = {
       enable = true;
     };
@@ -121,7 +125,7 @@
           sudo echo ""
           nix flake update ~/.dotfiles
           echo "flake updated!" |& blahaj -i
-          sudo nixos-rebuild switch --flake ~/.dotfiles |& nom
+          sudo nixos-rebuild switch --flake ~/.dotfiles --impure |& nom
           echo "nixos rebuilt!" | blahaj -i
         '';
       };
