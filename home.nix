@@ -101,6 +101,8 @@
         theme = "xiong-chiamiov";
       };
 
+      initExtra = "fastfetch";
+
       # zsh alias #
       shellAliases = {
         edit-config = "hx ~/.dotfiles";
@@ -130,7 +132,6 @@
         '';
       };
     };
-    shellInit = "fastfetch";
   };
 
 
