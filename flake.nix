@@ -24,6 +24,7 @@
           inherit system;
   	      modules = [
             ./configuration.nix
+            ./hardware-configuration.nix	
             catppuccin.nixosModules.catppuccin
           ];
         };
