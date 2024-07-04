@@ -32,9 +32,9 @@
     dust                    # disk usage things
     xorg.xev                # for checking keycodes mostly
     gamemode                # makes games run better (?)
-    dconf
     catppuccin-cursors.mochaLavender
     lxappearance
+    dconf
     unzip
     tree
     git lazygit gh
