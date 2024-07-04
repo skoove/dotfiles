@@ -20,7 +20,7 @@ in
     {command = "syncthing";}
     {command = "syncthingtray";}
     {command = "vesktop --start-minimized --enable-blink-features=MiddleClickAutoscroll";}
-    {command = "steam -silent";}
+    # {command = "steam -silent";} # steam keeps complaining on startup
     {command = "xmousepasteblock";}
     {
       command = "feh --bg-fill /home/zie/.dotfiles/background-image.png";

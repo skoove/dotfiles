@@ -34,11 +34,13 @@
     gamemode                # makes games run better (?)
     dconf
     catppuccin-cursors.mochaLavender
+    lxappearance
     unzip
     tree
     git lazygit gh
     prismlauncher
     xpointerbarrier        # i only use this to play warthunder
+    r2mod_cli
   ]);
 
   catppuccin = {
