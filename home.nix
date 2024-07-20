@@ -41,6 +41,7 @@
     prismlauncher
     xpointerbarrier        # i only use this to play warthunder
     r2mod_cli
+    obs-studio
   ]);
 
   catppuccin = {
