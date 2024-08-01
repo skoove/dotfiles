@@ -51,7 +51,7 @@ in
   # fonts
   fonts.packages = with pkgs; [
     nerdfonts
-    roboto
+    roboto roboto-slab roboto-serif
   ];
 
   # Set your time zone.
