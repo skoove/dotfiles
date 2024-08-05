@@ -42,6 +42,7 @@
     r2mod_cli
     obs-studio
     vscode                 # vs code :shocked:
+    cargo rustc            # its rusty
   ]);
 
   catppuccin = {
