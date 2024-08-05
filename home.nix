@@ -116,22 +116,18 @@
         # updating things #
         upd-flake = ''
           nix flake update ~/.dotfiles
-          echo "flake updated!" |& blahaj -i
+          echo "flake updated"
         '';
 
         upd-home = ''
-          nix flake update ~/.dotfiles
-          echo "flake updated!" |& blahaj -i
           home-manager switch --flake ~/.dotfiles |& nom
-          echo "home managed" | blahaj -i
+          echo "home managed"
         '';
 
         upd-nixos = ''
-          sudo echo ""
-          nix flake update ~/.dotfiles
-          echo "flake updated!" |& blahaj -i
+          sudo echo "sudoed"
           sudo nixos-rebuild switch --flake ~/.dotfiles --impure |& nom
-          echo "nixos rebuilt!" | blahaj -i
+          echo "nixos rebuilt"
         '';
       };
     };
