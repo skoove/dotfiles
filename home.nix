@@ -27,7 +27,6 @@
     nix-output-monitor      # pretty nix building
     ripgrep                 # grep but rust
     xmousepasteblock        # blocks mmb paste
-    kdePackages.okular      # document visualiser
     bottom                  # top
     dust                    # disk usage things
     xorg.xev                # for checking keycodes mostly
@@ -42,6 +41,7 @@
     xpointerbarrier        # i only use this to play warthunder
     r2mod_cli
     obs-studio
+    vscode                 # vs code :shocked:
   ]);
 
   catppuccin = {
