@@ -42,6 +42,7 @@
     obs-studio
     vscode                 # vs code :shocked:
     cargo rustc            # its rusty
+    gcc                    # cpp compiler
   ]);
 
   catppuccin = {
