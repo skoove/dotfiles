@@ -101,7 +101,7 @@
     };
 
     # make bash run zsh on start
-    programs.bash.shellInit = "zsh";
+    bash.shellInit = "zsh";
 
     # zsh #
     zsh = {
