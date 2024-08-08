@@ -45,7 +45,7 @@ in
   xsession.windowManager.i3.config.modifier = modifier;
   xsession.windowManager.i3.config.keybindings = 
   lib.mkOptionDefault {
-    "${modifier}+Return" = "exec alacritty";
+    "${modifier}+Return" = "exec kitty";
 
     # window focusing keybinds #
     "${modifier}+h" = "focus left";
