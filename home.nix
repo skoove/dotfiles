@@ -100,6 +100,9 @@
       shellIntegration.mode = "no-cursor";
     };
 
+    # make bash run zsh on start
+    programs.bash.shellInit = "zsh";
+
     # zsh #
     zsh = {
       enable = true;
