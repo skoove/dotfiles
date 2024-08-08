@@ -41,6 +41,7 @@
     r2mod_cli
     obs-studio
     kitty
+    ranger
   ]);
 
   catppuccin = {
@@ -77,6 +78,21 @@
         language = [{
           name = "nix";
         }];
+      };
+    };
+
+    # kitty #
+    kitty = {
+      enable = true;
+      font = {
+        name = "JetBrainsMonoNL NF";
+        package = pkgs.nerdfonts;
+        size = 11;
+      };
+      settings = {
+        cursor_shape = "underline";
+        window_padding_width = "10";
+        shell_intergration = "no-cursor";
       };
     };
 
