@@ -38,11 +38,11 @@
     tree
     git lazygit gh
     prismlauncher
-    r2mod_cli
     obs-studio
     kitty
     ranger
     rust-analyzer
+    vscode
   ]);
 
   catppuccin = {
