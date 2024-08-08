@@ -62,17 +62,6 @@
       enable = true;
     };
 
-    # alacritty #
-    alacritty = {
-      enable = true;
-      
-      settings = {
-        shell.program = "${pkgs.zsh}/bin/zsh";
-        window.padding = {x = 10; y = 10;};
-        font.normal = {family = "JetBrainsMonoNL Nerd Font";};
-      };
-    };   
-    
     # helix #
     helix = {
       enable = true;
