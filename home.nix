@@ -40,6 +40,7 @@
     prismlauncher
     r2mod_cli
     obs-studio
+    kitty
   ]);
 
   catppuccin = {
