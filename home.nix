@@ -42,6 +42,7 @@
     obs-studio
     kitty
     ranger
+    rust-analyzer
   ]);
 
   catppuccin = {
@@ -75,8 +76,11 @@
       };
     
       languages = {
-        language = [{
+        nix = [{
           name = "nix";
+        }];
+        rust = [{
+          name = "rust";
         }];
       };
     };
@@ -92,8 +96,8 @@
       settings = {
         cursor_shape = "underline";
         window_padding_width = "10";
-        shell_intergration = "no-cursor";
       };
+      shellIntegration.mode = "no-cursor";
     };
 
     # zsh #
