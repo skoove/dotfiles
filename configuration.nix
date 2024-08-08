@@ -154,9 +154,9 @@ in
     zsh
   ];
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable          = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     package = gpu-drv-pkg;
   };
 
