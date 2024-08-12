@@ -25,17 +25,11 @@ in
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # nix optimistation #
-  nix.settings.auto-optimise-store = true;
-  nix.optimise = {
-    automatic = true;
-    dates = [ "00:00" "12:00" "06:00" "18:00" "08:00" "20:00"];
-  };
-
+  # nix garbage collect #
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+    dates = "daily";
+    options = "--delete-older-than 3d";
   };
 
   # swap file #
