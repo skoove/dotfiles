@@ -25,6 +25,12 @@ in
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # optimsation
+  nix.settings.auto-optimise-store = true;
+  nix.optimise = {
+    automatic = true;
+  };
+
   # nix garbage collect #
   nix.gc = {
     automatic = true;
