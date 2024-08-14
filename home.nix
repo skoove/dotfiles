@@ -16,7 +16,6 @@
     pavucontrol             # volume control for puse audio
     obsidian                # note taking app
     syncthing syncthingtray # file syncing
-    libreoffice             # office apps
     nil                     # nix lsp
     feh                     # image viewer and background settter
     wine protonup-ng        # windows compatibility things
