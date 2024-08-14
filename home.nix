@@ -142,6 +142,11 @@
           sudo nixos-rebuild switch --flake ~/.dotfiles --impure |& nom
           echo "nixos rebuilt"
         '';
+
+        collect-all-garbage = ''
+          sudo nix-collect-garbage --delete-older-than 3d
+          nix-collect-garbage --delete-older-than 3d
+        '';
       };
     };
   };
