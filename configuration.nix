@@ -26,10 +26,10 @@ in
   networking.networkmanager.enable = true;
 
   # optimsation
-  nix.settings.auto-optimise-store = true;
-  nix.optimise = {
-    automatic = true;
-  };
+  # nix.settings.auto-optimise-store = true;
+  # nix.optimise = {
+  #   automatic = true;
+  # };
 
   # nix garbage collect #
   nix.gc = {
@@ -38,7 +38,7 @@ in
     options = "--delete-older-than 3d";
   };
 
-  swap file #
+  # swap file #
   swapDevices = [{
     device = "/swapfile";
     size = 28 * 1024; # 28gb
