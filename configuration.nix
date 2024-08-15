@@ -38,10 +38,10 @@ in
     options = "--delete-older-than 3d";
   };
 
-  # swap file #
+  swap file #
   swapDevices = [{
     device = "/swapfile";
-    size = 36 * 1024; # 36gb
+    size = 28 * 1024; # 28gb
   }];
 
   # sound
