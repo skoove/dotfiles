@@ -26,10 +26,10 @@ in
   networking.networkmanager.enable = true;
 
   # optimsation
-  nix.settings.auto-optimise-store = true;
-  nix.optimise = {
-    automatic = true;
-  };
+  # nix.settings.auto-optimise-store = true;
+  # nix.optimise = {
+  #   automatic = true;
+  # };
 
   # nix garbage collect #
   nix.gc = {
