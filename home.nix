@@ -43,6 +43,7 @@
     rust-analyzer
     vscode
     onlyoffice-bin_latest
+    krita
   ]);
 
   catppuccin = {
