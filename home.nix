@@ -44,6 +44,7 @@
     vscode
     onlyoffice-bin_latest
     krita
+    fontfinder
   ]);
 
   catppuccin = {
