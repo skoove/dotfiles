@@ -44,6 +44,7 @@
     vscode
     onlyoffice-bin_latest
     krita
+    playerctl
   ]);
 
   catppuccin = {
@@ -94,11 +95,6 @@
         package = pkgs.nerdfonts;
         size = 11;
       };
-      settings = {
-        cursor_shape = "underline";
-        window_padding_width = "10";
-      };
-      shellIntegration.mode = "no-cursor";
     };
 
     # make bash run zsh on start
