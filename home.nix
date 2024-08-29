@@ -45,6 +45,7 @@
     onlyoffice-bin_latest
     krita
     playerctl
+    siril
   ]);
 
   catppuccin = {
@@ -95,6 +96,7 @@
         package = pkgs.nerdfonts;
         size = 11;
       };
+      settings.window_padding_width = "1";
     };
 
     # make bash run zsh on start
