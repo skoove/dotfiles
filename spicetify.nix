@@ -1,22 +1,22 @@
 { pkgs, spicetify-nix , ...  }:
-# let
-  # spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
-# in
+let
+  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
+in
 {
-  # imports = [ spicetify-nix.homeManagerModule ];
+  imports = [ spicetify-nix.homeManagerModule ];
 
-  # programs.spicetify = {
-    # spotifyPackage = pkgs.spotify;
-    # enable = true;
-    # theme = spicePkgs.themes.catppuccin; #catppuccin build errors :(
-    # colorScheme = "mocha";
-    # windowManagerPatch = true; # trying to use the default spotify package seems to break things
+  programs.spicetify = {
+    spotifyPackage = pkgs.spotify;
+    enable = true;
+    theme = spicePkgs.themes.catppuccin; 
+    colorScheme = "mocha";
+    windowManagerPatch = true; 
 
-    # enabledExtensions = with spicePkgs.extensions; [
-      # shuffle
-      # adblock
-      # volumePercentage
-      # fullAppDisplay
-    # ];
-  # };
+    enabledExtensions = with spicePkgs.extensions; [
+      shuffle
+      adblock
+      volumePercentage
+      fullAppDisplay
+    ];
+ };
 }
