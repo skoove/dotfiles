@@ -67,22 +67,6 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1724819573,
-        "narHash": "sha256-GnR7/ibgIH1vhoy8cYdmXE6iyZqKqFxQSVkFgosBh6w=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "71e91c409d1e654808b2621f28a327acfdad8dc2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
@@ -94,14 +78,16 @@
     "spicetify-nix": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1724904972,
-        "narHash": "sha256-UuMf0oHOZqiU81WNSnk30XJ5sKYvvSiChvotptI1Zm0=",
+        "lastModified": 1725077747,
+        "narHash": "sha256-4SwFxe789QXOtGNFbwldpqFzkKxIFuyDysFttFWB5eM=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "6c7bd8132eb69880b7ec8935b6f55dbca1e69424",
+        "rev": "305b6034ad329268eb33c079e2d33740ccf329ea",
         "type": "github"
       },
       "original": {

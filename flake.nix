@@ -9,7 +9,10 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { spicetify-nix , nixpkgs, home-manager, catppuccin,  ... }:

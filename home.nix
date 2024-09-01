@@ -29,7 +29,7 @@
     bottom                  # top
     dust                    # disk usage things
     xorg.xev                # for checking keycodes mostly
-    gamemode                # makes games run better (?)
+    gamemode                # makes games run better
     catppuccin-cursors.mochaLavender
     lxappearance
     dconf
@@ -46,6 +46,7 @@
     krita
     playerctl
     siril
+    dxvk
   ]);
 
   catppuccin = {
