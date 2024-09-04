@@ -1,6 +1,6 @@
 # file : home.nix
 # managed by : home manager
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, stable_pkgs ,  ... }:
 
 {
   home.username = "zie";
@@ -50,9 +50,10 @@
     mangohud
     python3
     protontricks
+  ])++ (with stable_pkgs; [
     grapejuice
   ]);
-
+  
   catppuccin = {
     enable = true;
     accent = "lavender";

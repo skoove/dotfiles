@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs_stable.url = "nixpkgs/nixos-24.05";
     
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -15,7 +16,7 @@
     };
   };
 
-  outputs = { spicetify-nix , nixpkgs, home-manager, catppuccin,  ... }:
+  outputs = { spicetify-nix , nixpkgs, home-manager, catppuccin, nixpkgs_stable ,   ... }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -37,7 +38,15 @@
       homeConfigurations = {
         zie = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = {inherit spicetify-nix;};
+          extraSpecialArgs = {
+            inherit spicetify-nix;
+            
+            stable_pkgs = import nixpkgs_stable {
+                inherit system;
+                config.allowUnFree = true;
+              };
+              
+            };
           modules = [
           ./home.nix 
           catppuccin.homeManagerModules.catppuccin
