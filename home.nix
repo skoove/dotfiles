@@ -47,6 +47,10 @@
     playerctl
     siril
     dxvk
+    mangohud
+    python3
+    protontricks
+    grapejuice
   ]);
 
   catppuccin = {
@@ -115,7 +119,7 @@
         theme = "xiong-chiamiov";
       };
 
-      initExtra = "fastfetch";
+      # initExtra = "fastfetch";
 
       # zsh alias #
       shellAliases = {
