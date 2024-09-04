@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = { spicetify-nix , nixpkgs, home-manager, catppuccin, nixpkgs_stable ,   ... }:
+  outputs = { spicetify-nix , nixpkgs, home-manager, catppuccin,   ... }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
