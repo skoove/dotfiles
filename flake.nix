@@ -3,8 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs_stable.url = "nixpkgs/nixos-24.05";
-    
+        
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -39,13 +38,7 @@
         zie = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {
-            inherit spicetify-nix;
-            
-            stable_pkgs = import nixpkgs_stable {
-                inherit system;
-                config.allowUnFree = true;
-              };
-              
+            inherit spicetify-nix;          
             };
           modules = [
           ./home.nix 
