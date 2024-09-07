@@ -51,10 +51,7 @@
     python3
     protontricks
   ]);
-  # ++ (with stable_pkgs; [
-    # grapejuice
-  # ]);
-  
+    
   catppuccin = {
     enable = true;
     accent = "lavender";
