@@ -49,6 +49,7 @@
     mangohud
     python3
     protontricks
+    nushell
   ]);
     
   catppuccin = {
@@ -103,7 +104,7 @@
     };
 
     # make bash run nushell on start
-    bash.bashrcExtra = "nushell";
+    bash.bashrcExtra = "nu";
 
     nushell = {
       enable = true;
@@ -117,7 +118,7 @@
         '';
 
         upd-home = ''
-          home-manager switch --flake ~/.dotfiles |& nom
+          home-manager switch --flake ~/.dotfiles | nom
           echo "home managed"
         '';
 
