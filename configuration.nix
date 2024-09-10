@@ -31,7 +31,8 @@ in
   #   automatic = true;
   # };
 
-  # nix garbage collect #
+  # nix garbage collect 
+  # i am not convinced this works *at all*
   nix.gc = {
     automatic = true;
     dates = "daily";
@@ -41,12 +42,12 @@ in
   # swap file #
   swapDevices = [{
     device = "/swapfile";
-    size = 28 * 1024; # 28gb
+    size = 28 * 1024; # 28GiB
   }];
 
   # sound
   hardware.pulseaudio.enable = true;
-  services.pipewire.enable = false;
+  services.pipewire.enable = false; # for some reason unless i explicitly disable this stuff breaks
   nixpkgs.config.pulseaudio = true;
 
   # fonts
@@ -73,12 +74,12 @@ in
     LC_TIME = "en_AU.UTF-8";
   };
 
+  # no clue man
   environment.pathsToLink = [ "/libexec" ];
 
   programs.dconf.enable = true;
 
-  programs.zsh.enable = true;
-  services.flatpak.enable = true;
+  # TO DO: why is this stuff here??
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-kde ];
   xdg.portal.config.common.default = "*";
@@ -114,7 +115,7 @@ in
     };
   };
 
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.nushell;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zie = {
@@ -146,13 +147,12 @@ in
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     helix
     firefox
     alacritty
     killall
-    zsh
+    nushell
   ];
 
   hardware.graphics = {
