@@ -22,7 +22,6 @@
     gst_all_1.gstreamer
     fastfetch cowsay blahaj # neccercary for the system to run correctly
     maim xclip              # things for screenshots
-    zsh                     # shell
     nix-output-monitor      # pretty nix building
     ripgrep                 # grep but rust
     xmousepasteblock        # blocks mmb paste
@@ -103,31 +102,13 @@
       settings.window_padding_width = "1";
     };
 
-    # make bash run zsh on start
-    bash.bashrcExtra = "zsh";
+    # make bash run nushell on start
+    bash.bashrcExtra = "nushell";
 
-    # zsh #
-    zsh = {
+    nushell = {
       enable = true;
-      enableCompletion = true;
-      autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
 
-      oh-my-zsh = {
-        enable = true;
-        theme = "xiong-chiamiov";
-      };
-
-      # initExtra = "fastfetch";
-
-      # zsh alias #
       shellAliases = {
-        edit-config = "hx ~/.dotfiles";
-
-        mon-2-off = "xrandr --output DVI-I-1 --off";
-        mon-2-on = "xrandr --output HDMI-0 --primary --mode 1920x1080 --rate 100 --output DVI-I-1 --auto --right-of HDMI-0";
-
-        # updating things #
         upd-flake = ''
           cd ~/.dotfiles
           nix flake update ~/.dotfiles
@@ -146,6 +127,7 @@
           echo "nixos rebuilt"
         '';
 
+        # collects garbage oldar than 3 days on both hm and nixos
         collect-all-garbage = ''
           sudo nix-collect-garbage --delete-older-than 3d
           nix-collect-garbage --delete-older-than 3d
