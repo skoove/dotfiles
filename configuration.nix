@@ -46,6 +46,7 @@ in
 
   # sound
   hardware.pulseaudio.enable = true;
+  services.pipewire.enable = false;
   nixpkgs.config.pulseaudio = true;
 
   # fonts
