@@ -117,6 +117,11 @@ in
 
   users.defaultUserShell = pkgs.nushell;
 
+  programs.starship = {
+    enable = true;
+    presets = [ "nerd-font-symbols" ];
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zie = {
     isNormalUser = true;

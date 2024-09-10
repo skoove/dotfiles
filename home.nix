@@ -119,6 +119,8 @@
 
       extraConfig = ''
         $env.config.show_banner = false;
+
+        cat `~/obsidian/99 Meta/reminders.md`
       '';
 
       extraEnv = ''
@@ -126,10 +128,11 @@
         starship init nu | save -f ~/.cache/starship/init.nu
       '';
     };
-
-    starship.enable = true;
   };
 
+  programs.starship = {
+    enable = true;
+  };
 
   # --- picom settings --- #
   services.picom = {
