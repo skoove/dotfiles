@@ -50,6 +50,7 @@
     python3
     protontricks
     nushell
+    starship
   ]);
     
   catppuccin = {
@@ -110,31 +111,23 @@
       enable = true;
 
       shellAliases = {
-        upd-flake = ''
-          cd ~/.dotfiles
-          nix flake update ~/.dotfiles
-          echo "flake updated"
-          git commit -a -m "flake updated"
-        '';
-
-        upd-home = ''
-          home-manager switch --flake ~/.dotfiles | nom
-          echo "home managed"
-        '';
-
-        upd-nixos = ''
-          sudo echo "sudoed"
-          sudo nixos-rebuild switch --flake ~/.dotfiles --impure |& nom
-          echo "nixos rebuilt"
-        '';
-
-        # collects garbage oldar than 3 days on both hm and nixos
-        collect-all-garbage = ''
-          sudo nix-collect-garbage --delete-older-than 3d
-          nix-collect-garbage --delete-older-than 3d
-        '';
+        collect-garbage = "sh ~/.dotfiles/scripts/collect-garbage.sh";
+        update-flake = "sh ~/.dotfiles/scripts/update-flake.sh";
+        update-home  = "sh ~/.dotfiles/scripts/update-home.sh";
+        update-nixos = "sh ~/.dotfiles/scripts/update-nixos.sh";
       };
+
+      extraConfig = ''
+        $env.config.show_banner = false;
+      '';
+
+      extraEnv = ''
+        mkdir ~/.cache/starship
+        starship init nu | save -f ~/.cache/starship/init.nu
+      '';
     };
+
+    starship.enable = true;
   };
 
 
