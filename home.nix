@@ -101,7 +101,10 @@
         package = pkgs.nerdfonts;
         size = 11;
       };
-      settings.window_padding_width = "1";
+      settings = {
+        window_padding_width = "1";
+        confirm_os_window_close = "0";
+      };
     };
 
     # make bash run nushell on start
