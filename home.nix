@@ -51,6 +51,7 @@
     protontricks
     nushell
     starship
+    gamescope
   ]);
     
   catppuccin = {
