@@ -19,16 +19,29 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
+  stylix.enable = true;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+  stylix.image = ./gruvbox-rainbow-nix.png;
+  stylix.fonts = {
+    monospace = {
+      package = pkgs.nerd-fonts.jetbrains-mono;
+      name = "JetBrainsMono Nerd Font";
+    };
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     starship
-    zellij
     obsidian
     libreoffice-fresh
-    fuzzel
     waybar
   ];
+
+  programs.kitty.enable = true;
+  programs.starship.enable = true;
+  programs.zellij.enable = true;
+  programs.nushell.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -38,7 +51,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "gruvbox";
+      # theme = "gruvbox";
       editor = {
         indent-guides.render = true;
       };
