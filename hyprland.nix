@@ -1,3 +1,5 @@
+# managed by home manager
+
 { config, pkgs, ... }:
 
 let
