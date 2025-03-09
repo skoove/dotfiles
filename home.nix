@@ -6,6 +6,10 @@
   home.username = "zie";
   home.homeDirectory = "/home/zie";
 
+  imports = [ 
+    ./hyprland.nix
+  ];
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -18,7 +22,12 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    starship
+    zellij
     obsidian
+    libreoffice-fresh
+    fuzzel
+    waybar
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -48,25 +57,8 @@
     tray.enable = true;
   };
 
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/zie/etc/profile.d/hm-session-vars.sh
-  #
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
+  # home.sessionVariables = {
+  # };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
