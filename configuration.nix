@@ -119,6 +119,8 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
   services.displayManager.ly.enable = true;
+  services.displayManager.ly.settings.animation = "doom";
+  
   services.xserver.desktopManager.gnome.enable = true;
 
   # Open ports in the firewall.
