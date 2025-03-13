@@ -108,7 +108,6 @@
     helix
     nh
     git
-    nil
     hyprland
     kitty
   ];

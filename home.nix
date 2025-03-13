@@ -35,6 +35,7 @@
     starship
     obsidian
     libreoffice-fresh
+    nixd
     waybar
   ];
 
@@ -42,11 +43,7 @@
   programs.starship.enable = true;
   programs.zellij.enable = true;
   programs.nushell.enable = true;
-
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
-  home.file = {
-  };
+  programs.bat.enable = true;
 
   stylix.targets.helix.enable = false;
   programs.helix = {
@@ -55,6 +52,7 @@
       theme = "gruvbox";
       editor = {
         indent-guides.render = true;
+        line-number = "relative";
       };
     };
   };
@@ -64,6 +62,7 @@
     userName = "Zie Sturges";
     userEmail = "53106860+skoove@users.noreply.github.com";
     extraConfig.init.defaultBranch = "main";
+    delta.enable = true;
   };
 
   services.syncthing = {
