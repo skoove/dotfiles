@@ -100,7 +100,6 @@
     nh
     git
     hyprland
-    kitty
   ];
 
   programs.hyprland.enable = true;
