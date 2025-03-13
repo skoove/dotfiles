@@ -12,7 +12,7 @@
   nix.optimise = {
     automatic = true;
     persistent = true;
-    dates = [ "weekly" ];
+    dates = [ "daily" ];
   };
 
   nix.gc = {
