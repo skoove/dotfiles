@@ -7,9 +7,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     stylix.url = "github:danth/stylix";
+
+    nixcord.url = "github:kaylorben/nixcord";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix,  ... }:
+  outputs = { self, nixpkgs, home-manager, stylix, nixcord,  ... }:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -20,8 +22,10 @@
         inherit pkgs;
         modules = [
           stylix.homeManagerModules.stylix
+          nixcord.homeManagerModules.nixcord
           ./home.nix
           ./stylix.nix
+          ./nixcord.nix
         ];
       };
     };
