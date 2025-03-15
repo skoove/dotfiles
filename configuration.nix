@@ -1,10 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-    ];
+  imports = [];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
