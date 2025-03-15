@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, settings, ... }:
 
 {
   imports = [];
@@ -95,10 +95,9 @@
     helix
     nh
     git
-    hyprland
   ];
 
-  programs.hyprland.enable = true;
+  programs.hyprland.enable = settings.hyprland-enabled;
   programs.starship.enable = true;
   programs.steam.enable = true;
 
