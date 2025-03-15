@@ -16,28 +16,33 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
+
+    sharedHomeModules = [
+      stylix.homeManagerModules.stylix
+      nixcord.homeManagerModules.nixcord
+      ./home.nix
+      ./stylix.nix
+      ./nixcord.nix
+      ./hyprland.nix
+    ];
+
+    sharedNixosModules = [
+      stylix.nixosModules.stylix
+      ./configuration.nix
+      ./stylix.nix
+    ];
   in {
     homeConfigurations = {
       zie = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [
-          stylix.homeManagerModules.stylix
-          nixcord.homeManagerModules.nixcord
-          ./home.nix
-          ./stylix.nix
-          ./nixcord.nix
-        ];
+        modules = sharedHomeModules ++ [ ];
       };
     };
 
     nixosConfigurations = {
       nixos-laptop = lib.nixosSystem {
         inherit system;
-        modules = [
-          stylix.nixosModules.stylix
-          ./configuration.nix
-          ./stylix.nix
-        ];
+        modules = sharedNixosModules ++ [ ./hosts/laptop/hardware-configuration.nix ];
       };
     };
   };

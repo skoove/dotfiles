@@ -6,9 +6,7 @@
   home.username = "zie";
   home.homeDirectory = "/home/zie";
 
-  imports = [ 
-    ./hyprland.nix
-  ];
+  imports = [ ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
