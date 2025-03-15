@@ -52,8 +52,8 @@
       nixos-laptop = lib.nixosSystem {
         inherit system;
         modules = sharedNixosModules ++ [ ./hosts/laptop/hardware-configuration.nix ];
+        specialArgs = sharedArgs;
       };
-      specialArgs = sharedArgs;
     };
   };
 }
