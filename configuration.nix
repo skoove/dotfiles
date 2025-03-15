@@ -57,7 +57,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -105,8 +105,6 @@
   # services.xserver.enable = true;
   services.displayManager.ly.enable = true;
   
-  services.xserver.desktopManager.gnome.enable = true;
-
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
