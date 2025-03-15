@@ -12,4 +12,9 @@
     # serif = config.stylix.fonts.monospace;
     # emoji = config.stylix.fonts.monospace;
   };
+  stylix.cursor = {
+    package = pkgs.capitaine-cursors-themed;
+    name = "Capitaine Cursors (Gruvbox)";
+    size = 44;
+  };
 }
