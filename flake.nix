@@ -17,6 +17,10 @@
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
 
+    settings = {
+      hyprland-enabled = true; # bool
+    };
+
     sharedHomeModules = [
       stylix.homeManagerModules.stylix
       nixcord.homeManagerModules.nixcord
@@ -31,11 +35,16 @@
       ./configuration.nix
       ./stylix.nix
     ];
+
+    sharedArgs = {
+      inherit settings;
+    };
   in {
     homeConfigurations = {
       zie = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = sharedHomeModules ++ [ ];
+        extraSpecialArgs = sharedArgs;
       };
     };
 
@@ -44,6 +53,7 @@
         inherit system;
         modules = sharedNixosModules ++ [ ./hosts/laptop/hardware-configuration.nix ];
       };
+      specialArgs = sharedArgs;
     };
   };
 }
