@@ -24,6 +24,7 @@
     libreoffice-fresh
     nixd
     waybar
+    bemoji
   ];
 
   programs.kitty.enable = true;
@@ -31,6 +32,9 @@
   programs.zellij.enable = true;
   programs.nushell.enable = true;
   programs.bat.enable = true;
+  programs.fuzzel.enable = true;
+
+  services.dunst.enable = true;
 
   stylix.targets.helix.enable = false;
   programs.helix = {
