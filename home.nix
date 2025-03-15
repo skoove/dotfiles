@@ -23,7 +23,6 @@
     obsidian
     libreoffice-fresh
     nixd
-    waybar
     bemoji
   ];
 
