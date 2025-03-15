@@ -34,6 +34,7 @@
   programs.fuzzel.enable = true;
 
   services.dunst.enable = true;
+  services.hyprpaper.enable = true;
 
   stylix.targets.helix.enable = false;
   programs.helix = {
