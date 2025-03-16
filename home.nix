@@ -24,6 +24,7 @@
     libreoffice-fresh
     nixd
     bemoji
+    brightnessctl
   ];
 
   programs.kitty.enable = true;
