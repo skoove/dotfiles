@@ -28,6 +28,7 @@
       ./stylix.nix
       ./nixcord.nix
       ./hyprland.nix
+      ./waybar.nix
     ];
 
     sharedNixosModules = [
