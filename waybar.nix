@@ -8,7 +8,12 @@ in
     systemd.enable = true; # makes it start with hyprland
 
     settings.main-bar = {
-      modules-left = [ "hyprland/workspaces" "hyprland/window" ];
+      modules-left = [
+        "hyprland/workspaces"
+        "hyprland/window"
+      ];
+
+      modules-right = ["clock"];
     };
 
     style = ''
