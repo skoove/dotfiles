@@ -18,7 +18,10 @@ in {
     misc.disable_hyprland_logo = true;
 
     # fixing hyprpaper not starting
-    exec-once = [ "systemctl --user enable --now hyprpaper.service" ];
+    exec-once = [
+      "systemctl --user enable --now hyprpaper.service"
+      "waybar"
+    ];
 
     bindm = [
       "${mod}, mouse:272, movewindow"
