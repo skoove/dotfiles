@@ -32,6 +32,7 @@
   programs.nushell.enable = true;
   programs.bat.enable = true;
   programs.fuzzel.enable = true;
+  programs.carapace.enable = true;
 
   services.dunst.enable = true;
   services.hyprpaper.enable = true;
