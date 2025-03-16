@@ -10,8 +10,11 @@ in {
   wayland.windowManager.hyprland.enable = settings.hyprland-enabled;
 
   wayland.windowManager.hyprland.settings = {
-    monitor = ", preferred, auto, 1";
+    monitor = [ ", preferred, auto, 1" ];
     misc.disable_hyprland_logo = true;
+
+    # fixing hyprpaper not starting
+    exec-once = [ "systemctl --user enable --now hyprpaper.service" ];
 
     bindm = [
       "${mod}, mouse:272, movewindow"
