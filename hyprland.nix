@@ -13,7 +13,7 @@ in {
     monitor = [
     ", preferred, auto, 1" # default for unspecified monitors
     "HDMI-A-1, 1920x1080@100.0, auto, 1" # main desktop monitor
-    "DVI-D-1, 1920x1080@100.0, left, 1" # left desktop monitor
+    "DVI-D-1, 1920x1080@100.0, auto-left, 1" # left desktop monitor
     ];
     misc.disable_hyprland_logo = true;
 
