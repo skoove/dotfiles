@@ -49,9 +49,15 @@
     };
 
     nixosConfigurations = {
-      nixos-laptop = lib.nixosSystem {
+      zie-nixos-laptop = lib.nixosSystem {
         inherit system;
         modules = sharedNixosModules ++ [ ./hosts/laptop/hardware-configuration.nix ];
+        specialArgs = sharedArgs;
+      };
+
+      zie-nixos-desktop = lib.nixosSystem {
+        inherit system;
+        modules = sharedNixosModules ++ [ ./hosts/desktop/hardware-configuration.nix ];
         specialArgs = sharedArgs;
       };
     };
