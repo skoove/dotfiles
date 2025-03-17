@@ -10,6 +10,12 @@ in {
   wayland.windowManager.hyprland.enable = settings.hyprland-enabled;
 
   wayland.windowManager.hyprland.settings = {
+    device = {
+      name = "logitech-g203-lightsync-gaming-mouse";
+      accel_profile = "flat";
+      sensitivity = 0.3;
+    };
+  
     monitor = [
     ", preferred, auto, 1" # default for unspecified monitors
     "HDMI-A-1, 1920x1080@100.0, auto, 1" # main desktop monitor
