@@ -35,14 +35,14 @@ in {
     ];
 
     bind = [
+      "${mod}, T, exec, bemoji -c -n"
+      "${mod}, D, exec, ${menu}"
+      "${mod}, RETURN, exec, ${terminal}"
+
       "${mod}, Q, killactive"
       "${mod}, F, fullscreen"
       "${mod}, W, togglegroup"
       "${mod} SHIFT, M, exit"
-
-      "${mod}, T, exec, bemoji -c -n"
-      "${mod}, D, exec, ${menu}"
-      "${mod}, RETURN, exec, ${terminal}"
 
       "${mod}, H, movefocus, l"
       "${mod}, L, movefocus, r"
