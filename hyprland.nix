@@ -10,18 +10,19 @@ in {
   wayland.windowManager.hyprland.enable = settings.hyprland-enabled;
 
   wayland.windowManager.hyprland.settings = {
-    device = {
-      name = "logitech-g203-lightsync-gaming-mouse";
-      accel_profile = "flat";
-      sensitivity = 0.3;
-    };
+    misc.disable_hyprland_logo = true;
   
     monitor = [
     ", preferred, auto, 1" # default for unspecified monitors
     "HDMI-A-1, 1920x1080@100.0, auto, 1" # main desktop monitor
     "DVI-D-1, 1920x1080@100.0, auto-left, 1" # left desktop monitor
     ];
-    misc.disable_hyprland_logo = true;
+
+    device = {
+      name = "logitech-g203-lightsync-gaming-mouse";
+      accel_profile = "flat";
+      sensitivity = 0.3;
+    };
 
     exec-once = [
       "systemctl --user enable --now hyprpaper.service"
