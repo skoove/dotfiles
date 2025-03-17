@@ -11,6 +11,7 @@ in {
 
   wayland.windowManager.hyprland.settings = {
     misc.disable_hyprland_logo = true;
+    general.border_size = 3;
   
     monitor = [
       ", preferred, auto, 1" # default for unspecified monitors
