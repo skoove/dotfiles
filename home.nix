@@ -17,14 +17,18 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
+  fonts.fontconfig.enable = true;
+  
   home.packages = with pkgs; [
+    # programs
     obsidian
     libreoffice-fresh
     nixd
     bemoji
     brightnessctl
+
+    # fonts
+    corefonts
   ];
 
   programs.kitty.enable = true;
