@@ -18,8 +18,8 @@ in {
     misc.disable_hyprland_logo = true;
 
     exec-once = [
-      # fixing hyprpaper not starting
       "systemctl --user enable --now hyprpaper.service"
+      "systemctl --user enable --now waybar.service"
     ];
 
     bindm = [
