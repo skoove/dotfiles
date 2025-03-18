@@ -33,10 +33,6 @@
   services.dunst.enable = true;
   services.hyprpaper.enable = true;
 
-  services.syncthing = {
-    enable = true;
-    tray.enable = true;
-  };
 
   # home.sessionVariables = {
   # };
