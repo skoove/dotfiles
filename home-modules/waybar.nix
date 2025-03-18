@@ -17,6 +17,7 @@ in
         "network"
         "battery"
         "clock"
+        "tray"
       ];
 
       clock = {
