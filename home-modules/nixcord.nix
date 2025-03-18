@@ -1,7 +1,9 @@
 # managed by home manager
-{ config, pkgs, ... }:
+{ inputs, ... }:
 
 {
+  imports = [ inputs.nixcord.homeManagerModules.nixcord ];
+
   programs.nixcord = {
     enable = true;
 

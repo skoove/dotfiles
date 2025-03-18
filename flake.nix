@@ -11,9 +11,12 @@
 
     nixcord.url = "github:kaylorben/nixcord";
     nixcord.inputs.nixpkgs.follows = "nixpkgs";
+
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, nixcord,  ... }:
+  outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -25,13 +28,13 @@
 
     sharedHomeModules = [
       stylix.homeManagerModules.stylix
-      nixcord.homeManagerModules.nixcord
       ./home-modules/home.nix
       ./home-modules/nixcord.nix
       ./home-modules/hyprland.nix
       ./home-modules/git.nix
       ./home-modules/helix.nix
       ./home-modules/syncthing.nix
+      ./home-modules/spotify.nix
       ./stylix.nix
     ];
 
@@ -43,6 +46,7 @@
 
     sharedArgs = {
       inherit settings;
+      inputs = inputs;
     };
   in {
     homeConfigurations = {
