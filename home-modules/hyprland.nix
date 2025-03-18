@@ -1,6 +1,6 @@
 # managed by home manager
 
-{ config, pkgs, settings, ... }:
+{ settings, ... }:
 
 let
   mod = "SUPER";
