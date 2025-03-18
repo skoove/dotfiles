@@ -30,7 +30,7 @@ in
       battery = {
         format = "{icon} {capacity}%";
         format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
-        tooltip-format = "time, {cycles} cycles, {health}% health";
+        tooltip-format = "{time}, {cycles} cycles, {health}% health";
       };
 
       network = {
