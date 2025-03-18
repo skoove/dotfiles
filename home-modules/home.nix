@@ -6,7 +6,7 @@
   home.username = "zie";
   home.homeDirectory = "/home/zie";
 
-  imports = [ ];
+  imports = [ ./stylix.nix ];
 
   fonts.fontconfig.enable = true;
   
@@ -17,6 +17,7 @@
     nixd
     bemoji
     brightnessctl
+    pavucontrol
 
     # fonts
     corefonts

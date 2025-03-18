@@ -13,7 +13,25 @@ in
         "hyprland/window"
       ];
 
-      modules-right = ["clock"];
+      modules-right = [
+        "network"
+        "battery"
+        "clock"
+      ];
+
+      clock = {
+        format = " {:%H:%M  %F}";
+      };
+
+      battery = {
+        format = "{icon} {capacity}%";
+        format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+      };
+
+      network = {
+        format = "{icon} {essid}  {ipaddr}";
+        format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
+      };
     };
 
     style = ''
