@@ -30,6 +30,8 @@
       ./hyprland.nix
       ./waybar.nix
       ./git.nix
+      ./helix.nix
+      ./syncthing.nix
     ];
 
     sharedNixosModules = [
