@@ -42,18 +42,6 @@
   services.dunst.enable = true;
   services.hyprpaper.enable = true;
 
-  stylix.targets.helix.enable = false;
-  programs.helix = {
-    enable = true;
-    settings = {
-      theme = "gruvbox";
-      editor = {
-        indent-guides.render = true;
-        line-number = "relative";
-      };
-    };
-  };
-
   services.syncthing = {
     enable = true;
     tray.enable = true;
