@@ -29,6 +29,7 @@
       ./nixcord.nix
       ./hyprland.nix
       ./waybar.nix
+      ./git.nix
     ];
 
     sharedNixosModules = [
