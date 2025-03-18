@@ -27,7 +27,6 @@
       ./home-modules/home.nix
       ./home-modules/nixcord.nix
       ./home-modules/hyprland.nix
-      ./home-modules/waybar.nix
       ./home-modules/git.nix
       ./home-modules/helix.nix
       ./home-modules/syncthing.nix

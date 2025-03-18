@@ -7,6 +7,8 @@ let
   menu = "fuzzel";
   terminal = "kitty";
 in {
+  imports = [ ./waybar.nix ];
+  
   wayland.windowManager.hyprland.enable = settings.hyprland-enabled;
 
   wayland.windowManager.hyprland.settings = {
