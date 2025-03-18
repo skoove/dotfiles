@@ -14,6 +14,9 @@ in
       ];
 
       modules-right = [
+        "temperature"
+        "cpu"
+        "memory"
         "network"
         "battery"
         "clock"
@@ -27,12 +30,29 @@ in
       battery = {
         format = "{icon} {capacity}%";
         format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
-        tooltop-format = "time, {cycles} cycles, {health}% health";
+        tooltip-format = "time, {cycles} cycles, {health}% health";
       };
 
       network = {
         format = "{icon} {essid}  {ipaddr}";
         format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
+      };
+
+      cpu = {
+        interval = 1;
+        format = " {usage}%";
+      };
+
+      memory = {
+        interval = 1;
+        format = " {percentage}%";
+        tooltip-format = "{used} GiB / {total} GiB";
+      };
+
+      temperature = {
+        interval = 1;
+        thermal-zone = 2;
+        format = " {temperatureC}°C";
       };
     };
 
