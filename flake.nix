@@ -24,19 +24,19 @@
     sharedHomeModules = [
       stylix.homeManagerModules.stylix
       nixcord.homeManagerModules.nixcord
-      ./home.nix
+      ./home-modules/home.nix
+      ./home-modules/nixcord.nix
+      ./home-modules/hyprland.nix
+      ./home-modules/waybar.nix
+      ./home-modules/git.nix
+      ./home-modules/helix.nix
+      ./home-modules/syncthing.nix
       ./stylix.nix
-      ./nixcord.nix
-      ./hyprland.nix
-      ./waybar.nix
-      ./git.nix
-      ./helix.nix
-      ./syncthing.nix
     ];
 
     sharedNixosModules = [
       stylix.nixosModules.stylix
-      ./configuration.nix
+      ./nixos-modules/configuration.nix
       ./stylix.nix
     ];
 
