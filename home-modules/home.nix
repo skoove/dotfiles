@@ -22,7 +22,7 @@
     gimp
     hyprshot
     ksnip
-
+    libsForQt5.qtstyleplugin-kvantum
     # fonts
     corefonts
   ];
