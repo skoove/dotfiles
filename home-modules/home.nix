@@ -9,6 +9,7 @@
   imports = [
     ./stylix.nix
     ./starship.nix
+    ./nushell.nix
    ];
 
   fonts.fontconfig.enable = true;
@@ -35,10 +36,10 @@
 
   programs.kitty.enable = true;
   programs.zellij.enable = true;
-  programs.nushell.enable = true;
   programs.bat.enable = true;
   programs.fuzzel.enable = true;
   programs.carapace.enable = true;
+  programs.fastfetch.enable = true;
 
   services.hyprpaper.enable = true;
 
