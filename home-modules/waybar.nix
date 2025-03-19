@@ -17,6 +17,7 @@ in
         "temperature"
         "cpu"
         "memory"
+        "backlight"
         "network"
         "battery"
         "clock"
@@ -36,6 +37,10 @@ in
       network = {
         format = "{icon} {essid}";
         format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
+      };
+
+      backlight = {
+        format = " {percent}%";
       };
 
       cpu = {
