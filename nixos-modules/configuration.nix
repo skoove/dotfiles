@@ -102,7 +102,6 @@
   ];
 
   programs.hyprland.enable = settings.hyprland-enabled;
-  programs.starship.enable = true;
   programs.steam.enable = true;
 
   # Enable the X11 windowing system.

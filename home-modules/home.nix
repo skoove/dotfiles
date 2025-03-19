@@ -6,7 +6,10 @@
   home.username = "zie";
   home.homeDirectory = "/home/zie";
 
-  imports = [ ./stylix.nix ];
+  imports = [
+    ./stylix.nix
+    ./starship.nix
+   ];
 
   fonts.fontconfig.enable = true;
   
@@ -23,19 +26,18 @@
     hyprshot
     ksnip
     libsForQt5.qtstyleplugin-kvantum
+
     # fonts
     corefonts
   ];
 
   programs.kitty.enable = true;
-  programs.starship.enable = true;
   programs.zellij.enable = true;
   programs.nushell.enable = true;
   programs.bat.enable = true;
   programs.fuzzel.enable = true;
   programs.carapace.enable = true;
 
-  services.dunst.enable = true;
   services.hyprpaper.enable = true;
 
 

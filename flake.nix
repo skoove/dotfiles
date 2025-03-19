@@ -35,6 +35,7 @@
       ./home-modules/helix.nix
       ./home-modules/syncthing.nix
       ./home-modules/spotify.nix
+      ./home-modules/dunst.nix
       ./stylix.nix
     ];
 
