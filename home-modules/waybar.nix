@@ -34,7 +34,7 @@ in
       };
 
       network = {
-        format = "{icon} {essid}  {ipaddr}";
+        format = "{icon} {essid}";
         format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
       };
 
