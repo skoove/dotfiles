@@ -8,6 +8,8 @@ in
     systemd.enable = true; # makes it start with hyprland
 
     settings.main-bar = {
+      layer = "top";
+      
       modules-left = [
         "hyprland/workspaces"
         "hyprland/window"

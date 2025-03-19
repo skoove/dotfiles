@@ -4,10 +4,13 @@
 
 let
   mod = "SUPER";
-  menu = "fuzzel";
+  menu = "wofi --show drun";
   terminal = "kitty";
 in {
-  imports = [ ./waybar.nix ];
+  imports = [
+    ./waybar.nix
+    ./wofi.nix
+  ];
   
   wayland.windowManager.hyprland.enable = settings.hyprland-enabled;
 
@@ -33,6 +36,13 @@ in {
       "systemctl --user enable --now hyprpaper.service"
       "systemctl --user enable --now waybar.service"
       "systemctl --user enable --now syncthingtray.service"
+    ];
+
+    animation = [
+      # NAME, ONOFF, SPEED, CURVE ,STYLE
+      # style is optional
+      "windows, 1, 5, default, slide"
+      "workspaces, 1, 5, default, slidevert"
     ];
 
     bindm = [

@@ -37,7 +37,6 @@
   programs.kitty.enable = true;
   programs.zellij.enable = true;
   programs.bat.enable = true;
-  programs.fuzzel.enable = true;
   programs.carapace.enable = true;
   programs.fastfetch.enable = true;
 
