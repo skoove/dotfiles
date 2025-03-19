@@ -19,6 +19,7 @@
     brightnessctl
     pavucontrol
     inkscape
+    gimp
 
     # fonts
     corefonts
