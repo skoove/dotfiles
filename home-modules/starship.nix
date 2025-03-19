@@ -72,6 +72,7 @@
       Redhat = "󱄛"
       RedHatEnterprise = "󱄛"
       Pop = ""
+      NixOS = ""
 
       [username]
       show_always = true
