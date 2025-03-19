@@ -18,6 +18,7 @@
     bemoji
     brightnessctl
     pavucontrol
+    inkscape
 
     # fonts
     corefonts
