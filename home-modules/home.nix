@@ -39,10 +39,6 @@
   services.hyprpaper.enable = true;
 
 
-  home.sessionVariables = {
-    HYPRSHOT_DIR = "Photos/screenshots";
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;

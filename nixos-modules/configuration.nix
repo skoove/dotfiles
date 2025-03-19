@@ -84,6 +84,7 @@
   };
 
   environment.sessionVariables = {
+    HYPRSHOT_DIR = "Photos/screenshots";
     EDITOR = "hx";
   };
 
