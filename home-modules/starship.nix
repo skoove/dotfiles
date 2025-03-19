@@ -167,12 +167,12 @@
 
       [character]
       disabled = false
-      success_symbol = '[](bold fg:color_green)'
-      error_symbol = '[](bold fg:color_red)'
-      vimcmd_symbol = '[](bold fg:color_green)'
-      vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
-      vimcmd_replace_symbol = '[](bold fg:color_purple)'
-      vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+      success_symbol = '[>](bold fg:color_green)'
+      error_symbol = '[>](bold fg:color_red)'
+      vimcmd_symbol = '[<](bold fg:color_green)'
+      vimcmd_replace_one_symbol = '[<](bold fg:color_purple)'
+      vimcmd_replace_symbol = '[<](bold fg:color_purple)'
+      vimcmd_visual_symbol = '[<](bold fg:color_yellow)'
     '';
   };
 }

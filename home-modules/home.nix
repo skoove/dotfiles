@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib,... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -12,6 +12,7 @@
    ];
 
   fonts.fontconfig.enable = true;
+  fonts.fontconfig.defaultFonts.monospace = [ "JetbrainsMono NFM" "DejaVu Sans"];
   
   home.packages = with pkgs; [
     # programs
@@ -29,6 +30,7 @@
 
     # fonts
     corefonts
+    dejavu_fonts
   ];
 
   programs.kitty.enable = true;
