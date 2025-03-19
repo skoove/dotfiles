@@ -13,7 +13,7 @@ in {
 
   wayland.windowManager.hyprland.settings = {
     misc.disable_hyprland_logo = true;
-    general.border_size = 3;
+    general.border_size =  3;
   
     monitor = [
       ", preferred, auto, 1" # default for unspecified monitors
@@ -48,6 +48,10 @@ in {
     ];
 
     bind = [
+      "${mod}, S, exec, hyprshot -m region -- ksnip"
+      "${mod} SHIFT, S, exec, hyprshot -m window -- ksnip"
+      "${mod} CONTROL, S, exec, hyprshot -m output -- ksnip"
+
       "${mod}, T, exec, bemoji -c -n"
       "${mod}, D, exec, ${menu}"
       "${mod}, RETURN, exec, ${terminal}"
