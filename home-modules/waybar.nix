@@ -18,6 +18,7 @@ in
         "cpu"
         "memory"
         "backlight"
+        "pulseaudio"
         "network"
         "battery"
         "clock"
@@ -37,6 +38,14 @@ in
       network = {
         format = "{icon} {essid}";
         format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
+      };
+
+      pulseaudio = {
+        format = "{icon} {volume}%";
+        format-muted = " muted";
+        format-icons.default = [ "" ""];
+        on-click = "pavucontrol";
+        scroll-step = 1;
       };
 
       backlight = {
