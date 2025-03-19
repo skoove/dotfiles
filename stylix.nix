@@ -6,7 +6,7 @@
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "JetBrainsMono NFM";
+      name = "JetBrainsMono NF";
     };
     sansSerif = config.stylix.fonts.monospace;
     serif = config.stylix.fonts.monospace;

@@ -13,7 +13,7 @@
    ];
 
   fonts.fontconfig.enable = true;
-  fonts.fontconfig.defaultFonts.monospace = [ "JetbrainsMono NFM" "DejaVu Sans"];
+  fonts.fontconfig.defaultFonts.monospace = [ "JetbrainsMono NF" "DejaVu Sans"];
   
   home.packages = with pkgs; [
     # programs
