@@ -1,7 +1,10 @@
-{ pkgs, settings, ... }:
+{ pkgs, inputs, ... }:
 
 {
-  imports = [];
+  imports = [
+    inputs.stylix.nixosModules.stylix
+    ../stylix.nix
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -113,7 +116,7 @@
     git
   ];
 
-  programs.hyprland.enable = settings.hyprland-enabled;
+  programs.hyprland.enable = true;
   programs.steam.enable = true;
 
   # Enable the X11 windowing system.
