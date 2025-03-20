@@ -1,5 +1,7 @@
 { ... }:
 {
+  stylix.targets.starship.enable = false;
+
   programs.starship = {
     enable = true;
     settings = builtins.fromTOML ''
