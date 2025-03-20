@@ -13,7 +13,10 @@
    ];
 
   fonts.fontconfig.enable = true;
-  fonts.fontconfig.defaultFonts.monospace = [ "JetbrainsMono NF" "DejaVu Sans"];
+  fonts.fontconfig.defaultFonts.monospace = [
+    config.stylix.fonts.monospace.name
+    "DejaVu Sans"
+  ];
   
   home.packages = with pkgs; [
     # programs
