@@ -100,6 +100,7 @@
   environment.sessionVariables = {
     HYPRSHOT_DIR = "Photos/screenshots";
     EDITOR = "hx";
+    FLAKE = "~/.dotfiles";
   };
 
   # Allow unfree packages

@@ -38,6 +38,7 @@
     ksnip
     libsForQt5.qtstyleplugin-kvantum
     wl-clipboard
+    nix-output-monitor
 
     # fonts
     corefonts
@@ -49,7 +50,6 @@
   programs.bat.enable = true;
   programs.carapace.enable = true;
   programs.fastfetch.enable = true;
-
   services.hyprpaper.enable = true;
 
 
