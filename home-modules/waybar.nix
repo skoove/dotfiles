@@ -1,11 +1,11 @@
-{ config, ... }:
+{ config, lib, ... }:
 let
   colors = config.lib.stylix.colors;
 in
 {
   programs.waybar = {
     enable = true;
-    systemd.enable = true; # makes it start with hyprland
+    systemd.enable = true;
 
     settings.main-bar = {
       layer = "top";
@@ -72,7 +72,7 @@ in
       };
     };
 
-    style = ''
+    style =  ''
       window#waybar {
         background-color: #${colors.base01};
       }
