@@ -56,6 +56,18 @@
     variant = "";
   };
 
+  # upower and logind
+  services.upower = {
+    enable = true;
+    criticalPowerAction = "Hibernate";
+  };
+
+  services.logind = {
+    lidSwitch = "ignore";
+    powerKey = "ignore";
+    powerKeyLongPress = "ignore";
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
