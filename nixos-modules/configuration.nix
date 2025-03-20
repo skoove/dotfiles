@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./gaming.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -115,7 +116,6 @@
   ];
 
   programs.hyprland.enable = true;
-  programs.steam.enable = true;
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
