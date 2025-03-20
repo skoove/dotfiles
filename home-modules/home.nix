@@ -7,12 +7,11 @@
   home.homeDirectory = "/home/zie";
 
   imports = [
-    ../stylix.nix
+    ./hyprland.nix
     ./stylix.nix
     ./starship.nix
     ./nushell.nix
     ./nixcord.nix
-    ./hyprland.nix
     ./git.nix
     ./helix.nix
     ./syncthing.nix

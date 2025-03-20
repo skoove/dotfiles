@@ -27,9 +27,11 @@
         inherit pkgs;
 
         modules = [
-          inputs.stylix.homeManagerModules.stylix
+          ./stylix.nix
           ./home-modules/home.nix
           ./home-modules/rust-dev-tools.nix
+
+          stylix.homeManagerModules.stylix
         ];
 
         extraSpecialArgs = { inherit inputs; };
@@ -41,9 +43,11 @@
         inherit system;
 
         modules = [
-          inputs.stylix.nixosModules.stylix
+          ./stylix.nix
           ./hosts/laptop/hardware-configuration.nix
           ./nixos-modules/configuration.nix
+
+          stylix.nixosModules.stylix
         ];
 
         specialArgs = { inherit inputs; };
@@ -53,9 +57,11 @@
         inherit system;
 
         modules = [
-          inputs.stylix.nixosModules.stylix
+          ./stylix.nix
           ./hosts/desktop/hardware-configuration.nix
           ./nixos-modules/configuration.nix
+
+          stylix.nixosModules.stylix
         ];
 
         specialArgs = { inherit inputs; };
