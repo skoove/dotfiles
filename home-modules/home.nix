@@ -52,6 +52,9 @@
   programs.fastfetch.enable = true;
   services.hyprpaper.enable = true;
 
+  home.sessionVariables = {
+    FLAKE = "/home/zie/.dotfiles";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
