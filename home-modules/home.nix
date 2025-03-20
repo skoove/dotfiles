@@ -28,6 +28,7 @@
     hyprshot
     ksnip
     libsForQt5.qtstyleplugin-kvantum
+    wl-clipboard
 
     # fonts
     corefonts
