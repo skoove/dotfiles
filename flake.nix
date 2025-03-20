@@ -16,7 +16,7 @@
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -27,6 +27,7 @@
         inherit pkgs;
 
         modules = [
+          inputs.stylix.homeManagerModules.stylix
           ./home-modules/home.nix
           ./home-modules/rust-dev-tools.nix
         ];
@@ -40,6 +41,7 @@
         inherit system;
 
         modules = [
+          inputs.stylix.nixosModules.stylix
           ./hosts/laptop/hardware-configuration.nix
           ./nixos-modules/configuration.nix
         ];
@@ -51,6 +53,7 @@
         inherit system;
 
         modules = [
+          inputs.stylix.nixosModules.stylix
           ./hosts/desktop/hardware-configuration.nix
           ./nixos-modules/configuration.nix
         ];
