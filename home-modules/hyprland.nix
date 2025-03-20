@@ -1,6 +1,6 @@
 # managed by home manager
 
-{ settings, ... }:
+{ ... }:
 
 let
   mod = "SUPER";
@@ -10,9 +10,10 @@ in {
   imports = [
     ./waybar.nix
     ./wofi.nix
+    ./dunst.nix
   ];
   
-  wayland.windowManager.hyprland.enable = settings.hyprland-enabled;
+  wayland.windowManager.hyprland.enable = true;
 
   wayland.windowManager.hyprland.settings = {
     misc.disable_hyprland_logo = true;

@@ -1,5 +1,9 @@
-{ ... }:
-{ 
+{ inputs, ... }:
+{
+  imports = [
+    inputs.stylix.homeManagerModules.stylix
+  ];
+  
   stylix.targets.helix.enable = false;
   programs.helix = {
     enable = true;

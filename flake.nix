@@ -16,59 +16,46 @@
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
-
-    settings = {
-      hyprland-enabled = true; # bool
-    };
-
-    sharedHomeModules = [
-      stylix.homeManagerModules.stylix
-      ./home-modules/home.nix
-      ./home-modules/nixcord.nix
-      ./home-modules/hyprland.nix
-      ./home-modules/git.nix
-      ./home-modules/helix.nix
-      ./home-modules/syncthing.nix
-      ./home-modules/spotify.nix
-      ./home-modules/dunst.nix
-      ./stylix.nix
-    ];
-
-    sharedNixosModules = [
-      stylix.nixosModules.stylix
-      ./nixos-modules/configuration.nix
-      ./stylix.nix
-    ];
-
-    sharedArgs = {
-      inherit settings;
-      inputs = inputs;
-    };
   in {
     homeConfigurations = {
       zie = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = sharedHomeModules ++ [ ];
-        extraSpecialArgs = sharedArgs;
+
+        modules = [
+          ./home-modules/home.nix
+          ./home-modules/rust-dev-tools.nix
+        ];
+
+        extraSpecialArgs = { inherit inputs; };
       };
     };
 
     nixosConfigurations = {
       zie-nixos-laptop = lib.nixosSystem {
         inherit system;
-        modules = sharedNixosModules ++ [ ./hosts/laptop/hardware-configuration.nix ];
-        specialArgs = sharedArgs;
+
+        modules = [
+          ./hosts/laptop/hardware-configuration.nix
+          ./nixos-modules/configuration.nix
+        ];
+
+        specialArgs = { inherit inputs; };
       };
 
       zie-nixos-desktop = lib.nixosSystem {
         inherit system;
-        modules = sharedNixosModules ++ [ ./hosts/desktop/hardware-configuration.nix ];
-        specialArgs = sharedArgs;
+
+        modules = [
+          ./hosts/desktop/hardware-configuration.nix
+          ./nixos-modules/configuration.nix
+        ];
+
+        specialArgs = { inherit inputs; };
       };
     };
   };
