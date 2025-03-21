@@ -16,7 +16,6 @@ in {
   wayland.windowManager.hyprland.enable = true;
 
   wayland.windowManager.hyprland.settings = {
-    misc.disable_hyprland_logo = true;
     general.border_size =  3;
 
     env = "HYPRSHOT_DIR,Photos/screenshots";
@@ -26,6 +25,16 @@ in {
       "HDMI-A-1, 1920x1080@100.0, auto, 1" # main desktop monitor
       "DVI-D-1, 1920x1080@100.0, auto-left, 1" # left desktop monitor
     ];
+
+    misc = {
+      disable_hyprland_logo = true;
+      vfr = true;
+    };
+
+    decoration = {
+      blur.enabled = false;
+      shadow.enabled = false;
+    };
 
     device = {
       name = "logitech-g203-lightsync-gaming-mouse";
@@ -44,6 +53,7 @@ in {
       # style is optional
       "windows, 1, 5, default, slide"
       "workspaces, 1, 5, default, slidevert"
+      "fade, 0"
     ];
 
     bindm = [
