@@ -27,8 +27,14 @@ in
         "tray"
       ];
 
+      "hyprland/window".icon = true;
+
+      tray = {
+        spacing = 5;
+      };
+
       clock = {
-        format = " {:%H:%M  %F}";
+        format = " {:%H:%M   %F}";
       };
 
       battery = {
@@ -68,14 +74,11 @@ in
       temperature = {
         interval = 1;
         thermal-zone = 2;
+        critical-threshold = 80;
         format = " {temperatureC}°C";
       };
     };
 
-    style =  ''
-      window#waybar {
-        background-color: #${colors.base01};
-      }
-    '';
+    style = builtins.readFile ./waybar.css;
   };
 }

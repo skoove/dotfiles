@@ -1,0 +1,20 @@
+window#waybar {
+  background-color: @base01;
+}
+
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#backlight,
+#cpu,
+#memory,
+#temperature,
+#tray {
+  padding-right: 10px;
+}
+
+#temperature.critical {
+  background-color: @base08;
+  color: @base00;
+}
