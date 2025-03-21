@@ -9,15 +9,16 @@
   imports = [
     ./dwarf-fortress.nix
     ./eza.nix
-    ./kitty.nix
     ./git.nix
     ./helix.nix
     ./hyprland.nix
+    ./kitty.nix
     ./nixcord.nix
     ./spotify.nix
     ./starship.nix
     ./stylix.nix
     ./syncthing.nix
+    ./thunderbird.nix
     ./zellij.nix
     ./zsh.nix
    ];
@@ -51,7 +52,6 @@
 
   programs.bat.enable = true;
   programs.carapace.enable = true;
-  programs.thunderbird.enable = true;
 
   services.hyprpaper.enable = true;
 
