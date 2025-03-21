@@ -46,6 +46,8 @@ in {
       "systemctl --user enable --now hyprpaper.service"
       "systemctl --user enable --now waybar.service"
       "systemctl --user enable --now syncthingtray.service"
+      "discord --start-minimized"
+      "steam -silent"
     ];
 
     animation = [
