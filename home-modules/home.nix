@@ -50,7 +50,6 @@
   programs.zellij.enable = true;
   programs.bat.enable = true;
   programs.carapace.enable = true;
-  programs.fastfetch.enable = true;
   services.hyprpaper.enable = true;
 
   home.sessionVariables = {
