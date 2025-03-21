@@ -51,6 +51,8 @@
 
   programs.bat.enable = true;
   programs.carapace.enable = true;
+  programs.thunderbird.enable = true;
+
   services.hyprpaper.enable = true;
 
   home.sessionVariables = {
