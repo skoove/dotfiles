@@ -16,6 +16,8 @@
     ./syncthing.nix
     ./spotify.nix
     ./dwarf-fortress.nix
+    ./zsh.nix
+    ./eza.nix
    ];
 
   fonts.fontconfig.enable = true;
