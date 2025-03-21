@@ -9,6 +9,7 @@
   imports = [
     ./dwarf-fortress.nix
     ./eza.nix
+    ./kitty.nix
     ./git.nix
     ./helix.nix
     ./hyprland.nix
@@ -48,7 +49,6 @@
     dejavu_fonts
   ];
 
-  programs.kitty.enable = true;
   programs.bat.enable = true;
   programs.carapace.enable = true;
   services.hyprpaper.enable = true;
