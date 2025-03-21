@@ -16,6 +16,7 @@
     ./helix.nix
     ./syncthing.nix
     ./spotify.nix
+    ./dwarf-fortress.nix
    ];
 
   fonts.fontconfig.enable = true;
@@ -39,7 +40,7 @@
     libsForQt5.qtstyleplugin-kvantum
     wl-clipboard
     nix-output-monitor
-
+    
     # fonts
     corefonts
     dejavu_fonts
