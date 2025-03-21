@@ -87,6 +87,7 @@
   # services.xserver.libinput.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zie = {
@@ -109,7 +110,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     firefox
-    nushell
     helix
     nh
     git

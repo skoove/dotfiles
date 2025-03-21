@@ -10,7 +10,6 @@
     ./hyprland.nix
     ./stylix.nix
     ./starship.nix
-    ./nushell.nix
     ./nixcord.nix
     ./git.nix
     ./helix.nix
