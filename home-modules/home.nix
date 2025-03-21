@@ -7,17 +7,18 @@
   home.homeDirectory = "/home/zie";
 
   imports = [
-    ./hyprland.nix
-    ./stylix.nix
-    ./starship.nix
-    ./nixcord.nix
+    ./dwarf-fortress.nix
+    ./eza.nix
     ./git.nix
     ./helix.nix
-    ./syncthing.nix
+    ./hyprland.nix
+    ./nixcord.nix
     ./spotify.nix
-    ./dwarf-fortress.nix
+    ./starship.nix
+    ./stylix.nix
+    ./syncthing.nix
+    ./zellij.nix
     ./zsh.nix
-    ./eza.nix
    ];
 
   fonts.fontconfig.enable = true;
@@ -48,7 +49,6 @@
   ];
 
   programs.kitty.enable = true;
-  programs.zellij.enable = true;
   programs.bat.enable = true;
   programs.carapace.enable = true;
   services.hyprpaper.enable = true;
