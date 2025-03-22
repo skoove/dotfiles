@@ -44,6 +44,7 @@
     ksnip                            # edit screenshots
     wl-clipboard                     # copy things to clipboard (required by bemoji)
     libsForQt5.qtstyleplugin-kvantum # themeing for qt apps
+    wofi-power-menu                  # shutdown & other poweractions using wofi
 
     # tools
     nixd               # nix lsp
