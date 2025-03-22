@@ -50,6 +50,7 @@
     nix-output-monitor # see builds better
     dust               # disk usage but easier read
     nh                 # replacement for rebuild commands
+    tldr               # simpler man pages
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
