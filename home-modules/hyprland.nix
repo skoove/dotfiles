@@ -7,6 +7,8 @@ let
   menu = "wofi --show drun";
   terminal = "kitty";
   power-menu = "wofi-power-menu";
+
+  hostname = builtins.getEnv "HOSTNAME";
 in {
   imports = [
     ./waybar.nix
@@ -47,7 +49,13 @@ in {
       "systemctl --user enable --now hyprpaper.service"
       "systemctl --user enable --now waybar.service"
       "systemctl --user enable --now syncthingtray.service"
-    ];
+      "${hostname}"
+    ] ++ (
+      if hostname == "zie-nixos-desktop" then [
+        "discord --start-minimized"
+        "steam -silent"
+      ] else []
+    );
 
     animation = [
       # NAME, ONOFF, SPEED, CURVE ,STYLE

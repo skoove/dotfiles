@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config, ... }:
 
 {
   imports = [
@@ -6,6 +6,13 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  environment.sessionVariables = {
+    HYPRSHOT_DIR = "Photos/screenshots";
+    EDITOR = "hx";
+    HOSTNAME = config.networking.hostName;
+    FLAKE = "/home/zie/.dotfiles";
+  };
 
   # storage optimisation
   nix.optimise = {
@@ -98,10 +105,6 @@
     ];
   };
 
-  environment.sessionVariables = {
-    HYPRSHOT_DIR = "Photos/screenshots";
-    EDITOR = "hx";
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
