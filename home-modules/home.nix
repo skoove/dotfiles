@@ -30,28 +30,38 @@
   ];
   
   home.packages = with pkgs; [
-    # programs
-    obsidian
-    libreoffice-fresh
-    nixd
-    bemoji
-    brightnessctl
-    pavucontrol
-    inkscape
-    gimp
-    hyprshot
-    ksnip
-    libsForQt5.qtstyleplugin-kvantum
-    wl-clipboard
-    nix-output-monitor
+    # productive
+    obsidian          # note taking
+    libreoffice-fresh # office suite
+    inkscape          # vector graphics
+    gimp              # image editing
+
+    # utils
+    bemoji                           # emoji picker for wofi
+    brightnessctl                    # for controlling laptop backlight
+    hyprshot                         # screenshotting
+    pavucontrol                      # volume control
+    ksnip                            # edit screenshots
+    wl-clipboard                     # copy things to clipboard (required by bemoji)
+    libsForQt5.qtstyleplugin-kvantum # themeing for qt apps
+
+    # tools
+    nixd               # nix lsp
+    nix-output-monitor # see builds better
+    dust               # disk usage but easier read
+    nh                 # replacement for rebuild commands
+
+    # not tools at all but i dont want to nix run them
+    nitch # pretty, mostly useless
     
     # fonts
-    corefonts
-    dejavu_fonts
+    corefonts    # ms fonts
+    dejavu_fonts # idk if i actually like these
   ];
 
   programs.bat.enable = true;
   programs.carapace.enable = true;
+  programs.firefox.enable = true;
 
   services.hyprpaper.enable = true;
 
