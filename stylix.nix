@@ -8,6 +8,7 @@
       package = pkgs.nerd-fonts.jetbrains-mono;
       name = "JetBrainsMono NF";
     };
+
     sansSerif = config.stylix.fonts.monospace;
     serif = config.stylix.fonts.monospace;
     # emoji = config.stylix.fonts.monospace;

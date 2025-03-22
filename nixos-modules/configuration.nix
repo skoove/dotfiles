@@ -2,7 +2,11 @@
 
 {
   imports = [
+    ../stylix.nix
     ./gaming.nix
+
+    inputs.stylix.nixosModules.stylix
+    inputs.home-manager.nixosModules.default
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -102,10 +106,22 @@
     description = "Zie Sturges";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      helix
+      firefox
     ];
   };
 
+  # this is to make sure stylix is loaded last
+  # remember to add stylix to new users
+  stylix.homeManagerIntegration.autoImport = false;
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "zie" = import ../home-modules/home.nix;
+    };
+  };
+  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

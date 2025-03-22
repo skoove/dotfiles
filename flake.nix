@@ -24,55 +24,32 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    homeConfigurations = {
-      zie = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          ./stylix.nix
-          ./home-modules/home.nix
-          ./home-modules/rust-dev-tools.nix
-
-          stylix.homeManagerModules.stylix
-        ];
-
-        extraSpecialArgs = { inherit inputs; };
-      };
-    };
-
     nixosConfigurations = {
       zie-nixos-laptop = lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
 
         modules = [
-          ./stylix.nix
           ./hosts/laptop/hardware-configuration.nix
           ./nixos-modules/configuration.nix
-
-          stylix.nixosModules.stylix
         ];
 
-        specialArgs = { inherit inputs; };
       };
 
       zie-nixos-desktop = lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
 
         modules = [
-          ./stylix.nix
           ./hosts/desktop/hardware-configuration.nix
           ./nixos-modules/configuration.nix
-
-          stylix.nixosModules.stylix
         ];
-
-        specialArgs = { inherit inputs; };
       };
     };
   };

@@ -1,12 +1,13 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "zie";
-  home.homeDirectory = "/home/zie";
+  # home.username = "zie";
+  # home.homeDirectory = "/home/zie";
 
   imports = [
+    ../stylix.nix
     ./dwarf-fortress.nix
     ./eza.nix
     ./git.nix
@@ -14,6 +15,7 @@
     ./hyprland.nix
     ./kitty.nix
     ./nixcord.nix
+    ./rust-dev-tools.nix
     ./spotify.nix
     ./starship.nix
     ./stylix.nix
@@ -21,6 +23,8 @@
     ./thunderbird.nix
     ./zellij.nix
     ./zsh.nix
+
+    inputs.stylix.homeManagerModules.stylix
    ];
 
   fonts.fontconfig.enable = true;
@@ -67,12 +71,8 @@
 
   services.hyprpaper.enable = true;
 
-  home.sessionVariables = {
-    FLAKE = "/home/zie/.dotfiles";
-  };
-
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  # programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
   home.stateVersion = "24.11";
 }

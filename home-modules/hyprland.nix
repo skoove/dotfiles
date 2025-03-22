@@ -1,6 +1,4 @@
-# managed by home manager
-
-{ ... }:
+{ config, osConfig , ... }:
 
 let
   mod = "SUPER";
@@ -8,7 +6,7 @@ let
   terminal = "kitty";
   power-menu = "wofi-power-menu";
 
-  hostname = builtins.getEnv "HOSTNAME";
+  hostname = osConfig.networking.hostName;
 in {
   imports = [
     ./waybar.nix
@@ -49,7 +47,6 @@ in {
       "systemctl --user enable --now hyprpaper.service"
       "systemctl --user enable --now waybar.service"
       "systemctl --user enable --now syncthingtray.service"
-      "${hostname}"
     ] ++ (
       if hostname == "zie-nixos-desktop" then [
         "discord --start-minimized"
