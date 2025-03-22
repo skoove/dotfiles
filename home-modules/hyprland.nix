@@ -6,6 +6,7 @@ let
   mod = "SUPER";
   menu = "wofi --show drun";
   terminal = "kitty";
+  power-menu = "wofi-power-menu";
 in {
   imports = [
     ./waybar.nix
@@ -78,11 +79,11 @@ in {
       "${mod}, T, exec, bemoji -c -n"
       "${mod}, D, exec, ${menu}"
       "${mod}, RETURN, exec, ${terminal}"
+      "${mod} SHIFT, M, exec, ${power-menu}"
 
       "${mod}, Q, killactive"
       "${mod}, F, fullscreen"
       "${mod}, W, togglegroup"
-      "${mod} SHIFT, M, exit"
 
       "${mod}, H, movefocus, l"
       "${mod}, L, movefocus, r"
