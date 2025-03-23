@@ -62,7 +62,8 @@
     LC_TIME = "en_AU.UTF-8";
   };
 
-
+  services.openssh.enable = true;
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
