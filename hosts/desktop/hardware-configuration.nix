@@ -15,8 +15,8 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = false; # hey zie, if sleep/hibernate breaks turn this on
-    open = false;
+    powerManagement.enable = true; # hey zie, if sleep/hibernate breaks turn this on
+    open = false;                  # hey past zie, why the hell did you turn this off??
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
