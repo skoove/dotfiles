@@ -39,6 +39,7 @@
     libreoffice-fresh # office suite
     inkscape          # vector graphics
     gimp              # image editing
+    aseprite          # pixel art
 
     # utils
     bemoji                           # emoji picker for wofi
