@@ -8,6 +8,7 @@
 
   imports = [
     ../stylix.nix
+    ./bottom.nix
     ./dwarf-fortress.nix
     ./eza.nix
     ./git.nix
