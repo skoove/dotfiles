@@ -6,6 +6,7 @@
       allow_images = true;
       allow_markup = true;
       insensitive = true;
+      width = "30%";
     };
   };
 }
