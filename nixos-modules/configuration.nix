@@ -117,7 +117,9 @@
   stylix.homeManagerIntegration.autoImport = false;
 
   home-manager = {
+    backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
+
     users = {
       "zie" = import ../home-modules/home.nix;
     };
