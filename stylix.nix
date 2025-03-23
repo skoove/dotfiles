@@ -6,12 +6,19 @@
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "JetBrainsMono NF";
+      name = "JetBrainsMono Nerd Font";
     };
 
     sansSerif = config.stylix.fonts.monospace;
     serif = config.stylix.fonts.monospace;
     # emoji = config.stylix.fonts.monospace;
+
+    sizes = {
+      applications = 10;
+      desktop = 10;
+      popups = 10;
+      terminal = 10;
+    };
   };
 
   stylix.targets.qt.enable = true;
