@@ -8,7 +8,7 @@
       enableIntro = false;
       enableDFHack = true;
       enableTWBT = true;
-      enableTruetype = true;
+      enableTruetype = false;
     })
   ];
 
