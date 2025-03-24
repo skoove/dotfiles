@@ -1,6 +1,6 @@
 { ... }:
 {
-  stylix.targets.starship.enable = false;
+  stylix.targets.starship.enable = true;
 
   programs.starship = {
     enable = true;
