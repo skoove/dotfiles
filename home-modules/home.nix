@@ -24,6 +24,7 @@
     ./zellij.nix
     ./zsh.nix
     ./sops.nix
+    ./thunderbird.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];
