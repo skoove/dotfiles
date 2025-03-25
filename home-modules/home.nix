@@ -14,7 +14,6 @@
     ./git.nix
     ./helix.nix
     ./hyprland.nix
-    ./kitty.nix
     ./nixcord.nix
     ./rust-dev-tools.nix
     ./spotify.nix
@@ -73,6 +72,7 @@
   programs.bat.enable = true;
   programs.carapace.enable = true;
   programs.firefox.enable = true;
+  programs.foot.enable = true;
 
   services.hyprpaper.enable = true;
 

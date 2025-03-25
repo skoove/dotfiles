@@ -3,7 +3,7 @@
 let
   mod = "SUPER";
   menu = "wofi --show drun";
-  terminal = "kitty";
+  terminal = "foot";
   power-menu = "wofi-power-menu";
 
   hostname = osConfig.networking.hostName;
