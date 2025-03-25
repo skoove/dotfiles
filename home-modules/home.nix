@@ -23,7 +23,7 @@
     ./zellij.nix
     ./zsh.nix
     ./sops.nix
-    ./thunderbird.nix
+    ./email.nix.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];
