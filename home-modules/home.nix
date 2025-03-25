@@ -21,9 +21,9 @@
     ./starship.nix
     ./stylix.nix
     ./syncthing.nix
-    ./thunderbird.nix
     ./zellij.nix
     ./zsh.nix
+    ./sops.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];
@@ -58,6 +58,8 @@
     dust               # disk usage but easier read
     nh                 # replacement for rebuild commands
     tldr               # simpler man pages
+    bitwarden-cli      # password manager
+    sops               # secrets management
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
