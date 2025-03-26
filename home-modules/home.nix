@@ -51,6 +51,7 @@
     wl-clipboard                     # copy things to clipboard (required by bemoji)
     libsForQt5.qtstyleplugin-kvantum # themeing for qt apps
     wofi-power-menu                  # shutdown & other poweractions using wofi
+    python3                          # its python 3!
 
     # tools
     nixd               # nix lsp

@@ -138,6 +138,11 @@
 
   programs.hyprland.enable = true;
 
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
   services.displayManager.ly.enable = true;
   
   # Open ports in the firewall.
