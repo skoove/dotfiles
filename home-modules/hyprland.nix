@@ -14,7 +14,7 @@ in {
     ./dunst.nix
   ];
   
-  wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland.enable = osConfig.programs.hyprland.enable;
 
   wayland.windowManager.hyprland.settings = {
     general.border_size =  3;
