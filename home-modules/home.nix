@@ -23,7 +23,7 @@
     ./zellij.nix
     ./zsh.nix
     ./sops.nix
-    ./email.nix.nix
+    ./email.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];
