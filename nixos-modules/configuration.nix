@@ -7,6 +7,7 @@
 
     inputs.stylix.nixosModules.stylix
     inputs.home-manager.nixosModules.default
+    inputs.niri.nixosModules.niri
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -137,6 +138,11 @@
   ];
 
   programs.hyprland.enable = true;
+
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri;
+  };
 
   programs.gnupg.agent = {
     enable = true;
