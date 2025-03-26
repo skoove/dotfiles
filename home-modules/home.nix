@@ -10,6 +10,7 @@
     ../stylix.nix
     ./bottom.nix
     # ./dwarf-fortress.nix
+    ./niri.nix
     ./eza.nix
     ./git.nix
     ./helix.nix
@@ -61,6 +62,7 @@
     tldr               # simpler man pages
     bitwarden-cli      # password manager
     sops               # secrets management
+    nushell            # i dont use nu as a shell but its amazing for scripting!! and also just to have around
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
