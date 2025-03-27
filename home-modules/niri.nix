@@ -149,6 +149,7 @@ in {
         # screenshotting
         "${mod}+S".action = screenshot;
         "${mod}+Shift+S".action = screenshot-window;
+        "${mod}+A".action = sh "wl-paste | satty -f -";
 
         # resize things
         "Mod+Equal".action = set-column-width "+10%";
