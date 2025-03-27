@@ -49,7 +49,7 @@
     brightnessctl                    # for controlling laptop backlight
     hyprshot                         # screenshotting
     pavucontrol                      # volume control
-    ksnip                            # edit screenshots
+    satty                            # edit screenshots
     wl-clipboard                     # copy things to clipboard (required by bemoji)
     libsForQt5.qtstyleplugin-kvantum # themeing for qt apps
     wofi-power-menu                  # shutdown & other poweractions using wofi
