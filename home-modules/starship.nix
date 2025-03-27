@@ -4,7 +4,9 @@
 
   programs.starship = {
     enable = true;
-      settings = builtins.fromTOML ''
+    enableFishIntegration = true;
+    
+    settings = builtins.fromTOML ''
       [aws]
       format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
