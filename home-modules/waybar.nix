@@ -14,8 +14,8 @@ in
         "niri/workspaces"
         "niri/window"
       
-        "hyprland/workspaces"
-        "hyprland/window"
+        # "hyprland/workspaces"
+        # "hyprland/window"
       ];
 
       modules-right = [

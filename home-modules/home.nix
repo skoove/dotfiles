@@ -7,25 +7,26 @@
   # home.homeDirectory = "/home/zie";
 
   imports = [
+    # ./dwarf-fortress.nix
+    # ./hyprland.nix
     ../stylix.nix
     ./bottom.nix
-    # ./dwarf-fortress.nix
-    ./foot.nix
-    ./niri.nix
+    ./email.nix
     ./eza.nix
+    ./fish.nix
+    ./foot.nix
     ./git.nix
     ./helix.nix
-    # ./hyprland.nix
+    ./niri.nix
     ./nixcord.nix
     ./rust-dev-tools.nix
+    ./sops.nix
     ./spotify.nix
     ./starship.nix
     ./stylix.nix
     ./syncthing.nix
     ./zellij.nix
-    ./zsh.nix
-    ./sops.nix
-    ./email.nix
+    # ./zsh.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];
@@ -74,7 +75,6 @@
   ];
 
   programs.bat.enable = true;
-  programs.carapace.enable = true;
   programs.firefox.enable = true;
 
   # Let Home Manager install and manage itself.
