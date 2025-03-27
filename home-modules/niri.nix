@@ -1,10 +1,12 @@
-{ config , pkgs , ... }:
+{ config , pkgs , osConfig , ... }:
 let
   mod = "Super";
   menu = "wofi --show drun";
   terminal = "footclient";
   alt_terminal = "foot";
   power-menu = "wofi-power-menu";
+
+  hostname = osConfig.networking.hostName;
 in {
   imports = [
     ./waybar.nix
@@ -37,10 +39,15 @@ in {
       spawn-at-startup =[
         { command = [ "sh" "-c" "systemctl --user enable --now waybar.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
-        { command = [ "sh" "-c" "systemctl --user enable --now hyprpaper.service"]; }
+        { command = [ "sh" "-c" "systemctl --user enable --now hyprpaper.service" ]; }
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
-      ];
+      ] ++ (
+        if hostname == "zie-nixos-desktop" then [
+          { command = [ "discord" "--start-minimized" ]; }
+          { command = [ "steam" "-silent" ]; }
+        ] else []
+      );
 
       environment = {
         QT_QPA_PLATFORM = "wayland";
