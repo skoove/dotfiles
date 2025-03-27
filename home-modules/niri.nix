@@ -76,12 +76,33 @@ in {
       ];
 
       outputs = {
-        "Chimei Innolux Corporation" = {
+        # laptop monitor
+        "HDMI-A-1" = {
           scale = 1.0;
           mode = {
             width = 1920;
             height = 1080;
-            refresh = 60.0;
+            refresh = 100.0;
+          };
+        };
+
+        # primary desktop monitor
+        "DVI-D-1" = {
+          scale = 1.0;
+          mode = {
+            width = 1920;
+            height = 1080;
+            refresh = 100.0;
+          };
+        };
+
+        # left desktop monitor
+        "eDP-1" = {
+          scale = 1.0;
+          mode = {
+            width = 1920;
+            height = 1080;
+            refresh = 100.0;
           };
         };
       };
