@@ -52,26 +52,31 @@ in {
       let
         sh = spawn "sh" "-c";
       in {
+        # open things
         "${mod}+D".action = sh menu;
         "${mod}+Return".action = sh terminal;
         "${mod}+Shift+Return".action = sh alt_terminal;
         "${mod}+Shift+M".action = sh power-menu;
 
+        # resize and reorient
         "${mod}+Q".action = close-window;
         "${mod}+F".action = maximize-column;
         "${mod}+Shift+F".action = fullscreen-window;
         "${mod}+C".action = center-column;
 
+        # refocus
         "${mod}+K".action = focus-window-or-workspace-up;
         "${mod}+J".action = focus-window-or-workspace-down;
         "${mod}+H".action = focus-column-or-monitor-left;
         "${mod}+L".action = focus-column-or-monitor-right;
 
+        # move things
         "${mod}+Shift+K".action = move-window-up-or-to-workspace-up;
         "${mod}+Shift+J".action = move-window-down-or-to-workspace-down;
         "${mod}+Shift+H".action = move-column-left-or-to-monitor-left;
         "${mod}+Shift+L".action = move-column-right-or-to-monitor-right;
 
+        # stack and unstack
         "${mod}+Comma".action = consume-or-expel-window-left;
         "${mod}+Period".action = consume-or-expel-window-right;
 
