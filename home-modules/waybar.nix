@@ -11,6 +11,9 @@ in
       layer = "top";
       
       modules-left = [
+        "niri/workspaces"
+        "niri/window"
+      
         "hyprland/workspaces"
         "hyprland/window"
       ];
@@ -28,6 +31,15 @@ in
       ];
 
       "hyprland/window".icon = true;
+      "niri/window".icon = true;
+
+      "niri/workspaces" = {
+        format = "{icon}";
+        format-icons = {
+          active = "";
+          default = "";
+        };
+      };
 
       tray = {
         spacing = 5;

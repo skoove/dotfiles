@@ -52,7 +52,9 @@ in {
         "${mod}+Shift+M".action = sh power-menu;
 
         "${mod}+Q".action = close-window;
-        "${mod}+F".action = fullscreen-window;
+        "${mod}+F".action = maximize-column;
+        "${mod}+Shift+F".action = fullscreen-window;
+        "${mod}+C".action = center-column;
 
         "${mod}+K".action = focus-workspace-up;
         "${mod}+J".action = focus-workspace-down;
