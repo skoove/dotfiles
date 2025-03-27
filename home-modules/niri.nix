@@ -42,7 +42,7 @@ in {
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
       ] ++ (
-        if hostname == "zie-nixos-desktop" then [
+        if hostname == "nixos-desktop" then [
           { command = [ "discord" "--start-minimized" ]; }
           { command = [ "steam" "-silent" ]; }
         ] else []

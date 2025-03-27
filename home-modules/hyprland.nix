@@ -49,7 +49,7 @@ in {
       "systemctl --user enable --now waybar.service"
       "systemctl --user enable --now syncthingtray.service"
     ] ++ (
-      if hostname == "zie-nixos-desktop" then [
+      if hostname == "nixos-desktop" then [
         "discord --start-minimized"
         "steam -silent"
       ] else []

@@ -42,7 +42,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      zie-nixos-laptop = lib.nixosSystem {
+      nixos-laptop = lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
 
@@ -53,7 +53,7 @@
 
       };
 
-      zie-nixos-desktop = lib.nixosSystem {
+      nixos-desktop = lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
 

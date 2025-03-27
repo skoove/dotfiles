@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  networking.hostName = "zie-nixos-desktop";
+  networking.hostName = "nixos-desktop";
 
   # nvidia settings yippppieieieieiei
   services.xserver.videoDrivers = [ "nvidia" ];
