@@ -12,7 +12,21 @@ in {
     ./dunst.nix
   ];
 
-  home.packages = [ pkgs.xwayland-satellite ];
+  home.packages = with pkgs; [
+    xwayland-satellite
+    gnome-keyring
+  ];
+
+  xdg.portal ={
+    enable = true;
+    config.common.default = "*";
+    
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gnome
+      xdg-desktop-portal-gtk
+    ];
+  };
+
 
   services.hyprpaper.enable = true;
 
@@ -30,6 +44,7 @@ in {
 
       environment = {
         QT_QPA_PLATFORM = "wayland";
+        ELECTRON_OZONE_PLATFORM_HINT = "wayland";
         DISPLAY = ":0";
       };
 
@@ -58,7 +73,7 @@ in {
         "${mod}+Shift+Return".action = sh alt_terminal;
         "${mod}+Shift+M".action = sh power-menu;
 
-        # resize and reorient
+        # reorient
         "${mod}+Q".action = close-window;
         "${mod}+F".action = maximize-column;
         "${mod}+Shift+F".action = fullscreen-window;
@@ -80,17 +95,24 @@ in {
         "${mod}+Comma".action = consume-or-expel-window-left;
         "${mod}+Period".action = consume-or-expel-window-right;
 
+        # screenshotting
+        "${mod}+S".action = screenshot;
+        "${mod}+Shift+S".action = screenshot-window;
+
+        # resize things
         "Mod+Equal".action = set-column-width "+10%";
         "Mod+Minus".action = set-column-width "-10%";
         "Mod+Shift+Equal".action = set-window-height "+10%";
         "Mod+Shift+Minus".action = set-window-height "-10%";
 
+        # the exact same binds that have followed me from wm to wm for
+        # probably years now!
         "XF86AudioRaiseVolume".action = sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
         "XF86AudioLowerVolume".action = sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
-        XF86AudioMute.action = sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        XF86AudioMicMute.action = sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-        XF86MonBrightnessUp.action = sh "brightnessctl s 10%+";
-        XF86MonBrightnessDown.action = sh "brightnessctl s 10%-";
+        "XF86AudioMute".action = sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        "XF86AudioMicMute".action = sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+        "XF86MonBrightnessUp".action = sh "brightnessctl s 10%+";
+        "XF86MonBrightnessDown".action = sh "brightnessctl s 10%-";
       };
     };
   };
