@@ -59,18 +59,23 @@ in {
         "${mod}+Shift+F".action = fullscreen-window;
         "${mod}+C".action = center-column;
 
-        "${mod}+K".action = focus-workspace-up;
-        "${mod}+J".action = focus-workspace-down;
+        "${mod}+K".action = focus-window-or-workspace-up;
+        "${mod}+J".action = focus-window-or-workspace-down;
         "${mod}+H".action = focus-column-or-monitor-left;
         "${mod}+L".action = focus-column-or-monitor-right;
 
-        "${mod}+Shift+K".action = move-workspace-up;
-        "${mod}+Shift+J".action = move-workspace-down;
+        "${mod}+Shift+K".action = move-window-up-or-to-workspace-up;
+        "${mod}+Shift+J".action = move-window-down-or-to-workspace-down;
         "${mod}+Shift+H".action = move-column-left-or-to-monitor-left;
         "${mod}+Shift+L".action = move-column-right-or-to-monitor-right;
 
+        "${mod}+Comma".action = consume-or-expel-window-left;
+        "${mod}+Period".action = consume-or-expel-window-right;
+
         "Mod+Equal".action = set-column-width "+10%";
         "Mod+Minus".action = set-column-width "-10%";
+        "Mod+Shift+Equal".action = set-window-height "+10%";
+        "Mod+Shift+Minus".action = set-window-height "-10%";
 
         "XF86AudioRaiseVolume".action = sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
         "XF86AudioLowerVolume".action = sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
