@@ -1,10 +1,9 @@
 { config , pkgs , osConfig , ... }:
 let
   mod = "Super";
-  menu = "wofi --show drun";
+  menu = "fuzzel";
   terminal = "footclient";
   alt_terminal = "foot";
-  power-menu = "wofi-power-menu";
 
   hostname = osConfig.networking.hostName;
 in {
@@ -122,7 +121,7 @@ in {
         "${mod}+D".action = sh menu;
         "${mod}+Return".action = sh terminal;
         "${mod}+Shift+Return".action = sh alt_terminal;
-        "${mod}+Shift+M".action = sh power-menu;
+        "${mod}+Shift+M".action = quit;
 
         # reorient
         "${mod}+Q".action = close-window;

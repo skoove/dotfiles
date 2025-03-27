@@ -15,6 +15,7 @@
     ./eza.nix
     ./fish.nix
     ./foot.nix
+    ./fuzzel.nix
     ./git.nix
     ./helix.nix
     ./niri.nix
