@@ -48,6 +48,18 @@ in {
         DISPLAY = ":0";
       };
 
+      input = {
+        mouse = {
+          accel-profile = "flat";
+          accel-speed = 0.3;
+        };
+
+        trackpoint = {
+          accel-profile = "adaptive";
+          accel-speed = 0.3;
+        };
+      };
+
       window-rules = [
         {
           clip-to-geometry = true;
