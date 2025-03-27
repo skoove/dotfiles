@@ -10,6 +10,7 @@
     ../stylix.nix
     ./bottom.nix
     # ./dwarf-fortress.nix
+    ./foot.nix
     ./niri.nix
     ./eza.nix
     ./git.nix
@@ -75,7 +76,6 @@
   programs.bat.enable = true;
   programs.carapace.enable = true;
   programs.firefox.enable = true;
-  programs.foot.enable = true;
 
   # Let Home Manager install and manage itself.
   # programs.home-manager.enable = true;

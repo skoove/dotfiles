@@ -2,7 +2,8 @@
 let
   mod = "Super";
   menu = "wofi --show drun";
-  terminal = "foot";
+  terminal = "footclient";
+  alt_terminal = "foot";
   power-menu = "wofi-power-menu";
 in {
   imports = [
@@ -21,6 +22,7 @@ in {
         { command = [ "sh" "-c" "systemctl --user enable --now waybar.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
         { command = [ "xwayland-satellite" ]; }
+        { command = [ "foot" "-s" ]; }
       ];
 
       environment = {
@@ -49,6 +51,7 @@ in {
       in {
         "${mod}+D".action = sh menu;
         "${mod}+Return".action = sh terminal;
+        "${mod}+Shift+Return".action = sh alt_terminal;
         "${mod}+Shift+M".action = sh power-menu;
 
         "${mod}+Q".action = close-window;
