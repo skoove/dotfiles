@@ -1,5 +1,6 @@
 { ... }:
 {
+  imports = [ ./direnv.nix ];
   programs.fish = {
     enable = true;
 
