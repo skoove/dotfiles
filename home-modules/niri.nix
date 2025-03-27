@@ -78,7 +78,11 @@ in {
       outputs = {
         "Chimei Innolux Corporation" = {
           scale = 1.0;
-          mode = "1920x1080@60";
+          mode = {
+            width = 1920;
+            height = 1080;
+            refresh = 60.0;
+          };
         };
       };
       
