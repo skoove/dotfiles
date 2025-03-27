@@ -14,6 +14,8 @@
       gc = "git commit";
       gp = "git push";
       ga = "git add";
+      gs = "git status";
+      gd = "git diff";
 
       nixsrc = "open \"https://mynixos.com/search?q=";
     };
