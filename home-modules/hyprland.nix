@@ -15,6 +15,7 @@ in {
   ];
   
   wayland.windowManager.hyprland.enable = osConfig.programs.hyprland.enable;
+  services.hyprpaper.enable = true;
 
   wayland.windowManager.hyprland.settings = {
     general.border_size =  3;

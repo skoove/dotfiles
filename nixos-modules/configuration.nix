@@ -137,7 +137,7 @@
     git
   ];
 
-  programs.hyprland.enable = true;
+  programs.hyprland.enable = false;
 
   programs.niri = {
     enable = true;

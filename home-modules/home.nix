@@ -14,7 +14,7 @@
     ./eza.nix
     ./git.nix
     ./helix.nix
-    ./hyprland.nix
+    # ./hyprland.nix
     ./nixcord.nix
     ./rust-dev-tools.nix
     ./spotify.nix
