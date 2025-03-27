@@ -7,6 +7,8 @@
     enableFishIntegration = true;
     
     settings = {
+      add_newline = false;
+      
       format = 
         "$username$hostname" +
         "$directory" +
