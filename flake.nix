@@ -35,7 +35,7 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs:
+  outputs = { nixpkgs, niri, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;

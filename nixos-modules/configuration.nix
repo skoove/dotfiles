@@ -12,6 +12,8 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+
   environment.sessionVariables = {
     HYPRSHOT_DIR = "Photos/screenshots";
     EDITOR = "hx";
@@ -141,7 +143,7 @@
 
   programs.niri = {
     enable = true;
-    package = pkgs.niri;
+    package = pkgs.niri-stable;
   };
 
   programs.gnupg.agent = {
