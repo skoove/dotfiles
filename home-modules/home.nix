@@ -77,8 +77,6 @@
   programs.firefox.enable = true;
   programs.foot.enable = true;
 
-  services.hyprpaper.enable = true;
-
   # Let Home Manager install and manage itself.
   # programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
