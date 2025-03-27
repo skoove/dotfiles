@@ -34,6 +34,10 @@
         read_only = "";
       };
 
+      nix_shell = {
+        format = "[\\(nix-shell\\)](bold cyan) ";
+      };
+
       character = {
         format = "$symbol ";
         success_symbol = "[>](green)";
