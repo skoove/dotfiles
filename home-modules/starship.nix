@@ -7,194 +7,246 @@
     enableFishIntegration = true;
     
     settings = builtins.fromTOML ''
-      [aws]
-      format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+      [character]
+      success_symbol = "[>](bold green)"
+      error_symbol = "[x](bold red)"
+      vimcmd_symbol = "[<](bold green)"
 
-      [bun]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [c]
-      format = '\[[$symbol($version(-$name))]($style)\]'
-
-      [cmake]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [cmd_duration]
-      format = '\[[⏱ $duration]($style)\]'
-
-      [cobol]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [conda]
-      format = '\[[$symbol$environment]($style)\]'
-
-      [crystal]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [daml]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [dart]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [deno]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [docker_context]
-      format = '\[[$symbol$context]($style)\]'
-
-      [dotnet]
-      format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
-
-      [elixir]
-      format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
-
-      [elm]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [erlang]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [fennel]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [fossil_branch]
-      format = '\[[$symbol$branch]($style)\]'
-
-      [gcloud]
-      format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
-
-      [git_branch]
-      format = '\[[$symbol$branch]($style)\]'
+      [git_commit]
+      tag_symbol = " tag "
 
       [git_status]
-      format = '([\[$all_status$ahead_behind\]]($style))'
+      ahead = ">"
+      behind = "<"
+      diverged = "<>"
+      renamed = "r"
+      deleted = "x"
+
+      [aws]
+      symbol = "aws "
+
+      [azure]
+      symbol = "az "
+
+      [buf]
+      symbol = "buf "
+
+      [bun]
+      symbol = "bun "
+
+      [c]
+      symbol = "C "
+
+      [cobol]
+      symbol = "cobol "
+
+      [conda]
+      symbol = "conda "
+
+      [crystal]
+      symbol = "cr "
+
+      [cmake]
+      symbol = "cmake "
+
+      [daml]
+      symbol = "daml "
+
+      [dart]
+      symbol = "dart "
+
+      [deno]
+      symbol = "deno "
+
+      [dotnet]
+      symbol = ".NET "
+
+      [directory]
+      read_only = " ro"
+
+      [docker_context]
+      symbol = "docker "
+
+      [elixir]
+      symbol = "exs "
+
+      [elm]
+      symbol = "elm "
+
+      [fennel]
+      symbol = "fnl "
+
+      [fossil_branch]
+      symbol = "fossil "
+
+      [gcloud]
+      symbol = "gcp "
+
+      [git_branch]
+      symbol = "git "
+
+      [gleam]
+      symbol = "gleam "
 
       [golang]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "go "
 
       [gradle]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "gradle "
 
       [guix_shell]
-      format = '\[[$symbol]($style)\]'
-
-      [haskell]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [haxe]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [helm]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "guix "
 
       [hg_branch]
-      format = '\[[$symbol$branch]($style)\]'
+      symbol = "hg "
 
       [java]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "java "
 
       [julia]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "jl "
 
       [kotlin]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [kubernetes]
-      format = '\[[$symbol$context( \($namespace\))]($style)\]'
+      symbol = "kt "
 
       [lua]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [memory_usage]
-      format = '\[$symbol[$ram( | $swap)]($style)\]'
-
-      [meson]
-      format = '\[[$symbol$project]($style)\]'
-
-      [nim]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [nix_shell]
-      format = '\[[$symbol$state( \($name\))]($style)\]'
+      symbol = "lua "
 
       [nodejs]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "nodejs "
+
+      [memory_usage]
+      symbol = "memory "
+
+      [meson]
+      symbol = "meson "
+
+      [nats]
+      symbol = "nats "
+
+      [nim]
+      symbol = "nim "
+
+      [nix_shell]
+      symbol = "nix "
 
       [ocaml]
-      format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
+      symbol = "ml "
 
       [opa]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "opa "
 
-      [openstack]
-      format = '\[[$symbol$cloud(\($project\))]($style)\]'
-
-      [os]
-      format = '\[[$symbol]($style)\]'
+      [os.symbols]
+      AIX = "aix "
+      Alpaquita = "alq "
+      AlmaLinux = "alma "
+      Alpine = "alp "
+      Amazon = "amz "
+      Android = "andr "
+      Arch = "rch "
+      Artix = "atx "
+      CachyOS = "cach "
+      CentOS = "cent "
+      Debian = "deb "
+      DragonFly = "dfbsd "
+      Emscripten = "emsc "
+      EndeavourOS = "ndev "
+      Fedora = "fed "
+      FreeBSD = "fbsd "
+      Garuda = "garu "
+      Gentoo = "gent "
+      HardenedBSD = "hbsd "
+      Illumos = "lum "
+      Kali = "kali "
+      Linux = "lnx "
+      Mabox = "mbox "
+      Macos = "mac "
+      Manjaro = "mjo "
+      Mariner = "mrn "
+      MidnightBSD = "mid "
+      Mint = "mint "
+      NetBSD = "nbsd "
+      NixOS = "nix "
+      Nobara = "nbra "
+      OpenBSD = "obsd "
+      OpenCloudOS = "ocos "
+      openEuler = "oeul "
+      openSUSE = "osuse "
+      OracleLinux = "orac "
+      Pop = "pop "
+      Raspbian = "rasp "
+      Redhat = "rhl "
+      RedHatEnterprise = "rhel "
+      RockyLinux = "rky "
+      Redox = "redox "
+      Solus = "sol "
+      SUSE = "suse "
+      Ubuntu = "ubnt "
+      Ultramarine = "ultm "
+      Unknown = "unk "
+      Uos = "uos "
+      Void = "void "
+      Windows = "win "
 
       [package]
-      format = '\[[$symbol$version]($style)\]'
+      symbol = "pkg "
 
       [perl]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "pl "
 
       [php]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "php "
 
       [pijul_channel]
-      format = '\[[$symbol$channel]($style)\]'
+      symbol = "pijul "
 
       [pulumi]
-      format = '\[[$symbol$stack]($style)\]'
+      symbol = "pulumi "
 
       [purescript]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "purs "
+
+      [python]
+      symbol = "py "
+
+      [quarto]
+      symbol = "quarto "
 
       [raku]
-      format = '\[[$symbol($version-$vm_version)]($style)\]'
-
-      [red]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "raku "
 
       [ruby]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "rb "
 
       [rust]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "rs "
 
       [scala]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "scala "
 
       [spack]
-      format = '\[[$symbol$environment]($style)\]'
-
-      [sudo]
-      format = '\[[as $symbol]($style)\]'
-
-      [swift]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [terraform]
-      format = '\[[$symbol$workspace]($style)\]'
-
-      [time]
-      format = '\[[$time]($style)\]'
-
-      [username]
-      format = '\[[$user]($style)\]'
-
-      [vagrant]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [vlang]
-      format = '\[[$symbol($version)]($style)\]'
-
-      [zig]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "spack "
 
       [solidity]
-      format = '\[[$symbol($version)]($style)\]'
+      symbol = "solidity "
+
+      [status]
+      symbol = "[x](bold red) "
+
+      [sudo]
+      symbol = "sudo "
+
+      [swift]
+      symbol = "swift "
+
+      [typst]
+      symbol = "typst "
+
+      [terraform]
+      symbol = "terraform "
+
+      [zig]
+      symbol = "zig "
     '';
   };
 }
