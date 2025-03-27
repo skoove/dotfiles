@@ -27,6 +27,21 @@ in {
         QT_QPA_PLATFORM = "wayland";
         DISPLAY = ":0";
       };
+
+      window-rules = [
+        {
+          clip-to-geometry = true;
+          geometry-corner-radius =
+          let
+            rounding = 10.0;
+          in {
+            top-left = rounding;
+            top-right = rounding;
+            bottom-left = rounding;
+            bottom-right = rounding;
+          };
+        }
+      ];
       
       binds = with config.lib.niri.actions;
       let
@@ -34,7 +49,7 @@ in {
       in {
         "${mod}+D".action = sh menu;
         "${mod}+Return".action = sh terminal;
-        "${mod}+Shift+D".action = sh power-menu;
+        "${mod}+Shift+M".action = sh power-menu;
 
         "${mod}+Q".action = close-window;
         "${mod}+F".action = fullscreen-window;
