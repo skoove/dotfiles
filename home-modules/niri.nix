@@ -1,4 +1,4 @@
-{ config , ... }:
+{ config , pkgs , ... }:
 let
   mod = "Super";
   menu = "wofi --show drun";
@@ -11,12 +11,22 @@ in {
     ./dunst.nix
   ];
 
+  home.packages = [ pkgs.xwayland-satellite ];
+
   programs.niri = {
     settings = {
+      prefer-no-csd = true;
+      
       spawn-at-startup =[
-        { command = ["sh" "-c" "systemctl --user enable --now waybar.service"]; }
-        { command = ["sh" "-c" "systemctl --user enable --now syncthingtray.service"]; }
+        { command = [ "sh" "-c" "systemctl --user enable --now waybar.service" ]; }
+        { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
+        { command = [ "xwayland-satellite" ]; }
       ];
+
+      environment = {
+        QT_QPA_PLATFORM = "wayland";
+        DISPLAY = ":0";
+      };
       
       binds = with config.lib.niri.actions;
       let
