@@ -120,6 +120,8 @@ in {
         fish = spawn "fish" "-c";
       in {
         # misc
+        # edit text then save to clipboard
+        "${mod}+E".action = fish "fish ${../scripts/eddy.fish}";
         # edit clipboard
         "${mod}+Shift+E".action = fish "fish ${../scripts/cleddy.fish}";
         
