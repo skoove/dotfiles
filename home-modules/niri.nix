@@ -115,10 +115,13 @@ in {
       
       binds = with config.lib.niri.actions;
       let
+        # for shell scripts remember to actually run them
+        # with fish, see cleddy bind
         fish = spawn "fish" "-c";
       in {
         # misc
-        "${mod}+Shift+E".action = fish "${terminal} command 'hx .'";
+        # edit clipboard
+        "${mod}+Shift+E".action = fish "fish ${../scripts/cleddy.fish}";
         
         # open things
         "${mod}+D".action = fish menu;
