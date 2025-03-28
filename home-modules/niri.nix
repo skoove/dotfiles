@@ -34,11 +34,14 @@ in {
   programs.niri = {
     settings = {
       prefer-no-csd = true;
-      
+
+      # TODO: this seriously needs to be cleaned up
       spawn-at-startup =[
         { command = [ "sh" "-c" "systemctl --user enable --now waybar.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now hyprpaper.service" ]; }
+        # this (hopefully) fixes waybar being really slow to load
+        { command = [ "sh" "-c" "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY" ]; }
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
       ] ++ (
