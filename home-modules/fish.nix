@@ -20,8 +20,9 @@
       ga = "git add";
       gs = "git status";
       gd = "git diff";
+      gf = "git fetch";
 
-      nixsrc = "open \"https://mynixos.com/search?q=";
+      nr = "nix run nixpkgs#";
     };
 
     functions = {
