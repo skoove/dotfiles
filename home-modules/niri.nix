@@ -133,6 +133,7 @@ in {
         "${mod}+Return".action = fish terminal;
         "${mod}+Shift+Return".action = fish alt_terminal;
         "${mod}+Shift+M".action = quit;
+        "${mod}+T".action = fish "bemoji -c -n";
 
         # reorient
         "${mod}+Q".action = close-window;
