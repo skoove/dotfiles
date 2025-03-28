@@ -115,12 +115,15 @@ in {
       
       binds = with config.lib.niri.actions;
       let
-        sh = spawn "sh" "-c";
+        fish = spawn "fish" "-c";
       in {
+        # misc
+        "${mod}+Shift+E".action = fish "${terminal} command 'hx .'";
+        
         # open things
-        "${mod}+D".action = sh menu;
-        "${mod}+Return".action = sh terminal;
-        "${mod}+Shift+Return".action = sh alt_terminal;
+        "${mod}+D".action = fish menu;
+        "${mod}+Return".action = fish terminal;
+        "${mod}+Shift+Return".action = fish alt_terminal;
         "${mod}+Shift+M".action = quit;
 
         # reorient
@@ -148,7 +151,7 @@ in {
         # screenshotting
         "${mod}+S".action = screenshot;
         "${mod}+Shift+S".action = screenshot-window;
-        "${mod}+A".action = sh "wl-paste | satty -f - --fullscreen --copy-command 'wl-copy'";
+        "${mod}+A".action = fish "wl-paste | satty -f - --fullscreen --copy-command 'wl-copy'";
 
         # resize things
         "Mod+Equal".action = set-column-width "+10%";
@@ -158,12 +161,12 @@ in {
 
         # the exact same binds that have followed me from wm to wm for
         # probably years now!
-        "XF86AudioRaiseVolume".action = sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
-        "XF86AudioLowerVolume".action = sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
-        "XF86AudioMute".action = sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        "XF86AudioMicMute".action = sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-        "XF86MonBrightnessUp".action = sh "brightnessctl s 10%+";
-        "XF86MonBrightnessDown".action = sh "brightnessctl s 10%-";
+        "XF86AudioRaiseVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
+        "XF86AudioLowerVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
+        "XF86AudioMute".action = fish "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        "XF86AudioMicMute".action = fish "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+        "XF86MonBrightnessUp".action = fish "brightnessctl s 10%+";
+        "XF86MonBrightnessDown".action = fish "brightnessctl s 10%-";
       };
     };
   };
