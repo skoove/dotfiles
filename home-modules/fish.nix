@@ -32,7 +32,7 @@
 
     functions = {
       __fish_command_not_found_handler = {
-        body = "echo \"TRY AGAIN STUPID: $argv\"";
+        body = "echo \"command not found :(\"";
       };
     };
   };
