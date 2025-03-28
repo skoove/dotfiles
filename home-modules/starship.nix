@@ -12,6 +12,8 @@
       format = 
         "$username$hostname" +
         "$directory" +
+        "$git_branch" +
+        "$git_status" +
         "$nix_shell" +
         "$character";
 
@@ -34,6 +36,28 @@
         style = "blue";
         read_only_style = "red";
         read_only = "";
+      };
+
+      git_branch = {
+        format = "[$branch ]($style)";
+        style = "bold purple";
+      };
+
+      git_status = {
+        format = "([\[$all_status$ahead_behind\]]($style))";
+        style = "bold red";
+        conflicted = "=";
+        ahead = " ahead";
+        behind = " behind";
+        diverged = " diverged";
+        up_to_date = "";
+        untracked = "?";
+        stashed = "$";
+        modified = "!";
+        staged = "+";
+        renamed = ">>";
+        deleted = "x";
+        typechanged = "";
       };
 
       nix_shell = {

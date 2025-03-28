@@ -9,8 +9,8 @@
     };
 
     stylix = {
-      # url = "github:danth/stylix";
-      url = "path:/home/zie/dev/stylix-discord-fix";
+      url = "github:danth/stylix";
+      # url = "path:/home/zie/dev/stylix-discord-fix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

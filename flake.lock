@@ -490,14 +490,17 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1743128385,
-        "narHash": "sha256-PEc1QGaNgfxUGUTIgaMa97/UA/VC7S9kMFl18BDO7uM=",
-        "path": "/home/zie/dev/stylix-discord-fix",
-        "type": "path"
+        "lastModified": 1743075971,
+        "narHash": "sha256-8fSI6C19ZTcHgvoLK17wfEEVI08tgnZfSLgVe3E/22w=",
+        "owner": "danth",
+        "repo": "stylix",
+        "rev": "2fb8321ea16c595e0208b22021ddaf1f471c634a",
+        "type": "github"
       },
       "original": {
-        "path": "/home/zie/dev/stylix-discord-fix",
-        "type": "path"
+        "owner": "danth",
+        "repo": "stylix",
+        "type": "github"
       }
     },
     "systems": {
