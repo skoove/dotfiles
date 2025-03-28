@@ -44,12 +44,12 @@
       };
 
       git_status = {
-        format = "([\[$all_status$ahead_behind\]]($style))";
+        format = "([\\[$all_status$ahead_behind\\] ]($style))";
         style = "bold red";
         conflicted = "=";
-        ahead = " ahead";
-        behind = " behind";
-        diverged = " diverged";
+        ahead = ">";
+        behind = "<";
+        diverged = "<>";
         up_to_date = "";
         untracked = "?";
         stashed = "$";
