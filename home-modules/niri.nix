@@ -9,7 +9,6 @@ let
 in {
   imports = [
     ./waybar.nix
-    ./wofi.nix
     ./dunst.nix
   ];
 
