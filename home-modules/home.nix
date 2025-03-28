@@ -80,6 +80,9 @@
   programs.bat.enable = true;
   programs.firefox.enable = true;
 
+  home.file.".local/share/loago/loago.json".source =
+    config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
+
   # Let Home Manager install and manage itself.
   # programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
