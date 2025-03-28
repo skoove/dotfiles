@@ -47,15 +47,16 @@
     aseprite          # pixel art
 
     # utils
-    bemoji                           # emoji picker for wofi
-    brightnessctl                    # for controlling laptop backlight
-    hyprshot                         # screenshotting
-    pavucontrol                      # volume control
-    satty                            # edit screenshots
-    wl-clipboard                     # copy things to clipboard (required by bemoji)
-    libsForQt5.qtstyleplugin-kvantum # themeing for qt apps
-    wofi-power-menu                  # shutdown & other poweractions using wofi
-    python3                          # its python 3!
+    bemoji                                           # emoji picker for wofi
+    brightnessctl                                    # for controlling laptop backlight
+    hyprshot                                         # screenshotting
+    pavucontrol                                      # volume control
+    satty                                            # edit screenshots
+    wl-clipboard                                     # copy things to clipboard (required by bemoji)
+    libsForQt5.qtstyleplugin-kvantum                 # themeing for qt apps
+    wofi-power-menu                                  # shutdown & other poweractions using wofi
+    python3                                          # its python 3!
+    (import ../packages/loago.nix { inherit pkgs; }) # shows how long ago a task was done
 
     # tools
     nixd               # nix lsp
