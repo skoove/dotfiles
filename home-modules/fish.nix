@@ -23,5 +23,11 @@
 
       nixsrc = "open \"https://mynixos.com/search?q=";
     };
+
+    functions = {
+      __fish_command_not_found_handler = {
+        body = "echo \"TRY AGAIN STUPID: $argv\"";
+      };
+    };
   };
 }
