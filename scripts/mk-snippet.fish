@@ -13,7 +13,7 @@ switch $lang
         set ext $lang
 end
 
-set temp_file /tmp/(random).$ext
+set temp_file (mktemp).$ext
 hx $temp_file
 
 set final_string "\
