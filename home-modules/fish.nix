@@ -15,6 +15,7 @@
     shellAbbrs = {
       gco = "git checkout";
       gsw = "git switch";
+      gcl = "git clone";
       gc = "git commit";
       gp = "git push";
       ga = "git add";
@@ -22,7 +23,11 @@
       gd = "git diff";
       gf = "git fetch";
 
-      nr = "nix run nixpkgs#";
+      nr = "nix run";
+
+      lv = "loago view -m";
+      ld = "loago do";
+      lrm = "loago rm";
     };
 
     functions = {
