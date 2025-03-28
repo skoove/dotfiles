@@ -46,8 +46,8 @@ in {
         { command = [ "foot" "-s" ]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
-          { command = [ "discord" "--start-minimized" ]; }
-          { command = [ "steam" "-silent" ]; }
+          { command = [ "sh" "-c" "discord --start-minimized" ]; }
+          { command = [ "sh" "-c" "steam -silent" ]; }
         ] else []
       );
 
