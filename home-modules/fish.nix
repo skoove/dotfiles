@@ -16,6 +16,7 @@
       gco = "git checkout";
       gsw = "git switch";
       gcl = "git clone";
+      gpu = "git pull";
       gc = "git commit";
       gp = "git push";
       ga = "git add";
