@@ -17,6 +17,9 @@
       gsw = "git switch";
       gcl = "git clone";
       gpu = "git pull";
+      gg = "git log --oneline --graph";
+      gl = "git log";
+      gll = "git log --oneline";
       gc = "git commit";
       gp = "git push";
       ga = "git add";
