@@ -49,7 +49,6 @@
     # utils
     bemoji                                           # emoji picker for wofi
     brightnessctl                                    # for controlling laptop backlight
-    hyprshot                                         # screenshotting
     pavucontrol                                      # volume control
     satty                                            # edit screenshots
     wl-clipboard                                     # copy things to clipboard (required by bemoji)
