@@ -19,7 +19,6 @@
     HOSTNAME = config.networking.hostName;
     FLAKE = "/home/zie/.dotfiles";
     NIXPKGS_ALLOW_UNFREE = 1;
-    PAGER = "moar";
   };
 
   # storage optimisation
@@ -135,7 +134,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    moar # pager
     helix
     git
   ];
