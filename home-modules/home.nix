@@ -14,6 +14,7 @@
     ./email.nix
     ./eza.nix
     ./fish.nix
+    ./obs.nix
     ./foot.nix
     ./fuzzel.nix
     ./git.nix
@@ -55,7 +56,9 @@
     libsForQt5.qtstyleplugin-kvantum                 # themeing for qt apps
     wofi-power-menu                                  # shutdown & other poweractions using wofi
     python3                                          # its python 3!
+    wf-recorder                                      # screen recorder
     (import ../packages/loago.nix { inherit pkgs; }) # shows how long ago a task was done
+
 
     # tools
     nixd               # nix lsp
