@@ -15,11 +15,11 @@
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
 
   environment.sessionVariables = {
-    HYPRSHOT_DIR = "Photos/screenshots";
     EDITOR = "hx";
     HOSTNAME = config.networking.hostName;
     FLAKE = "/home/zie/.dotfiles";
     NIXPKGS_ALLOW_UNFREE = 1;
+    PAGER = "moar";
   };
 
   # storage optimisation
@@ -135,6 +135,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    moar # pager
     helix
     git
   ];
