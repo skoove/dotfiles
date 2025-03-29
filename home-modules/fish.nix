@@ -13,19 +13,19 @@
     '';
 
     shellAbbrs = {
-      gco = "git checkout";
-      gsw = "git switch";
-      gcl = "git clone";
-      gpu = "git pull";
-      gg = "git log --oneline --graph";
-      gl = "git log";
-      gll = "git log --oneline";
-      gc = "git commit";
-      gp = "git push";
-      ga = "git add";
-      gs = "git status";
-      gd = "git diff";
-      gf = "git fetch";
+      g = "git";
+      d = "diff";
+      a = "add";
+      pu = "pull";
+      p = "push";
+      cl = "clone";
+      co = "checkout";
+      sw = "switch";
+      l = "log --oneline --graph";
+      ll = "log";
+      c = "commit";
+      s = "status";
+      f = "fetch";
 
       nr = "nix run";
 
