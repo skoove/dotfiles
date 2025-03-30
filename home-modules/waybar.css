@@ -19,9 +19,12 @@ window#waybar {
   padding: 0px;
 }
 
+#workspaces button,
+.modules-left #workspaces button,
 .modules-left #workspaces button.focused,
 .modules-left #workspaces button.active {
   border-bottom: 0px none transparent;
+  padding: 0px;
 }
 
 #temperature.critical {
