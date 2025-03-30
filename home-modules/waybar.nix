@@ -12,10 +12,13 @@ in
       
       modules-left = [
         "niri/workspaces"
-        "niri/window"
       
         # "hyprland/workspaces"
         # "hyprland/window"
+      ];
+
+      modules-center = [
+        "niri/window"
       ];
 
       modules-right = [
@@ -31,7 +34,7 @@ in
       ];
 
       "hyprland/window".icon = true;
-      "niri/window".icon = true;
+      "niri/window".icon = false;
 
       "niri/workspaces" = {
         format = "{icon}";
@@ -46,40 +49,40 @@ in
       };
 
       clock = {
-        format = " {:%H:%M   %F}";
+        format = "{:%H:%M  %F}";
       };
 
       battery = {
-        format = "{icon} {capacity}%";
-        format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+        format = "bat: {capacity}%";
+        # format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
         tooltip-format = "{time}, {cycles} cycles, {health}% health";
       };
 
       network = {
-        format = "{icon} {essid}";
-        format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
+        format = "net: {essid}";
+        # format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
       };
 
       pulseaudio = {
-        format = "{icon} {volume}%";
-        format-muted = " muted";
+        format = "vol: {volume}%";
+        format-muted = "vol: muted";
         format-icons.default = [ "" ""];
         on-click = "pavucontrol";
         scroll-step = 1;
       };
 
       backlight = {
-        format = " {percent}%";
+        format = "bl: {percent}%";
       };
 
       cpu = {
         interval = 1;
-        format = " {usage}%";
+        format = "cpu: {usage}%";
       };
 
       memory = {
         interval = 1;
-        format = " {percentage}%";
+        format = "mem: {percentage}%";
         tooltip-format = "{used} GiB / {total} GiB";
       };
 
@@ -87,7 +90,7 @@ in
         interval = 1;
         thermal-zone = 2;
         critical-threshold = 80;
-        format = " {temperatureC}°C";
+        format = "t: {temperatureC}°C";
       };
     };
 

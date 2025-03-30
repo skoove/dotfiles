@@ -14,6 +14,16 @@ window#waybar {
   padding-right: 10px;
 }
 
+#window,
+#workspaces button {
+  padding: 0px;
+}
+
+.modules-left #workspaces button.focused,
+.modules-left #workspaces button.active {
+  border-bottom: 0px none transparent;
+}
+
 #temperature.critical {
   background-color: @base08;
   color: @base00;
