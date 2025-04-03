@@ -70,6 +70,7 @@
     sops               # secrets management
     mprocs             # run commands ez
     ripgrep            # grepper
+    whatsapp-for-linux # whats
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
