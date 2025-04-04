@@ -2,7 +2,7 @@
 {
   stylix.enable = true;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-  stylix.image = ./wallpapers/dock.png;
+  stylix.image = ./wallpapers/houseonthesideofalake.jpg;
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.jetbrains-mono;
