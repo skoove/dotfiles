@@ -68,6 +68,11 @@ in {
         };
       };
 
+      layout = {
+        always-center-single-column = true;
+        empty-workspace-above-first = true;
+      };
+
       window-rules = [
         {
           clip-to-geometry = true;
