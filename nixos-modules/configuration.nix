@@ -11,6 +11,7 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.sandbox = "relaxed";
 
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
 
@@ -108,7 +109,7 @@
   users.users.zie = {
     isNormalUser = true;
     description = "Zie Sturges";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
     packages = with pkgs; [
       helix
       firefox
@@ -139,6 +140,7 @@
   ];
 
   programs.hyprland.enable = false;
+  programs.nix-ld.enable = true;
 
   programs.niri = {
     enable = true;
