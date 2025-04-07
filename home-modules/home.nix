@@ -46,6 +46,7 @@
     inkscape          # vector graphics
     gimp              # image editing
     aseprite          # pixel art
+    russ              # rss reader
 
     # utils
     bemoji                                           # emoji picker for wofi
