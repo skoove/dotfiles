@@ -46,7 +46,7 @@
     inkscape          # vector graphics
     gimp              # image editing
     aseprite          # pixel art
-    russ              # rss reader
+    nom               # rss reader
 
     # utils
     bemoji                                           # emoji picker for wofi
@@ -63,7 +63,6 @@
 
     # tools
     nixd               # nix lsp
-    nix-output-monitor # see builds better
     dust               # disk usage but easier read
     nh                 # replacement for rebuild commands
     tldr               # simpler man pages
