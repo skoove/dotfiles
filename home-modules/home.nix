@@ -59,6 +59,7 @@
     python3                                          # its python 3!
     wf-recorder                                      # screen recorder
     (import ../packages/loago.nix { inherit pkgs; }) # shows how long ago a task was done
+    gnuplot                                          # plotting lib
 
 
     # tools
