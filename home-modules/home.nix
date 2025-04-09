@@ -24,6 +24,7 @@
     ./rust-dev-tools.nix
     ./sops.nix
     ./spotify.nix
+    ./yazi.nix
     ./starship.nix
     ./stylix.nix
     ./syncthing.nix
