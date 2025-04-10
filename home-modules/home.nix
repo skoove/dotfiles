@@ -7,29 +7,25 @@
   # home.homeDirectory = "/home/zie";
 
   imports = [
-    # ./dwarf-fortress.nix
-    # ./hyprland.nix
     ../stylix.nix
     ./bottom.nix
     ./email.nix
     ./eza.nix
     ./fish.nix
-    ./obs.nix
     ./foot.nix
     ./fuzzel.nix
     ./git.nix
     ./helix.nix
     ./niri.nix
     ./nixcord.nix
+    ./obs.nix
     ./rust-dev-tools.nix
     ./sops.nix
-    ./spotify.nix
-    ./yazi.nix
     ./starship.nix
     ./stylix.nix
     ./syncthing.nix
+    ./yazi.nix
     ./zellij.nix
-    # ./zsh.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];
@@ -48,6 +44,7 @@
     gimp              # image editing
     aseprite          # pixel art
     nom               # rss reader
+    blanket           # ambient noise
 
     # utils
     bemoji                                           # emoji picker for wofi
@@ -73,8 +70,9 @@
     mprocs             # run commands ez
     ripgrep            # grepper
     whatsapp-for-linux # whats
-    strawberry         # music player
+    sayonara           # music player
     cargo-flamegraph   # flamegraph
+    gnome-podcasts     # podcasts
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
