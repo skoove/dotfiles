@@ -12,6 +12,7 @@
     ./email.nix
     ./eza.nix
     ./fish.nix
+    ./floorp.nix
     ./foot.nix
     ./fuzzel.nix
     ./git.nix
@@ -82,7 +83,6 @@
   ];
 
   programs.bat.enable = true;
-  programs.firefox.enable = true;
 
   home.file.".local/share/loago/loago.json".source =
     config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
