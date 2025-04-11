@@ -72,6 +72,7 @@
     ripgrep            # grepper
     whatsapp-for-linux # whats
     vlc                # the last media player i will ever need
+    gpodder            # nice little podcast manager
     cargo-flamegraph   # flamegraph
 
     # not tools at all but i dont want to nix run them
