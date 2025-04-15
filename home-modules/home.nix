@@ -12,6 +12,7 @@
     ./email.nix
     ./eza.nix
     ./fish.nix
+    ./btop.nix
     ./floorp.nix
     ./foot.nix
     ./fuzzel.nix
