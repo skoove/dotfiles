@@ -83,6 +83,9 @@
     # fonts
     corefonts    # ms fonts
     dejavu_fonts # idk if i actually like these
+    roboto
+    roboto-slab
+    roboto-serif
   ];
 
   programs.bat.enable = true;
