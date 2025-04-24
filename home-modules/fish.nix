@@ -39,6 +39,11 @@
         body = "echo \"command not found :(\"";
       };
 
+      # sorce: https://axlefublr.github.io/uri-list/
+      pick = {
+        body = "echo file://(realpath $argv[1]) | wl-copy -t text/uri-list";
+      };
+
       mk-snippet = {
         body = builtins.readFile ../scripts/mk-snippet.fish;
       };
