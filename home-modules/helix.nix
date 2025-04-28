@@ -30,22 +30,6 @@
         command = "${pkgs.typos-lsp}/bin/typos-lsp";
       };
 
-      language-server.ltex-ls = {
-        command = "${pkgs.ltex-ls-plus}/bin/ltex-ls-plus";
-
-        config = {
-          ltex.language = "en-AU";
-          ltex.enabled = "typst";
-          ltex.disabledRules = { 
-            "en-AU" = [
-              "ARROWS"
-              "EN_UNPAIRED_BRACKETS"
-              "MORFOLOGIK_RULE_EN_AU"
-            ];
-          };
-        };
-      };
-
       language = [
       {
         name = "rust";
@@ -64,7 +48,7 @@
         name = "typst";
         rulers = [80];
         auto-format = true;
-        language-servers = [ "tinymist" "typos" "ltex-ls"];
+        language-servers = [ "tinymist" "typos" ];
       }
       ];
     };
