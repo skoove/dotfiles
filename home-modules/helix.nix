@@ -26,29 +26,29 @@
 
       language-server.tinymist.config.formatterMode = "typstyle";
       
-      language-server.typos = {
-        command = "${pkgs.typos-lsp}/bin/typos-lsp";
+      language-server.harper = {
+        command = "${pkgs.harper}/bin/harper-ls";
       };
 
       language = [
       {
         name = "rust";
-        language-servers = [ "rust-analyzer" "typos" ];
+        language-servers = [ "rust-analyzer" "harper" ];
       }
       {
         name = "nix";
-        language-servers = [ "nixd" "typos" ];
+        language-servers = [ "nixd" "harper" ];
       }
       {
         name = "markdown";
         soft-wrap.enable = true;
-        language-servers = [ "typos" ];
+        language-servers = [ "harper" ];
       }
       {
         name = "typst";
         rulers = [80];
         auto-format = true;
-        language-servers = [ "tinymist" "typos" ];
+        language-servers = [ "tinymist" "harper" ];
       }
       ];
     };
