@@ -23,10 +23,17 @@
     };
 
     languages = {
-      language = [{
+      language = [
+      {
         name = "markdown";
         soft-wrap.enable = true;
-      }];
+      }
+      {
+        name = "typst";
+        rulers = [80];
+      }
+      ];
+
     };
   };
 }
