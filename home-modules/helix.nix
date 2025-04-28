@@ -25,15 +25,24 @@
     languages = {
       language = [
       {
+        name = "rust";
+        language_servers = [ "rust-analyzer" "typos-lsp" ];
+      }
+      {
+        name = "nix";
+        language_servers = [ "nixd" "typos-lsp" ];
+      }
+      {
         name = "markdown";
         soft-wrap.enable = true;
+        language_servers = [ "typos-lsp" ];
       }
       {
         name = "typst";
         rulers = [80];
+        language_servers = [ "tinymist" "typos-lsp" ];
       }
       ];
-
     };
   };
 }

@@ -78,6 +78,7 @@
     qbittorrent        # :D
     typst              # for writing school papers
     tinymist           # typst lsp
+    typos-lsp          # spell checker
     zathura            # pdf viewer
     gnome-pomodoro     # pomodoro
 
