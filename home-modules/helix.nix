@@ -28,6 +28,11 @@
       
       language-server.harper = {
         command = "${pkgs.harper}/bin/harper-ls";
+        args = [ " --stdio" ];
+
+        config.harper-ls = {
+          dialect = "Australian";
+        };
       };
 
       language = [
