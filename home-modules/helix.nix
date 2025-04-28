@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs , ... }:
 {
   stylix.targets.helix.enable = false;
   programs.helix = {
@@ -23,24 +23,48 @@
     };
 
     languages = {
+
+      language-server.tinymist.config.formatterMode = "typstyle";
+      
+      language-server.typos = {
+        command = "${pkgs.typos-lsp}/bin/typos-lsp";
+      };
+
+      language-server.ltex-ls = {
+        command = "${pkgs.ltex-ls-plus}/bin/ltex-ls-plus";
+
+        config = {
+          ltex.language = "en-AU";
+          ltex.enabled = "typst";
+          ltex.disabledRules = { 
+            "en-AU" = [
+              "ARROWS"
+              "EN_UNPAIRED_BRACKETS"
+              "MORFOLOGIK_RULE_EN_AU"
+            ];
+          };
+        };
+      };
+
       language = [
       {
         name = "rust";
-        language_servers = [ "rust-analyzer" "typos-lsp" ];
+        language-servers = [ "rust-analyzer" "typos" ];
       }
       {
         name = "nix";
-        language_servers = [ "nixd" "typos-lsp" ];
+        language-servers = [ "nixd" "typos" ];
       }
       {
         name = "markdown";
         soft-wrap.enable = true;
-        language_servers = [ "typos-lsp" ];
+        language-servers = [ "typos" ];
       }
       {
         name = "typst";
         rulers = [80];
-        language_servers = [ "tinymist" "typos-lsp" ];
+        auto-format = true;
+        language-servers = [ "tinymist" "typos" "ltex-ls"];
       }
       ];
     };
