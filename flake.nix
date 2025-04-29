@@ -33,6 +33,11 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    woomer = {
+      url = "github:Axlefublr/woomer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, niri, ... }@inputs:
