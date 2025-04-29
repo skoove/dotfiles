@@ -44,7 +44,6 @@
     libreoffice-fresh # office suite
     inkscape          # vector graphics
     gimp              # image editing
-    aseprite          # pixel art
     nom               # rss reader
     blanket           # ambient noise
 
@@ -69,7 +68,6 @@
     tldr               # simpler man pages
     bitwarden-cli      # password manager
     sops               # secrets management
-    mprocs             # run commands ez
     ripgrep            # grepper
     whatsapp-for-linux # whats
     vlc                # the last media player i will ever need

@@ -18,7 +18,7 @@
   environment.sessionVariables = {
     EDITOR = "hx";
     HOSTNAME = config.networking.hostName;
-    FLAKE = "/home/zie/.dotfiles";
+    NH_FLAKE = "/home/zie/.dotfiles";
     NIXPKGS_ALLOW_UNFREE = 1;
   };
 
