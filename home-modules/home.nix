@@ -52,12 +52,12 @@
     brightnessctl                                    # for controlling laptop backlight
     pavucontrol                                      # volume control
     satty                                            # edit screenshots
-    wl-clipboard                                     # copy things to clipboard (required by bemoji)
-    libsForQt5.qtstyleplugin-kvantum                 # themeing for qt apps
-    wofi-power-menu                                  # shutdown & other poweractions using wofi
+    wl-clipboard                                     # Copy things to clipboard (required by bemoji)
+    libsForQt5.qtstyleplugin-kvantum                 # theming for qt apps
+    wofi-power-menu                                  # Shutdown & other power actions using wofi
     python3                                          # its python 3!
     wf-recorder                                      # screen recorder
-    (import ../packages/loago.nix { inherit pkgs; }) # shows how long ago a task was done
+    (import ../packages/loago.nix { inherit pkgs; }) # Shows how long ago a task was done
     gnuplot                                          # plotting lib
 
 
