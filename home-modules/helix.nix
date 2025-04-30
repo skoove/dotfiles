@@ -28,7 +28,7 @@
       
       language-server.harper = {
         command = "${pkgs.harper}/bin/harper-ls";
-        args = [ " --stdio" ];
+        args = [ "--stdio" ];
 
         config.harper-ls = {
           dialect = "Australian";
