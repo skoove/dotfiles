@@ -31,7 +31,7 @@
       };
 
       directory = {
-        fish_style_pwd_dir_length = 5;
+        fish_style_pwd_dir_length = 1;
         truncate_to_repo = true;
         style = "blue";
         read_only_style = "red";
