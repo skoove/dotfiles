@@ -89,7 +89,8 @@
     
     # fonts
     corefonts    # ms fonts
-    dejavu_fonts # idk if i actually like these
+    rubik
+    inter
     roboto
     roboto-slab
     roboto-serif
