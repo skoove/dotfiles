@@ -9,15 +9,16 @@
   imports = [
     ../stylix.nix
     ./bottom.nix
+    ./btop.nix
     ./email.nix
     ./eza.nix
     ./fish.nix
-    ./btop.nix
     ./floorp.nix
     ./foot.nix
     ./fuzzel.nix
     ./git.nix
     ./helix.nix
+    ./magazines
     ./niri.nix
     ./nixcord.nix
     ./obs.nix
