@@ -20,6 +20,10 @@
         auto-save.after-delay.enable = true;
         gutters.layout = [ "line-numbers" "spacer" "diff" ];
       };
+
+      keys.normal = {
+        "space-q" = ":reflow";
+      };
     };
 
     languages = {

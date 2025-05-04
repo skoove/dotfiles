@@ -59,6 +59,7 @@
     wf-recorder                                      # screen recorder
     (import ../packages/loago.nix { inherit pkgs; }) # Shows how long ago a task was done
     gnuplot                                          # plotting lib
+    mpv
 
 
     # tools
