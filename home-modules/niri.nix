@@ -14,7 +14,6 @@ in {
 
   home.packages = with pkgs; [
     xwayland-satellite
-    gnome-keyring
   ];
 
   xdg.portal ={
