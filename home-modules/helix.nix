@@ -22,7 +22,7 @@
       };
 
       keys.normal = {
-        "space-q" = ":reflow";
+        space.q = ":reflow";
       };
     };
 
