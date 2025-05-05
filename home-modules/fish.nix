@@ -31,7 +31,7 @@
 
       lv = "loago view -m";
       ld = "loago do";
-      lrm = "loago rm";
+      lrm = "loago remove";
     };
 
     functions = {
