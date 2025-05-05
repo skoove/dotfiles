@@ -38,7 +38,7 @@ switch $action
         switch $mag
             # special behaviour
             # split some things at the first instance of — (U+2014) then copy stuff after that
-            case l s
+            case l s d
                 set selected (cat $mag_path | fuzzel --dmenu)
                 set thing_to_copy (string split — $selected --max 1)[2]
                 set thing_to_copy (string trim $thing_to_copy)
@@ -58,7 +58,7 @@ switch $action
             # allow for input of headers then the contents
             # good for stuff like links and symbols
             # in file headers and contents are seperated by — (U+2014)
-            case l s
+            case l s d
                 set header (fuzzel --dmenu --prompt 'title: ')
                 cancel_checker $header
                 set contents (fuzzel --dmenu --prompt 'body: ')
