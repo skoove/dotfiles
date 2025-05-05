@@ -23,6 +23,10 @@ switch $action
         notif editing magazine: $mag
         new_foot hx $mag_path
 
+    case v view
+        notif viewing magazine: $mag
+        new_foot $PAGER $mag_path
+
     case c copy
         switch $mag
             # special behaviour
@@ -49,7 +53,15 @@ switch $action
             # in file headers and contents are seperated by — (U+2014)
             case l s
                 set header (fuzzel --dmenu --prompt 'title: ')
+                if test "$header" = "!cancel"
+                    notif append canceled
+                    exit
+                end
                 set contents (fuzzel --dmenu --prompt 'body: ')
+                if test "$contents" = "!cancel"
+                    notif append canceled
+                    exit
+                end
                 set item "$header — $contents"
                 echo $item >>$mag_path
                 notif appended \"$item\" to magazine: $mag
