@@ -39,6 +39,12 @@
         };
       };
 
+      language-server.fish-lsp = {
+        command = "${pkgs.fish-lsp}/bin/fish-lsp";
+        args = [ "start" ];
+        enviroment = { "fish_lsp_show_client_popups" = false; };
+      };
+
       language = [
       {
         name = "rust";

@@ -1,3 +1,10 @@
+# -- utils -- #
+
+function new_foot -a command
+
+end
+
+# -- entry point -- #
 set mag $argv[1]
 set action $argv[2]
 
