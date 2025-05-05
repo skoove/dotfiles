@@ -8,6 +8,13 @@ function notif
     dunstify magazines "$argv"
 end
 
+function cancel_checker
+    if test "$argv" = "!cancel"
+        notif canceled
+        exit
+    end
+end
+
 # -- entry point -- #
 set mag $argv[1]
 set action $argv[2]
@@ -53,21 +60,16 @@ switch $action
             # in file headers and contents are seperated by — (U+2014)
             case l s
                 set header (fuzzel --dmenu --prompt 'title: ')
-                if test "$header" = "!cancel"
-                    notif append canceled
-                    exit
-                end
+                cancel_checker $header
                 set contents (fuzzel --dmenu --prompt 'body: ')
-                if test "$contents" = "!cancel"
-                    notif append canceled
-                    exit
-                end
+                cancel_checker $header
                 set item "$header — $contents"
                 echo $item >>$mag_path
                 notif appended \"$item\" to magazine: $mag
 
             case "*"
                 set input (fuzzel --dmenu)
+                cancel_checker $input
                 echo $input >>$mag_path
                 notif appended \"$input\" to magazine: $mag
         end
