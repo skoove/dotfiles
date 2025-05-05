@@ -48,8 +48,8 @@ switch $action
             # good for stuff like links and symbols
             # in file headers and contents are seperated by — (U+2014)
             case l s
-                set header (fuzzel --dmenu --prompt 'header: ')
-                set contents (fuzzel --dmenu --prompt 'link: ')
+                set header (fuzzel --dmenu --prompt 'title: ')
+                set contents (fuzzel --dmenu --prompt 'body: ')
                 set item "$header — $contents"
                 echo $item >>$mag_path
                 notif appended \"$item\" to magazine: $mag
