@@ -4,18 +4,62 @@ function new_foot
     footclient $argv & disown
 end
 
+function notif
+    dunstify magazines "$argv"
+end
+
 # -- entry point -- #
 set mag $argv[1]
 set action $argv[2]
+set mag_path ~/magazines/$mag
 
 # check if args were provided
 if not test -n "$mag"; or not test -n "$action"
-    echo cant do anything without both a magazine and action
+    notif cant do anything without both a magazine and action
 end
 
 switch $action
     case e edit
-        new_foot hx ~/magazines/$mag
+        notif editing magazine: $mag
+        new_foot hx $mag_path
+
+    case c copy
+        switch $mag
+            # special behaviour
+            # split some things at the first instance of — (U+2014) then copy stuff after that
+            case l s
+                set selected (cat $mag_path | fuzzel --dmenu)
+                set thing_to_copy (string split — $selected --max 1)[2]
+                set thing_to_copy (string trim $thing_to_copy)
+                wl-copy $thing_to_copy
+                notif copied \"$thing_to_copy\"
+
+            case "*"
+                set selected (cat $mag_path | fuzzel --dmenu)
+                wl-copy $selected
+                notif copied \"$selected\"
+
+        end
+
+    case a append
+        switch $mag
+            # special behaviour:
+            # allow for input of headers then the contents
+            # good for stuff like links and symbols
+            # in file headers and contents are seperated by — (U+2014)
+            case l s
+                set header (fuzzel --dmenu --prompt 'header: ')
+                set contents (fuzzel --dmenu --prompt 'link: ')
+                set item "$header — $contents"
+                echo $item >>$mag_path
+                notif appended \"$item\" to magazine: $mag
+
+            case "*"
+                set input (fuzzel --dmenu)
+                echo $input >>$mag_path
+                notif appended \"$input\" to magazine: $mag
+        end
+
     case "*"
-        echo invalid action: $action
+        notif invalid action: $action
 end
