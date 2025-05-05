@@ -1,7 +1,7 @@
 # -- utils -- #
 
-function new_foot -a command
-
+function new_foot
+    footclient $argv & disown
 end
 
 # -- entry point -- #
@@ -15,5 +15,7 @@ end
 
 switch $action
     case e edit
-        hx ~/magazines/$mag
+        new_foot hx ~/magazines/$mag
+    case "*"
+        echo invalid action: $action
 end

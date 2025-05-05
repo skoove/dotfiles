@@ -70,6 +70,14 @@ in {
       layout = {
         always-center-single-column = true;
         empty-workspace-above-first = true;
+
+        struts =
+        let
+        side_struts = 15;
+        in {
+          left = side_struts;
+          right = side_struts;
+        };
       };
 
       window-rules = [
