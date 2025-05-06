@@ -4,6 +4,7 @@
   imports = [
     ../stylix.nix
     ./gaming.nix
+    ./udev.nix
 
     inputs.stylix.nixosModules.stylix
     inputs.home-manager.nixosModules.default
@@ -137,7 +138,8 @@
   environment.systemPackages = with pkgs; [
     helix
     git
-  ];
+    toybox
+    ];
 
   programs.hyprland.enable = false;
   programs.nix-ld.enable = true;
