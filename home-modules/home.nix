@@ -23,7 +23,6 @@
     ./nixcord.nix
     ./obs.nix
     ./rust-dev-tools.nix
-    ./sops.nix
     ./starship.nix
     ./stylix.nix
     ./syncthing.nix
