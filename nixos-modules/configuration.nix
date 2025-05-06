@@ -151,7 +151,6 @@
 
   programs.gnupg.agent = {
     enable = true;
-    enableSSHSupport = true;
   };
 
   services.displayManager.ly.enable = true;
