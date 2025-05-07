@@ -138,7 +138,6 @@
   environment.systemPackages = with pkgs; [
     helix
     git
-    toybox
     ];
 
   programs.hyprland.enable = false;
