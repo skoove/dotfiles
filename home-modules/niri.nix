@@ -64,6 +64,8 @@ in {
           accel-profile = "adaptive";
           accel-speed = 0.3;
         };
+
+        tablet.map-to-output = "HDMI-A-1";
       };
 
       layout = {
