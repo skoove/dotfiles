@@ -46,6 +46,7 @@
     gimp              # image editing
     nom               # rss reader
     blanket           # ambient noise
+    krita             # draw
 
     # utils
     bemoji                                           # emoji picker for wofi
