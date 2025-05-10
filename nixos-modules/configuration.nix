@@ -37,6 +37,8 @@
     options = "--delete-older-than 3d";
   };
 
+  security.polkit.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

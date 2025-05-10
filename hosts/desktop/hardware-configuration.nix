@@ -32,7 +32,8 @@
     };
 
   fileSystems."/games" =
-    { device = "/dev/disk/by-uuid/54472399-e1e8-47cc-8f71-7f817f23cad5";
+    {
+      device = "/dev/disk/by-label/games";
       fsType = "ext4";
     };
 
