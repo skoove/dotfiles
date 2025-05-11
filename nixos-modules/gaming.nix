@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     mangohud
     bottles
+    wine
   ];
 
   programs.steam = {
