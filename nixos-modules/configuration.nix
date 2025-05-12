@@ -161,7 +161,7 @@
     enable = true;
   };
 
-  services.displayManager.ly.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
   
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22000 ];
