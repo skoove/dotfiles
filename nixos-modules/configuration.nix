@@ -40,8 +40,15 @@
   security.polkit.enable = true;
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+    };
+  };
 
   # opengl on
   hardware.graphics.enable = true;
