@@ -47,6 +47,10 @@
       mk-snippet = {
         body = builtins.readFile ../scripts/mk-snippet.fish;
       };
+
+      search = {
+        body = "find | rg -i $argv[1]";
+      };
     };
   };
 }

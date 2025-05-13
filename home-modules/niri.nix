@@ -140,6 +140,7 @@ in {
         "${mod}+F".action = maximize-column;
         "${mod}+Shift+F".action = fullscreen-window;
         "${mod}+C".action = center-column;
+        "${mod}+Ctrl+F".action = toggle-window-floating;
 
         # refocus
         "${mod}+K".action = focus-window-or-workspace-up;
