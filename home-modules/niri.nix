@@ -71,7 +71,7 @@ in {
       layout = {
         always-center-single-column = true;
         empty-workspace-above-first = true;
-        focus-ring.width = 1;
+        border.width = 2;
         gaps = 10;
 
         struts =
