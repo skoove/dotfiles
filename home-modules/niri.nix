@@ -71,6 +71,8 @@ in {
       layout = {
         always-center-single-column = true;
         empty-workspace-above-first = true;
+        focus-ring.width = 1;
+        gaps = 10;
 
         struts =
         let
@@ -80,21 +82,6 @@ in {
           right = side_struts;
         };
       };
-
-      window-rules = [
-        {
-          clip-to-geometry = true;
-          geometry-corner-radius =
-          let
-            rounding = 10.0;
-          in {
-            top-left = rounding;
-            top-right = rounding;
-            bottom-left = rounding;
-            bottom-right = rounding;
-          };
-        }
-      ];
 
       outputs = {
         # laptop monitor
@@ -146,6 +133,7 @@ in {
         "${mod}+Shift+Return".action = fish alt_terminal;
         "${mod}+Shift+M".action = quit;
         "${mod}+T".action = fish "bemoji -c -n";
+        "${mod}+P".action = fish "${pkgs.swaylock-effects}/bin/swaylock --screenshot --effect-pixelate 10 --clock";
 
         # reorient
         "${mod}+Q".action = close-window;
@@ -180,8 +168,6 @@ in {
         "Mod+Shift+Equal".action = set-window-height "+10%";
         "Mod+Shift+Minus".action = set-window-height "-10%";
 
-        # the exact same binds that have followed me from wm to wm for
-        # probably years now!
         "XF86AudioRaiseVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
         "XF86AudioLowerVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
         "XF86AudioMute".action = fish "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";

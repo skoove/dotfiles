@@ -1,6 +1,6 @@
-window#waybar {
-  background-color: @base01;
-}
+/* window#waybar { */
+  /* background-color: @base01; */
+/* } */
 
 #clock,
 #battery,
