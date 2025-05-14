@@ -43,7 +43,7 @@
     obsidian          # note taking
     libreoffice-fresh # office suite
     inkscape          # vector graphics
-    gimp              # image editing
+    gimp3             # image editing
     nom               # rss reader
     blanket           # ambient noise
     krita             # draw
