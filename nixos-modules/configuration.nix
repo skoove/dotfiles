@@ -122,7 +122,6 @@
     extraGroups = [ "networkmanager" "wheel" "dialout" ];
     packages = with pkgs; [
       helix
-      firefox
     ];
   };
 
