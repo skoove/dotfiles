@@ -8,12 +8,14 @@ let
   hostname = osConfig.networking.hostName;
 in {
   imports = [
-    ./waybar.nix
-    ./dunst.nix
+    ./waybar.nix # bar
+    ./dunst.nix  # notification daemon
+    ./fish.nix   # Scripts and such required by several things.
   ];
 
   home.packages = with pkgs; [
     xwayland-satellite
+    swaylock-effects   # Lockscreen.
   ];
 
   xdg.portal ={

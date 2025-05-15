@@ -52,15 +52,16 @@
       }
       {
         name = "rust";
-        language-servers = [ "rust-analyzer" "harper" ];
+        language-servers = [ "rust-analyzer"];
       }
       {
         name = "nix";
-        language-servers = [ "nixd" "harper" ];
+        language-servers = [ "nixd"];
       }
       {
         name = "markdown";
         soft-wrap.enable = true;
+        rulers = [80];
         language-servers = [ "harper" ];
       }
       {
