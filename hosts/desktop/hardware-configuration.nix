@@ -11,15 +11,15 @@
   networking.hostName = "nixos-desktop";
 
   # nvidia settings yippppieieieieiei
-  services.xserver.videoDrivers = [ "nouveau" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
-  # hardware.nvidia = {
-  #   modesetting.enable = true;
-  #   powerManagement.enable = true; 
-  #   open = false;                  
-  #   nvidiaSettings = true;
-  #   package = config.boot.kernelPackages.nvidiaPackages.stable;
-  # };
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true; 
+    open = false;                  
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
