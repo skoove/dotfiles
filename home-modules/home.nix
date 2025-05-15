@@ -84,6 +84,7 @@
     gh                 # gh cli
     anki-bin           # flashcards
     ckan               # komrehensive kerbal archive network
+    killall
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
