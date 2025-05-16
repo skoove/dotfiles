@@ -28,6 +28,7 @@
     ./syncthing.nix
     ./yazi.nix
     ./zellij.nix
+    ./xdg.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];
