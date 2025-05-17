@@ -86,7 +86,16 @@
     gh                 # gh cli
     anki-bin           # flashcards
     ckan               # komrehensive kerbal archive network
-    killall
+    usbutils pciutils psmisc
+    nautilus
+    gnome-calculator
+    gnome-2048
+    gnome-calculator
+    gnome-disk-utility
+    emblem
+    hieroglyphic
+    wike
+    
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
