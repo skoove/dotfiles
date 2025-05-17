@@ -29,6 +29,7 @@
     ./yazi.nix
     ./zellij.nix
     ./xdg.nix
+    ./i3.nix
 
     inputs.stylix.homeManagerModules.stylix
    ];

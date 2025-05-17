@@ -157,6 +157,7 @@
   };
 
   services.xserver.windowManager.i3.enable = true;
+  services.xserver.enable = config.services.xserver.windowManager.i3.enable;
 
   services.xserver.displayManager.gdm.enable = true;
   
