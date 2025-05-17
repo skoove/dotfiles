@@ -156,9 +156,7 @@
     package = pkgs.niri-stable;
   };
 
-  programs.gnupg.agent = {
-    enable = true;
-  };
+  services.xserver.windowManager.i3.enable = true;
 
   services.xserver.displayManager.gdm.enable = true;
   
