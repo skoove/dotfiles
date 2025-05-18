@@ -51,6 +51,10 @@
       search = {
         body = "find | rg -i $argv[1]";
       };
+
+      update-flake = {
+        body = "cd ~/.dotfiles; nix flake update; git commit -m 'flake.lock: update'; git push";
+      };
     };
   };
 }
