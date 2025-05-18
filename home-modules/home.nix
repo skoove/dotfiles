@@ -70,6 +70,7 @@
     gnuplot                                          # plotting lib
     mpv
     scrcpy
+    porsmo             # pomodoro
 
 
     # tools
@@ -87,7 +88,6 @@
     typst              # for writing school papers
     tinymist           # typst lsp
     zathura            # pdf viewer
-    gnome-pomodoro     # pomodoro
     gh                 # gh cli
     anki-bin           # flashcards
     ckan               # komrehensive kerbal archive network
