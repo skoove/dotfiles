@@ -67,6 +67,7 @@
 
 
     # tools
+    unzip
     nixd               # nix lsp
     dust               # disk usage but easier read
     nh                 # replacement for rebuild commands
@@ -76,7 +77,6 @@
     ripgrep            # grepper
     whatsapp-for-linux # whats
     vlc                # the last media player i will ever need
-    gpodder            # nice little podcast manager
     cargo-flamegraph   # flamegraph
     qbittorrent        # :D
     typst              # for writing school papers
@@ -95,6 +95,7 @@
     emblem
     hieroglyphic
     wike
+    inetutils
     
 
     # not tools at all but i dont want to nix run them
