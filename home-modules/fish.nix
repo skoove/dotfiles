@@ -53,7 +53,7 @@
       };
 
       update-flake = {
-        body = "cd ~/.dotfiles; nix flake update; git commit -m 'flake.lock: update'; git push";
+        body = "cd ~/.dotfiles; nix flake update; git commit -am 'flake.lock: update'; git push; nh os switch";
       };
     };
   };
