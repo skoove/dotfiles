@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, osConfig , ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -39,6 +39,13 @@
     config.stylix.fonts.monospace.name
     "DejaVu Sans"
   ];
+
+  nix.gc = {
+    automatic = osConfig.nix.gc.automatic;
+    persistent = osConfig.nix.gc.persistent;
+    frequency = osConfig.nix.gc.dates;
+    options = osConfig.nix.gc.options;
+  };
   
   home.packages = with pkgs; [
     # productive

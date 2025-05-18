@@ -33,8 +33,8 @@
   nix.gc = {
     automatic = true;
     persistent = true;
-    dates = "daily";
-    options = "--delete-older-than 3d";
+    dates = "weekly";
+    options = "--delete-older-than 7d";
   };
 
   security.polkit.enable = true;
