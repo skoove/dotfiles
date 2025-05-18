@@ -6,6 +6,17 @@
     config = {
       modifier = "Mod4";
 
+      startup = [
+        {
+          always = true;
+          command = "xrandr --output HDMI-0 --mode 1920x1080 --rate 100 --primary --output DVI-D-0 --mode 1920x1080 --rate 100 --left-of HDMI-0";
+        }
+        {
+          always = true;
+          command = "xinput --set-prop 'Logitech G203 LIGHTSYNC Gaming Mouse' 'libinput Accel Profile Enabled' 0, 1, 0";
+        }
+      ];
+
       keybindings = let
         mod = config.xsession.windowManager.i3.config.modifier;
       in lib.mkOptionDefault {
