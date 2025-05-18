@@ -64,7 +64,6 @@
     satty                                            # edit screenshots
     wl-clipboard                                     # Copy things to clipboard (required by bemoji)
     libsForQt5.qtstyleplugin-kvantum                 # theming for qt apps
-    wofi-power-menu                                  # Shutdown & other power actions using wofi
     python3                                          # its python 3!
     wf-recorder                                      # screen recorder
     (import ../packages/loago.nix { inherit pkgs; }) # Shows how long ago a task was done
@@ -78,7 +77,6 @@
     nixd               # nix lsp
     dust               # disk usage but easier read
     nh                 # replacement for rebuild commands
-    tldr               # simpler man pages
     bitwarden-cli      # password manager
     sops               # secrets management
     ripgrep            # grepper
@@ -95,13 +93,6 @@
     ckan               # komrehensive kerbal archive network
     usbutils pciutils psmisc
     nautilus
-    gnome-calculator
-    gnome-2048
-    gnome-calculator
-    gnome-disk-utility
-    emblem
-    hieroglyphic
-    wike
     inetutils
     
 
