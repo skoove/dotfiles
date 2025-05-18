@@ -27,7 +27,7 @@
   nix.optimise = {
     automatic = true;
     persistent = true;
-    dates = [ "daily" ];
+    dates = [ "18:00" ];
   };
 
   nix.gc = {
