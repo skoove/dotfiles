@@ -15,6 +15,10 @@
           always = true;
           command = "xinput --set-prop 'Logitech G203 LIGHTSYNC Gaming Mouse' 'libinput Accel Profile Enabled' 0, 1, 0";
         }
+        {
+          always = true;
+          command = "steam";
+        }
       ];
 
       keybindings = let
