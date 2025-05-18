@@ -76,7 +76,7 @@ in {
         always-center-single-column = true;
         empty-workspace-above-first = true;
         border.width = 2;
-        gaps = 10;
+        gaps = 0;
 
         struts =
         let
