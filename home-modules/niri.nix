@@ -138,12 +138,12 @@ in {
         "${mod}+Shift+M".action = quit;
         "${mod}+T".action = fish "bemoji -c -n";
         "${mod}+P".action = fish "fish ${../scripts/lock-screen.fish}";
+        "${mod}+C".action = fish "fish ${../scripts/command-runner.fish}";
 
         # reorient
         "${mod}+Q".action = close-window;
         "${mod}+F".action = maximize-column;
         "${mod}+Shift+F".action = fullscreen-window;
-        "${mod}+C".action = center-column;
         "${mod}+Ctrl+F".action = toggle-window-floating;
 
         # open things
