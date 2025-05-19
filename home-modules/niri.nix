@@ -148,9 +148,9 @@ in {
 
         # open things
         "${mod}+1".action = spawn "floorp";
-        "${mod}+1".action = spawn "obsidian";
-        "${mod}+1".action = spawn "discord";
-        "${mod}+1".action = spawn "steam";
+        "${mod}+2".action = spawn "obsidian";
+        "${mod}+3".action = spawn "discord";
+        "${mod}+4".action = spawn "steam";
 
         # refocus
         "${mod}+K".action = focus-window-or-workspace-up;
