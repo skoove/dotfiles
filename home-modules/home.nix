@@ -31,7 +31,7 @@
     ./xdg.nix
     ./i3.nix
 
-    inputs.stylix.homeManagerModules.stylix
+    inputs.stylix.homeModules.stylix
    ];
 
   fonts.fontconfig.enable = true;
