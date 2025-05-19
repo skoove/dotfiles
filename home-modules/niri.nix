@@ -146,6 +146,12 @@ in {
         "${mod}+C".action = center-column;
         "${mod}+Ctrl+F".action = toggle-window-floating;
 
+        # open things
+        "${mod}+1".action = spawn "floorp";
+        "${mod}+1".action = spawn "obsidian";
+        "${mod}+1".action = spawn "discord";
+        "${mod}+1".action = spawn "steam";
+
         # refocus
         "${mod}+K".action = focus-window-or-workspace-up;
         "${mod}+J".action = focus-window-or-workspace-down;
@@ -170,6 +176,7 @@ in {
         # resize things
         "Mod+Equal".action = set-column-width "+10%";
         "Mod+Minus".action = set-column-width "-10%";
+        "Mod+Shift+1".action = set-column-width "50%";
         "Mod+Shift+Equal".action = set-window-height "+10%";
         "Mod+Shift+Minus".action = set-window-height "-10%";
 
