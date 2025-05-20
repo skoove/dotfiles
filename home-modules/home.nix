@@ -57,7 +57,7 @@
     nom               # rss reader
     blanket           # ambient noise
     krita             # draw
-    numbat
+    numbat speedcrunch
 
     # utils
     bemoji                                           # emoji picker for wofi
