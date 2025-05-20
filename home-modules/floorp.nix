@@ -16,6 +16,11 @@
 
     profiles."zie" = {
       name = "zie";
+
+      settings = {
+        "extensions.autoDisableScopes" = 0;
+      };
+      
       extensions = {
         force = true;
 
