@@ -29,13 +29,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    woomer = {
-      url = "github:Axlefublr/woomer";
+    nur = {
+      url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, niri, ... }@inputs:
+  outputs = {nixpkgs, niri, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;

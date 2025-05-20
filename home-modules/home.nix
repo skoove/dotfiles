@@ -32,6 +32,7 @@
     ./i3.nix
 
     inputs.stylix.homeModules.stylix
+    inputs.nur.modules.homeManager.default
    ];
 
   fonts.fontconfig.enable = true;
@@ -56,6 +57,7 @@
     nom               # rss reader
     blanket           # ambient noise
     krita             # draw
+    speedcrunch
 
     # utils
     bemoji                                           # emoji picker for wofi
@@ -115,7 +117,6 @@
     config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
 
   # Let Home Manager install and manage itself.
-  # programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
   home.stateVersion = "24.11";
 }

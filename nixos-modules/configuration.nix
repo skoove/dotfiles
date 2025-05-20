@@ -9,6 +9,7 @@
     inputs.stylix.nixosModules.stylix
     inputs.home-manager.nixosModules.default
     inputs.niri.nixosModules.niri
+    inputs.nur.modules.nixos.default
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -130,7 +131,8 @@
   stylix.homeManagerIntegration.autoImport = false;
 
   home-manager = {
-    backupFileExtension = "backup";
+
+    backupFileExtension = "hm-backup";
     extraSpecialArgs = { inherit inputs; };
 
     users = {

@@ -1,5 +1,10 @@
-{ ... }:
+{ pkgs , ... }:
 {
+  stylix.targets.floorp = {
+    profileNames = [ "zie" ];
+    colorTheme.enable = true;
+  };
+
   programs.floorp = {
     enable = true;
 
@@ -7,6 +12,18 @@
       DisableTelemetry = true;
       OfferToSaveLogins = false;
       DisableProfileImport = true;
+    };
+
+    profiles."zie" = {
+      name = "zie";
+      extensions = {
+        force = true;
+
+        packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          ublock-origin
+          bitwarden
+        ];
+      };
     };
   };
 }
