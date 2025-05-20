@@ -66,7 +66,7 @@ in {
 
         trackpoint = {
           accel-profile = "adaptive";
-          accel-speed = 0.3;
+          accel-speed = 0.6;
         };
 
         tablet.map-to-output = "HDMI-A-1";
