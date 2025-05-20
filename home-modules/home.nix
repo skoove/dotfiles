@@ -58,6 +58,7 @@
     blanket           # ambient noise
     krita             # draw
     numbat qalculate-qt
+    super-super-productivity
 
     # utils
     bemoji                                           # emoji picker for wofi
