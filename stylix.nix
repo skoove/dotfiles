@@ -9,9 +9,11 @@
       name = "JetBrainsMono Nerd Font";
     };
 
-    sansSerif = config.stylix.fonts.monospace;
-    serif = config.stylix.fonts.monospace;
-    # emoji = config.stylix.fonts.monospace;
+    sansSerif = {
+      package = pkgs.rubik;
+    };
+
+    serif = config.stylix.fonts.sansSerif;
 
     sizes = {
       applications = 10;
