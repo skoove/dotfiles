@@ -11,6 +11,7 @@
 
     sansSerif = {
       package = pkgs.rubik;
+      name = "Rubik";
     };
 
     serif = config.stylix.fonts.sansSerif;
