@@ -44,7 +44,6 @@
   nix.gc = {
     automatic = osConfig.nix.gc.automatic;
     persistent = osConfig.nix.gc.persistent;
-    frequency = osConfig.nix.gc.dates;
     options = osConfig.nix.gc.options;
   };
   
