@@ -17,8 +17,8 @@
     modesetting.enable = true;
     powerManagement.enable = true; 
     open = false;                  
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    nvidiaSettings = false;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
