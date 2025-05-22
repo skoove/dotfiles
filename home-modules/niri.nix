@@ -16,7 +16,7 @@ in {
   home.packages = with pkgs; [
     xwayland-satellite
     swaylock-effects   # Lockscreen.
-    swayidle           # for turning off screen after 5 min
+    swayidle           # for turning off screen after 5 min when screen is locked
   ];
 
   xdg.portal ={
