@@ -58,6 +58,7 @@
     krita             # draw
     numbat qalculate-qt
     super-productivity
+    stellarium
 
     # utils
     bemoji                                           # emoji picker for wofi
