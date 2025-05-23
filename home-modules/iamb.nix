@@ -6,5 +6,17 @@
   ''
     [profiles.user]
     user_id = "@skoove:catgirl.cloud"
+
+    [settings.image_preview]
+    protocol.type = "sixel"
+
+    [settings.notifications]
+    enabled = true
+
+    [layout]
+    style = "restore"
+
+    [dirs]
+    downloads = "~/Downloads/iamb"
   '';
 }
