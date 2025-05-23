@@ -30,6 +30,7 @@
     ./zellij.nix
     ./xdg.nix
     ./i3.nix
+    ./iamb.nix
 
     inputs.stylix.homeModules.stylix
     inputs.nur.modules.homeManager.default
@@ -59,7 +60,6 @@
     numbat qalculate-qt
     super-productivity
     stellarium
-    iamb # matrix client
 
     # utils
     bemoji                                           # emoji picker for wofi
