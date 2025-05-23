@@ -17,6 +17,7 @@
     style = "restore"
 
     [dirs]
-    downloads = "~/Downloads/iamb"
+    downloads = "Downloads/iamb"
+    data = ".local/share"
   '';
 }
