@@ -10,7 +10,6 @@ in
 {
 
   home.packages = with pkgs; [
-    cava
     nerd-fonts.jetbrains-mono
   ];
 
@@ -30,7 +29,7 @@ in
       ];
 
       modules-center = [
-        "cava"
+        # "cava"
       ];
 
       modules-right = [
