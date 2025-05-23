@@ -162,7 +162,6 @@ in {
         "${mod}+Shift+F".action = fullscreen-window;
         "${mod}+Ctrl+F".action = toggle-window-floating;
         "${mod}+W".action = toggle-column-tabbed-display;
-        stereo = false;
 
         # open things
         "${mod}+1".action = spawn "floorp";
