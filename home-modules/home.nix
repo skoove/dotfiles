@@ -59,6 +59,7 @@
     numbat qalculate-qt
     super-productivity
     stellarium
+    iamb # matrix client
 
     # utils
     bemoji                                           # emoji picker for wofi
