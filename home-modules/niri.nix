@@ -75,17 +75,33 @@ in {
       layout = {
         always-center-single-column = true;
         empty-workspace-above-first = true;
-        border.width = 2;
-        gaps = 0;
+        border.width = 4;
+        gaps = 15;
+        shadow.enable = true;
 
         struts =
         let
-        side_struts = 15;
+        side_struts = 0;
         in {
           left = side_struts;
           right = side_struts;
         };
       };
+
+
+      window-rules = [
+        {
+          geometry-corner-radius = let
+            r = 10.0;
+          in {
+            top-left = r;
+            top-right = r;
+            bottom-left = r;
+            bottom-right = r;
+          };
+          clip-to-geometry = true;
+        }
+      ];
 
       outputs = {
         # laptop monitor
