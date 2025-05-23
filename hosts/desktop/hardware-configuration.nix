@@ -38,9 +38,15 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/CC1D-8E2D";
+    {
+      device = "/dev/disk/by-uuid/CC1D-8E2D";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
+    };
+
+  fileSystems."/home/zie/development" =
+    {
+      device = "/dev/disk/by-label/development";
     };
 
   swapDevices = [ {
