@@ -1,8 +1,19 @@
-{ config, lib, ... }:
+{ config, pkgs, osConfig, ... }:
 let
   colors = config.lib.stylix.colors;
+  bat-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+  net-icons = [ "󰣾" "󰣴" "󰣶" "󰣸" "󰣺" ];
+  audio-icons = ["" "" "" "" ];
+  generic-percent-icons = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+  temp-icons = [ "" "" "" ""];
 in
 {
+
+  home.packages = with pkgs; [
+    cava
+    nerd-fonts.jetbrains-mono
+  ];
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -12,13 +23,14 @@ in
       
       modules-left = [
         "niri/workspaces"
+        "niri/window"
       
         # "hyprland/workspaces"
         # "hyprland/window"
       ];
 
       modules-center = [
-        "niri/window"
+        "cava"
       ];
 
       modules-right = [
@@ -40,7 +52,7 @@ in
         format = "{icon}";
         format-icons = {
           active = "";
-          default = "";
+          default = "";
         };
       };
 
@@ -48,52 +60,93 @@ in
         spacing = 5;
       };
 
+      cava = {
+        format-icons = generic-percent-icons;
+        bars = 14;
+        method = "pulse";
+        framerate = 20;
+        bar_delimiter = 0;
+        stereo = false;
+      };
+
       clock = {
-        format = "{:%H:%M  %F}";
+        format = "{:%H:%M %F}";
       };
 
       battery = {
-        format = "bat: {capacity}%";
-        # format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+        format = "{icon} {capacity}%";
+        format-icons = bat-icons;
         tooltip-format = "{time}, {cycles} cycles, {health}% health";
       };
 
       network = {
-        format = "net: {essid}";
-        # format-icons = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
+        format = "{icon}  {ipaddr}";
+        format-icons = net-icons;
       };
 
       pulseaudio = {
-        format = "vol: {volume}%";
+        format = "{icon}  {volume}%";
         format-muted = "vol: muted";
-        format-icons.default = [ "" ""];
+        format-icons.default = audio-icons;
         on-click = "pavucontrol";
         scroll-step = 1;
       };
 
       backlight = {
-        format = "bl: {percent}%";
+        format = "󰖨 {icon}";
+        format-icons = generic-percent-icons;
+        tooltip-format = "{percent}%";
       };
 
       cpu = {
         interval = 1;
-        format = "cpu: {usage}%";
+        format = " {icon}";
+        format-icons = generic-percent-icons;
+        tooltip-format = "usage: {usage}%\nload: {load}";
       };
 
       memory = {
         interval = 1;
-        format = "mem: {percentage}%";
-        tooltip-format = "{used} GiB / {total} GiB";
+        format = "  {icon}";
+        format-icons = generic-percent-icons;
+        tooltip-format = "{used} GiB / {total} GiB \n{percentage}%";
       };
 
       temperature = {
         interval = 1;
-        thermal-zone = 2;
         critical-threshold = 80;
-        format = "t: {temperatureC}°C";
-      };
+        format = " {icon} {temperatureC}°C";
+        format-icons = temp-icons;
+      } // (if osConfig.networking.hostName == "nixos-desktop" then {
+        thermal-zone = 2;
+      } else {});
     };
-
-    style = builtins.readFile ./waybar.css;
   };
+
+  stylix.targets.waybar.enable = false;
+
+  programs.waybar.style = ''
+    * {
+      border: none;
+      font-family: "${config.stylix.fonts.sansSerif.name}", "JetBrainsMono NF";
+      font-size: ${toString config.stylix.fonts.sizes.desktop}pt;
+      color: #${colors.base05};
+    }
+
+    window#waybar {
+      background: transparent;
+    }
+
+    .module {
+      background: #${colors.base00};
+      margin: 3px 10px 0px 10px;
+      padding: 0px 5px 0px 5px;
+      border-radius: 10px;
+    }
+
+    #workspaces button {
+      padding: 0px;
+      border-bottom: 0px none transparent;
+    }
+  '';
 }
