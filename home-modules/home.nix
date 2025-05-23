@@ -60,6 +60,7 @@
     numbat qalculate-qt
     super-productivity
     stellarium
+    fluffychat
 
     # utils
     bemoji                                           # emoji picker for wofi
