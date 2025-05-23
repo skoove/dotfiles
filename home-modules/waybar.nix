@@ -127,7 +127,7 @@ in
   programs.waybar.style = ''
     * {
       border: none;
-      font-family: "${config.stylix.fonts.sansSerif.name}", "JetBrainsMono NF";
+      font-family: "${config.stylix.fonts.monospace.name}", "JetBrainsMono NF";
       font-size: ${toString config.stylix.fonts.sizes.desktop}pt;
       color: #${colors.base05};
     }
