@@ -121,9 +121,6 @@
     isNormalUser = true;
     description = "Zie Sturges";
     extraGroups = [ "networkmanager" "wheel" "dialout" ];
-    packages = with pkgs; [
-      helix
-    ];
   };
 
   # this is to make sure stylix is loaded last
@@ -148,7 +145,8 @@
   environment.systemPackages = with pkgs; [
     helix
     git
-    ];
+    btrfs-progs
+  ];
 
   programs.hyprland.enable = false;
   programs.nix-ld.enable = true;
