@@ -17,7 +17,7 @@
     style = "restore"
 
     [dirs]
-    downloads = "Downloads/iamb"
-    data = ".local/share"
+    downloads = "/home/zie/Downloads/iamb"
+    data = "/home/zie/.local/share"
   '';
 }
