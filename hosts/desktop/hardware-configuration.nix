@@ -35,7 +35,7 @@
     {
       device = "/dev/disk/by-label/games";
       fsType = "ext4";
-      options = [ "users" "gid=users" ];
+      options = [ "users" ];
     };
 
   fileSystems."/boot" =
@@ -48,7 +48,7 @@
   fileSystems."/home/zie/development" =
     {
       device = "/dev/disk/by-label/development";
-      options = [ "users" "gid=users" ];
+      options = [ "users" ];
     };
 
   swapDevices = [ {
