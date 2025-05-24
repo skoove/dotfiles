@@ -6,6 +6,8 @@ let
   alt_terminal = "foot";
 
   hostname = osConfig.networking.hostName;
+
+  colors = config.lib.stylix.colors;
 in {
   imports = [
     ./waybar.nix # bar
@@ -77,7 +79,6 @@ in {
         empty-workspace-above-first = true;
         border.width = 4;
         gaps = 15;
-        shadow.enable = true;
 
         struts =
         let
