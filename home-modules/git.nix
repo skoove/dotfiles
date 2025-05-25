@@ -2,8 +2,8 @@
 {
   programs.git = {
     enable = true;
-    userName = "Zie Sturges";
-    userEmail = "zie@sturges.com.au";
+    userName = "Zie";
+    userEmail = "53106860+skoove@users.noreply.github.com";
     delta.enable = true;
 
     extraConfig = {
