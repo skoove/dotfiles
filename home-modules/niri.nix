@@ -156,6 +156,7 @@ in {
         "${mod}+T".action = fish "bemoji -c -n";
         "${mod}+P".action = fish "fish ${../scripts/lock-screen.fish}";
         "${mod}+C".action = fish "fish ${../scripts/command-runner.fish}";
+        "${mod}+N".action = spawn "footclient" "numbat";
 
         # reorient
         "${mod}+Q".action = close-window;
