@@ -157,15 +157,6 @@
     package = pkgs.niri-unstable;
   };
 
-  # xdg.portal ={
-  #   enable = true;
-  #   wlr.enable = true;
-  #   extraPortals = with pkgs; [
-  #     xdg-desktop-portal-gtk
-  #     xdg-desktop-portal-gnome
-  #   ];
-  # };
-
   services.xserver.windowManager.i3.enable = false;
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
 

@@ -19,16 +19,8 @@ in {
     xwayland-satellite
     swaylock-effects   # Lockscreen.
     swayidle           # for turning off screen after 5 min
+    nur.repos.Vortriz.niriswitcher
   ];
-
-  # xdg.portal ={
-  #   enable = true;
-  #   config.common.default = "*";
-    
-  #   extraPortals = with pkgs; [
-  #     xdg-desktop-portal-gnome
-  #   ];
-  # };
 
 
   services.hyprpaper.enable = true;
@@ -42,10 +34,9 @@ in {
         { command = [ "sh" "-c" "systemctl --user enable --now waybar.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now hyprpaper.service" ]; }
-        # this (hopefully) fixes waybar being really slow to load
-        { command = [ "sh" "-c" "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY" ]; }
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
+        { command = [ "niriswitcher" ]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
           { command = [ "sh" "-c" "discord --start-minimized" ]; }
@@ -156,6 +147,8 @@ in {
         "${mod}+P".action = fish "fish ${../scripts/lock-screen.fish}";
         "${mod}+C".action = fish "fish ${../scripts/command-runner.fish}";
         "${mod}+N".action = spawn "footclient" "numbat";
+        "Alt+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
+        "Alt+Shift+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
 
         # reorient
         "${mod}+Q".action = close-window;
@@ -164,7 +157,7 @@ in {
         "${mod}+Ctrl+F".action = toggle-window-floating;
         "${mod}+W".action = toggle-column-tabbed-display;
 
-        # open things
+        # open things but better!!!
         "${mod}+1".action = spawn "floorp";
         "${mod}+2".action = spawn "obsidian";
         "${mod}+3".action = spawn "discord";
