@@ -15,8 +15,14 @@
       enable = true;
       defaultApplications = {
         "inode/directory" = "foot.desktop";
-        "image/png" = "vlc.desktop";
-        "image/jpeg" = "vlc.desktop";
+        "image/png" = "imv.desktop";
+        "image/jpeg" = "imv.desktop";
+        "image/jpg" = "imv.desktop";
+        "image/gif" = "imv.desktop";
+        "image/webp" = "imv.desktop";
+        "image/bmp" = "imv.desktop";
+        "image/tiff" = "imv.desktop";
+        "image/svg+xml" = "imv.desktop";
       };
     };
   };

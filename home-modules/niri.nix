@@ -21,16 +21,14 @@ in {
     swayidle           # for turning off screen after 5 min
   ];
 
-  xdg.portal ={
-    enable = true;
-    config.common.default = "*";
+  # xdg.portal ={
+  #   enable = true;
+  #   config.common.default = "*";
     
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
-  };
+  #   extraPortals = with pkgs; [
+  #     xdg-desktop-portal-gnome
+  #   ];
+  # };
 
 
   services.hyprpaper.enable = true;

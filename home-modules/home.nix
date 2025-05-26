@@ -98,6 +98,8 @@
     usbutils pciutils psmisc
     nautilus
     inetutils
+    mpv
+    imv
     
 
     # not tools at all but i dont want to nix run them
