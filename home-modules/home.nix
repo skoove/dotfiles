@@ -75,7 +75,7 @@
     mpv
     scrcpy
     porsmo             # pomodoro
-    element-desktop-wayland
+    element-desktop
 
 
     # tools
