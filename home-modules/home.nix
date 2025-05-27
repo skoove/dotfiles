@@ -60,6 +60,7 @@
     numbat qalculate-qt
     super-productivity
     stellarium
+    rnote
 
     # utils
     bemoji                                           # emoji picker for wofi
