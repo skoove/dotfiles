@@ -13,6 +13,7 @@
     '';
 
     shellAbbrs = {
+      gwip = "git commit -a -m 'wip'";
       gco = "git checkout";
       gsw = "git switch";
       gcl = "git clone";
