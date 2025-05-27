@@ -66,7 +66,6 @@
     bemoji                                           # emoji picker for wofi
     brightnessctl                                    # for controlling laptop backlight
     pavucontrol                                      # volume control
-    satty                                            # edit screenshots
     wl-clipboard                                     # Copy things to clipboard (required by bemoji)
     libsForQt5.qtstyleplugin-kvantum                 # theming for qt apps
     python3                                          # its python 3!

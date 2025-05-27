@@ -20,6 +20,7 @@ in {
     swaylock-effects   # Lockscreen.
     swayidle           # for turning off screen after 5 min
     nur.repos.Vortriz.niriswitcher
+    ksnip
   ];
 
 
