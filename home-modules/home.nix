@@ -76,6 +76,7 @@
     scrcpy
     porsmo             # pomodoro
     element-desktop
+    blender
 
 
     # tools
