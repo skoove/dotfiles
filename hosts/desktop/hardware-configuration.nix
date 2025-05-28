@@ -48,7 +48,7 @@
   fileSystems."/home/zie/development" =
     {
       device = "/dev/disk/by-label/development";
-      options = [ "users" ];
+      options = [ "users" "exec" ];
     };
 
   swapDevices = [ {
