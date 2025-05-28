@@ -10,7 +10,6 @@
 
     stylix = {
       url = "github:danth/stylix";
-      # url = "path:/home/zie/dev/stylix-discord-fix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -27,7 +26,7 @@
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
+   };
 
     nur = {
       url = "github:nix-community/NUR";
