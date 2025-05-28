@@ -281,17 +281,19 @@
       "inputs": {
         "niri-stable": "niri-stable",
         "niri-unstable": "niri-unstable",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "nixpkgs-stable": "nixpkgs-stable",
         "xwayland-satellite-stable": "xwayland-satellite-stable",
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1748396098,
-        "narHash": "sha256-+Uor3AgZr4B1wePO80WZPwNOlvQpGaN7ULq1wYOUcWw=",
+        "lastModified": 1748403209,
+        "narHash": "sha256-LY3LjCRFcYKSZv5wOYu54sAqWF7/glhjxelzQzmaH6U=",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "86dffb01176f88b0462962f574ef1e99a9d0cfcb",
+        "rev": "1b20e651b080b8e9063fe9baf000275870ae1ab0",
         "type": "github"
       },
       "original": {
@@ -386,22 +388,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1748190013,
-        "narHash": "sha256-R5HJFflOfsP5FBtk+zE8FpL8uqE7n62jqOsADvVshhE=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "62b852f6c6742134ade1abdd2a21685fd617a291",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -411,11 +397,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1748399217,
-        "narHash": "sha256-YMwHiOAuNAEN0QkT7vWSVh6U53rfID0cEX3qYcr3/JE=",
+        "lastModified": 1748405140,
+        "narHash": "sha256-tfBZiJzyI0Mpq1Ptp0ZKlnEdZlUVX6nL92VHnaWWWrA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "feaeb33ea0ef5377011618b89c342b6c41f27691",
+        "rev": "5d73813e088bc61d322cd6af715e1df77b8d0e60",
         "type": "github"
       },
       "original": {
@@ -455,7 +441,7 @@
         "home-manager": "home-manager",
         "niri": "niri",
         "nixcord": "nixcord",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"
@@ -693,11 +679,11 @@
     "xwayland-satellite-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1748390472,
-        "narHash": "sha256-3JlBRSegDdS73dfihXlLth/ylswLdQojyLWWtvLtOyY=",
+        "lastModified": 1748396840,
+        "narHash": "sha256-NPSbIK8dsayXj4RbEwm+fMbnAKrTRRB/qFoWxfkRLDo=",
         "owner": "Supreeeme",
         "repo": "xwayland-satellite",
-        "rev": "d7bc38e6e763b55af6fe539158cd100c3e23a588",
+        "rev": "76ace3c656c6680e58e53f95baac0ae0fa1178b5",
         "type": "github"
       },
       "original": {
