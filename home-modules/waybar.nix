@@ -45,7 +45,7 @@ in
       ];
 
       "hyprland/window".icon = true;
-      "niri/window".icon = false;
+      "niri/window".icon = true;
 
       "niri/workspaces" = {
         format = "{icon}";
