@@ -61,6 +61,7 @@
     super-productivity
     stellarium
     rnote
+    bitwarden-desktop
 
     # utils
     bemoji                                           # emoji picker for wofi
