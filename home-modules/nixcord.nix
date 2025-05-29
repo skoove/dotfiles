@@ -38,7 +38,6 @@
       noProfileThemes.enable = true;
       noReplyMention.enable = true;
       noTypingAnimation.enable = true;
-      nsfwGateBypass.enable = true;
       permissionFreeWill.enable = true;
       petpet.enable = true;
       platformIndicators.enable = true;
