@@ -89,6 +89,7 @@
     ripgrep            # grepper
     whatsapp-for-linux # whats
     vlc                # the last media player i will ever need
+    tidal-hifi
     cargo-flamegraph   # flamegraph
     qbittorrent        # :D
     typst              # for writing school papers
