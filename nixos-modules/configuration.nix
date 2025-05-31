@@ -160,7 +160,7 @@
   services.xserver.windowManager.i3.enable = false;
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
 
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true;
   
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22000 ];
