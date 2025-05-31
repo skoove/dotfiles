@@ -8,10 +8,13 @@
     bottles
     wine
     protontricks
-    protonup-qt
   ];
 
   programs.steam = {
     enable = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ]
+    ;
   };
 }
