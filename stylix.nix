@@ -20,7 +20,7 @@
       applications = 10;
       desktop = 10;
       popups = 10;
-      terminal = 9;
+      terminal = 10;
     };
   };
 
