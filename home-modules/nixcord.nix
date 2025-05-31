@@ -63,11 +63,6 @@
         collapseDeleted = true;
       };
 
-      blurNSFW = {
-        enable = true;
-        blurAmount = 30;
-      };
-
       betterFolders = {
         enable = true;
         closeAllFolders = true;
