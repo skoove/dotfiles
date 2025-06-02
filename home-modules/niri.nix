@@ -16,11 +16,12 @@ in {
   ];
 
   home.packages = with pkgs; [
-    xwayland-satellite
-    swaylock-effects   # Lockscreen.
-    swayidle           # for turning off screen after 5 min
-    nur.repos.Vortriz.niriswitcher
     ksnip
+    nur.repos.Vortriz.niriswitcher
+    playerctl
+    swayidle           
+    swaylock-effects   
+    xwayland-satellite
   ];
 
 
@@ -199,6 +200,10 @@ in {
         "XF86AudioMicMute".action = fish "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
         "XF86MonBrightnessUp".action = fish "brightnessctl s 10%+";
         "XF86MonBrightnessDown".action = fish "brightnessctl s 10%-";
+
+        "XF86AudioPlay".action = fish "playerctl play-pause";
+        "XF86AudioNext".action = fish "playerctl next";
+        "XF86AudioPrev".action = fish "playerctl previous";
       };
     };
   };
