@@ -52,7 +52,6 @@
     # productive
     obsidian          # note taking
     libreoffice-fresh # office suite
-    inkscape          # vector graphics
     gimp3             # image editing
     nom               # rss reader
     blanket           # ambient noise
