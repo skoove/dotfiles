@@ -98,9 +98,6 @@
     powerKeyLongPress = "ignore";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   # Enable sound with pipewire.
   security.rtkit.enable = true;
   services.pipewire = {
@@ -121,7 +118,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zie = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin"];
   };
 
   # this is to make sure stylix is loaded last
@@ -161,7 +158,19 @@
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
 
   services.displayManager.gdm.enable = true;
+
+  # printing
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [ epson-escpr ];
+  };
   
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
