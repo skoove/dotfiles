@@ -104,7 +104,12 @@
     inetutils
     mpv
     imv
-    
+
+    (pkgs.inkscape-with-extensions.override {
+      inkscapeExtensions = [
+        pkgs.inkscape-extensions.textext
+      ];
+    })
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
