@@ -12,6 +12,8 @@
     inputs.nur.modules.nixos.default
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.sandbox = "relaxed";
 
