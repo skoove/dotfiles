@@ -5,8 +5,8 @@
   stylix.image = ./wallpapers/solar-system.jpg;
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerd-fonts.departure-mono;
-      name = "DepartureMono Nerd Font";
+      package = pkgs.pixel-code;
+      name = "Pixel Code";
     };
 
     # sansSerif = {
@@ -21,7 +21,7 @@
       applications = 8;
       desktop = 8;
       popups = 8;
-      terminal = 8;
+      terminal = 11;
     };
   };
 
