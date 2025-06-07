@@ -5,8 +5,8 @@
   stylix.image = ./wallpapers/solar-system.jpg;
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerd-fonts._0xproto;
-      name = "0xProto Nerd Font";
+      package = pkgs.nerd-fonts.jetbrains-mono;
+      name = "JetBrainsMono NF";
     };
 
     # sansSerif = {
