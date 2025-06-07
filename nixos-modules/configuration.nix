@@ -109,6 +109,7 @@
     pulse.enable = true;
     audio.enable = true;
     wireplumber.enable = true;
+    extraConfig = "context.properties = {default.clock.min-quantum = 1024}";
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
