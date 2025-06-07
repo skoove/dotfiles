@@ -5,8 +5,8 @@
   stylix.image = ./wallpapers/solar-system.jpg;
   stylix.fonts = {
     monospace = {
-      package = pkgs.pixel-code;
-      name = "Pixel Code";
+      package = pkgs.nerd-fonts._0xproto;
+      name = "0xProto Nerd Font";
     };
 
     # sansSerif = {
@@ -18,10 +18,10 @@
     serif = config.stylix.fonts.sansSerif;
 
     sizes = {
-      applications = 8;
-      desktop = 8;
-      popups = 8;
-      terminal = 11;
+      applications = 9;
+      desktop = 9;
+      popups = 9;
+      terminal = 9;
     };
   };
 

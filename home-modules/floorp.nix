@@ -79,6 +79,10 @@
                 name = "router";
                 url = "https://192.168.0.254/";
               }
+              {
+                name = "floorp";
+                url = "https://192.168.0.187:8006/";
+              }
             ];
           }
         ];
