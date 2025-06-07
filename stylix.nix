@@ -5,22 +5,23 @@
   stylix.image = ./wallpapers/solar-system.jpg;
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "JetBrainsMono Nerd Font";
+      package = pkgs.nerd-fonts.departure-mono;
+      name = "DepartureMono Nerd Font";
     };
 
-    sansSerif = {
-      package = pkgs.rubik;
-      name = "Rubik";
-    };
+    # sansSerif = {
+    #   package = pkgs.rubik;
+    #   name = "Rubik";
+    # };
 
+    sansSerif = config.stylix.fonts.monospace;
     serif = config.stylix.fonts.sansSerif;
 
     sizes = {
-      applications = 10;
-      desktop = 10;
-      popups = 10;
-      terminal = 10;
+      applications = 8;
+      desktop = 8;
+      popups = 8;
+      terminal = 8;
     };
   };
 

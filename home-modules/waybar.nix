@@ -9,10 +9,6 @@ let
 in
 {
 
-  home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -127,7 +123,7 @@ in
   programs.waybar.style = ''
     * {
       border: none;
-      font-family: "${config.stylix.fonts.monospace.name}", "JetBrainsMono NF";
+      font-family: "${config.stylix.fonts.monospace.name}";
       font-size: ${toString config.stylix.fonts.sizes.desktop}pt;
       color: #${colors.base05};
     }
