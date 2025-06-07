@@ -152,6 +152,7 @@ in {
         "${mod}+N".action = spawn "footclient" "numbat";
         "Alt+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
         "Alt+Shift+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
+        "${mod}+Y".action = fish "dunstify '$(niri msg focused-window)'";
 
         # reorient
         "${mod}+Q".action = close-window;
