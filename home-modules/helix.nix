@@ -24,7 +24,7 @@
       keys.normal = {
         space.q = ":reflow";
 
-        "-".n = ":sh footclient -H hx";
+        space.space.n = ":sh footclient fish -c -H hx";
       };
     };
 
