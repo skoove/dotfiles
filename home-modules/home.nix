@@ -61,6 +61,7 @@
     stellarium
     rnote
     bitwarden-desktop
+    freecad-wayland
 
     # utils
     bemoji                                           # emoji picker for wofi
