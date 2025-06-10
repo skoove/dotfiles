@@ -125,10 +125,12 @@
 
   programs.bat.enable = true;
 
-  home.file.".local/share/loago/loago.json".source =
-    config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
+  home.file = {
+    ".local/share/loago/loago.json".source = config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
+    ".config/inkscape/templates/default.svg".source = ../files/inkscape/default-document.svg;
+    ".config/inkscape/palettes/default.gpl".source = ../files/inkscape/gruvbox-palette.gpl;
+  };
 
-  home.file.".config/inkscape/templates/default.svg".source = ../files/inkscape/default.svg;
   # Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
   home.stateVersion = "24.11";
