@@ -62,6 +62,7 @@
     rnote
     bitwarden-desktop
     freecad-wayland
+    gnome-calendar
 
     # utils
     bemoji                                           # emoji picker for wofi
