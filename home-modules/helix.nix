@@ -10,12 +10,12 @@
       editor = {
         line-number = "relative";
         true-color = true;
-        bufferline = "multiple";
+        bufferline = "never";
         cursorline = true;
         completion-timeout = 5;
         soft-wrap.wrap-at-text-width = true;
         end-of-line-diagnostics = "hint";
-        inline-diagnostics.cursor-line = "warning";
+        inline-diagnostics.cursor-line = "error";
         indent-guides.render = true;
         auto-save.after-delay.enable = true;
         gutters.layout = [ "line-numbers" "spacer" "diff" ];
@@ -23,6 +23,8 @@
 
       keys.normal = {
         space.q = ":reflow";
+
+        "-".n = ":sh footclient -H hx";
       };
     };
 
