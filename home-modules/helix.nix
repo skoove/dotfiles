@@ -24,7 +24,7 @@
       keys.normal = {
         space.q = ":reflow";
 
-        space.space.n = ":sh footclient hx";
+        space.space.n = ":sh footclient hx .";
       };
     };
 
