@@ -24,8 +24,20 @@
       keys.normal = {
         space.q = ":reflow";
 
-        space.space.n = ":sh footclient direnv exec . hx .";
-        space.space.N = ":sh footclient . hx .";
+        A-h = "jump_view_left";
+        A-j = "jump_view_down";
+        A-k = "jump_view_up";
+        A-l = "jump_view_right";
+      
+        A-H = "swap_view_left";
+        A-J = "swap_view_down";
+        A-K = "swap_view_up";
+        A-L = "swap_view_right";
+      
+        space.space = {
+          n = ":sh footclient direnv exec . hx .";
+          N = ":sh footclient . hx .";
+        };
       };
     };
 
