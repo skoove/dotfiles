@@ -8,6 +8,7 @@
     bottles
     wine
     protontricks
+    r2modman
   ];
 
   programs.steam = {
