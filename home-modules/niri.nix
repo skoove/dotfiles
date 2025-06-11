@@ -153,6 +153,7 @@ in {
         "Alt+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
         "Alt+Shift+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
         "${mod}+Y".action = fish "dunstify \"$(niri msg focused-window)\"";
+        "${mod}+Z".action = spawn "${pkgs.woomer}/bin/woomer";
 
         # reorient
         "${mod}+Q".action = close-window;
