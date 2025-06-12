@@ -52,7 +52,7 @@
         diverged = "<>";
         up_to_date = "";
         untracked = "?";
-        stashed = "$";
+        stashed = "s";
         modified = "!";
         staged = "+";
         renamed = ">>";
