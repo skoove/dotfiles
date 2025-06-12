@@ -62,6 +62,7 @@
     rnote
     bitwarden-desktop
     freecad-wayland
+    mprocs
 
     # utils
     bemoji                                           # emoji picker for wofi
@@ -104,6 +105,10 @@
     inetutils
     mpv
     imv
+    fd
+    xh
+    gitui
+    hyperfine
 
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [

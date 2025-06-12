@@ -153,6 +153,7 @@
     helix
     git
     btrfs-progs
+    uutils-coreutils-noprefix
   ];
 
   programs.hyprland.enable = false;
