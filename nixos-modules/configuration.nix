@@ -100,6 +100,10 @@
     powerKeyLongPress = "ignore";
   };
 
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
   # Enable sound with pipewire.
   security.rtkit.enable = true;
   services.pipewire = {
@@ -109,6 +113,7 @@
     pulse.enable = true;
     audio.enable = true;
     wireplumber.enable = true;
+    
     extraConfig.pipewire = {
       "10-min-quantum" = {
         "context.properties" = {
