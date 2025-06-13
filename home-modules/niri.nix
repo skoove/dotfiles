@@ -70,7 +70,7 @@ in {
       layout = {
         always-center-single-column = true;
         empty-workspace-above-first = true;
-        border.width = 4;
+        border.width = 2;
         gaps = 15;
 
         struts =
