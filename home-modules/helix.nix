@@ -13,7 +13,6 @@
         bufferline = "never";
         cursorline = true;
         completion-timeout = 5;
-        soft-wrap.wrap-at-text-width = true;
         end-of-line-diagnostics = "hint";
         inline-diagnostics.cursor-line = "error";
         indent-guides.render = true;
@@ -81,7 +80,6 @@
       }
       {
         name = "markdown";
-        soft-wrap.enable = true;
         rulers = [80];
         language-servers = [ "harper" ];
       }
