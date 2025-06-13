@@ -105,10 +105,10 @@
     inetutils
     mpv
     imv
-    fd
-    xh
+    fd # better find
+    xh # http request sender
     gitui
-    hyperfine
+    hyperfine # benchmarker
 
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
