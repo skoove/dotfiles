@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     bacon
-    rusty-man
-    kondo # man pages byut for rust creates
+    rusty-man # man pages for rust crates
+    kondo # clean up crates
   ];
 }
