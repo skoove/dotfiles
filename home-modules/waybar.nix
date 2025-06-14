@@ -8,13 +8,12 @@ let
   temp-icons = [ "" "" "" ""];
 in
 {
-
   programs.waybar = {
     enable = true;
     systemd.enable = true;
 
     settings.main-bar = {
-      layer = "top";
+      layer = "bottom";
       
       modules-left = [
         "niri/workspaces"
