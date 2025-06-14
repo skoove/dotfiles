@@ -33,6 +33,8 @@
       lv = "loago view -m";
       ld = "loago do";
       lrm = "loago remove";
+
+      rman = "rusty-man --viewer tui";
     };
 
     functions = {
