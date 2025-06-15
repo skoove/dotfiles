@@ -132,7 +132,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zie = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin"];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" ];
   };
 
   # this is to make sure stylix is loaded last
@@ -173,6 +173,8 @@
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
 
   services.displayManager.gdm.enable = true;
+
+  virtualisation.docker.enable = true;
 
   # printing
   services.printing = {
