@@ -128,7 +128,7 @@
     roboto-slab
     roboto-serif
   ] ++ (
-    if osConfig.networking.hostName == "nixos_desktop" then with pkgs; [
+    if osConfig.networking.hostName == "nixos-desktop" then with pkgs; [
       ffmpeg-full
       handbrake
     ] else []
