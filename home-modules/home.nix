@@ -57,7 +57,6 @@
     blanket           # ambient noise
     krita             # draw
     numbat qalculate-qt
-    super-productivity
     stellarium
     rnote
     bitwarden-desktop
