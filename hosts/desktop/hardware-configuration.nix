@@ -53,6 +53,12 @@
       options = [ "users" "exec" ];
     };
 
+  fileSystems."/home/zie/large-misc" =
+    {
+      device = "/dev/disk/by-label/large-misc";
+      options = [ "users" "exec" ];
+    };
+
   swapDevices = [ {
     device = "/var/lib/swapfile";
     size = 8*1024;
