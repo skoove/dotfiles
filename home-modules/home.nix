@@ -55,7 +55,7 @@
     gimp3             # image editing
     nom               # rss reader
     blanket           # ambient noise
-    gnome-gnome-pomodoro # pomodoro timer
+    gnome-pomodoro # pomodoro timer
     krita             # draw
     numbat qalculate-qt
     stellarium
