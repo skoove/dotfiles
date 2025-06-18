@@ -127,7 +127,12 @@
     roboto
     roboto-slab
     roboto-serif
-  ];
+  ] ++ (
+    if osConfig.networking.hostname == "nixos_desktop" then with pkgs; [
+      ffmpeg-full
+      handbrake
+    ] else []
+  );
 
   programs.bat.enable = true;
 
