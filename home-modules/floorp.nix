@@ -80,7 +80,7 @@
                 url = "https://192.168.0.254/";
               }
               {
-                name = "floorp";
+                name = "proxmox";
                 url = "https://192.168.0.187:8006/";
               }
             ];
