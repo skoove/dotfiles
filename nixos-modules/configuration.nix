@@ -12,6 +12,13 @@
     inputs.nur.modules.nixos.default
   ];
 
+  fileSystems."/mnt/nas" = {
+    device = "192.168.0.230:/volume1/Media";
+    fsType = "nfs";
+    options = [ "nofail" "x-systemd.automount" "x-systemd.device-timeout=10s" ];
+  };
+    
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -81,7 +88,7 @@
   };
 
   services.openssh.enable = true;
-  
+ 
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
