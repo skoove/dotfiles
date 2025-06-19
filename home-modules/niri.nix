@@ -39,10 +39,10 @@ in {
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
         { command = [ "niriswitcher" ]; }
-        { command = [ "element-desktop" "--hidden" ]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
           { command = [ "sh" "-c" "discord --start-minimized" ]; }
+          { command = [ "element-desktop" "--hidden" ]; }
           { command = [ "sh" "-c" "steam -silent" ]; }
         ] else []
       );
