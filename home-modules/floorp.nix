@@ -83,6 +83,10 @@
                 name = "proxmox";
                 url = "https://192.168.0.187:8006/";
               }
+              {
+                name = "jellyfin";
+                url = "http://192.168.0.253:8096/web/";
+              }
             ];
           }
         ];

@@ -80,7 +80,6 @@
     element-desktop
     blender
 
-
     # tools
     unzip
     nixd               # nix lsp
