@@ -129,7 +129,6 @@
   ] ++ (
     if osConfig.networking.hostName == "nixos-desktop" then with pkgs; [
       ffmpeg-full
-      handbrake
     ] else []
   );
 
