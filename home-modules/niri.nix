@@ -98,7 +98,7 @@ in {
       ];
 
       outputs = {
-        # laptop monitor
+        # left desktop monitor
         "HDMI-A-1" = {
           scale = 1.0;
           mode = {
@@ -118,7 +118,7 @@ in {
           };
         };
 
-        # left desktop monitor
+        # laptop monitor
         "eDP-1" = {
           scale = 1.0;
           mode = {
