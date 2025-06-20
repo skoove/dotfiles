@@ -10,7 +10,7 @@
       editor = {
         line-number = "relative";
         true-color = true;
-        bufferline = "never";
+        bufferline = "always";
         cursorline = true;
         completion-timeout = 5;
         end-of-line-diagnostics = "hint";
