@@ -9,6 +9,7 @@
     wine
     protontricks
     r2modman
+    protonup-qt
   ];
 
   programs.steam = {
