@@ -82,6 +82,7 @@
         name = "markdown";
         rulers = [80];
         language-servers = [ "harper" ];
+        soft-wrap.enable = true;
       }
       {
         name = "typst";
