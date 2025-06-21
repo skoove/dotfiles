@@ -65,7 +65,8 @@
     mprocs
     jq
     wget2
-    python3
+    python312Full
+    python312Packages.pip
 
     # utils
     bemoji                                           # emoji picker for wofi
@@ -73,7 +74,6 @@
     pavucontrol                                      # volume control
     wl-clipboard                                     # Copy things to clipboard (required by bemoji)
     libsForQt5.qtstyleplugin-kvantum                 # theming for qt apps
-    python3                                          # its python 3!
     wf-recorder                                      # screen recorder
     (import ../packages/loago.nix { inherit pkgs; }) # Shows how long ago a task was done
     gnuplot                                          # plotting lib
