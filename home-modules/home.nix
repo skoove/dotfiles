@@ -63,6 +63,9 @@
     bitwarden-desktop
     freecad-wayland
     mprocs
+    jq
+    wget2
+    python3
 
     # utils
     bemoji                                           # emoji picker for wofi
