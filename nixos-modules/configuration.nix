@@ -17,7 +17,6 @@
     fsType = "nfs";
     options = [ "nofail" "x-systemd.automount" "x-systemd.device-timeout=10s" ];
   };
-    
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
