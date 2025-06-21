@@ -15,7 +15,6 @@
     sqlmap
     hydra
     tor
-    tor-browser
     hashcat
     john
     gobuster

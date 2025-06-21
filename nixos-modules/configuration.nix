@@ -5,6 +5,7 @@
     ../stylix.nix
     ./gaming.nix
     ./udev.nix
+    ./cybersec.nix
 
     inputs.stylix.nixosModules.stylix
     inputs.home-manager.nixosModules.default

@@ -31,6 +31,7 @@
     ./xdg.nix
     ./i3.nix
     ./iamb.nix
+    ./python.nix
 
     inputs.stylix.homeModules.stylix
     inputs.nur.modules.homeManager.default
@@ -65,8 +66,6 @@
     mprocs
     jq
     wget2
-    python312Full
-    python312Packages.pip
 
     # utils
     bemoji                                           # emoji picker for wofi
