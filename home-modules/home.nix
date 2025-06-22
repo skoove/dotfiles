@@ -55,12 +55,9 @@
     libreoffice-fresh # office suite
     gimp3             # image editing
     nom               # rss reader
-    blanket           # ambient noise
-    gnome-pomodoro # pomodoro timer
     krita             # draw
-    numbat qalculate-qt
+    numbat
     stellarium
-    rnote
     bitwarden-desktop
     freecad-wayland
     mprocs
@@ -90,7 +87,6 @@
     bitwarden-cli      # password manager
     sops               # secrets management
     ripgrep            # grepper
-    whatsapp-for-linux # whats
     vlc                # the last media player i will ever need
     tidal-hifi
     cargo-flamegraph   # flamegraph
@@ -108,7 +104,6 @@
     imv
     fd # better find
     xh # http request sender
-    gitui
     hyperfine # benchmarker
 
     (pkgs.inkscape-with-extensions.override {
