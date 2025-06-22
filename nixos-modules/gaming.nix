@@ -5,7 +5,6 @@
   
   environment.systemPackages = with pkgs; [
     mangohud
-    bottles
     wine
     protontricks
     r2modman
