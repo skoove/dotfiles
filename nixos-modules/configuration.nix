@@ -179,7 +179,7 @@
   services.xserver.windowManager.i3.enable = false;
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
 
-  services.displayManager.gdm.enable = true;
+  services.displayManager.ly.enable = true;
 
   virtualisation.docker.enable = true;
 
