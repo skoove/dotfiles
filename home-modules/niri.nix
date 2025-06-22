@@ -31,7 +31,6 @@ in {
     settings = {
       prefer-no-csd = true;
 
-      # TODO: this seriously needs to be cleaned up
       spawn-at-startup =[
         { command = [ "sh" "-c" "systemctl --user enable --now waybar.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
