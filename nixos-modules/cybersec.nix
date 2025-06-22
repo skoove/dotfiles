@@ -13,10 +13,8 @@
     tcpdump
     wireshark
     sqlmap
-    hydra
     tor
     hashcat
-    john
     gobuster
     exploitdb
   ];
