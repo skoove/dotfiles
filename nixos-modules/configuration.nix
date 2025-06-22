@@ -139,7 +139,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zie = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" "wireshark"];
   };
 
   # this is to make sure stylix is loaded last
