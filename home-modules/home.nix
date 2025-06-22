@@ -52,7 +52,7 @@
   home.packages = with pkgs; [
     # productive
     obsidian          # note taking
-    libreoffice-bin # office suite
+    libreoffice-fresh # office suite
     gimp3             # image editing
     nom               # rss reader
     krita             # draw
