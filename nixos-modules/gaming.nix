@@ -8,6 +8,7 @@
     protontricks
     r2modman
     protonup-qt
+    lutris
   ];
 
   programs.steam = {
