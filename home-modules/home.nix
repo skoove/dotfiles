@@ -63,6 +63,7 @@
     mprocs
     jq
     wget2
+    gnome-pomodoro
 
     # utils
     bemoji                                           # emoji picker for wofi
