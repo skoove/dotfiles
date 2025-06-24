@@ -50,7 +50,7 @@ in {
         QT_QPA_PLATFORM = "wayland";
         ELECTRON_OZONE_PLATFORM_HINT = "wayland";
         DISPLAY = ":0";
-        _JAVA_AWT_WM_NONREPARENTING=1;
+        _JAVA_AWT_WM_NONREPARENTING="1";
       };
 
       input = {
