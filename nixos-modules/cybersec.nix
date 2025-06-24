@@ -17,11 +17,11 @@
     gobuster
     exploitdb
     zap
-    wireshark
   ];
 
   programs.wireshark = {
     enable = true;
     usbmon.enable= true;
+    package = pkgs.wireshark;
   };
 }
