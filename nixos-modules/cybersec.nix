@@ -16,7 +16,12 @@
     hashcat
     gobuster
     exploitdb
+    zap
+    wireshark
   ];
 
-  programs.wireshark.enable = true;
+  programs.wireshark = {
+    enable = true;
+    usbmon.enable= true;
+  };
 }
