@@ -37,7 +37,7 @@
     {
       device = "/dev/disk/by-label/games";
       fsType = "ext4";
-      options = [ "users" ];
+      options = [ "users" "exec" ];
     };
 
   fileSystems."/boot" =
