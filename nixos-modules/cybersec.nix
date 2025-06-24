@@ -19,6 +19,9 @@
     zap
   ];
 
+  # zap needs it
+  programs.firefox.enable = true;
+
   programs.wireshark = {
     enable = true;
     usbmon.enable= true;
