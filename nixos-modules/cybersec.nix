@@ -11,11 +11,12 @@
     netcat
     traceroute
     tcpdump
-    wireshark
     sqlmap
     tor
     hashcat
     gobuster
     exploitdb
   ];
+
+  programs.wireshark.enable = true;
 }
