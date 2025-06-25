@@ -142,6 +142,7 @@
   services.displayManager.ly.enable = true;
   services.openssh.enable = true;
   services.blueman.enable = true;
+  services.tailscale.enable = true;
  
   services.xserver.xkb = {
     layout = "us";
