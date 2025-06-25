@@ -87,51 +87,12 @@
     LC_TIME = "en_AU.UTF-8";
   };
 
-  services.openssh.enable = true;
- 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  # upower and logind
-  services.upower = {
-    enable = true;
-    criticalPowerAction = "Hibernate";
-  };
-
-  services.logind = {
-    lidSwitch = "ignore";
-    powerKey = "ignore";
-    powerKeyLongPress = "ignore";
-  };
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
-  services.blueman.enable = true;
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    audio.enable = true;
-    wireplumber.enable = true;
-    
-    extraConfig.pipewire = {
-      "10-min-quantum" = {
-        "context.properties" = {
-          "default.clock.min-quantum" = 1024;
-        };
-      };
-    };
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
@@ -178,10 +139,25 @@
 
   services.xserver.windowManager.i3.enable = false;
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
-
   services.displayManager.ly.enable = true;
+  services.openssh.enable = true;
+  services.blueman.enable = true;
+ 
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
 
-  virtualisation.docker.enable = true;
+  services.upower = {
+    enable = true;
+    criticalPowerAction = "Hibernate";
+  };
+
+  services.logind = {
+    lidSwitch = "ignore";
+    powerKey = "ignore";
+    powerKeyLongPress = "ignore";
+  };
 
   # printing
   services.printing = {
@@ -195,11 +171,26 @@
     openFirewall = true;
   };
 
-  # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22000 ];
-  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    audio.enable = true;
+    wireplumber.enable = true;
+    
+    extraConfig.pipewire = {
+      "10-min-quantum" = {
+        "context.properties" = {
+          "default.clock.min-quantum" = 1024;
+        };
+      };
+    };
+  };
+
+  virtualisation.docker.enable = true;
+
+  networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
