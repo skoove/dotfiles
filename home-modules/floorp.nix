@@ -87,6 +87,23 @@
                 name = "jellyfin";
                 url = "http://192.168.0.253:8096/web/";
               }
+              {
+                name = "tailscale";
+                bookmarks = [
+                  {
+                    name = "nas";
+                    url = "http://100.124.39.39:5000/";
+                  }
+                  {
+                    name = "proxmox";
+                    url = "https://100.78.85.71:8006/";
+                  }
+                  {
+                    name = "jellyfin";
+                    url = "http://100.93.218.86:8096/web/";
+                  }
+                ];
+              }
             ];
           }
         ];
