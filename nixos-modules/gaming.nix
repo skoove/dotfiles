@@ -9,7 +9,10 @@
     r2modman
     protonup-qt
     lutris
+    piper # config mouse stuff
   ];
+
+  services.ratbagd.enable = true; # mouse stuff i think
 
   programs.steam = {
     enable = true;
