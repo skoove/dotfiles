@@ -197,12 +197,12 @@ in {
         "Mod+Shift+Equal".action = set-window-height "+10%";
         "Mod+Shift+Minus".action = set-window-height "-10%";
 
-        "XF86AudioRaiseVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
-        "XF86AudioLowerVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
+        "XF86AudioRaiseVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+";
+        "XF86AudioLowerVolume".action = fish "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-";
         "XF86AudioMute".action = fish "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         "XF86AudioMicMute".action = fish "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-        "XF86MonBrightnessUp".action = fish "brightnessctl s 10%+";
-        "XF86MonBrightnessDown".action = fish "brightnessctl s 10%-";
+        "XF86MonBrightnessUp".action = fish "brightnessctl s 5%+";
+        "XF86MonBrightnessDown".action = fish "brightnessctl s 5%-";
 
         "XF86AudioPlay".action = fish "playerctl play-pause";
         "XF86AudioNext".action = fish "playerctl next";
