@@ -10,6 +10,7 @@
     protonup-qt
     lutris
     piper # config mouse stuff
+    wine64
   ];
 
   services.ratbagd.enable = true; # mouse stuff i think
