@@ -148,11 +148,12 @@ in {
         "${mod}+Shift+M".action = quit;
         "${mod}+T".action = fish "bemoji -c -n";
         "${mod}+P".action = fish "fish ${../scripts/lock-screen.fish}";
-        "${mod}+C".action = fish "fish ${../scripts/command-runner.fish}";
+        "${mod}+Shift+C".action = fish "fish ${../scripts/command-runner.fish}";
         "${mod}+N".action = spawn "footclient" "numbat";
         "Alt+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
         "Alt+Shift+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
         "${mod}+Y".action = fish "dunstify \"$(niri msg focused-window)\"";
+        "${mod}+Shift+Y".action = fish "set win (niri msg focused-window); wl-copy $win; dunstify \"$win\"";
         "${mod}+Z".action = spawn "${pkgs.woomer}/bin/woomer";
         "${mod}+V".action = spawn "pavucontrol";
 
