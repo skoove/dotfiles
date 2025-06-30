@@ -77,8 +77,7 @@
     scrcpy
     porsmo             # pomodoro
     element-desktop
-    blender
-
+    
     # tools
     unzip
     nixd               # nix lsp
@@ -109,6 +108,7 @@
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
         pkgs.inkscape-extensions.textext
+        (blender.override { cudaSupport = true; })
       ];
     })
 
