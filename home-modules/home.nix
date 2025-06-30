@@ -1,11 +1,6 @@
 { config, pkgs, inputs, osConfig , ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
-  # home.username = "zie";
-  # home.homeDirectory = "/home/zie";
-
   imports = [
     ../stylix.nix
     ./bottom.nix
@@ -36,6 +31,10 @@
     inputs.stylix.homeModules.stylix
     inputs.nur.modules.homeManager.default
    ];
+
+  nixpkgs.overlays = [
+    inputs.blender.overlays.default
+  ];
 
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.monospace = [
@@ -108,7 +107,6 @@
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
         pkgs.inkscape-extensions.textext
-        (blender.override { cudaSupport = true; })
       ];
     })
 
@@ -125,6 +123,7 @@
   ] ++ (
     if osConfig.networking.hostName == "nixos-desktop" then with pkgs; [
       ffmpeg-full
+      blender_4_4
     ] else []
   );
 

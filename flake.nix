@@ -32,6 +32,11 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    blender = {
+      url = "github:edolstra/nix-warez?dir=blender";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, niri, ... }@inputs:

@@ -24,7 +24,10 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.sandbox = "relaxed";
 
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  nixpkgs.overlays = [
+    inputs.niri.overlays.niri
+    inputs.blender.overlays.default
+  ];
 
   environment.sessionVariables = {
     EDITOR = "hx";

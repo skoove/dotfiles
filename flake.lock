@@ -67,6 +67,28 @@
         "type": "github"
       }
     },
+    "blender": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "blender",
+        "lastModified": 1746378999,
+        "narHash": "sha256-aF+uC/aYR4I7VxN9s0gQG1WRDTE0Re3jAMd0qBkWjV4=",
+        "owner": "edolstra",
+        "repo": "nix-warez",
+        "rev": "85d76721132cc6631bbaa8c950d4d0f3aa4003fd",
+        "type": "github"
+      },
+      "original": {
+        "dir": "blender",
+        "owner": "edolstra",
+        "repo": "nix-warez",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -472,6 +494,7 @@
     },
     "root": {
       "inputs": {
+        "blender": "blender",
         "home-manager": "home-manager",
         "niri": "niri",
         "nixcord": "nixcord",
