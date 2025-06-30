@@ -127,6 +127,7 @@
     git
     btrfs-progs
     uutils-coreutils-noprefix
+    blender
   ];
 
   programs.hyprland.enable = false;
