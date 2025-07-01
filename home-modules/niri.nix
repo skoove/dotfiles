@@ -24,6 +24,10 @@ in {
     xwayland-satellite
   ];
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
   services.hyprpaper.enable = true;
 
