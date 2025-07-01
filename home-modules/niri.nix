@@ -27,7 +27,7 @@ in {
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.default = "gnome";
+    config.common.default = "gnome";
   };
 
   services.hyprpaper.enable = true;
