@@ -26,6 +26,14 @@
         "sidebar.revamp" = false;
         "floorp.browser.workspaces.enabled" = false;
         "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["firefoxcolor_mozilla_com-browser-action"],"nav-bar":["back-button","forward-button","customizableui-special-spring1","urlbar-container","customizableui-special-spring2","save-to-pocket-button","downloads-button","unified-extensions-button","ublock0_raymondhill_net-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["workspaces-toolbar-button","tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["personal-bookmarks"],"statusBar":["screenshot-button","fullscreen-button","status-text"]},"seen":["developer-button","sidebar-reverse-position-toolbar","undo-closed-tab","profile-manager","workspaces-toolbar-button","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","firefoxcolor_mozilla_com-browser-action","ublock0_raymondhill_net-browser-action"],"dirtyAreaCache":["nav-bar","statusBar","TabsToolbar","toolbar-menubar","PersonalToolbar","unified-extensions-area"],"currentVersion":20,"newElementCount":2}'';
+
+        ExtensionSettings = {
+          # jdownloader 2 thing
+          "jid1-OY8Xu5BsKZQa6A@jetpack" = {
+            install_url = "https://extensions.jdownloader.org/firefox.xpi";
+            installation_mode = "force_installed";
+          };
+        };
       };
       
       extensions = {
