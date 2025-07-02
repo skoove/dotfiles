@@ -22,6 +22,7 @@ in {
     swayidle           
     swaylock-effects   
     xwayland-satellite
+    pulseaudio # pactl for toggle mute
   ];
 
   xdg.portal = {
@@ -213,6 +214,8 @@ in {
         "XF86AudioPlay".action = fish "playerctl play-pause";
         "XF86AudioNext".action = fish "playerctl next";
         "XF86AudioPrev".action = fish "playerctl previous";
+
+        "${mod}+C".action = fish "fish ${../scripts/toggle-mute.fish}";
       };
     };
   };
