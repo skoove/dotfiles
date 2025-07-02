@@ -64,7 +64,6 @@
     jq
     wget2
     gnome-pomodoro
-    noisetorch
 
     # utils
     bemoji                                           # emoji picker for wofi
