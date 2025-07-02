@@ -215,7 +215,7 @@ in {
         "XF86AudioNext".action = fish "playerctl next";
         "XF86AudioPrev".action = fish "playerctl previous";
 
-        "${mod}+C".action = fish "fish ${../scripts/toggle-mute.fish}";
+        "Super+C".action = fish "fish ${../scripts/toggle-mute.fish}"; # this corrosponds to cortana buttons on alot of keyboards
       };
     };
   };
