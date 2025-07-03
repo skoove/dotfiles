@@ -56,13 +56,15 @@
       };
 
       update-flake = {
-        body = ''cd ~/.dotfiles
-         nix flake update
-         git add ./flake.lock
-         git commit -m 'flake.lock: update'
-         git push
-         loago do update-flake
-         nh os switch'';
+        body = ''
+          sudo echo sudoed
+          cd ~/.dotfiles
+          nix flake update
+          git add ./flake.lock
+          git commit -m 'flake.lock: update'
+          git push
+          loago do update-flake
+          nh os switch'';
       };
     };
   };
