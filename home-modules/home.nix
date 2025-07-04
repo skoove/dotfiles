@@ -64,6 +64,7 @@
     jq
     wget2
     gnome-pomodoro
+    p7zip-rar
 
     # utils
     bemoji                                           # emoji picker for wofi
