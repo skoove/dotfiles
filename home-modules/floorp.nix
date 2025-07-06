@@ -96,6 +96,10 @@
                 url = "http://192.168.0.253:8096/web/";
               }
               {
+                name = "transmission";
+                url = "http://192.168.0.36:9091/transmission/web/";
+              }
+              {
                 name = "tailscale";
                 bookmarks = [
                   {
@@ -109,6 +113,10 @@
                   {
                     name = "jellyfin";
                     url = "http://100.93.218.86:8096/web/";
+                  }
+                  {
+                    name = "transmission";
+                    url = "http://100.93.99.60:9091/transmission/web/";
                   }
                 ];
               }
