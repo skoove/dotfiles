@@ -40,12 +40,12 @@
 
   fileSystems."/home/zie/development" = {
     device = "/dev/disk/by-label/development";
-    options = [ "users" "exec" ];
+    options = [ "users" "exec" "nofail" ];
   };
 
   fileSystems."/home/zie/games" = {
     device = "/dev/disk/by-label/linux-games";
-    options = [ "users" "exec" ];
+    options = [ "users" "exec" "nofail" ];
   };
 
   swapDevices = [ {
