@@ -26,36 +26,32 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/4f0104c0-5f0e-4d9b-a83c-96e82a4c1575";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/4f0104c0-5f0e-4d9b-a83c-96e82a4c1575";
+    fsType = "ext4";
+  };
 
-  fileSystems."/games" =
-    {
-      device = "/dev/disk/by-label/games";
-      fsType = "ext4";
-      options = [ "users" "exec" ];
-    };
+  fileSystems."/games" = {
+    device = "/dev/disk/by-label/games";
+    fsType = "ext4";
+    options = [ "users" "exec" ];
+  };
 
-  fileSystems."/boot" =
-    {
-      device = "/dev/disk/by-uuid/CC1D-8E2D";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/CC1D-8E2D";
+    fsType = "vfat";
+    options = [ "fmask=0077" "dmask=0077" ];
+  };
 
-  fileSystems."/home/zie/development" =
-    {
-      device = "/dev/disk/by-label/development";
-      options = [ "users" "exec" ];
-    };
+  fileSystems."/home/zie/development" = {
+    device = "/dev/disk/by-label/development";
+    options = [ "users" "exec" ];
+  };
 
-  fileSystems."/home/zie/large-misc" =
-    {
-      device = "/dev/disk/by-label/large-misc";
-      options = [ "users" "exec" ];
-    };
+  fileSystems."/home/zie/large-misc" = {
+    device = "/dev/disk/by-label/large-misc";
+    options = [ "users" "exec" ];
+  };
 
   swapDevices = [ {
     device = "/var/lib/swapfile";
