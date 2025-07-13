@@ -1,6 +1,6 @@
 { pkgs , inputs , ... }:
 {
-  nixpkgs.overlay = [
+  nixpkgs.overlays = [
     inputs.millennium.overlays.default
   ];
 
