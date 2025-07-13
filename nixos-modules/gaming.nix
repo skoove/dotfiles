@@ -10,7 +10,6 @@
     protontricks
     r2modman
     protonup-qt
-    lutris
     piper # config mouse stuff
     wine64
   ];
