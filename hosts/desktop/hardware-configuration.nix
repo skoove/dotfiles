@@ -12,6 +12,7 @@
 
   # nvidia settings yippppieieieieiei
   services.xserver.videoDrivers = [ "nvidia" ];
+  services.thermald.enable = true;
 
   hardware.nvidia = {
     modesetting.enable = true;
