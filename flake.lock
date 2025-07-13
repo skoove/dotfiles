@@ -259,16 +259,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1752123613,
-        "narHash": "sha256-1rQupcw1+k6jlGVopr4UnSrr1oVHSKL3YhFuK9uV2hI=",
-        "ref": "refs/heads/main",
-        "rev": "b66d8bef5d49c95418638c143b1a24304430f4cc",
-        "revCount": 1851,
+        "lastModified": 1752379235,
+        "narHash": "sha256-2q5JOwJlBs8xU03/oj8E3QhAzvW/YrJ4IRGtcjzjnLY=",
+        "ref": "next",
+        "rev": "c85c0af310f5d98c563ec0a87243e52010809d12",
+        "revCount": 1956,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/SteamClientHomebrew/Millennium"
       },
       "original": {
+        "ref": "next",
         "type": "git",
         "url": "https://github.com/SteamClientHomebrew/Millennium"
       }
