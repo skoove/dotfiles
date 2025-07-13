@@ -113,7 +113,6 @@
 
     # not tools at all but i dont want to nix run them
     nitch # pretty, mostly useless
-    easyeffects
     pulseaudio
   
     # fonts
