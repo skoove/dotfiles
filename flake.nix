@@ -37,6 +37,11 @@
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    millennium = {
+      url = "git+https://github.com/SteamClientHomebrew/Millennium";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, niri, ... }@inputs:

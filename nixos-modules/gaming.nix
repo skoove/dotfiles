@@ -1,7 +1,9 @@
-{ pkgs , ... }:
+{ pkgs , inputs , ... }:
 {
-  programs.gamemode.enable = true;
-  
+  nixpkgs.overlay = [
+    inputs.millennium.overlays.default
+  ];
+
   environment.systemPackages = with pkgs; [
     mangohud
     wine
@@ -15,11 +17,14 @@
 
   services.ratbagd.enable = true; # mouse stuff i think
 
+  programs.gamescope.enable = true;
+  programs.gamemode.enable = true;
+  
   programs.steam = {
     enable = true;
+    package = pkgs.millennium;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
-    gamescopeSession.enable = true;
   };
 }
