@@ -31,12 +31,6 @@
     fsType = "ext4";
   };
 
-  fileSystems."/games" = {
-    device = "/dev/disk/by-label/games";
-    fsType = "ext4";
-    options = [ "users" "exec" ];
-  };
-
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/CC1D-8E2D";
     fsType = "vfat";
@@ -48,8 +42,8 @@
     options = [ "users" "exec" ];
   };
 
-  fileSystems."/home/zie/large-misc" = {
-    device = "/dev/disk/by-label/large-misc";
+  fileSystems."/home/zie/games" = {
+    device = "/dev/disk/by-label/linux-games";
     options = [ "users" "exec" ];
   };
 
