@@ -106,6 +106,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zie = {
     isNormalUser = true;
+    hashedPassword = "$6$sZqDUAAlSaboPpAR$zueEPawUgd8uvMwGNImT/HnF6t10Ct1Skrh3/caRgZZACARq7BKPGw.VQJS/uEHJoFKjyRwoKUFR78LwFQKON/";
     extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" "wireshark"];
   };
 
