@@ -135,6 +135,7 @@
     git
     btrfs-progs
     uutils-coreutils-noprefix
+    ntfs3g
   ];
 
   programs.hyprland.enable = false;
