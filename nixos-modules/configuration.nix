@@ -139,6 +139,7 @@
     btrfs-progs
     uutils-coreutils-noprefix
     ntfs3g
+    grub2 # for grub-reboot
   ];
 
   programs.hyprland.enable = false;
