@@ -17,14 +17,13 @@ in {
 
   home.packages = with pkgs; [
     ksnip
-    nur.repos.Vortriz.niriswitcher
     playerctl
     swayidle           
     swaylock-effects   
     xwayland-satellite
     pulseaudio # pactl for toggle mute
   ];
-
+  
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -43,7 +42,6 @@ in {
         { command = [ "sh" "-c" "systemctl --user enable --now hyprpaper.service" ]; }
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
-        { command = [ "niriswitcher" ]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
           { command = [ "sh" "-c" "discord --start-minimized" ]; }
@@ -156,8 +154,6 @@ in {
         "${mod}+P".action = fish "fish ${../scripts/lock-screen.fish}";
         "${mod}+Shift+C".action = fish "fish ${../scripts/command-runner.fish}";
         "${mod}+N".action = spawn "footclient" "numbat";
-        "Alt+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
-        "Alt+Shift+Tab".action = spawn "pkill" "-USR1" "niriswitcher";
         "${mod}+Y".action = fish "dunstify \"$(niri msg focused-window)\"";
         "${mod}+Shift+Y".action = fish "set win (niri msg focused-window); wl-copy $win; dunstify \"$win\"";
         "${mod}+Z".action = spawn "${pkgs.woomer}/bin/woomer";
