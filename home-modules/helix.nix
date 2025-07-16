@@ -8,16 +8,17 @@
       theme = "gruvbox";
 
       editor = {
-        line-number = "relative";
-        true-color = true;
-        bufferline = "always";
-        cursorline = true;
-        completion-timeout = 5;
-        end-of-line-diagnostics = "hint";
-        inline-diagnostics.cursor-line = "error";
-        indent-guides.render = true;
         auto-save.after-delay.enable = true;
+        bufferline = "always";
+        completion-timeout = 5;
+        cursorline = true;
+        end-of-line-diagnostics = "hint";
         gutters.layout = [ "line-numbers" "spacer" "diff" ];
+        indent-guides.render = true;
+        inline-diagnostics.cursor-line = "error";
+        line-number = "relative";
+        soft-wrap.wrap-at-text-width = true;
+        true-color = true;
       };
 
       keys.normal = {
