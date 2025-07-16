@@ -99,16 +99,19 @@
   # Enable sound with pipewire.
   security.rtkit.enable = true;
 
-  users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
   programs.noisetorch.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.defaultUserShell = pkgs.fish;
   users.mutableUsers = false;
   users.users.zie = {
     isNormalUser = true;
     hashedPassword = "$6$sZqDUAAlSaboPpAR$zueEPawUgd8uvMwGNImT/HnF6t10Ct1Skrh3/caRgZZACARq7BKPGw.VQJS/uEHJoFKjyRwoKUFR78LwFQKON/";
     extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" "wireshark"];
+    openssh.authorizedKeys.keys = [ 
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnGnBgccjncw0VMcpn/qjauAugKrTSzkIjLKssgVG9z zie@nixos-laptop"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHKO45q8PNR1u3rfs+un5tWSV1vAzewZoT76iB1E+JLh zie@nixos-desktop"
+    ];
   };
 
   # this is to make sure stylix is loaded last
