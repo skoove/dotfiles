@@ -12,7 +12,6 @@ in {
   imports = [
     ./waybar.nix # bar
     ./dunst.nix  # notification daemon
-    ./fish.nix   # Scripts and such required by several things.
   ];
 
   home.packages = with pkgs; [
@@ -22,6 +21,7 @@ in {
     swaylock-effects   
     xwayland-satellite
     pulseaudio # pactl for toggle mute
+    fish # scripts
   ];
   
   xdg.portal = {
