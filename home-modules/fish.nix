@@ -1,6 +1,9 @@
 { ... }:
 {
-  imports = [ ./direnv.nix ];
+  imports = [
+    ./direnv.nix
+    ./starship.nix
+  ];
 
   programs.zoxide.enable = true;
 

@@ -26,8 +26,8 @@
 
       hostname = {
         ssh_only = false;
-        format = "[$hostname]($style) ";
-        style = "bold green";
+        format = "[$ssh_symbol: ](bold blue)[$hostname]($style) ";
+        style = "bold purple";
       };
 
       directory = {
@@ -66,10 +66,10 @@
 
       character = {
         format = "$symbol ";
-        success_symbol = "[>](green)";
-        error_symbol = "[>](red)";
-        vimcmd_symbol = "[<](green)";
-        vimcmd_visual_symbol = "[<](yellow)";
+        success_symbol = "[>](bold green)";
+        error_symbol = "[>](bold red)";
+        vimcmd_symbol = "[<](bold green)";
+        vimcmd_visual_symbol = "[<](bold yellow)";
       };
     };
   };

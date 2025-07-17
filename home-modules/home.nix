@@ -19,6 +19,7 @@
     ./obs.nix
     ./rust-dev-tools.nix
     ./stylix.nix
+    ./nushell.nix
     ./syncthing.nix
     ./yazi.nix
     ./zellij.nix
