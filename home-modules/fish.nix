@@ -59,10 +59,8 @@
         body = ''
           sudo echo sudoed
           cd ~/.dotfiles
-          nix flake update
-          git add ./flake.lock
-          git commit -m 'flake.lock: update'
-          git push
+          nix flake update --commit-lock-file
+          git push & disown
           loago do update-flake
           nh os switch'';
       };
