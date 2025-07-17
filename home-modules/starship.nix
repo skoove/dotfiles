@@ -19,15 +19,15 @@
 
       username = {
         style_root = "bold red";
-        style_user = "bold yellow";
+        style_user = "bold purple";
         show_always = true;
         format = "[$user]($style)[@](blue)";
       };
 
       hostname = {
         ssh_only = false;
-        format = "[$ssh_symbol: ](bold blue)[$hostname]($style) ";
-        style = "bold purple";
+        format = "[$hostname]($style) ";
+        style = "bold green";
       };
 
       directory = {

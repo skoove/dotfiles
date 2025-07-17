@@ -14,6 +14,7 @@
 
     settings = {
       buffer_editor = "${pkgs.helix}";
+      
     };
 
     shellAliases = {
