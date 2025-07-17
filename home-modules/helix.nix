@@ -35,8 +35,6 @@
         A-L = "swap_view_right";
       
         space.space = {
-          n = ":sh footclient direnv exec . hx .";
-          N = ":sh footclient . hx .";
           d = ":insert-output date --iso";
         };
       };
