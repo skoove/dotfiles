@@ -99,10 +99,9 @@
   # Enable sound with pipewire.
   security.rtkit.enable = true;
 
-  programs.fish.enable = true;
   programs.noisetorch.enable = true;
 
-  users.defaultUserShell = pkgs.fish;
+  users.defaultUserShell = pkgs.nushell;
   users.mutableUsers = false;
   users.users.zie = {
     isNormalUser = true;
