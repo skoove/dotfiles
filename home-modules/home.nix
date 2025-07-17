@@ -18,7 +18,6 @@
     ./nixcord.nix
     ./obs.nix
     ./rust-dev-tools.nix
-    ./starship.nix
     ./stylix.nix
     ./syncthing.nix
     ./yazi.nix
