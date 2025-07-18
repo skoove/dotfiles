@@ -109,7 +109,7 @@
     extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" "wireshark"];
     openssh.authorizedKeys.keys = [ 
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnGnBgccjncw0VMcpn/qjauAugKrTSzkIjLKssgVG9z zie@nixos-laptop"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHKO45q8PNR1u3rfs+un5tWSV1vAzewZoT76iB1E+JLh zie@nixos-desktop"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINQVpPsMT/TM3XRDvhg662rUJ19PbB90FejdkYvtF8wj zie@nixos-desktop"
     ];
   };
 
