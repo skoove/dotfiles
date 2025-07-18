@@ -259,19 +259,19 @@
         ]
       },
       "locked": {
-        "lastModified": 1752772389,
-        "narHash": "sha256-dbEDxf5zgA1TruTwQVSvm6efD6dppp72z06G3jvTKJg=",
+        "lastModified": 1752833493,
+        "narHash": "sha256-2Dw1MnyxmuOMcj11I0fs7ChsXupYcpVbfGXuSUuWjtQ=",
         "ref": "next",
-        "rev": "e51aeb5aa3d13723ba2b93cd2b6ca890a6a5fc04",
-        "revCount": 1960,
+        "rev": "4dfd64ff2626ae78710546bc72937c0c49e25b36",
+        "revCount": 1961,
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/SteamClientHomebrew/Millennium"
+        "url": "https://github.com/skoove/Millennium"
       },
       "original": {
         "ref": "next",
         "type": "git",
-        "url": "https://github.com/SteamClientHomebrew/Millennium"
+        "url": "https://github.com/skoove/Millennium"
       }
     },
     "niri": {
@@ -341,15 +341,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1752802930,
-        "narHash": "sha256-zzbeznY7jIAdEX6gmR7VwUU0EI7Oei7gKv6qoniucAg=",
-        "owner": "kaylorben",
+        "lastModified": 1752832899,
+        "narHash": "sha256-j5ta/UhJXOlvRrhsf/EGpD7fL0AgYkEXj1FYPI3qypg=",
+        "owner": "skoove",
         "repo": "nixcord",
-        "rev": "c70ca9da4edd70ecad0386712d12cfad07f5f529",
+        "rev": "b30b99c1ad234568f894f9c1d5bf76ba0c444575",
         "type": "github"
       },
       "original": {
-        "owner": "kaylorben",
+        "owner": "skoove",
         "repo": "nixcord",
         "type": "github"
       }
