@@ -3,6 +3,10 @@
   imports = [
     ./starship.nix
   ];
+
+  home.packages = with pkgs; [
+    rusty-man
+  ];
   
   programs.carapace = {
     enable = true;
@@ -36,6 +40,8 @@
       lv = "loago view -m";
       ld = "loago do";
       lrm = "loago remove";
+
+      rman = "rusty-man --viewer tui";
     };
   };
 }
