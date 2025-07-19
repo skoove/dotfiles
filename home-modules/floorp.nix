@@ -45,6 +45,12 @@
           sponsorblock
           stylus
           enhancer-for-youtube
+          web-clipper-obsidian
+          unpaywall
+          shinigami-eyes
+          proton-vpn
+          boring-rss
+          web-archives
         ];
       };
 
