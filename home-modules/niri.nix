@@ -163,7 +163,7 @@ in {
         "${mod}+Q".action = close-window;
         "${mod}+F".action = maximize-column;
         "${mod}+Shift+F".action = fullscreen-window;
-        "${mod}+Ctrl+F".action = toggle-window-floating;
+        "${mod}+Space".action = toggle-window-floating;
         "${mod}+W".action = toggle-column-tabbed-display;
 
         # open things but better!!!
