@@ -1,4 +1,4 @@
-{ pkgs , ... }:
+{ pkgs , inputs , ... }:
 {
   stylix.targets.floorp = {
     profileNames = [ "zie" ];
@@ -7,6 +7,12 @@
 
   programs.floorp = {
     enable = true;
+
+    # see [1] and [2] for more information
+    #
+    # [1]: https://github.com/NixOS/nixpkgs/pull/422814
+    # [2]: https://github.com/NixOS/nixpkgs/issues/418473
+    package = inputs.floorp-disable-lto.legacyPackages.x86_64-linux.floorp;
 
     policies = {
       DisableTelemetry = true;

@@ -42,6 +42,14 @@
       url = "git+https://github.com/SteamClientHomebrew/Millennium?ref=next";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # see [1] and [2] for more information
+    #
+    # [1]: https://github.com/NixOS/nixpkgs/pull/422814
+    # [2]: https://github.com/NixOS/nixpkgs/issues/418473
+    floorp-disable-lto = {
+      url = "github:NixOS/nixpkgs?ref=pull/422814/head";
+    };
   };
 
   outputs = {nixpkgs, niri, ... }@inputs:
