@@ -44,9 +44,7 @@
     };
 
     millennium = {
-      # url = "git+https://github.com/SteamClientHomebrew/Millennium?ref=next";
-      # see nixcord input
-      url = "git+https://github.com/skoove/Millennium?ref=next";
+      url = "git+https://github.com/SteamClientHomebrew/Millennium?ref=next";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
