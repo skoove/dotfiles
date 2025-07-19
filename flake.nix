@@ -14,12 +14,7 @@
     };
 
     nixcord = {
-      # url = "github:kaylorben/nixcord";
-      # using local until [1] and [2] are fixed
-      #
-      # [1]: https://github.com/NixOS/nixpkgs/issues/426301
-      # [2]: 
-      url = "github:skoove/nixcord";
+      url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
