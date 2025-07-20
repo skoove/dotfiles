@@ -13,7 +13,7 @@ in
     systemd.enable = true;
 
     settings.main-bar = {
-      layer = "bottom";
+      layer = "top";
       
       modules-left = [
         "niri/workspaces"
