@@ -67,6 +67,7 @@
 
   # opengl on
   hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
   hardware.enableAllFirmware = true;
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -141,7 +142,9 @@
   ];
 
   programs.hyprland.enable = false;
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+  };
 
   programs.niri = {
     enable = true;

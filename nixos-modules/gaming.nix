@@ -17,6 +17,7 @@
     piper # config mouse stuff
     wine64
     arma3-unix-launcher
+    bottles-unwrapped
   ];
 
   services.ratbagd.enable = true; # mouse stuff i think
@@ -32,10 +33,18 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      freetype
+    ];
+  };
+
   programs.arma3helper = {
     enable = lib.mkIf (config.networking.hostName == "nixos-desktop") true;
-    proton_offical_version = "Proton Experimental";
-    steam_library_path = "/home/zie/ssd_games/SteamLibrary";
+    # proton_offical_version = "8.0";
+    proton_custom_version = "GE-Proton10-9";
+    steam_library_path = "/home/zie/ssd_games/SteamLibrary/steamapps/";
     compat_data_path = "/home/zie/ssd_games/SteamLibrary/steamapps/compatdata/107410";
   };
 }
