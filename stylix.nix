@@ -9,12 +9,11 @@
       name = "JetBrainsMono NF";
     };
 
-    # sansSerif = {
-    #   package = pkgs.rubik;
-    #   name = "Rubik";
-    # };
+    sansSerif = {
+      package = pkgs.rubik;
+      name = "Rubik";
+    };
 
-    sansSerif = config.stylix.fonts.monospace;
     serif = config.stylix.fonts.sansSerif;
 
     sizes = {
