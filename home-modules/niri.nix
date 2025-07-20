@@ -77,6 +77,11 @@ in {
         border.width = 2;
         gaps = 15;
 
+        shadow = {
+          enable = true;
+          color = "#${colors.base00}";
+        };
+
         struts =
         let
         side_struts = 15;
