@@ -28,7 +28,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/4f0104c0-5f0e-4d9b-a83c-96e82a4c1575";
+    device = "/dev/disk/by-label/nixos";
     fsType = "ext4";
   };
 
@@ -43,8 +43,13 @@
     options = [ "users" "exec" "nofail" ];
   };
 
-  fileSystems."/home/zie/games" = {
-    device = "/dev/disk/by-label/linux-games";
+  fileSystems."/home/zie/hdd_games" = {
+    device = "/dev/disk/by-label/hdd_games";
+    options = [ "users" "exec" "nofail" ];
+  };
+
+  fileSystems."/home/zie/ssd_games" = {
+    device = "/dev/disk/by-label/ssd_games";
     options = [ "users" "exec" "nofail" ];
   };
 
