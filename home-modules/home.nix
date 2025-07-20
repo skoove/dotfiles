@@ -81,7 +81,6 @@
     
     # tools
     unzip
-    nixd               # nix lsp
     dust               # disk usage but easier read
     nh                 # replacement for rebuild commands
     bitwarden-cli      # password manager

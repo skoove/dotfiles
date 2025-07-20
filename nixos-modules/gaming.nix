@@ -12,6 +12,7 @@
     protonup-qt
     piper # config mouse stuff
     wine64
+    arma3-unix-launcher
   ];
 
   services.ratbagd.enable = true; # mouse stuff i think
