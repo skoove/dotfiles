@@ -50,6 +50,11 @@
     floorp-disable-lto = {
       url = "github:NixOS/nixpkgs?ref=pull/422814/head";
     };
+
+    arma3helper = {
+      url = "github:skoove/arma3helper-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, niri, ... }@inputs:

@@ -1,7 +1,11 @@
-{ pkgs , inputs , ... }:
+{ pkgs , inputs , config , lib , ... }:
 {
   nixpkgs.overlays = [
     inputs.millennium.overlays.default
+  ];
+
+  imports = [
+    inputs.arma3helper.nixosModules.default
   ];
 
   environment.systemPackages = with pkgs; [
@@ -26,5 +30,12 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
+  };
+
+  programs.arma3helper = {
+    enable = lib.mkIf (config.networking.hostName == "nixos-desktop") true;
+    proton_offical_version = "Proton Experimental";
+    steam_library_path = "/home/zie/ssd_games/SteamLibrary";
+    compat_data_path = "/home/zie/ssd_games/SteamLibrary/steamapps/compatdata/107410";
   };
 }
