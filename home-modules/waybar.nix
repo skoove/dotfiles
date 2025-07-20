@@ -17,6 +17,7 @@ in
       
       modules-left = [
         "niri/workspaces"
+        "custom/sep"
         "niri/window"
       
         # "hyprland/workspaces"
@@ -28,8 +29,8 @@ in
       ];
 
       modules-right = [
-        "temperature"
         "cpu"
+        "temperature"
         "memory"
         "backlight"
         "pulseaudio"
@@ -109,7 +110,7 @@ in
       temperature = {
         interval = 1;
         critical-threshold = 80;
-        format = " {icon} {temperatureC}°C";
+        format = "{temperatureC}°C";
         format-icons = temp-icons;
       } // (if osConfig.networking.hostName == "nixos-desktop" then {
         thermal-zone = 2;
@@ -124,18 +125,17 @@ in
       border: none;
       font-family: "${config.stylix.fonts.monospace.name}";
       font-size: ${toString config.stylix.fonts.sizes.desktop}pt;
-      color: #${colors.base05};
+      color: #${colors.base04};
     }
 
     window#waybar {
-      background: transparent;
+      background: #${colors.base00};
     }
 
     .module {
       background: #${colors.base00};
-      margin: 3px 10px 0px 10px;
-      padding: 0px 5px 0px 5px;
-      border-radius: 10px;
+      margin: 0px 5px 0px 5px;
+      padding: 0px 0px 0px 5px;
     }
 
     #workspaces button {
