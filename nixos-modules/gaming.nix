@@ -12,13 +12,14 @@
     mangohud
     wine
     protontricks
-    r2modman
     protonup-qt
     piper # config mouse stuff
     wine64
-    arma3-unix-launcher
+  ] ++ (if config.networking.hostName == "nixos-desktop" then [
+    pkgs.arma3-unix-launcher
+    r2modman
     bottles-unwrapped
-  ];
+  ] else []);
 
   services.ratbagd.enable = true; # mouse stuff i think
 
