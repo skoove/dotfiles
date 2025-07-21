@@ -19,6 +19,19 @@
     options = [ "nofail" "x-systemd.automount" "x-systemd.device-timeout=10s" ];
   };
 
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "06:00";
+    randomizedDelaySec = "45min";
+    persistent = true;
+  };
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
