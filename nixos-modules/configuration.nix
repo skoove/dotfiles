@@ -103,6 +103,7 @@
   programs.noisetorch.enable = true;
 
   users.defaultUserShell = pkgs.fish;
+  programs.fish.enable = true;
   users.mutableUsers = false;
   users.users.zie = {
     isNormalUser = true;
