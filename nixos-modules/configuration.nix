@@ -102,7 +102,7 @@
 
   programs.noisetorch.enable = true;
 
-  users.defaultUserShell = pkgs.nushell;
+  users.defaultUserShell = pkgs.fish;
   users.mutableUsers = false;
   users.users.zie = {
     isNormalUser = true;
