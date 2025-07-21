@@ -42,7 +42,7 @@ in {
         { command = [ "sh" "-c" "systemctl --user enable --now hyprpaper.service" ]; }
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
-        { command = [ "${pkgs.networkmanagerapplet}" "--indicator" ]; }
+        { command = [ "${pkgs.networkmanagerapplet}/bin/nm-applet" "--indicator" ]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
           { command = [ "sh" "-c" "discord --start-minimized" ]; }
