@@ -34,7 +34,6 @@ in
         "memory"
         "backlight"
         "pulseaudio"
-        "network"
         "battery"
         "clock"
         "tray"
