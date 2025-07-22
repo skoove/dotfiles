@@ -104,6 +104,7 @@
     fd # better find
     xh # http request sender
     hyperfine # benchmarker
+    rnote # drawing tablet optimised draw note thingy
 
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
