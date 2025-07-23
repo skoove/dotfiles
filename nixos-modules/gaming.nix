@@ -1,16 +1,11 @@
 { pkgs , inputs , config , lib , ... }:
 {
-  nixpkgs.overlays = [
-    inputs.millennium.overlays.default
-  ];
-
   imports = [
     inputs.arma3helper.nixosModules.default
   ];
 
   environment.systemPackages = with pkgs; [
     mangohud
-    wine
     protontricks
     protonup-qt
     piper # config mouse stuff
@@ -28,7 +23,6 @@
   
   programs.steam = {
     enable = true;
-    package = pkgs.steam-millennium;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;

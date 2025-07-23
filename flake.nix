@@ -38,15 +38,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    millennium = {
-      # url = "git+https://github.com/SteamClientHomebrew/Millennium?ref=next";
-      # needed until [1] merges
-      #
-      # [1] https://github.com/SteamClientHomebrew/Millennium/pull/439
-      url = "git+https://github.com/SteamClientHomebrew/Millennium?rev=ffeeaa9a6eb42008e32c04602e8f5db035729906";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # see [1] and [2] for more information
     #
     # [1]: https://github.com/NixOS/nixpkgs/pull/422814
