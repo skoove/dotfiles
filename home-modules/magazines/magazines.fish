@@ -5,7 +5,7 @@ function new_foot
 end
 
 function notif
-    dunstify magazines "$argv"
+    notify-send magazines "$argv"
 end
 
 function cancel_checker

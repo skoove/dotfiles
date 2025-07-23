@@ -23,6 +23,7 @@ in {
     xwayland-satellite
     pulseaudio # pactl for toggle mute
     fish # scripts
+    libnotify # some things rely on libnotify to function
   ];
   
   xdg.portal = {
@@ -161,8 +162,8 @@ in {
         "${mod}+P".action = fish "fish ${../scripts/lock-screen.fish}";
         "${mod}+Shift+C".action = fish "fish ${../scripts/command-runner.fish}";
         "${mod}+N".action = spawn "footclient" "numbat";
-        "${mod}+Y".action = fish "dunstify \"$(niri msg focused-window)\"";
-        "${mod}+Shift+Y".action = fish "set win (niri msg focused-window); wl-copy $win; dunstify \"$win\"";
+        "${mod}+Y".action = fish "notify-send\"$(niri msg focused-window)\"";
+        "${mod}+Shift+Y".action = fish "set win (niri msg focused-window); wl-copy $win; notify-send \"$win\"";
         "${mod}+Z".action = spawn "${pkgs.woomer}/bin/woomer";
         "${mod}+V".action = spawn "pavucontrol";
 

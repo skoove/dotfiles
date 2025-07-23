@@ -8,8 +8,8 @@ echo $muted
 
 if test $muted = yes
     pactl set-source-mute $source 0
-    dunstify unmuted $source
+    notify-send unmuted $source
 else
     pactl set-source-mute $source 1
-    dunstify muted $source
+    notify-send muted $source
 end
