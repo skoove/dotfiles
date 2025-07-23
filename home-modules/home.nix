@@ -144,7 +144,7 @@
     ".config/inkscape/palettes/default.gpl".source = ../files/inkscape/gruvbox-palette.gpl;
   };
 
-  home.sessionVaribles = {
+  home.sessionVariables = {
     PAGER = "${pkgs.ov}";
   };
 
