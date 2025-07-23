@@ -105,6 +105,7 @@
     xh # http request sender
     hyperfine # benchmarker
     rnote # drawing tablet optimised draw note thingy
+    ov # pager
 
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
@@ -141,6 +142,10 @@
     ".local/share/loago/loago.json".source = config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
     ".config/inkscape/templates/default.svg".source = ../files/inkscape/default-document.svg;
     ".config/inkscape/palettes/default.gpl".source = ../files/inkscape/gruvbox-palette.gpl;
+  };
+
+  home.sessionVaribles = {
+    PAGER = "${pkgs.ov}";
   };
 
   # Let Home Manager install and manage itself.
