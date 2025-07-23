@@ -107,16 +107,20 @@
                 url = "https://192.168.0.254/";
               }
               {
-                name = "proxmox";
-                url = "https://192.168.0.187:8006/";
+                name = "px 1";
+                url = "https://proxmox-1.home.com/";
+              }
+              {
+                name = "px 2";
+                url = "https://proxmox-2.home.com/";
               }
               {
                 name = "jellyfin";
-                url = "http://192.168.0.253:8096/web/";
+                url = "http://jellyfin.home.com/web/";
               }
               {
                 name = "transmission";
-                url = "http://192.168.0.36:9091/transmission/web/";
+                url = "http://transmission.home.com/";
               }
               {
                 name = "tailscale";
