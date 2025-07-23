@@ -11,8 +11,9 @@ let
 in {
   imports = [
     ./waybar.nix # bar
-    ./dunst.nix  # notification daemon
   ];
+
+  services.swaync.enable = true;
 
   home.packages = with pkgs; [
     ksnip
