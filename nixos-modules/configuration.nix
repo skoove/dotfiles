@@ -69,8 +69,7 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
   hardware.enableAllFirmware = true;
-
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  hardware.opentabletdriver.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
