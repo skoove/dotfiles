@@ -34,6 +34,7 @@
     enable = true;
     libraries = with pkgs; [
       freetype
+      libunwind
     ];
   };
 
