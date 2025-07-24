@@ -15,6 +15,7 @@
     r2modman
     bottles-unwrapped
     prismlauncher
+    glfw-wayland-minecraft
   ] else []);
 
   services.ratbagd.enable = true; # mouse stuff i think
