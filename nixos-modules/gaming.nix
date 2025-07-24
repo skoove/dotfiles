@@ -14,6 +14,7 @@
     pkgs.arma3-unix-launcher
     r2modman
     bottles-unwrapped
+    prismlauncher
   ] else []);
 
   services.ratbagd.enable = true; # mouse stuff i think
