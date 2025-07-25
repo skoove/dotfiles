@@ -13,13 +13,15 @@
   # nvidia settings yippppieieieieiei
   services.xserver.videoDrivers = [ "nvidia" ];
   services.thermald.enable = true;
-
+  hardware.graphics = {
+     enable = true;
+   };
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true; 
     open = false;                  
     nvidiaSettings = false;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
