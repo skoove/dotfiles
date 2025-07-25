@@ -18,7 +18,7 @@ end
 # -- entry point -- #
 set mag $argv[1]
 set action $argv[2]
-set mag_path ~/magazines/$mag
+set mag_path /home/zie/magazines/$mag
 
 # check if args were provided
 if not test -n "$mag"; or not test -n "$action"
@@ -77,3 +77,5 @@ switch $action
     case "*"
         notif invalid action: $action
 end
+
+keydctl layer main

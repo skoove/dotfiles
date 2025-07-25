@@ -6,6 +6,7 @@
     ./gaming.nix
     ./udev.nix
     ./cybersec.nix
+    ./keyd.nix
 
     inputs.stylix.nixosModules.stylix
     inputs.home-manager.nixosModules.default
@@ -108,7 +109,7 @@
   users.users.zie = {
     isNormalUser = true;
     hashedPassword = "$6$sZqDUAAlSaboPpAR$zueEPawUgd8uvMwGNImT/HnF6t10Ct1Skrh3/caRgZZACARq7BKPGw.VQJS/uEHJoFKjyRwoKUFR78LwFQKON/";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" "wireshark"];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "lp" "lpadmin" "docker" "wireshark" "keyd" ];
     openssh.authorizedKeys.keys = [ 
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnGnBgccjncw0VMcpn/qjauAugKrTSzkIjLKssgVG9z zie@nixos-laptop"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINQVpPsMT/TM3XRDvhg662rUJ19PbB90FejdkYvtF8wj zie@nixos-desktop"
