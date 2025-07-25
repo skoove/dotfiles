@@ -35,6 +35,7 @@
     libraries = with pkgs; [
       freetype
       libunwind
+      libglvnd
     ];
   };
 
