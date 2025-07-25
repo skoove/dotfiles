@@ -24,7 +24,6 @@
     ./yazi.nix
     ./zellij.nix
     ./xdg.nix
-    ./i3.nix
     ./iamb.nix
     ./python.nix
 

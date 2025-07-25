@@ -153,7 +153,7 @@
     package = pkgs.niri-unstable;
   };
 
-  services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3.enable = false;
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
   services.displayManager.ly.enable = true;
   services.openssh.enable = true;
