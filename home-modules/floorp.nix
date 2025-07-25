@@ -28,13 +28,22 @@
         "extensions.autoDisableScopes" = 0;
         # needed for the obsidian clipper plugin
         "extensions.openPopupWithoutUserGesture.enabled" = true;
+
+        # its annoying
         "browser.aboutConfig.showWarning" = false;
+
         # 1: stacked
         "floorp.tabbar.style" = 1;
+
+        # ask for where to download files instead of just putting them wherever
+        "browser.download.useDownloadDir" = false;
+
+        # turn off all the floorp sidebar stuff; i do not like it
         "floorp.browser.sidebar.enable" = false;
         "floorp.browser.sidebar.is.displayed" = false;
         "sidebar.revamp" = false;
         "floorp.browser.workspaces.enabled" = false;
+
         # this is the state of that whole top bar, just copy paste it from
         # about:config after editing it manually, maybe some day i will find a
         # more nixy way? but nixing of the sake of nix is a fools endevour

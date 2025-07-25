@@ -132,11 +132,20 @@
 
   programs.bat.enable = true;
 
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      Host gh
+        User git
+        HostName github.com
+      '';
+  };
+
   services.tldr-update = {
     enable = true;
     period = "daily";
   };
-
+  
   home.file = {
     ".local/share/loago/loago.json".source = config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
     ".config/inkscape/templates/default.svg".source = ../files/inkscape/default-document.svg;
