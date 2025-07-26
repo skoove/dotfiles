@@ -38,6 +38,7 @@
       
         space.space = {
           d = ":insert-output date --iso";
+          c = ":buffer-close";
         };
       };
     };
