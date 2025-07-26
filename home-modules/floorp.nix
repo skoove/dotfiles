@@ -26,6 +26,10 @@
       settings = {
         # all of these settings are in about:config
         "extensions.autoDisableScopes" = 0;
+
+        # enable scrolling using the middle mouse button 
+        "general.autoScroll" = true;
+
         # needed for the obsidian clipper plugin
         "extensions.openPopupWithoutUserGesture.enabled" = true;
 
