@@ -155,11 +155,20 @@
 
   services.xserver.windowManager.i3.enable = false;
   services.xserver.enable = config.services.xserver.windowManager.i3.enable;
-  services.displayManager.ly.enable = true;
   services.openssh.enable = true;
   services.blueman.enable = true;
   services.tailscale.enable = true;
  
+  services.displayManager.ly.enable = true;
+  services.displayManager.ly.settings = {
+    animation = "colormix";
+    asterisk = "*";
+    box_title = "hello!";
+    colormix_col1 = "0x${config.lib.stylix.colors.base0E}";
+    colormix_col2 = "0x${config.lib.stylix.colors.base00}";
+    colormix_col3 = "0x${config.lib.stylix.colors.base00}";
+  };
+  
   services.xserver.xkb = {
     layout = "us";
     variant = "";

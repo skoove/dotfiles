@@ -123,6 +123,7 @@ in {
         # primary desktop monitor
         "DVI-D-1" = {
           scale = 1.0;
+          focus-at-startup = true;
           mode = {
             width = 1920;
             height = 1080;
