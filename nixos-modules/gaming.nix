@@ -9,7 +9,7 @@
     protontricks
     protonup-qt
     piper # config mouse stuff
-    wineWowPackages.stableFull
+    # wineWowPackages.stableFull
     dxvk_2
   ] ++ (if config.networking.hostName == "nixos-desktop" then [
     pkgs.arma3-unix-launcher
@@ -38,13 +38,5 @@
       libunwind
       libglvnd
     ];
-  };
-
-  programs.arma3helper = {
-    enable = lib.mkIf (config.networking.hostName == "nixos-desktop") true;
-    # proton_offical_version = "8.0";
-    proton_custom_version = "GE-Proton10-9";
-    steam_library_path = "/home/zie/ssd_games/SteamLibrary/steamapps/";
-    compat_data_path = "/home/zie/ssd_games/SteamLibrary/steamapps/compatdata/107410";
   };
 }

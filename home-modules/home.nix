@@ -152,9 +152,9 @@
     ".config/inkscape/palettes/default.gpl".source = ../files/inkscape/gruvbox-palette.gpl;
   };
 
-  home.sessionVariables = {
-    PAGER = "${pkgs.ov}";
-  };
+  # home.sessionVariables = {
+  #   PAGER = "${pkgs.ov}";
+  # };
 
   # Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
