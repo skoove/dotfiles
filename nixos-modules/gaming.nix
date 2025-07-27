@@ -9,7 +9,8 @@
     protontricks
     protonup-qt
     piper # config mouse stuff
-    wineWow64Packages.waylandFull
+    wineWowPackages.stableFull
+    
   ] ++ (if config.networking.hostName == "nixos-desktop" then [
     pkgs.arma3-unix-launcher
     r2modman
