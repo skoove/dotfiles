@@ -1,7 +1,6 @@
 { pkgs , inputs , config , lib , ... }:
 {
   imports = [
-    inputs.arma3helper.nixosModules.default
   ];
 
   environment.systemPackages = with pkgs; [
