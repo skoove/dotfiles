@@ -26,11 +26,11 @@ in {
     libnotify # some things rely on libnotify to function
   ];
   
-  # xdg.portal = {
-  #   enable = true;
-    # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    # config.common.default = "gnome";
-  # };
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gnome";
+  };
 
   services.hyprpaper.enable = true;
 

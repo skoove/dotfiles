@@ -1,7 +1,7 @@
 {
   description = "my configuration for personal devices";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/pull/429170/head";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
