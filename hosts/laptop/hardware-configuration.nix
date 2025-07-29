@@ -15,7 +15,7 @@
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
     battery = {
-      governor = "powersave";
+      governor = "power";
       turbo = "never";
     };
     charger = {
