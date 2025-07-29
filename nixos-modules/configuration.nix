@@ -35,6 +35,7 @@
     NH_FLAKE = "/home/zie/.dotfiles";
     NIXPKGS_ALLOW_UNFREE = 1;
     NIXOS_OZONE_WL=1;
+    GDK_BACKEND = "wayland";
   };
 
   # storage optimisation
