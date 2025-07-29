@@ -17,6 +17,7 @@
     gobuster
     exploitdb
     zap
+    aircrack-ng
   ];
 
   # zap needs it
