@@ -108,7 +108,7 @@
         force = true;
 
         settings = let
-          ponos_local = "192.168.230";
+          ponos_local = "192.168.210";
           ponos_tailscale = "100.93.218.86";
         in [
           {

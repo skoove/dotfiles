@@ -28,8 +28,13 @@ in {
   
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "gnome";
+    extraPortals = [ pkgs.xdg-desktop-portal-gnome pkgs.xdg-desktop-portal-gtk ];
+    config.niri.default = "*";
+  };
+
+  home.sessionVariables = {
+  #   GDK_BACKEND = "wayland";
+    G_MESSAGES_DEBUG="all";
   };
 
   services.hyprpaper.enable = true;
