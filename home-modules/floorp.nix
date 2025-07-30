@@ -107,53 +107,28 @@
       bookmarks = {
         force = true;
 
-        settings = [
+        settings = let
+          ponos_local = "192.168.230";
+          ponos_tailscale = "100.93.218.86";
+        in [
           {
             toolbar = true;
             bookmarks = [
+              { name = "px 1"; url = "https://100.78.85.71:8006/"; }
+              { name = "nas"; url = "http://100.124.39.39:5000/"; }
+              { name = "jellyfin"; url = "http://${ponos_tailscale}:8096/web/"; }
+              { name = "audiobookshelf"; url = "http://${ponos_tailscale}:8000/"; }
+              { name = "transmission"; url = "http://${ponos_tailscale}:9091/transmission/web/"; }
               {
-                name = "nas";
-                url = "http://192.168.0.230:5000/";
-              }
-              {
-                name = "router";
-                url = "https://192.168.0.254/";
-              }
-              {
-                name = "px 1";
-                url = "https://proxmox-1.home.com/";
-              }
-              {
-                name = "px 2";
-                url = "https://proxmox-2.home.com/";
-              }
-              {
-                name = "jellyfin";
-                url = "http://jellyfin.home.com/web/";
-              }
-              {
-                name = "transmission";
-                url = "http://transmission.home.com/";
-              }
-              {
-                name = "tailscale";
+                name = "local";
                 bookmarks = [
-                  {
-                    name = "nas";
-                    url = "http://100.124.39.39:5000/";
-                  }
-                  {
-                    name = "proxmox";
-                    url = "https://100.78.85.71:8006/";
-                  }
-                  {
-                    name = "jellyfin";
-                    url = "http://100.93.218.86:8096/web/";
-                  }
-                  {
-                    name = "transmission";
-                    url = "http://100.93.99.60:9091/transmission/web/";
-                  }
+                  { name = "nas"; url = "http://192.168.0.230:5000/"; }
+                  { name = "router"; url = "https://192.168.0.254/"; }
+                  { name = "px 1"; url = "https://192.168.0.230:8006/"; }
+                  { name = "px 2"; url = "https://192.168.0.231:8006/"; }
+                  { name = "jellyfin"; url = "http://${ponos_local}:8096/"; }
+                  { name = "audiobookshelf"; url = "http://${ponos_local}:8000/"; }
+                  { name = "transmission"; url = "http://${ponos_local}:9091/"; }
                 ];
               }
             ];
