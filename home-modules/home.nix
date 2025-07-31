@@ -64,6 +64,7 @@
     wget
     gnome-pomodoro
     p7zip
+    aseprite
 
     # utils
     bemoji                                           # emoji picker for wofi
