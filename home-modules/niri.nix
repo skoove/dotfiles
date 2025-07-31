@@ -24,11 +24,13 @@ in {
     pulseaudio # pactl for toggle mute
     fish # scripts
     libnotify # some things rely on libnotify to function
+    nautilus
   ];
-  
+
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    xdgOpenUsePortal = true;
   };
 
   home.sessionVariables = {
