@@ -119,6 +119,7 @@ in
       mpris = {
         format = "{status_icon} {dynamic}";
         dynamic-len = 60;
+        interval = 1;
         
         status-icons = {
           paused = "";
