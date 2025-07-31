@@ -25,7 +25,7 @@ in
       ];
 
       modules-center = [
-        # "cava"
+        "mpris"
       ];
 
       modules-right = [
@@ -115,6 +115,15 @@ in
       } // (if osConfig.networking.hostName == "nixos-desktop" then {
         thermal-zone = 2;
       } else {});
+
+      mpris = {
+        status-icons = {
+          paused = "";
+          playing = "";
+        };
+
+        format = "{status_icon} {dynamic}";
+      };
 
       "custom/notification" = {
         tooltip = false;
