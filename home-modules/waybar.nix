@@ -117,12 +117,13 @@ in
       } else {});
 
       mpris = {
+        format = "{status_icon} {dynamic}";
+        dynamic-len = 60;
+        
         status-icons = {
           paused = "";
           playing = "";
         };
-
-        format = "{status_icon} {dynamic}";
       };
 
       "custom/notification" = {
