@@ -8,7 +8,7 @@
       width = 40;
       lines = 20;
       border-width = 3;
-      border-radius =20;
+      border-radius = 20;
     };
   };
 }
