@@ -27,6 +27,7 @@
         # all of these settings are in about:config
         "extensions.autoDisableScopes" = 0;
         "browser.tabs.opentabfor.middleclick" = true;
+        "browser.tabs.loadInBackground" = true;
 
         # enable scrolling using the middle mouse button 
         "general.autoScroll" = true;
