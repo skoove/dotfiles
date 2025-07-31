@@ -61,7 +61,7 @@
     freecad-wayland
     mprocs
     jq
-    wget2
+    wget
     gnome-pomodoro
     p7zip
 
