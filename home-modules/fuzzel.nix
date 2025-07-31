@@ -3,10 +3,12 @@
   programs.fuzzel = {
     enable = true;
     settings.main = {
-      dpi-aware = false;
+      dpi-aware = true;
       use-bold = true;
-      width = 60;
-      lines = 30;
+      width = 40;
+      lines = 20;
+      border-width = 3;
+      border-radius =20;
     };
   };
 }
