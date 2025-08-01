@@ -120,6 +120,7 @@
               { name = "nas"; url = "http://100.124.39.39:5000/"; }
               { name = "jellyfin"; url = "http://${ponos_tailscale}:8096/web/"; }
               { name = "audiobookshelf"; url = "http://${ponos_tailscale}:8000/"; }
+              { name = "rss"; url = "http://${ponos_tailscale}:7000/"; }
               { name = "transmission"; url = "http://${ponos_tailscale}:9091/transmission/web/"; }
               {
                 name = "local";
@@ -130,6 +131,7 @@
                   { name = "px 2"; url = "https://192.168.0.231:8006/"; }
                   { name = "jellyfin"; url = "http://${ponos_local}:8096/"; }
                   { name = "audiobookshelf"; url = "http://${ponos_local}:8000/"; }
+                  { name = "rss"; url = "http://${ponos_local}:7000/"; }
                   { name = "transmission"; url = "http://${ponos_local}:9091/"; }
                 ];
               }
