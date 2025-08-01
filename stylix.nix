@@ -1,8 +1,8 @@
 { pkgs, config, ... }:
 {
   stylix.enable = true;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-  stylix.image = ./wallpapers/forest.jpg;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/windows-nt.yaml";
+  stylix.image = ./wallpapers/farewell-saturn.jpg;
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.jetbrains-mono;
