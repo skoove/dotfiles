@@ -164,9 +164,9 @@
     animation = "colormix";
     asterisk = "*";
     box_title = "hello!";
-    colormix_col1 = "0x${config.lib.stylix.colors.base0E}";
-    colormix_col2 = "0x${config.lib.stylix.colors.base00}";
-    colormix_col3 = "0x${config.lib.stylix.colors.base00}";
+    colormix_col1 = "0x${config.lib.stylix.colors.base00}";
+    colormix_col2 = "0x${config.lib.stylix.colors.base01}";
+    colormix_col3 = "0x${config.lib.stylix.colors.base02}";
   };
   
   services.xserver.xkb = {
