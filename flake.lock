@@ -432,7 +432,8 @@
         "nixpkgs": "nixpkgs",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "wallpapers": "wallpapers"
       }
     },
     "spicetify-nix": {
@@ -598,6 +599,22 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1754255865,
+        "narHash": "sha256-AgTnn4wfkBZZ09O13jEEyGdmCjQMWzNEUgUO7dsY2Dk=",
+        "owner": "skoove",
+        "repo": "wallpapers",
+        "rev": "10fdcff507d480fed444cea4405c6faf0cd22d89",
+        "type": "github"
+      },
+      "original": {
+        "owner": "skoove",
+        "repo": "wallpapers",
         "type": "github"
       }
     },

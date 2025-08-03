@@ -38,6 +38,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    wallpapers = {
+      url = "github:skoove/wallpapers";
+      flake = false;
+    };
+
     # see [1] and [2] for more information
     #
     # [1]: https://github.com/NixOS/nixpkgs/pull/422814
