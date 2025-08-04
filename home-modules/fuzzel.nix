@@ -7,8 +7,11 @@
       use-bold = true;
       width = 40;
       lines = 20;
-      border-width = 3;
-      border-radius = 20;
+    };
+
+    settings.border = {
+      width = 3;
+      radius = 20;
     };
   };
 }
