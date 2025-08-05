@@ -37,6 +37,8 @@
       lrm = "loago remove";
 
       rman = "rusty-man --viewer tui";
+
+      errm = "cowsay -f actually";
     };
 
     functions = {
