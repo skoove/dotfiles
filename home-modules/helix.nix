@@ -2,12 +2,12 @@
 {
   home.packages = [ pkgs.nixd ];
   
-  stylix.targets.helix.enable = true;
+  stylix.targets.helix.enable = false;
   programs.helix = {
     enable = true;
 
     settings = {
-      # theme = "gruvbox";
+      theme = "gruvbox";
 
       editor = {
         auto-save.after-delay.enable = true;
