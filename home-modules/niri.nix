@@ -44,6 +44,7 @@ in {
   programs.niri = {
     settings = {
       prefer-no-csd = true;
+      overview.backdrop-color = "#${colors.base00}";
 
       spawn-at-startup =[
         { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
@@ -85,7 +86,7 @@ in {
         always-center-single-column = false;
         empty-workspace-above-first = true;
         border.width = 2;
-        gaps = 15;
+        gaps = 0;
 
         shadow = {
           enable = true;
@@ -105,7 +106,7 @@ in {
       window-rules = [
         {
           geometry-corner-radius = let
-            r = 10.0;
+            r = 0.0;
           in {
             top-left = r;
             top-right = r;
