@@ -5,6 +5,7 @@
     ../stylix.nix
     ./bottom.nix
     ./btop.nix
+    ./emacs.nix
     ./email.nix
     ./eza.nix
     ./fish.nix
@@ -13,19 +14,19 @@
     ./fuzzel.nix
     ./git.nix
     ./helix.nix
+    ./iamb.nix
     ./magazines
     ./niri.nix
     ./nixcord.nix
+    ./nushell.nix
     ./obs.nix
+    ./python.nix
     ./rust-dev-tools.nix
     ./stylix.nix
-    ./nushell.nix
     ./syncthing.nix
+    ./xdg.nix
     ./yazi.nix
     ./zellij.nix
-    ./xdg.nix
-    ./iamb.nix
-    ./python.nix
 
     inputs.stylix.homeModules.stylix
     inputs.nur.modules.homeManager.default
