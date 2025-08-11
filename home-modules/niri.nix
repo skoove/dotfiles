@@ -62,7 +62,7 @@ in {
       input = {
         mouse = {
           accel-profile = "flat";
-          accel-speed = 0;
+          accel-speed = 0.0;
         };
 
         trackpoint = {
