@@ -159,7 +159,7 @@
 
   programs.niri = {
     enable = true;
-    package = pkgs.niri-unstable;
+    package = pkgs.niri-stable;
   };
 
   services.xserver.windowManager.i3.enable = false;
