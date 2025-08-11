@@ -214,6 +214,22 @@
     };
   };
 
+  systemd.user.services.xdg-desktop-portal = {
+    after = [ "xdg-desktop-autostart.target" ];
+  };
+
+  systemd.user.services.xdg-desktop-portal-gtk = {
+    after = [ "xdg-desktop-autostart.target" ];
+  };
+
+  systemd.user.services.xdg-desktop-portal-gnome = {
+    after = [ "xdg-desktop-autostart.target" ];
+  };
+
+  systemd.user.services.niri-flake-polkit = {
+    after = [ "xdg-desktop-autostart.target" ];
+  };
+
   virtualisation.docker.enable = true;
 
   networking.firewall.enable = false;

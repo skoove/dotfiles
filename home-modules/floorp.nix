@@ -78,6 +78,7 @@
 
       search = {
         force = true;
+        default = "ddg";
         engines = {
           google.metaData.alias = "@g";
           my-nixos = {

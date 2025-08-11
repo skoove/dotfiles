@@ -28,14 +28,15 @@ in {
   ];
 
   xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "*";
-    xdgOpenUsePortal = true;
+  enable = true;
+  extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  config.common.default = "*";
+  xdgOpenUsePortal = true;
   };
 
+
   home.sessionVariables = {
-  #   GDK_BACKEND = "wayland";
+    GDK_BACKEND = "wayland";
     G_MESSAGES_DEBUG="all";
   };
 
