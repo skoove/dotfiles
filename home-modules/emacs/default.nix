@@ -2,12 +2,12 @@
 {
   stylix.targets.emacs.enable = false;
 
-  home.packages = [ pkgs.emacs-gtk ];
+  home.packages = [ pkgs.emacs ];
 
   services.emacs = {
     enable = true;
     package = with pkgs; (
-        (emacsPackagesFor emacs-gtk).emacsWithPackages (
+        (emacsPackagesFor emacs).emacsWithPackages (
           epkgs: with epkgs; [
             vertico
           ]
