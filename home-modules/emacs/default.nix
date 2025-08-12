@@ -16,4 +16,6 @@
         )
       );
   };
+
+  services.emacs.enable = true;
 }
