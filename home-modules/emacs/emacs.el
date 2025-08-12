@@ -15,4 +15,10 @@
  :config
  (direnv-mode))
 
+(use-package treesit-auto
+  :config
+  (treesit-auto-add-to-auto-mode-alist 'all) ;; if a treesitter grammar is found for the language detected in the buffer, use the corresponding language-ts-mode
+  (global-treesit-auto-mode))
+
 (which-key-mode)
+

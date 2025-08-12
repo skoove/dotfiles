@@ -13,10 +13,12 @@
     package = with pkgs; (
       (emacsPackagesFor emacs).emacsWithPackages (
         epkgs: with epkgs; [
+          use-package
           vertico
           orderless
           marginalia
           direnv
+          treesit-auto treesit-grammars.with-all-grammars
         ]
       )
     );
