@@ -13,9 +13,11 @@
   # nvidia settings yippppieieieieiei
   services.xserver.videoDrivers = [ "nvidia" ];
   services.thermald.enable = true;
+
   hardware.graphics = {
      enable = true;
-   };
+  };
+
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true; 
@@ -28,6 +30,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "video=HDMI-1:1920x1080@100"];
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";

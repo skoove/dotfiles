@@ -14,6 +14,9 @@
       (emacsPackagesFor emacs).emacsWithPackages (
         epkgs: with epkgs; [
           vertico
+          orderless
+          marginalia
+          direnv
         ]
       )
     );
