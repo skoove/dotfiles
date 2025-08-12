@@ -11,6 +11,7 @@
         (emacsPackagesFor emacs).emacsWithPackages (
           epkgs: with epkgs; [
             vertico
+            markdown-mode
           ]
         )
       );
