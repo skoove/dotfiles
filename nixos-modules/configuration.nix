@@ -152,7 +152,9 @@
     libnotify # just useful to be able to use from anywhere
   ];
 
+  services.displayManager.gdm.enable = true;
   programs.hyprland.enable = false;
+
   programs.nix-ld = {
     enable = true;
   };
@@ -167,8 +169,9 @@
   services.openssh.enable = true;
   services.blueman.enable = true;
   services.tailscale.enable = true;
- 
-  services.displayManager.ly.enable = true;
+
+  # disable ly because it breaks things!
+  services.displayManager.ly.enable = false;
   services.displayManager.ly.settings = {
     animation = "colormix";
     asterisk = "*";
