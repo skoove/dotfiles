@@ -6,13 +6,13 @@
   programs.emacs = {
     enable = true;
     package = with pkgs; (
-        (emacsPackagesFor emacs).emacsWithPackages (
-          epkgs: with epkgs; [
-            vertico
-            markdown-mode
-          ]
-        )
-      );
+      (emacsPackagesFor emacs).emacsWithPackages (
+        epkgs: with epkgs; [
+          vertico
+          markdown-mode
+        ]
+      )
+    );
   };
 
   services.emacs.enable = true;
