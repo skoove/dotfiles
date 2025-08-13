@@ -66,7 +66,7 @@
           bitwarden
           sponsorblock
           stylus
-          enhancer-for-youtube
+          untrap-for-youtube
           web-clipper-obsidian
           unpaywall
           shinigami-eyes
