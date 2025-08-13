@@ -19,8 +19,8 @@
           marginalia
           direnv
           treesit-auto treesit-grammars.with-all-grammars
-          nix-ts-mode
-	  gruvbox-theme
+          gruvbox-theme
+          meow meow-tree-sitter
         ]
       )
     );
