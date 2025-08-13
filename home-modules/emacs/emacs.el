@@ -31,6 +31,9 @@
 ;;; theme
 (load-theme 'gruvbox-dark-medium t)
 
+;; turn on line numbers
+(global-display-line-numbers-mode)
+
 ;;; remove native stuff
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -126,7 +129,7 @@
    '("'" . repeat)
    '("<escape>" . ignore)))
 
-(require 'meow)
 (meow-setup)
 (meow-global-mode 1)
 (meow-tree-sitter-register-defaults)
+
