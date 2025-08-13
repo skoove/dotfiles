@@ -11,7 +11,7 @@
   programs.emacs = {
     enable = true;
     package = with pkgs; (
-      (emacsPackagesFor emacs).emacsWithPackages (
+      (emacsPackagesFor emacs-gtk).emacsWithPackages (
         epkgs: with epkgs; [
           use-package
           vertico
