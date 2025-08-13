@@ -6,6 +6,14 @@
   :init
   (vertico-mode))
 
+;; emacs dashboard
+(use-package dashboard
+  :ensure t
+  :config
+  (setq dashboard-startup-banner "~/.emacs.d/trans-flag.png")
+  (setq dashboard-image-banner-max-width 200)
+  (dashboard-setup-startup-hook))
+
 ;;; fuzzy completion
 (use-package orderless
   :custom
@@ -31,6 +39,20 @@
 ;;; theme
 (load-theme 'gruvbox-dark-medium t)
 
+;; get rid of extra autosave files, save to same file, also no backups
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
+(defun my/auto-save ()
+  "save buffers visiting files not things like dash"
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      (when (and buffer-file-name
+		 (buffer-modified-p))
+	(save-buffer)))))
+
+(run-with-idle-timer 3 t #'my/auto-save)
+
 ;; turn on line numbers
 (global-display-line-numbers-mode)
 
@@ -44,6 +66,32 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+;; theme and edit like it is the native file
+(setq org-src-fontify-natively t
+    org-src-tab-acts-natively t
+    org-confirm-babel-evaluate nil
+    org-edit-src-content-indentation 0)
+
+(defun my-org-faces ()
+    (set-face-attribute 'org-todo nil :height 0.8)
+    (set-face-attribute 'org-level-1 nil :height 1.3)
+    (set-face-attribute 'org-level-2 nil :height 1.2)
+    (set-face-attribute 'org-level-3 nil :height 1.1))
+
+(add-hook 'org-mode-hook #'my-org-faces)
+
+;; wrap and center but not in src
+(setq-default fill-column 80)
+(add-hook 'org-mode-hook #'turn-on-auto-fill)
+
+(defun my/org-mode-auto-fill-function ()
+  "Only auto-fill outside of source blocks."
+  (unless (org-in-src-block-p)
+    (do-auto-fill)))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (setq-local auto-fill-function #'my/org-mode-auto-fill-function)))
 
 ;;; meow
 (defun meow-setup ()
@@ -129,6 +177,7 @@
    '("'" . repeat)
    '("<escape>" . ignore)))
 
+(require 'meow)
 (meow-setup)
 (meow-global-mode 1)
 (meow-tree-sitter-register-defaults)

@@ -7,6 +7,7 @@
   
   # we use mkOutOfStoreSymLink here because i want hot reloading type shit
   home.file.".emacs".source = config.lib.file.mkOutOfStoreSymlink /home/zie/.dotfiles/home-modules/emacs/emacs.el;
+  home.file.".emacs.d/trans-flag.png".source = ../../files/assets/trans-flag.png;
 
   programs.emacs = {
     enable = true;
@@ -19,8 +20,10 @@
           marginalia
           direnv
           treesit-auto treesit-grammars.with-all-grammars
+	        nix-mode
           gruvbox-theme
           meow meow-tree-sitter
+          dashboard
         ]
       )
     );
