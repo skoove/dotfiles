@@ -139,6 +139,10 @@ in {
             refresh = 100.0;
           };
         };
+
+        "*" = {
+          scale = 2.0;
+        };
       };
       
       binds = with config.lib.niri.actions;
