@@ -18,6 +18,9 @@
   (setq dashboard-image-banner-max-width 200)
   (dashboard-setup-startup-hook))
 
+; make dashboard show on client start even when runnign as daemon
+(setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
+
 ;;; fuzzy completion
 (use-package orderless
   :custom
@@ -28,6 +31,14 @@
 (use-package direnv
  :config
  (direnv-mode))
+
+;; consult
+(use-package consult
+  :bind
+  (("C-x b"   . consult-buffer)
+   ("C-x f" . consult-find)
+   ("C-s"     . consult-line)
+   ("M-g g"   . consult-goto-line)))
 
 ;;; treesit auto
 (use-package treesit-auto
@@ -209,3 +220,17 @@
 (meow-global-mode 1)
 (meow-tree-sitter-register-defaults)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(consult dashboard direnv general gruvbox-theme marginalia meow-tree-sitter
+	     nix-mode orderless treesit-auto use-package vertico)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

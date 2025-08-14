@@ -1,7 +1,7 @@
 { pkgs , config , lib , ... }:
 {
-  # for some reason not doing this causes build faliures, i belive because i
-  # do not use the community overlay for emacs, i prefer using normal themes for
+  # for some reason not doing this causes build faliures, i belive because i do
+  # not use the community overlay for emacs, i prefer using normal themes for
   # editors anyway
   stylix.targets.emacs.enable = false;
   
@@ -13,6 +13,9 @@
     hash = "sha256-VYklC4GlkTXf/e3DX7cdSmaD7EB4IQH9xXidtcj6IC8=";
   };
 
+  # the service just inherits the package from programs.emacs.package if
+  # programs.emacs.enable = true so i dont need to actually do anything but
+  # enable it :D
   services.emacs.enable = true;
 
   programs.emacs = {
@@ -31,6 +34,7 @@
           meow meow-tree-sitter
           dashboard
           general
+          consult
         ]
       )
     );
