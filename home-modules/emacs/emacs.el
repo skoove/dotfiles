@@ -62,7 +62,6 @@
   (auto-fill-mode 1)
   (setq-local comment-start "#")
 
-  ;; Highlight first line if longer than 50 chars
   (defun my-git-header-warning-p (limit)
     "highlight header longer than 50 chars"
     (and (<= (line-number-at-pos) 1)
@@ -71,7 +70,6 @@
   (font-lock-add-keywords
    nil `((my-git-header-warning-p 0 font-lock-warning-face prepend)))
   (let ((map my-git-commit-mode-map))
-    ;; Save buffer and close (like git commit)
     (define-key map (kbd "C-c C-c")
 		(lambda ()
 		  (interactive)
@@ -153,9 +151,15 @@
       (org-typst-preview-clear-buffer)
       (setq my/typst-render-toggle-state t))))
 
-(general-define-key
- :keymaps 'org-mode-map
- "C-c t" 'my/toggle-typst-rendering)
+(define-key org-mode-map (kbd "C-c t") 'my/toggle-typst-rendering)
+
+(defun my/insert-typst-math ()
+  "insert typst math"
+  (interactive)
+  (insert "#[ $$ ]")
+  (backward-char 3))
+
+(define-key org-mode-map (kbd "C-c e") 'my/insert-typst-math)
 
 ;;; meow
 (defun meow-setup ()
@@ -245,18 +249,3 @@
 (meow-setup)
 (meow-global-mode 1)
 (meow-tree-sitter-register-defaults)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(consult dashboard direnv general gruvbox-theme marginalia meow-tree-sitter
-	     nix-mode orderless treesit-auto use-package vertico)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
