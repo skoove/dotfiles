@@ -1,4 +1,4 @@
-{ pkgs , config , ... }:
+{ pkgs , config , lib , ... }:
 {
   # for some reason not doing this causes build faliures, i belive because i
   # do not use the community overlay for emacs, i prefer using normal themes for
@@ -24,6 +24,28 @@
           gruvbox-theme
           meow meow-tree-sitter
           dashboard
+
+          (
+            {
+              trivialBuild,
+              fetchFromGitHub,
+            }:
+            trivialBuild rec {
+              pname = "org-typst-preview";
+              version = "main-2025-08-14";
+              src = fetchFromGitHub {
+                owner = "remimimimimi";
+                repo = "org-typst-preview.el";
+                rev = "de334cf3daa84b23ceea2a9fc70b6787f7c6af5b";
+                hash = "";
+              };
+              # elisp dependencies
+              propagatedUserEnvPkgs = [
+                # all-the-icons
+              ];
+              buildInputs = propagatedUserEnvPkgs;
+            }
+          )
         ]
       )
     );

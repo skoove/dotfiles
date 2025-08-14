@@ -95,7 +95,7 @@
             (setq-local auto-fill-function #'my/org-mode-auto-fill-function)))
 
 ;; typst preview
-(org-typst-preview)
+; (org-typst-preview)
 
 ;;; meow
 (defun meow-setup ()
