@@ -18,7 +18,8 @@
   (dashboard-setup-startup-hook))
 
 ; make dashboard show on client start even when runnign as daemon
-(setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
+(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+(add-hook 'server-after-make-frame-hook (lambda () (dashboard-refresh-buffer)))
 
 ;;; fuzzy completion
 (use-package orderless
