@@ -9,6 +9,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       pull.rebase = true;
+      core.editor = "emacsclient -nw";
     };
   };
 }

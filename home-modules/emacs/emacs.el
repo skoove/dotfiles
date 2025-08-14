@@ -12,7 +12,6 @@
 
 ;; emacs dashboard
 (use-package dashboard
-  :ensure t
   :config
   (setq dashboard-startup-banner "~/.emacs.d/trans-flag.png")
   (setq dashboard-image-banner-max-width 200)
@@ -40,6 +39,16 @@
    ("C-s"     . consult-line)
    ("M-g g"   . consult-goto-line)))
 
+;;; git
+(defun my/git-commit-mode-setup ()
+  (highlight-lines-matching-regexp "^.\\{51\\}" 'hi-yellow) ;; lines >50 in yellow
+  (setq-local fill-column 72)
+  (auto-fill-mode 1)
+  )
+
+(add-hook 'git-commit-mode-hook 'my/git-commit-mode-setup)
+
+
 ;;; treesit auto
 (use-package treesit-auto
   :config
@@ -48,7 +57,7 @@
 
 ;;; which key setup
 (which-key-mode)
-(which-key-setup-side-window-right-bottom)
+(which-key-setup-side-window-bottom)
 (setq which-key-idle-delay 0)
 
 ;;; theme
