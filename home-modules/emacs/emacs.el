@@ -157,7 +157,7 @@
   "insert typst math"
   (interactive)
   (insert "#[ $$ #]")
-  (backward-char 3))
+  (backward-char 4))
 
 (define-key org-mode-map (kbd "C-c e") 'my/insert-typst-math)
 
