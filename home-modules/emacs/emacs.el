@@ -48,7 +48,6 @@
 
 (add-hook 'git-commit-mode-hook 'my/git-commit-mode-setup)
 
-
 ;;; treesit auto
 (use-package treesit-auto
   :config
