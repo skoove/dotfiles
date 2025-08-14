@@ -4,7 +4,8 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
 
 (use-package general)
-
+(elcord-mode)
+(zone-when-idle 120)
 ;; vertico
 (use-package vertico
   :init
@@ -45,9 +46,6 @@
   :config
   (treesit-auto-add-to-auto-mode-alist 'all) 
   (global-treesit-auto-mode))
-
-;; elcord
-(elcord-mode)
 
 ;;; which key setup
 (which-key-mode)
