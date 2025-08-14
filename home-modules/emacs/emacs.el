@@ -46,6 +46,9 @@
   (treesit-auto-add-to-auto-mode-alist 'all) 
   (global-treesit-auto-mode))
 
+;; elcord
+(elcord-mode)
+
 ;;; which key setup
 (which-key-mode)
 (which-key-setup-side-window-bottom)
