@@ -67,10 +67,17 @@
          (re-search-forward (format "^.\\{%d\\}\\(.*\\)$" (1+ 50)) limit t)))
 
   (font-lock-add-keywords
-   nil `((my-git-header-warning-p 0 font-lock-warning-face prepend))))
+   nil `((my-git-header-warning-p 0 font-lock-warning-face prepend)))
+  (let ((map my-git-commit-mode-map))
+    ;; Save buffer and close (like git commit)
+    (define-key map (kbd "C-c C-c")
+		(lambda ()
+		  (interactive)
+		  (save-buffer)
+		  (kill-buffer)))))
 
 (add-to-list 'auto-mode-alist
-             '("/\\.git/COMMIT_EDITMSG\\'" . my-git-commit-mode))
+	     '("/\\.git/COMMIT_EDITMSG\\'" . my-git-commit-mode))
 
 ;; get rid of extra autosave files, save to same file, also no backups
 (setq make-backup-files nil)
