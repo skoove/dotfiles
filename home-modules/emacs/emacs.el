@@ -1,6 +1,10 @@
 ;; i want use-package for config but i do not want it to donwload anything:
 (setq use-package-always-ensure nil)
 
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
+
+(use-package general)
+
 ;; vertico
 (use-package vertico
   :init
@@ -95,7 +99,26 @@
             (setq-local auto-fill-function #'my/org-mode-auto-fill-function)))
 
 ;; typst preview
-; (org-typst-preview)
+(require 'org-typst-preview)
+(add-hook 'org-mode-hook #'org-typst-preview-render-buffer)
+
+(defvar my/typst-render-toggle-state nil
+  "tracks the state of typst rendering")
+
+(defun my/toggle-typst-rendering ()
+  "toggle typst rendering in org mode"
+  (interactive)
+  (if my/typst-render-toggle-state
+      (progn
+	(org-typst-preview-render-buffer)
+	(setq my/typst-render-toggle-state nil))
+    (progn
+      (org-typst-preview-clear-buffer)
+      (setq my/typst-render-toggle-state t))))
+
+(general-define-key
+ :keymaps 'org-mode-map
+ "C-c t" 'my/toggle-typst-rendering)
 
 ;;; meow
 (defun meow-setup ()
@@ -169,7 +192,7 @@
    '("s" . meow-kill)
    '("t" . meow-till)
    '("u" . meow-undo)
-   '("U" . meow-undo-in-selection)
+   '("U" . undo-redo)
    '("v" . meow-visit)
    '("w" . meow-mark-word)
    '("W" . meow-mark-symbol)

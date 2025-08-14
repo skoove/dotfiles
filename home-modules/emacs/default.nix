@@ -8,6 +8,10 @@
   # we use mkOutOfStoreSymLink here because i want hot reloading type shit
   home.file.".emacs".source = config.lib.file.mkOutOfStoreSymlink /home/zie/.dotfiles/home-modules/emacs/emacs.el;
   home.file.".emacs.d/trans-flag.png".source = ../../files/assets/trans-flag.png;
+  home.file.".emacs.d/lisp/org-typst-preview.el".source = pkgs.fetchurl {
+    url = "https://raw.githubusercontent.com/remimimimimi/org-typst-preview.el/refs/heads/main/org-typst-preview.el";
+    hash = "sha256-VYklC4GlkTXf/e3DX7cdSmaD7EB4IQH9xXidtcj6IC8=";
+  };
 
   programs.emacs = {
     enable = true;
@@ -24,28 +28,7 @@
           gruvbox-theme
           meow meow-tree-sitter
           dashboard
-
-          (
-            {
-              trivialBuild,
-              fetchFromGitHub,
-            }:
-            trivialBuild rec {
-              pname = "org-typst-preview";
-              version = "main-2025-08-14";
-              src = fetchFromGitHub {
-                owner = "remimimimimi";
-                repo = "org-typst-preview.el";
-                rev = "de334cf3daa84b23ceea2a9fc70b6787f7c6af5b";
-                hash = "";
-              };
-              # elisp dependencies
-              propagatedUserEnvPkgs = [
-                # all-the-icons
-              ];
-              buildInputs = propagatedUserEnvPkgs;
-            }
-          )
+          general
         ]
       )
     );
