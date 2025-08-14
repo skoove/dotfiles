@@ -35,7 +35,6 @@
           dashboard
           general
           consult
-          magit
         ]
       )
     );
