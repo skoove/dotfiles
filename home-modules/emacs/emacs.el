@@ -54,6 +54,24 @@
 ;;; theme
 (load-theme 'gruvbox-dark-medium t)
 
+(define-derived-mode my-git-commit-mode text-mode "mygitcommit"
+  "majour mode for git commit messages"
+  (setq-local fill-column 72)
+  (auto-fill-mode 1)
+  (setq-local comment-start "#")
+
+  ;; Highlight first line if longer than 50 chars
+  (defun my-git-header-warning-p (limit)
+    "highlight header longer than 50 chars"
+    (and (<= (line-number-at-pos) 1)
+         (re-search-forward (format "^.\\{%d\\}\\(.*\\)$" (1+ 50)) limit t)))
+
+  (font-lock-add-keywords
+   nil `((my-git-header-warning-p 0 font-lock-warning-face prepend))))
+
+(add-to-list 'auto-mode-alist
+             '("/\\.git/COMMIT_EDITMSG\\'" . my-git-commit-mode))
+
 ;; get rid of extra autosave files, save to same file, also no backups
 (setq make-backup-files nil)
 (setq auto-save-default nil)
