@@ -13,6 +13,8 @@
     hash = "sha256-VYklC4GlkTXf/e3DX7cdSmaD7EB4IQH9xXidtcj6IC8=";
   };
 
+  services.emacs.enable = true;
+
   programs.emacs = {
     enable = true;
     package = with pkgs; (

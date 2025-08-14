@@ -155,7 +155,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR="emacs";
+    EDITOR="emacsclient";
   };
 
   # Let Home Manager install and manage itself.
