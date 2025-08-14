@@ -156,7 +156,7 @@
 (defun my/insert-typst-math ()
   "insert typst math"
   (interactive)
-  (insert "#[ $$ ]")
+  (insert "#[ $$ #]")
   (backward-char 3))
 
 (define-key org-mode-map (kbd "C-c e") 'my/insert-typst-math)
