@@ -39,15 +39,6 @@
    ("C-s"     . consult-line)
    ("M-g g"   . consult-goto-line)))
 
-;;; git
-(defun my/git-commit-mode-setup ()
-  (highlight-lines-matching-regexp "^.\\{51\\}" 'hi-yellow) ;; lines >50 in yellow
-  (setq-local fill-column 72)
-  (auto-fill-mode 1)
-  )
-
-(add-hook 'git-commit-mode-hook 'my/git-commit-mode-setup)
-
 ;;; treesit auto
 (use-package treesit-auto
   :config
