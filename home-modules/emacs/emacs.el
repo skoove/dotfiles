@@ -2,8 +2,8 @@
 (setq use-package-always-ensure nil)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
-
-(use-package general)
+(setq ispell-program-name "aspell")
+(setq ispell-dictionary "en_AU")
 (elcord-mode)
 
 ;; vertico
@@ -132,6 +132,30 @@
           (lambda ()
             (setq-local auto-fill-function #'my/org-mode-auto-fill-function)))
 
+;; markdown mode
+(use-package markdown-mode
+  :mode ("README\\.md\\'" . gfm-mode)
+  :init
+  (setq markdown-command "multimarkdown")
+  :hook (markdown-mode . (lambda ()
+		     (setq-local fill-column 80)
+		     (visual-line-mode 1)
+		     (setq-local sentence-end-double-space nil)
+		     (dolist (face '((markdown-header-face-1 . 1.5)
+				     (markdown-header-face-2 . 1.3)
+				     (markdown-header-face-3 . 1.2)
+				     (markdown-header-face-4 . 1.1)))
+		       (set-face-attribute (car face) nil :height (cdr face) :weight 'bold))))
+  :bind (:map markdown-mode-map
+              ("C-c C-e" . markdown-do)))
+
+;; better column fill
+(use-package visual-fill-column
+  :hook (visual-line-mode . visual-fill-column-mode)
+  :config
+  (setq visual-fill-column-width 80
+        visual-fill-column-center-text nil))
+
 ;; typst preview
 (require 'org-typst-preview)
 (add-hook 'org-mode-hook #'org-typst-preview-render-buffer)
@@ -216,7 +240,6 @@
    '("e" . meow-next-word)
    '("E" . meow-next-symbol)
    '("f" . meow-find)
-   '("F" . make-frame)
    '("g" . meow-cancel-selection)
    '("G" . meow-grab)
    '("h" . meow-left)
@@ -240,7 +263,6 @@
    '("R" . meow-swap-grab)
    '("s" . meow-kill)
    '("t" . meow-till)
-   '("T" . my/open-terminal)
    '("u" . meow-undo)
    '("U" . undo-redo)
    '("v" . meow-visit)
@@ -258,3 +280,9 @@
 (meow-setup)
 (meow-global-mode 1)
 (meow-tree-sitter-register-defaults)
+
+(use-package general
+  :config
+  (general-define-key
+   "M-f" #'make-frame
+   "M-n" #'my/open-terminal))

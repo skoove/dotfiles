@@ -4,6 +4,11 @@
   # not use the community overlay for emacs, i prefer using normal themes for
   # editors anyway
   stylix.targets.emacs.enable = false;
+
+  home.packages = with pkgs; [
+    (aspellWithDicts
+      (dicts: with dicts; [ en en-computers en-science ]))
+  ];
   
   # we use mkOutOfStoreSymLink here because i want hot reloading type shit
   home.file.".emacs".source = config.lib.file.mkOutOfStoreSymlink /home/zie/.dotfiles/home-modules/emacs/emacs.el;
@@ -36,6 +41,8 @@
           general
           consult
           elcord
+          markdown-mode
+          visual-fill-column
         ]
       )
     );
