@@ -160,6 +160,14 @@
 
 (define-key org-mode-map (kbd "C-c e") 'my/insert-typst-math)
 
+;; term launcher in dir
+(defun my/open-terminal ()
+  "launch termianl in the currently open directory"
+  (interactive)
+  (let ((default-directory (or (file-name-directory (or buffer-file-name default-directory))
+                               default-directory)))
+    (start-process "terminal" nil "footclient")))
+
 ;;; meow
 (defun meow-setup ()
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
@@ -208,6 +216,7 @@
    '("e" . meow-next-word)
    '("E" . meow-next-symbol)
    '("f" . meow-find)
+   '("F" . make-frame)
    '("g" . meow-cancel-selection)
    '("G" . meow-grab)
    '("h" . meow-left)
@@ -231,6 +240,7 @@
    '("R" . meow-swap-grab)
    '("s" . meow-kill)
    '("t" . meow-till)
+   '("T" . my/open-terminal)
    '("u" . meow-undo)
    '("U" . undo-redo)
    '("v" . meow-visit)
