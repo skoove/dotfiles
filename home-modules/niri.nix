@@ -13,7 +13,7 @@ in {
     ./waybar.nix # bar
   ];
 
-  services.swaync.enable = true;
+  services.dunst.enable = true;
 
   home.packages = with pkgs; [
     ksnip
