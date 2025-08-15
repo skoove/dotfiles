@@ -26,7 +26,10 @@
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"
+    "nvidia_drm" "nvidia_modeset" "nvidia" "nvidia_uvm"
+   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
