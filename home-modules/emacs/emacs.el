@@ -240,6 +240,7 @@
    '("e" . meow-next-word)
    '("E" . meow-next-symbol)
    '("f" . meow-find)
+   '("F" . make-frame)
    '("g" . meow-cancel-selection)
    '("G" . meow-grab)
    '("h" . meow-left)
@@ -263,6 +264,7 @@
    '("R" . meow-swap-grab)
    '("s" . meow-kill)
    '("t" . meow-till)
+   '("T" . my/open-terminal)
    '("u" . meow-undo)
    '("U" . undo-redo)
    '("v" . meow-visit)
@@ -280,9 +282,3 @@
 (meow-setup)
 (meow-global-mode 1)
 (meow-tree-sitter-register-defaults)
-
-(use-package general
-  :config
-  (general-define-key
-   "M-f" #'make-frame
-   "M-n" #'my/open-terminal))
