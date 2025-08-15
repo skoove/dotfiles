@@ -5,7 +5,6 @@
 
 (use-package general)
 (elcord-mode)
-(require 'zone) (zone-when-idle 120)
 
 ;; vertico
 (use-package vertico
