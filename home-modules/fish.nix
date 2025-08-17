@@ -46,6 +46,10 @@
         body = "echo \"command not found :(\"";
       };
 
+      em = {
+        body = "emacsclient -c $argv";
+      };
+
       # source: https://axlefublr.github.io/uri-list/
       pick = {
         body = "echo file://(realpath $argv[1]) | wl-copy -t text/uri-list";
