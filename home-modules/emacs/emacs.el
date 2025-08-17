@@ -1,4 +1,4 @@
-;; i want use-package for config but i do not want it to donwload anything:
+n; i want use-package for config but i do not want it to donwload anything:
 (setq use-package-always-ensure nil)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
@@ -218,7 +218,7 @@
    '("3" . meow-expand-3)
    '("2" . meow-expand-2)
    '("1" . meow-expand-1)
-   '("-" . negative-armegument)
+   '("-" . negative-argument)
    '(";" . meow-reverse)
    '("," . meow-inner-of-thing)
    '("." . meow-bounds-of-thing)
