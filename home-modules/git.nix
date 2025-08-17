@@ -3,7 +3,7 @@
   programs.git = {
     enable = true;
     userName = "Zie";
-    userEmail = "53106860+skoove@users.noreply.github.com";
+    userEmail = "zie@skoove.dev";
     delta.enable = true;
 
     extraConfig = {
