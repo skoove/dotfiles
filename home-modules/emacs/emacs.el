@@ -1,10 +1,11 @@
-n; i want use-package for config but i do not want it to donwload anything:
+; i want use-package for config but i do not want it to donwload anything:
 (setq use-package-always-ensure nil)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
 (setq ispell-program-name "aspell")
 (setq ispell-dictionary "en_AU")
 (elcord-mode)
+(setq-default truncate-lines t)
 
 ;; vertico
 (use-package vertico

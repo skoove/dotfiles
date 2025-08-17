@@ -47,7 +47,7 @@
       };
 
       em = {
-        body = "emacsclient -c $argv";
+        body = "emacsclient -c $argv & disown";
       };
 
       # source: https://axlefublr.github.io/uri-list/
