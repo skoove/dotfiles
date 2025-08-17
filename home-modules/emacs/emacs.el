@@ -218,7 +218,7 @@
    '("3" . meow-expand-3)
    '("2" . meow-expand-2)
    '("1" . meow-expand-1)
-   '("-" . negative-argument)
+   '("-" . negative-armegument)
    '(";" . meow-reverse)
    '("," . meow-inner-of-thing)
    '("." . meow-bounds-of-thing)
@@ -234,7 +234,6 @@
    '("e" . meow-next-word)
    '("E" . meow-next-symbol)
    '("f" . meow-find)
-   '("F" . make-frame)
    '("g" . meow-cancel-selection)
    '("G" . meow-grab)
    '("h" . meow-left)
@@ -258,7 +257,6 @@
    '("R" . meow-swap-grab)
    '("s" . meow-kill)
    '("t" . meow-till)
-   '("T" . zie/open-terminal)
    '("u" . meow-undo)
    '("U" . undo-redo)
    '("v" . meow-visit)
@@ -276,3 +274,10 @@
 (meow-setup)
 (meow-global-mode 1)
 (meow-tree-sitter-register-defaults)
+
+;; general
+(require 'general)
+(general-define-key
+ :keymaps 'global
+ "C-c n" 'zie/open-terminal
+ "C-c f" 'make-frame)
