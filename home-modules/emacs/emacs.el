@@ -55,20 +55,20 @@
 ;;; theme
 (load-theme 'gruvbox-dark-medium t)
 
-(define-derived-mode my-git-commit-mode text-mode "mygitcommit"
+(define-derived-mode zie-git-commit-mode text-mode "ziegitcommit"
   "majour mode for git commit messages"
   (setq-local fill-column 72)
   (auto-fill-mode 1)
   (setq-local comment-start "#")
 
-  (defun my-git-header-warning-p (limit)
+  (defun zie/git-header-warning (limit)
     "highlight header longer than 50 chars"
     (and (<= (line-number-at-pos) 1)
          (re-search-forward (format "^.\\{%d\\}\\(.*\\)$" (1+ 50)) limit t)))
 
   (font-lock-add-keywords
-   nil `((my-git-header-warning-p 0 font-lock-warning-face prepend)))
-  (let ((map my-git-commit-mode-map))
+   nil `((zie/git-header-warning 0 font-lock-warning-face prepend)))
+  (let ((map zie-git-commit-mode-map))
     (define-key map (kbd "C-c C-c")
 		(lambda ()
 		  (interactive)
@@ -76,13 +76,13 @@
 		  (kill-buffer)))))
 
 (add-to-list 'auto-mode-alist
-	     '("/\\.git/COMMIT_EDITMSG\\'" . my-git-commit-mode))
+	     '("/\\.git/COMMIT_EDITMSG\\'" . zie-git-commit-mode))
 
 ;; get rid of extra autosave files, save to same file, also no backups
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-(defun my/auto-save ()
+(defun zie/auto-save ()
   "save buffers visiting files not things like dash"
   (dolist (buf (buffer-list))
     (with-current-buffer buf
@@ -90,7 +90,7 @@
 		 (buffer-modified-p))
 	(save-buffer)))))
 
-(run-with-idle-timer 3 t #'my/auto-save)
+(run-with-idle-timer 3 t #'zie/auto-save)
 
 ;; turn on line numbers
 (global-display-line-numbers-mode)
@@ -104,6 +104,7 @@
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+
 (setq org-log-done t)
 ;; theme and edit like it is the native file
 (setq org-src-fontify-natively t
@@ -111,27 +112,21 @@
     org-confirm-babel-evaluate nil
     org-edit-src-content-indentation 0)
 
-(defun my-org-faces ()
+(defun zie/org-faces ()
     (set-face-attribute 'org-level-1 nil :height 1.6)
     (set-face-attribute 'org-level-2 nil :height 1.4)
     (set-face-attribute 'org-level-3 nil :height 1.2)
     (set-face-attribute 'org-level-4 nil :height 1.1))
 
-(add-hook 'org-mode-hook #'my-org-faces)
-
-;; wrap and center but not in src
-(setq-default fill-column 80)
-(add-hook 'org-mode-hook #'turn-on-auto-fill)
-
-(defun my/org-mode-auto-fill-function ()
-  "Only auto-fill outside of source blocks."
-  (unless (org-in-src-block-p)
-    (do-auto-fill)))
+(defun zie/org-setup ()
+  (setq-local fill-column 80)
+  (visual-line-mode 1))
 
 (add-hook 'org-mode-hook
-          (lambda ()
-            (setq-local auto-fill-function #'my/org-mode-auto-fill-function)))
-
+	  (lambda ()
+	    (zie/org-setup)
+	    (zie/org-faces)))
+	  
 ;; markdown mode
 (use-package markdown-mode
   :mode ("README\\.md\\'" . gfm-mode)
@@ -140,7 +135,6 @@
   :hook (markdown-mode . (lambda ()
 		     (setq-local fill-column 80)
 		     (visual-line-mode 1)
-		     (setq-local sentence-end-double-space nil)
 		     (dolist (face '((markdown-header-face-1 . 1.5)
 				     (markdown-header-face-2 . 1.3)
 				     (markdown-header-face-3 . 1.2)
@@ -160,32 +154,32 @@
 (require 'org-typst-preview)
 (add-hook 'org-mode-hook #'org-typst-preview-render-buffer)
 
-(defvar my/typst-render-toggle-state nil
+(defvar zie/typst-render-toggle-state nil
   "tracks the state of typst rendering")
 
-(defun my/toggle-typst-rendering ()
+(defun zie/toggle-typst-rendering ()
   "toggle typst rendering in org mode"
   (interactive)
-  (if my/typst-render-toggle-state
+  (if zie/typst-render-toggle-state
       (progn
 	(org-typst-preview-render-buffer)
-	(setq my/typst-render-toggle-state nil))
+	(setq zie/typst-render-toggle-state nil))
     (progn
       (org-typst-preview-clear-buffer)
-      (setq my/typst-render-toggle-state t))))
+      (setq zie/typst-render-toggle-state t))))
 
-(define-key org-mode-map (kbd "C-c t") 'my/toggle-typst-rendering)
+(define-key org-mode-map (kbd "C-c t") 'zie/toggle-typst-rendering)
 
-(defun my/insert-typst-math ()
+(defun zie/insert-typst-math ()
   "insert typst math"
   (interactive)
   (insert "#[ $$ #]")
   (backward-char 4))
 
-(define-key org-mode-map (kbd "C-c e") 'my/insert-typst-math)
+(define-key org-mode-map (kbd "C-c e") 'zie/insert-typst-math)
 
 ;; term launcher in dir
-(defun my/open-terminal ()
+(defun zie/open-terminal ()
   "launch termianl in the currently open directory"
   (interactive)
   (let ((default-directory (or (file-name-directory (or buffer-file-name default-directory))
@@ -264,7 +258,7 @@
    '("R" . meow-swap-grab)
    '("s" . meow-kill)
    '("t" . meow-till)
-   '("T" . my/open-terminal)
+   '("T" . zie/open-terminal)
    '("u" . meow-undo)
    '("U" . undo-redo)
    '("v" . meow-visit)
