@@ -153,6 +153,8 @@
   ];
 
   services.displayManager.gdm.enable = true;
+  services.protonmail-bridge.enable = true;
+
   programs.hyprland.enable = false;
 
   programs.nix-ld = {
