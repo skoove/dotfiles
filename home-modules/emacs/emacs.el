@@ -127,7 +127,10 @@
 	  (lambda ()
 	    (zie/org-setup)
 	    (zie/org-faces)))
-	  
+
+(setq org-roam-directory (file-truename "~/org/roam"))
+(org-roam-db-autosync-mode)
+
 ;; markdown mode
 (use-package markdown-mode
   :mode ("README\\.md\\'" . gfm-mode)
