@@ -120,8 +120,12 @@
     (set-face-attribute 'org-level-4 nil :height 1.1))
 
 (defun zie/org-setup ()
+  ;; auto fill
   (setq-local fill-column 80)
-  (auto-fill-mode 1))
+  (auto-fill-mode 1)
+  ;; utf8 bullets for org
+  (require 'org-bullets)
+  (org-bullets-mode 1))
 
 (add-hook 'org-mode-hook
 	  (lambda ()

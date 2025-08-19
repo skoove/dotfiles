@@ -43,7 +43,7 @@
           elcord
           markdown-mode
           visual-fill-column
-          org-roam org-modern
+          org-roam org-bullets
         ]
       )
     );
