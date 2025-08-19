@@ -27,23 +27,23 @@
     enable = true;
     package = with pkgs; (
       (emacsPackagesFor emacs-gtk).emacsWithPackages (
-        epkgs: with epkgs; [
-          use-package
-          vertico
-          orderless
-          marginalia
-          direnv
-          treesit-auto treesit-grammars.with-all-grammars
-	        nix-mode
-          gruvbox-theme
-          meow meow-tree-sitter
-          dashboard
-          general
-          consult
-          elcord
-          markdown-mode
-          visual-fill-column
-          org-roam org-bullets
+        epkgs: with epkgs;  [
+          use-package # used to config packages
+          vertico # vertical buffer stuff
+          orderless # alterntive matching thing
+          marginalia # little things next to M-x commands
+          direnv # use dev env
+          treesit-auto treesit-grammars.with-all-grammars # tressitter
+          markdown-mode # markdown majour mode
+	        nix-mode # nix majour mode
+          gruvbox-theme # theme
+          meow meow-tree-sitter # meow modal editing
+          dashboard # nice dashboard with recent file sand stuff
+          general # nice key rebinding
+          consult # nice stuff for searching around
+          elcord # duiscord ritch presenfce
+          visual-fill-column # soft wrapping at collumn thing
+          org-roam org-bullets # make org look a biut nicer
         ]
       )
     );
