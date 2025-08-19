@@ -115,9 +115,9 @@
     org-edit-src-content-indentation 0)
 
 (defun zie/org-setup ()
-  ;; auto fill
+  ;; visual fill
   (setq-local fill-column 80)
-  (auto-fill-mode 1)
+  (visual-fill-column-mode 1)
   ;; utf8 bullets for org
   (require 'org-bullets)
   (org-bullets-mode 1)
