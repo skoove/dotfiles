@@ -6,6 +6,7 @@
 (setq ispell-dictionary "en_AU")
 (elcord-mode)
 (setq-default truncate-lines t)
+(windmove-default-keybindings)
 
 ;; vertico
 (use-package vertico
@@ -127,8 +128,21 @@
 	  (lambda ()
 	    (zie/org-setup)))
 
-(setq org-roam-directory (file-truename "~/org/roam"))
-(org-roam-db-autosync-mode)
+(use-package org-mem
+  :defer
+  :config
+  (setq org-mem-do-sync-with-org-id t)
+  (setq org-mem-watch-dirs (list "~/org"))
+  (org-mem-updater-mode))
+
+(use-package org-node
+  :init
+  ;; Optional key bindings
+  (keymap-global-set "M-o" org-node-global-prefix-map)
+  (with-eval-after-load 'org
+    (keymap-set org-mode-map "M-o" org-node-org-prefix-map))
+  :config
+  (org-node-cache-mode))
 
 ;; markdown mode
 (use-package markdown-mode

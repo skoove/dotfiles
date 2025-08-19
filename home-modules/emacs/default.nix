@@ -43,7 +43,8 @@
           consult # nice stuff for searching around
           elcord # duiscord ritch presenfce
           visual-fill-column # soft wrapping at collumn thing
-          org-roam org-bullets # make org look a biut nicer
+          org-node # zettle ts
+          org-bullets # make org look a biut nicer
         ]
       )
     );
