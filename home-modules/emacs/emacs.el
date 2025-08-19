@@ -118,6 +118,7 @@
   ;; visual fill
   (setq-local fill-column 80)
   (visual-fill-column-mode 1)
+  (visual-line-mode 1)
   ;; utf8 bullets for org
   (require 'org-bullets)
   (org-bullets-mode 1)
