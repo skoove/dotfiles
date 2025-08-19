@@ -125,7 +125,9 @@
   (auto-fill-mode 1)
   ;; utf8 bullets for org
   (require 'org-bullets)
-  (org-bullets-mode 1))
+  (org-bullets-mode 1)
+  ;; indent mode
+  (org-indent-mode 1))
 
 (add-hook 'org-mode-hook
 	  (lambda ()
