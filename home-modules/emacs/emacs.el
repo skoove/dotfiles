@@ -113,12 +113,6 @@
     org-confirm-babel-evaluate nil
     org-edit-src-content-indentation 0)
 
-(defun zie/org-faces ()
-    (set-face-attribute 'org-level-1 nil :height 1.6)
-    (set-face-attribute 'org-level-2 nil :height 1.4)
-    (set-face-attribute 'org-level-3 nil :height 1.2)
-    (set-face-attribute 'org-level-4 nil :height 1.1))
-
 (defun zie/org-setup ()
   ;; auto fill
   (setq-local fill-column 80)
@@ -131,8 +125,7 @@
 
 (add-hook 'org-mode-hook
 	  (lambda ()
-	    (zie/org-setup)
-	    (zie/org-faces)))
+	    (zie/org-setup)))
 
 (setq org-roam-directory (file-truename "~/org/roam"))
 (org-roam-db-autosync-mode)
