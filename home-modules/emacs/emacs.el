@@ -121,7 +121,7 @@
 
 (defun zie/org-setup ()
   (setq-local fill-column 80)
-  (visual-line-mode 1))
+  (auto-fill-mode 1))
 
 (add-hook 'org-mode-hook
 	  (lambda ()
