@@ -37,6 +37,8 @@ in {
     settings = {
       prefer-no-csd = true;
 
+      screenshot-path = "~/Pictures/screenshots/%Y-%m-%d %H-%M-%S.png";
+      
       spawn-at-startup =[
         { command = [ "sh" "-c" "systemctl --user enable --now syncthingtray.service" ]; }
         { command = [ "sh" "-c" "systemctl --user enable --now hyprpaper.service" ]; }
