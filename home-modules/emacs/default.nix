@@ -1,4 +1,4 @@
-{ pkgs , config , lib , ... }:
+{ pkgs, config, lib , ... }:
 {
   # for some reason not doing this causes build faliures, i belive because i do
   # not use the community overlay for emacs, i prefer using normal themes for
@@ -45,7 +45,7 @@
           visual-fill-column # soft wrapping at collumn thing
           org-node # zettle ts
           org-bullets # make org look a biut nicer
-          all-the-icons nerd-icons # icons
+          all-the-icons # icons
           page-break-lines # nice lines for page breaks
         ]
       )
