@@ -9,7 +9,7 @@
 (windmove-default-keybindings)
 (page-break-lines-mode)
 
-(set-face-attribute 'default nil :family "JetBrains Nerd Font Mono" :height 110)
+(set-face-attribute 'default nil :family "JetBrains Nerd Font Mono" :height 100)
 
 ;; vertico
 (use-package vertico
