@@ -16,6 +16,14 @@
   :init
   (vertico-mode))
 
+;; projectiole
+(use-package projectile
+  :init
+  (projctile-mode 1)
+  :bind-keymap
+  ("M-p" . projectile-command-map))
+
+
 ;; emacs dashboard
 (require 'all-the-icons)
 (require 'page-break-lines)

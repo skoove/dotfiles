@@ -46,6 +46,7 @@
           org-node # zettle ts
           org-superstar # make org look a biut nicer
           all-the-icons # icons
+          projectile # project stuff
           page-break-lines # nice lines for page breaks
         ]
       )
