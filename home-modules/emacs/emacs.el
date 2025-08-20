@@ -1,4 +1,4 @@
-;; i want use-package for config but i do not want it to donwload anything:
+;; i wnt use-package for config but i do not want it to donwload anything:
 (setq use-package-always-ensure nil)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
@@ -8,6 +8,7 @@
 (setq-default truncate-lines t)
 (windmove-default-keybindings)
 (page-break-lines-mode)
+(org-node-backlink-mode)
 
 (set-face-attribute 'default nil :family "JetBrains Nerd Font Mono" :height 100)
 
@@ -61,7 +62,6 @@
 (use-package consult
   :bind
   (("C-x b"   . consult-buffer)
-   ("C-x f" . consult-find)
    ("C-s"     . consult-line)
    ("M-g g"   . consult-goto-line)))
 
@@ -128,7 +128,7 @@
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-
+(setq org-agenda-files '("~/org/"))
 (setq org-log-done t)
 ;; theme and edit like it is the native file
 (setq org-src-fontify-natively t
@@ -142,12 +142,12 @@
   (setq-local fill-column 80)
   (visual-fill-column-mode 1)
   (visual-line-mode 1)
-  ;; utf8 bullets for org
-  (org-superstar-mode 1)
   ;; spell check
   (flyspell-mode 1)
   ;; indent mode
-  (org-indent-mode 1))
+  (org-indent-mode 1)
+  ;; utf8 bullets for org
+  (org-superstar-mode 1))
 
 (add-hook 'org-mode-hook
 	  (lambda ()
@@ -323,4 +323,5 @@
  :keymaps 'global
  "C-c t" 'zie/open-terminal
  "C-c f" 'make-frame
- "C-c d" 'dashboard-open)
+ "C-c d" 'dashboard-open
+ "C-x f" 'projectile-find-file)
