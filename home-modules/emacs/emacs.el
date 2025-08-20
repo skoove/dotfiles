@@ -31,7 +31,7 @@
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
   (dashboard-modify-heading-icons '((recents   . "clock")
-				    (projects  . "book")
+				    (projects  . "file-directory")
 				    (agenda    . "calendar")))
   (setq dashboard-page-separator "\n\f\n")
   (dashboard-setup-startup-hook))
