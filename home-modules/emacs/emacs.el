@@ -23,6 +23,7 @@
 ;; emacs dashboard
 (require 'all-the-icons)
 (require 'page-break-lines)
+(require 'projectile)
 
 (use-package dashboard
   :config
@@ -34,6 +35,7 @@
   (setq dashboard-icon-type 'all-the-icons)
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
+  (setq dashboard-projects-backend 'projectile)
   (dashboard-modify-heading-icons '((recents   . "clock")
 				    (projects  . "file-directory")
 				    (agenda    . "calendar")))
