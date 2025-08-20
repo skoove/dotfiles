@@ -314,4 +314,5 @@
 (general-define-key
  :keymaps 'global
  "C-c t" 'zie/open-terminal
- "C-c f" 'make-frame)
+ "C-c f" 'make-frame
+ "C-c d" 'dashboard-open)
