@@ -1,4 +1,4 @@
-; i want use-package for config but i do not want it to donwload anything:
+;; i want use-package for config but i do not want it to donwload anything:
 (setq use-package-always-ensure nil)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
@@ -36,17 +36,17 @@
   (setq dashboard-page-separator "\n\f\n")
   (dashboard-setup-startup-hook))
 
-; make dashboard show on client start even when runnign as daemon
+;; make dashboard show on client start even when runnign as daemon
 (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
 (add-hook 'server-after-make-frame-hook (lambda () (dashboard-refresh-buffer)))
 
-;;; fuzzy completion
+;; fuzzy completion
 (use-package orderless
   :custom
   (completion-styles '(orderless basic))
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
-;;; direnv
+;; direnv
 (use-package direnv
  :config
  (direnv-mode))
@@ -59,18 +59,18 @@
    ("C-s"     . consult-line)
    ("M-g g"   . consult-goto-line)))
 
-;;; treesit auto
+;; treesit auto
 (use-package treesit-auto
   :config
   (treesit-auto-add-to-auto-mode-alist 'all) 
   (global-treesit-auto-mode))
 
-;;; which key setup
+;; which key setup
 (which-key-mode)
 (which-key-setup-side-window-bottom)
 (setq which-key-idle-delay 0)
 
-;;; theme
+;; theme
 (load-theme 'gruvbox-dark-medium t)
 
 (define-derived-mode zie-git-commit-mode text-mode "ziegitcommit"
@@ -113,12 +113,12 @@
 ;; turn on line numbers
 (global-display-line-numbers-mode)
 
-;;; remove native stuff
+;; remove native stuff
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-;;; org
+;; org
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -220,7 +220,7 @@
                                default-directory)))
     (start-process "terminal" nil "footclient")))
 
-;;; meow
+;; meow
 (defun meow-setup ()
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
   (meow-motion-define-key
