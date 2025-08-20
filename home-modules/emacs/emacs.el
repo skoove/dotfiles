@@ -17,12 +17,8 @@
   (vertico-mode))
 
 ;; projectiole
-(use-package projectile
-  :init
-  (projctile-mode 1)
-  :bind-keymap
-  ("M-p" . projectile-command-map))
-
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; emacs dashboard
 (require 'all-the-icons)
