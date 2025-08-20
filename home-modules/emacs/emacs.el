@@ -130,14 +130,16 @@
     org-confirm-babel-evaluate nil
     org-edit-src-content-indentation 0)
 
+(require 'org-superstar)
 (defun zie/org-setup ()
   ;; visual fill
   (setq-local fill-column 80)
   (visual-fill-column-mode 1)
   (visual-line-mode 1)
   ;; utf8 bullets for org
-  (require 'org-bullets)
-  (org-bullets-mode 1)
+  (org-superstar-mode 1)
+  ;; spell check
+  (flyspell-mode 1)
   ;; indent mode
   (org-indent-mode 1))
 

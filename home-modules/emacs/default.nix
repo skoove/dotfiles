@@ -44,7 +44,7 @@
           elcord # duiscord ritch presenfce
           visual-fill-column # soft wrapping at collumn thing
           org-node # zettle ts
-          org-bullets # make org look a biut nicer
+          org-superstar # make org look a biut nicer
           all-the-icons # icons
           page-break-lines # nice lines for page breaks
         ]
