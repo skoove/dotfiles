@@ -45,6 +45,8 @@
           visual-fill-column # soft wrapping at collumn thing
           org-node # zettle ts
           org-bullets # make org look a biut nicer
+          all-the-icons nerd-icons # icons
+          page-break-lines # nice lines for page breaks
         ]
       )
     );

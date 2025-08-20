@@ -7,6 +7,9 @@
 (elcord-mode)
 (setq-default truncate-lines t)
 (windmove-default-keybindings)
+(page-break-lines-mode)
+
+(set-face-attribute 'default nil :family "JetBrains Nerd Font Mono" :height 110)
 
 ;; vertico
 (use-package vertico
@@ -14,10 +17,23 @@
   (vertico-mode))
 
 ;; emacs dashboard
+(require 'all-the-icons)
+(require 'page-break-lines)
+
 (use-package dashboard
   :config
-  (setq dashboard-startup-banner "~/.emacs.d/trans-flag.png")
-  (setq dashboard-image-banner-max-width 200)
+  (setq dashboard-startup-banner 'logo)
+  (setq dashboard-items '((recents   . 10)
+                          (projects  . 10)
+                          (agenda    . 10)))
+  (setq dashboard-display-icons-p t)    
+  (setq dashboard-icon-type 'all-the-icons)
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  (dashboard-modify-heading-icons '((recents   . "clock")
+				    (projects  . "book")
+				    (agenda    . "calendar")))
+  (setq dashboard-page-separator "\n\f\n")
   (dashboard-setup-startup-hook))
 
 ; make dashboard show on client start even when runnign as daemon
@@ -297,5 +313,5 @@
 (require 'general)
 (general-define-key
  :keymaps 'global
- "C-c n" 'zie/open-terminal
+ "C-c t" 'zie/open-terminal
  "C-c f" 'make-frame)
