@@ -144,6 +144,7 @@
   ;; spell check
   (flyspell-mode 1)
   ;; indent mode
+  (setq-local org-hide-leading-stars t)
   (org-indent-mode 1))
 
 (add-hook 'org-mode-hook
