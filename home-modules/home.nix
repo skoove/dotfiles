@@ -63,7 +63,8 @@
     mprocs
     jq
     wget
-    gnome-pomodoro
+    gnome-pomodoro # pompdoro gnome
+    gnome-clocks # gnome alarm
     p7zip
     aseprite
 
@@ -107,6 +108,7 @@
     hyperfine # benchmarker
     rnote # drawing tablet optimised draw note thingy
     ov # pager
+
 
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
