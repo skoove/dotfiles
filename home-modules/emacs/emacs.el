@@ -130,6 +130,7 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-agenda-files '("~/org/"))
 (setq org-log-done t)
+(setq org-image-actual-width nil) ; make images be set my #+ATTR_ORG: :width
 ;; theme and edit like it is the native file
 (setq org-src-fontify-natively t
     org-src-tab-acts-natively t
@@ -318,7 +319,7 @@
 (require 'general)
 (general-define-key
  :keymaps 'global
- "C-c t" 'zie/open-terminal
+ "C-c n" 'zie/open-terminal
  "C-c f" 'make-frame
  "C-c d" 'dashboard-open
  "C-x f" 'projectile-find-file)
