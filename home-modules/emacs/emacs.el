@@ -136,7 +136,6 @@
     org-confirm-babel-evaluate nil
     org-edit-src-content-indentation 0)
 
-(require 'org-superstar)
 (defun zie/org-setup ()
   ;; visual fill
   (setq-local fill-column 80)
@@ -145,9 +144,7 @@
   ;; spell check
   (flyspell-mode 1)
   ;; indent mode
-  (org-indent-mode 1)
-  ;; utf8 bullets for org
-  (org-superstar-mode 1))
+  (org-indent-mode 1))
 
 (add-hook 'org-mode-hook
 	  (lambda ()
@@ -224,9 +221,8 @@
 (defun zie/open-terminal ()
   "launch termianl in the currently open directory"
   (interactive)
-  (let ((default-directory (or (file-name-directory (or buffer-file-name default-directory))
-                               default-directory)))
-    (start-process "terminal" nil "footclient")))
+  (call-process-shell-command
+   (concat "footclient -D " default-directory) nil 0))
 
 ;; meow
 (defun meow-setup ()
