@@ -1,6 +1,7 @@
 ;; i wnt use-package for config but i do not want it to donwload anything:
 (setq use-package-always-ensure nil)
 
+(load-theme 'gruvbox-dark-medium t)
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
 (setq ispell-program-name "aspell")
 (setq ispell-dictionary "en_AU")
@@ -75,9 +76,6 @@
 (which-key-mode)
 (which-key-setup-side-window-bottom)
 (setq which-key-idle-delay 0)
-
-;; theme
-(load-theme 'gruvbox-dark-medium t)
 
 (define-derived-mode zie-git-commit-mode text-mode "ziegitcommit"
   "majour mode for git commit messages"
