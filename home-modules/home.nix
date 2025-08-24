@@ -55,7 +55,6 @@
     libreoffice-fresh # office suite
     gimp3             # image editing
     nix-output-monitor
-    krita             # draw
     numbat
     stellarium
     bitwarden-desktop
