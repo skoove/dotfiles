@@ -116,7 +116,7 @@
               { name = "jellyfin"; url = "http://${ponos_tailscale}:8096/web/"; }
               { name = "audiobookshelf"; url = "http://${ponos_tailscale}:8000/"; }
               { name = "rss"; url = "http://${ponos_tailscale}:7000/"; }
-              { name = "transmission"; url = "http://${ponos_tailscale}:9091/transmission/web/"; }
+              { name = "transmission"; url = "http://100.93.99.60:9091/transmission/web/"; }
               {
                 name = "local";
                 bookmarks = [
