@@ -19,7 +19,7 @@
     options = [ "nofail" "x-systemd.automount" "x-systemd.device-timeout=10s" ];
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.sandbox = "relaxed";
