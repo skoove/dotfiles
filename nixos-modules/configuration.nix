@@ -95,7 +95,7 @@
 
 
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = false;
+  hardware.bluetooth.powerOnBoot = true;
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;
