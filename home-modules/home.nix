@@ -5,7 +5,6 @@
     ../stylix.nix
     ./bottom.nix
     ./btop.nix
-    ./emacs
     ./email.nix
     ./eza.nix
     ./fish.nix
