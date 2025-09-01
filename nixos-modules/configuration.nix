@@ -21,6 +21,8 @@
 
   boot.kernelPackages = pkgs.linuxPackages;
 
+  networking.nameservers = [ "1.1.1.1" ];
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.sandbox = "relaxed";
 
