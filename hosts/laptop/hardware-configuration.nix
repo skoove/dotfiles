@@ -10,6 +10,8 @@
 
   networking.hostName = "nixos-laptop"; # Define your hostname.
 
+  hardware.graphics.enable = true;
+
   services.thermald.enable = true;
 
   services.auto-cpufreq.enable = true;
