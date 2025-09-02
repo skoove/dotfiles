@@ -46,11 +46,10 @@
     dates = [ "18:00" ];
   };
 
-  nix.gc = {
-    automatic = true;
-    persistent = true;
+  programs.nh.clean = {
+    enable = true;
     dates = "daily";
-    options = "--delete-older-than 7d";
+    extraArgs = "--keep 3 --keep-since 5d";
   };
 
   security.polkit.enable = true;
