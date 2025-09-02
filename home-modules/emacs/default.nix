@@ -21,10 +21,10 @@
   # the service just inherits the package from programs.emacs.package if
   # programs.emacs.enable = true so i dont need to actually do anything but
   # enable it :D
-  services.emacs.enable = true;
+  services.emacs.enable = false;
 
   programs.emacs = {
-    enable = true;
+    enable = false;
     package = with pkgs; (
       (emacsPackagesFor emacs-gtk).emacsWithPackages (
         epkgs: with epkgs;  [
