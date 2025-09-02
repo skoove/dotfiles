@@ -59,7 +59,6 @@
           ./hosts/laptop/hardware-configuration.nix
           ./nixos-modules/configuration.nix
         ];
-
       };
 
       nixos-desktop = lib.nixosSystem {
