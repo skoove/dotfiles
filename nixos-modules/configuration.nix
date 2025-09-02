@@ -154,13 +154,18 @@
     libnotify # just useful to be able to use from anywhere
   ];
 
-  services.displayManager.gdm.enable = true;
   services.protonmail-bridge.enable = true;
 
   programs.hyprland.enable = false;
 
   programs.nix-ld = {
     enable = true;
+  };
+
+  services.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+    autoSuspend = false;
   };
 
   programs.niri = {
