@@ -28,7 +28,7 @@ end
 switch $action
     case e edit
         notif editing magazine: $mag
-        $EDITOR $mag_path
+        footclient hx $mag_path
 
     case v view
         notif viewing magazine: $mag
