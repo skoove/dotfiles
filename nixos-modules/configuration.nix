@@ -45,11 +45,15 @@
     persistent = true;
     dates = [ "18:00" ];
   };
-
-  programs.nh.clean = {
+  
+  programs.nh = {
     enable = true;
-    dates = "daily";
-    extraArgs = "--keep 3 --keep-since 5d";
+    flake = "/home/zie/.dotfiles";
+    clean = {
+      enable = true;
+      dates = "daily";
+      extraArgs = "--keep 3 --keep-since 5d";
+    };
   };
 
   security.polkit.enable = true;
