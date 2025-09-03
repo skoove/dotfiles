@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../stylix.nix
     ./bottom.nix
     ./btop.nix
     ./email.nix
@@ -27,7 +26,6 @@
     ./yazi.nix
     ./zellij.nix
 
-    inputs.stylix.homeModules.stylix
     inputs.nur.modules.homeManager.default
    ];
 

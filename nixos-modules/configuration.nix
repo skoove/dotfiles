@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../stylix.nix
+    ./stylix.nix
     ./gaming.nix
     ./udev.nix
     ./cybersec.nix
@@ -129,10 +129,6 @@
     ];
   };
 
-  # this is to make sure stylix is loaded last
-  # remember to add stylix to new users
-  stylix.homeManagerIntegration.autoImport = false;
-
   home-manager = {
     backupFileExtension = "hm-backup";
     extraSpecialArgs = { inherit inputs; };
@@ -236,22 +232,6 @@
         };
       };
     };
-  };
-
-  systemd.user.services.xdg-desktop-portal = {
-    after = [ "xdg-desktop-autostart.target" ];
-  };
-
-  systemd.user.services.xdg-desktop-portal-gtk = {
-    after = [ "xdg-desktop-autostart.target" ];
-  };
-
-  systemd.user.services.xdg-desktop-portal-gnome = {
-    after = [ "xdg-desktop-autostart.target" ];
-  };
-
-  systemd.user.services.niri-flake-polkit = {
-    after = [ "xdg-desktop-autostart.target" ];
   };
 
   virtualisation.docker.enable = true;
