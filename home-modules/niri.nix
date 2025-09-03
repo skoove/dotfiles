@@ -27,10 +27,6 @@ in {
     nautilus
   ];
 
-  home.sessionVariables = {
-    G_MESSAGES_DEBUG="all";
-  };
-
   services.hyprpaper.enable = true;
 
   programs.niri = {
