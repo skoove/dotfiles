@@ -72,6 +72,21 @@
           loago do update-flake
           nh os switch'';
       };
+
+      # open or create svg
+      is = {
+        body = ''
+          set file $argv[1]
+
+          if test -e $file
+              inkscape $file & disown
+          else
+              cp ${../files/inkscape/default-document.svg} $file
+              chmod 744 $file
+              inkscape $file & disown
+          end
+        '';
+      };
     };
   };
 }
