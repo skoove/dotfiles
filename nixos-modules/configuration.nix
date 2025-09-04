@@ -52,7 +52,7 @@
     clean = {
       enable = true;
       dates = "daily";
-      extraArgs = "--keep 3 --keep-since 5d";
+      extraArgs = "--keep 10 --keep-since 5d";
     };
   };
 
