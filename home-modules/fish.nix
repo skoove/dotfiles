@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs,  ... }:
 {
   imports = [
     ./direnv.nix
@@ -38,7 +38,7 @@
 
       rman = "rusty-man --viewer tui";
 
-      errm = "cowsay -f actually";
+      errm = "${pkgs.cowsay}/bin/cowsay -f actually";
     };
 
     functions = {
