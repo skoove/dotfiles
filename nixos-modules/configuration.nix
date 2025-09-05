@@ -199,7 +199,7 @@
     criticalPowerAction = "Hibernate";
   };
 
-  services.logind = {
+  services.logind.settings.Login = {
     lidSwitch = "ignore";
     powerKey = "ignore";
     powerKeyLongPress = "ignore";
