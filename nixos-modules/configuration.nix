@@ -154,6 +154,7 @@
   ];
 
   services.protonmail-bridge.enable = true;
+  services.flatpak.enable = true;
 
   programs.hyprland.enable = false;
 
