@@ -10,6 +10,14 @@
       noDisplay = false;
     };
 
+    vintagestory = {
+        name = "Vintage Story";
+        genericName = "Vintage Story";
+        exec = "env mesa_glthread=true vintagestory";
+        terminal = false;
+        categories = [ "Application" "Game" ];
+    };
+
     enable = true;
     mimeApps = {
       enable = true;
