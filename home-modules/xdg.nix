@@ -10,7 +10,7 @@
       noDisplay = false;
     };
 
-    vintagestory = {
+    desktopEntries.vintagestory = {
         name = "Vintage Story";
         genericName = "Vintage Story";
         exec = "env mesa_glthread=true vintagestory";
