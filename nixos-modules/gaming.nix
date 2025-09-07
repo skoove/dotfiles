@@ -15,6 +15,7 @@
     bottles-unwrapped
     prismlauncher
     glfw-wayland-minecraft
+    vintagestory
   ] else []);
 
   services.ratbagd.enable = true; # mouse stuff i think
