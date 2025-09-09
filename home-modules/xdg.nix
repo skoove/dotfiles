@@ -11,13 +11,21 @@
     };
 
     desktopEntries.vintagestory = {
-        name = "Vintage Story";
-        genericName = "Vintage Story";
-        exec = "env mesa_glthread=true vintagestory";
-        terminal = false;
-        categories = [ "Application" "Game" ];
+      name = "Vintage Story";
+      genericName = "Vintage Story";
+      exec = "env mesa_glthread=true vintagestory";
+      terminal = false;
+      categories = [ "Application" "Game" ];
     };
 
+    desktopEntries.vintagestorymodinstall = {
+      name = "Vintage Story Mod Install";
+      exec = "vintagestory -i %u";
+      type = "Application";
+      noDisplay = true;
+      mimeType = [ "x-scheme-handler/vintagestorymodinstall" ];
+    };
+    
     enable = true;
     mimeApps = {
       enable = true;
