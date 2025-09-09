@@ -22,7 +22,7 @@
         "extensions.autoDisableScopes" = 0;
         "browser.tabs.opentabfor.middleclick" = true;
         "browser.tabs.loadInBackground" = true;
-
+        "startup.homepage_override_url" = "https://github.com/notifications";
         # enable scrolling using the middle mouse button 
         "general.autoScroll" = true;
 
