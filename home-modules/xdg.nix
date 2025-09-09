@@ -10,14 +10,6 @@
       noDisplay = false;
     };
 
-    desktopEntries.vintagestory = {
-      name = "Vintage Story";
-      genericName = "Vintage Story";
-      exec = "env mesa_glthread=true vintagestory";
-      terminal = false;
-      categories = [ "Application" "Game" ];
-    };
-
     desktopEntries.vintagestorymodinstall = {
       name = "Vintage Story Mod Install";
       exec = "vintagestory -i %u";
