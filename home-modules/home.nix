@@ -128,6 +128,7 @@
     if osConfig.networking.hostName == "nixos-desktop" then with pkgs; [
       ffmpeg-full
       blender_4_5
+      davinci-resolve
     ] else []
   );
 
