@@ -126,6 +126,7 @@
     roboto-serif
   ] ++ (
     if osConfig.networking.hostName == "nixos-desktop" then with pkgs; [
+      kdePackages.kdenlive
       ffmpeg-full
       blender_4_5
     ] else []
