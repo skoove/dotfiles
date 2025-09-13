@@ -178,6 +178,7 @@
   services.openssh.enable = true;
   services.blueman.enable = true;
   services.tailscale.enable = true;
+  services.tailscale.package = pkgs.tailscale.overrideAttrs { doCheck = false; };
 
   # disable ly because it breaks things!
   services.displayManager.ly.enable = false;
