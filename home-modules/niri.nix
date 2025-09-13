@@ -202,7 +202,7 @@ in {
         # screenshotting
         "${mod}+S".action = screenshot;
         "${mod}+Shift+S".action = screenshot-window;
-        "${mod}+A".action = fish "wl-paste | satty -f - --right-click-copy --early-exit --copy-command "wl-copy" --fullscreen --brush-smooth-history-size 5";
+        "${mod}+A".action = fish "wl-paste | satty -f - --right-click-copy --early-exit --copy-command 'wl-copy' --fullscreen --brush-smooth-history-size 5";
 
         # resize things
         "Mod+Equal".action = set-column-width "+10%";
