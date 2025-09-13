@@ -168,7 +168,6 @@ in {
         "${mod}+Shift+Y".action = fish "set win (niri msg focused-window); wl-copy $win; notify-send \"$win\"";
         "${mod}+Z".action = spawn "${pkgs.woomer}/bin/woomer";
         "${mod}+V".action = spawn "pavucontrol";
-        "${mod}+A".action = fish "wl-paste | satty -f - --right-click-copy --early-exit --copy-command "wl-copy" --fullscreen --brush-smooth-history-size 5";
 
 
         # reorient
@@ -203,7 +202,7 @@ in {
         # screenshotting
         "${mod}+S".action = screenshot;
         "${mod}+Shift+S".action = screenshot-window;
-        "${mod}+A".action = fish "wl-paste | satty -f - --fullscreen --copy-command 'wl-copy'";
+        "${mod}+A".action = fish "wl-paste | satty -f - --right-click-copy --early-exit --copy-command "wl-copy" --fullscreen --brush-smooth-history-size 5";
 
         # resize things
         "Mod+Equal".action = set-column-width "+10%";
