@@ -8,6 +8,8 @@
   programs.floorp = {
     enable = true;
 
+    package = pkgs.firefox;
+
     policies = {
       DisableTelemetry = true;
       OfferToSaveLogins = false;
