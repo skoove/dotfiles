@@ -10,7 +10,7 @@
   programs.floorp = {
     enable = true;
 
-    package = pkgs.hello; # https://github.com/nix-community/home-manager/issues/7809
+    package = pkgs.firefox; # https://github.com/nix-community/home-manager/issues/7809
 
     policies = {
       DisableTelemetry = true;
