@@ -5,10 +5,12 @@
     colorTheme.enable = true;
   };
 
+  home.packages = [ pkgs.floorp ]; # https://github.com/nix-community/home-manager/issues/7809
+
   programs.floorp = {
     enable = true;
 
-    package = pkgs.firefox;
+    package = pkgs.hello; # https://github.com/nix-community/home-manager/issues/7809
 
     policies = {
       DisableTelemetry = true;
