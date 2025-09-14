@@ -5,7 +5,7 @@
     colorTheme.enable = true;
   };
 
-  home.packages = [ pkgs.floorp ]; # https://github.com/nix-community/home-manager/issues/7809
+  home.packages = [ pkgs.floorp-bin ]; # https://github.com/nix-community/home-manager/issues/7809
 
   programs.floorp = {
     enable = true;
