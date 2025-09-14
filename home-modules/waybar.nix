@@ -8,6 +8,17 @@ let
   temp-icons = [ "" "" "" ""];
 in
 {
+  home.packages = with pkgs; [
+    # required for danials screen recoder script
+    socat
+    bash
+    wf-recorder
+    jq
+    ffmpeg-full
+    slurp
+    wl-clipboard
+  ];
+  
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -35,8 +46,8 @@ in
         "backlight"
         "pulseaudio"
         "battery"
+        "custom/recorder"
         "clock"
-        "custom/notification"
         "tray"
       ];
 
@@ -127,26 +138,15 @@ in
         };
       };
 
-      "custom/notification" = {
-        tooltip = false;
-        format = "{} {icon}";
-        "format-icons" = {
-          notification = "󱅫";
-          none = "";
-          "dnd-notification" = " ";
-          "dnd-none" = "󰂛";
-          "inhibited-notification" = " ";
-          "inhibited-none" = "";
-          "dnd-inhibited-notification" = " ";
-          "dnd-inhibited-none" = " ";
-        };
-        "return-type" = "json";
-        "exec-if" = "which swaync-client";
-        exec = "swaync-client -swb";
-        "on-click" = "sleep 0.1 && swaync-client -t -sw";
-        "on-click-right" = "sleep 0.1 && swaync-client -d -sw";
-        escape = true;
+      "custom/recorder" = {
+        exec = "python ${../scripts/recorder.py}";
+        return-type = "json";
+        restart-interval = "never";
+        on-click = "bash ${../scripts/recorder.sh} screen";
+        on-click-right = "bash ${../scripts/recorder.sh} region";
+        format = "{}";
       };
+
     };
   };
 
