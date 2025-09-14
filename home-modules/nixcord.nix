@@ -36,7 +36,6 @@
       noDevtoolsWarning.enable = true;
       noF1.enable = true;
       noProfileThemes.enable = true;
-      noReplyMention.enable = true;
       noTypingAnimation.enable = true;
       permissionFreeWill.enable = true;
       petpet.enable = true;
@@ -69,6 +68,11 @@
         closeAllHomeButton = true;
         closeOthers = true;
         forceOpen = true;
+      };
+
+      noReplyMention = {
+        enable = true;
+        userList = "471257729168703500";
       };
     };
   };
