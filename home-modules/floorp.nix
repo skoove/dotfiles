@@ -45,7 +45,7 @@
         "floorp.browser.sidebar.is.displayed" = false;
         "sidebar.revamp" = false;
         "floorp.browser.workspaces.enabled" = false;
-
+        "floorp.panelSidebar.enabled" = false;
         # this is the state of that whole top bar, just copy paste it from
         # about:config after editing it manually, maybe some day i will find a
         # more nixy way? but nixing of the sake of nix is a fools endevour
