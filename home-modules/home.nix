@@ -140,6 +140,8 @@
       save-position-on-quit = true;
       resume-playback = true;
       save-watch-history = true;
+      idle = true;
+      force-window = true;
     };
   };
 
