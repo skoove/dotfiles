@@ -71,7 +71,6 @@
     wl-clipboard                                     # Copy things to clipboard (required by bemoji)
     libsForQt5.qtstyleplugin-kvantum                 # theming for qt apps
     (import ../packages/loago.nix { inherit pkgs; }) # Shows how long ago a task was done
-    mpv
     scrcpy
     porsmo             # pomodoro
     element-desktop
@@ -133,6 +132,16 @@
   );
 
   programs.bat.enable = true;
+
+  programs.mpv = {
+    enable = true;
+    config = {
+      ytdl-format = "bestvideo+bestaudio";
+      save-position-on-quit = true;
+      resume-playback = true;
+      save-watch-history = true;
+    };
+  };
 
   programs.ssh = {
     enable = true;
