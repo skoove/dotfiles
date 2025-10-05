@@ -96,7 +96,6 @@
     usbutils pciutils psmisc
     nautilus
     inetutils
-    mpv
     imv
     fd # better find
     xh # http request sender
@@ -142,7 +141,24 @@
       save-watch-history = true;
       idle = true;
       force-window = true;
+      profile = "high-quality";
+      write-filename-in-watch-later-config = true;
     };
+
+    scripts = with pkgs.mpvScripts; [
+        mpris
+        uosc
+        mpv-notify-send
+        mpv-playlistmanager
+        mpv-discord
+        sponsorblock-minimal
+      ];
+    };
+
+  # mpv youtube queue plugin for mpv
+  home.file.".config/mpv/scripts/mpv-youtube-queue".source = pkgs.fetchurl {
+    url = "https://gitea.suda.codes/sudacode/mpv-youtube-queue/raw/branch/master/mpv-youtube-queue.lua";
+    hash = "sha256-LBBL1bKezTNjwSzBeD2/Lrb7Fo8wUejA1+XoJhYol40=";
   };
 
   programs.ssh = {
