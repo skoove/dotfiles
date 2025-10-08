@@ -129,7 +129,7 @@ in {
 
         # laptop monitor
         "eDP-1" = {
-          scale = 1.2;
+          scale = 1.0;
           mode = {
             width = 1920;
             height = 1080;
