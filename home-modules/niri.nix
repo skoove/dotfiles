@@ -73,17 +73,17 @@ in {
       layout = {
         always-center-single-column = false;
         empty-workspace-above-first = true;
-        border.width = 2;
-        gaps = 15;
+        border.width = 4;
+        gaps = 20;
 
         shadow = {
-          enable = true;
+          enable = false;
           color = "#${colors.base00}";
         };
 
         struts =
         let
-        side_struts = 15;
+        side_struts = 20;
         in {
           left = side_struts;
           right = side_struts;
@@ -94,7 +94,7 @@ in {
       window-rules = [
         {
           geometry-corner-radius = let
-            r = 10.0;
+            r = 20.0;
           in {
             top-left = r;
             top-right = r;
@@ -129,7 +129,7 @@ in {
 
         # laptop monitor
         "eDP-1" = {
-          scale = 1.0;
+          scale = 1.2;
           mode = {
             width = 1920;
             height = 1080;
