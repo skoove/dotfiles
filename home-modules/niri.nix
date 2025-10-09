@@ -83,7 +83,7 @@ in {
 
         struts =
         let
-        side_struts = 20;
+        side_struts = 0;
         in {
           left = side_struts;
           right = side_struts;
