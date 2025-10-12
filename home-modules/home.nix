@@ -7,7 +7,7 @@
     ./email.nix
     ./eza.nix
     ./fish.nix
-    ./floorp.nix
+    # ./floorp.nix
     ./foot.nix
     ./fuzzel.nix
     ./git.nix
@@ -75,6 +75,8 @@
     porsmo             # pomodoro
     element-desktop
     tldr # short manpage-like command instructions
+
+    vivaldi
     
     # tools
     unzip
