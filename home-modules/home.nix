@@ -7,7 +7,7 @@
     ./email.nix
     ./eza.nix
     ./fish.nix
-    # ./floorp.nix
+    ./floorp.nix
     ./foot.nix
     ./fuzzel.nix
     ./git.nix
@@ -76,8 +76,6 @@
     element-desktop
     tldr # short manpage-like command instructions
 
-    vivaldi
-    
     # tools
     unzip
     dust               # disk usage but easier read
