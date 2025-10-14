@@ -119,6 +119,7 @@
               { name = "audiobookshelf"; url = "http://${ponos_tailscale}:8000/"; }
               { name = "rss"; url = "http://${ponos_tailscale}:7000/"; }
               { name = "transmission"; url = "http://100.93.99.60:9091/transmission/web/"; }
+              { name = "view 3d"; url = builtins.readFile ../scripts/bookmark_3d_viewer_thing.js; }
               {
                 name = "local";
                 bookmarks = [
