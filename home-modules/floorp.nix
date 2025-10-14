@@ -45,11 +45,13 @@
         "floorp.browser.sidebar.is.displayed" = false;
         "sidebar.revamp" = false;
         "floorp.browser.workspaces.enabled" = false;
+        "floorp.workspaces.enabled" = false;
+        "floorp.workspaces.v4.config" = ''{"manageOnBms":false,"showWorkspaceNameOnToolbar":false,"closePopupAfterClick":true}'';
         "floorp.panelSidebar.enabled" = false;
         # this is the state of that whole top bar, just copy paste it from
         # about:config after editing it manually, maybe some day i will find a
         # more nixy way? but nixing of the sake of nix is a fools endevour
-        "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["sponsorblocker_ajay_app-browser-action","firefoxcolor_mozilla_com-browser-action","_f209234a-76f0-4735-9920-eb62507a54cd_-browser-action","enhancerforyoutube_maximerf_addons_mozilla_org-browser-action","jid1-oy8xu5bskzqa6a_jetpack-browser-action"],"nav-bar":["back-button","forward-button","customizableui-special-spring1","urlbar-container","customizableui-special-spring2","save-to-pocket-button","downloads-button","unified-extensions-button","ublock0_raymondhill_net-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","vpn_proton_ch-browser-action","_d07ccf11-c0cd-4938-a265-2a4d6ad01189_-browser-action","clipper_obsidian_md-browser-action","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["workspaces-toolbar-button","tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["personal-bookmarks"],"statusBar":["screenshot-button","fullscreen-button","status-text"]},"seen":["developer-button","sidebar-reverse-position-toolbar","undo-closed-tab","profile-manager","workspaces-toolbar-button","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","firefoxcolor_mozilla_com-browser-action","ublock0_raymondhill_net-browser-action","_f209234a-76f0-4735-9920-eb62507a54cd_-browser-action","enhancerforyoutube_maximerf_addons_mozilla_org-browser-action","jid1-oy8xu5bskzqa6a_jetpack-browser-action","vpn_proton_ch-browser-action","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action","_d07ccf11-c0cd-4938-a265-2a4d6ad01189_-browser-action","clipper_obsidian_md-browser-action","sponsorblocker_ajay_app-browser-action"],"dirtyAreaCache":["nav-bar","statusBar","TabsToolbar","toolbar-menubar","PersonalToolbar","unified-extensions-area"],"currentVersion":20,"newElementCount":2}'';
+        "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["sponsorblocker_ajay_app-browser-action","firefoxcolor_mozilla_com-browser-action","_f209234a-76f0-4735-9920-eb62507a54cd_-browser-action","enhancerforyoutube_maximerf_addons_mozilla_org-browser-action","jid1-oy8xu5bskzqa6a_jetpack-browser-action","syrup_extension-browser-action","_2662ff67-b302-4363-95f3-b050218bd72c_-browser-action"],"nav-bar":["back-button","forward-button","vertical-spacer","undo-closed-tab","customizableui-special-spring1","urlbar-container","customizableui-special-spring2","downloads-button","unified-extensions-button","ublock0_raymondhill_net-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","vpn_proton_ch-browser-action","_d07ccf11-c0cd-4938-a265-2a4d6ad01189_-browser-action","clipper_obsidian_md-browser-action","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"],"nora-statusbar":["screenshot-button","fullscreen-button","status-text"],"statusBar":["screenshot-button","fullscreen-button","status-text"]},"seen":["developer-button","sidebar-reverse-position-toolbar","undo-closed-tab","profile-manager","workspaces-toolbar-button","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","firefoxcolor_mozilla_com-browser-action","ublock0_raymondhill_net-browser-action","_f209234a-76f0-4735-9920-eb62507a54cd_-browser-action","enhancerforyoutube_maximerf_addons_mozilla_org-browser-action","jid1-oy8xu5bskzqa6a_jetpack-browser-action","vpn_proton_ch-browser-action","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action","_d07ccf11-c0cd-4938-a265-2a4d6ad01189_-browser-action","clipper_obsidian_md-browser-action","sponsorblocker_ajay_app-browser-action","syrup_extension-browser-action","_2662ff67-b302-4363-95f3-b050218bd72c_-browser-action","screenshot-button"],"dirtyAreaCache":["nav-bar","statusBar","TabsToolbar","toolbar-menubar","PersonalToolbar","unified-extensions-area","vertical-tabs","nora-statusbar"],"currentVersion":23,"newElementCount":3}'';
 
         ExtensionSettings = {
           # jdownloader 2 thing
@@ -68,11 +70,8 @@
           bitwarden
           sponsorblock
           stylus
-          untrap-for-youtube
-          web-clipper-obsidian
           unpaywall
           shinigami-eyes
-          proton-vpn
           boring-rss
           web-archives
         ];
