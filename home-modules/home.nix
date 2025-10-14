@@ -50,7 +50,7 @@
     obsidian          # note taking
     xxd
     libreoffice-fresh # office suite
-    gimp3             # image editing
+    gimp3 krita             # image editing
     nix-output-monitor
     numbat
     stellarium
