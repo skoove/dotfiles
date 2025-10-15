@@ -177,7 +177,7 @@ in {
         "${mod}+W".action = toggle-column-tabbed-display;
 
         # open things but better!!!
-        "${mod}+1".action = spawn "vivaldi";
+        "${mod}+1".action = spawn "floorp";
         "${mod}+2".action = spawn "obsidian";
         "${mod}+3".action = spawn "discord";
         "${mod}+4".action = spawn "steam";
