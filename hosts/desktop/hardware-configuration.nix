@@ -25,6 +25,30 @@
     nvidiaSettings = false;
     package = config.boot.kernelPackages.nvidiaPackages.production;
   };
+  environment.etc."nvidia/nvidia-application-profiles-rc.d/50-limit-free-buffer-pool-in-wayland-compositors.json".text = ''
+{
+    "rules": [
+        {
+            "pattern": {
+                "feature": "procname",
+                "matches": "niri"
+            },
+            "profile": "Limit Free Buffer Pool On Wayland Compositors"
+        }
+    ],
+    "profiles": [
+        {
+            "name": "Limit Free Buffer Pool On Wayland Compositors",
+            "settings": [
+                {
+                    "key": "GLVidHeapReuseRatio",
+                    "value": 0
+                }
+            ]
+        }
+    ]
+}
+	'';
 
   boot.initrd.availableKernelModules = [
     "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"
