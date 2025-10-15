@@ -37,6 +37,10 @@
         # 1: stacked
         "floorp.tabbar.style" = 1;
 
+        # this gets rid of the close button
+        # https://github.com/Floorp-Projects/Floorp/discussions/674
+        "browser.tabs.inTitlebar" = 0;
+
         # ask for where to download files instead of just putting them wherever
         "browser.download.useDownloadDir" = false;
 
