@@ -52,6 +52,10 @@
         "floorp.workspaces.enabled" = false;
         "floorp.workspaces.v4.config" = ''{"manageOnBms":false,"showWorkspaceNameOnToolbar":false,"closePopupAfterClick":true}'';
         "floorp.panelSidebar.enabled" = false;
+
+        # new tab page settings
+        "floorp.newtab.configs" = ''{"components":{"topSites":false,"clock":false,"searchBar":false},"background":{"type":"random","customImage":null,"fileName":null,"folderPath":null,"selectedFloorp":null,"slideshowEnabled":false,"slideshowInterval":30},"searchBar":{"searchEngine":"default"},"topSites":{"pinned":[],"blocked":[]}}'';
+        
         # this is the state of that whole top bar, just copy paste it from
         # about:config after editing it manually, maybe some day i will find a
         # more nixy way? but nixing of the sake of nix is a fools endevour
