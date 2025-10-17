@@ -202,9 +202,9 @@
   };
 
   services.logind.settings.Login = {
-    lidSwitch = "ignore";
-    powerKey = "ignore";
-    powerKeyLongPress = "ignore";
+    HandleLidSwitch = "ignore";
+    HandlePowerKey = "ignore";
+    HandlePowerKeyLongPress = "ignore";
   };
 
   # printing
