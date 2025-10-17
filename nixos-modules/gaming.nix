@@ -21,9 +21,15 @@
 
   services.ratbagd.enable = true; # mouse stuff i think
 
-  programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   
+  programs.gamescope = {
+    enable = true;
+    package = pkgs.gamescope.overrideAttrs (_: {
+      NIX_CFLAGS_COMPILE = ["-fno-fast-math"];
+    });
+  };
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
