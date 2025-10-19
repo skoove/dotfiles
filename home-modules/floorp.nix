@@ -90,20 +90,30 @@
         default = "ddg";
         engines = {
           google.metaData.alias = "@g";
+
           my-nixos = {
             name = "MyNixOs";
             urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
             iconMapObj."16" = "https://mynixos.com/favicon.ico";
             definedAliases = [ "@nm" ];
           };
+
           "Nix Packages" = {
             urls = [{template = "https://search.nixos.org/packages?type=packages&query={searchTerms}";}];
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = ["@np"];
           };
-          GitHub = {
+
+          github = {
             urls = [{template = "https://github.com/search?q={searchTerms}";}];
             icon = "https://github.com/fluidicon.png";
+            updateInterval = 7 * 24 * 60 * 60 * 1000;
+            definedAliases = ["@gh"];
+          };
+
+          wikipedia = {
+            urls = [{template = "https://en.wikipedia.org/wiki/Special:Search?go=Go&search={searchTerms}";}];
+            icon = "https://en.wikipedia.org/favicon.ico";
             updateInterval = 7 * 24 * 60 * 60 * 1000;
             definedAliases = ["@gh"];
           };
