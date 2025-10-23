@@ -82,6 +82,7 @@
           shinigami-eyes
           boring-rss
           web-archives
+          untrap-for-youtube
         ];
       };
 
