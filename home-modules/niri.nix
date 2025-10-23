@@ -199,8 +199,8 @@ in {
         "${mod}+Period".action = consume-or-expel-window-right;
 
         # screenshotting
-        "${mod}+S".action = screenshot;
-        "${mod}+Shift+S".action = screenshot-window;
+        "${mod}+S".action.screenshot = {};
+        "${mod}+Shift+S".action.screenshot-window = {};
         "${mod}+A".action = fish "wl-paste | satty -f - --right-click-copy --early-exit --copy-command 'wl-copy' --fullscreen --brush-smooth-history-size 5";
 
         # resize things
