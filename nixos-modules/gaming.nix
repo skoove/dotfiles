@@ -11,9 +11,7 @@
     heroic
     openttd-jgrpp
   ] ++ (if config.networking.hostName == "nixos-desktop" then [
-    pkgs.arma3-unix-launcher
     r2modman
-    bottles-unwrapped
     prismlauncher
     glfw3-minecraft
     vintagestory
