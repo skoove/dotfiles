@@ -15,7 +15,7 @@
     r2modman
     bottles-unwrapped
     prismlauncher
-    glfw-wayland-minecraft
+    glfw3-minecraft
     vintagestory
   ] else []);
 
