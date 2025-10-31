@@ -166,7 +166,7 @@ in {
         "${mod}+Y".action = fish "notify-send\"$(niri msg focused-window)\"";
         "${mod}+Shift+Y".action = fish "set win (niri msg focused-window); wl-copy $win; notify-send \"$win\"";
         "${mod}+Z".action = spawn "${pkgs.woomer}/bin/woomer";
-        "${mod}+V".action = spawn "pavucontrol";
+        "${mod}+V".action = spawn "${pkgs.myxer}/bin/myxer";
 
 
         # reorient
