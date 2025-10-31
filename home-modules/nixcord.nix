@@ -69,11 +69,6 @@
         closeOthers = true;
         forceOpen = true;
       };
-
-      noReplyMention = {
-        enable = true;
-        userList = "471257729168703500";
-      };
     };
   };
 }
