@@ -7,7 +7,6 @@
     ./email.nix
     ./eza.nix
     ./fish.nix
-    ./floorp.nix
     ./foot.nix
     ./fuzzel.nix
     ./git.nix
