@@ -25,6 +25,7 @@
     ./xdg.nix
     ./yazi.nix
     ./zellij.nix
+    ./librewolf.nix
 
     inputs.nur.modules.homeManager.default
    ];
