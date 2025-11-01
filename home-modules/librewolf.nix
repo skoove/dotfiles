@@ -53,15 +53,16 @@
         force = true;
 
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
           bitwarden
+          boring-rss
+          darkreader
+          shinigami-eyes
           sponsorblock
           stylus
+          ublock-origin
           unpaywall
-          shinigami-eyes
-          boring-rss
-          web-archives
           untrap-for-youtube
+          web-archives
         ];
       };
 
