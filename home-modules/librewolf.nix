@@ -23,6 +23,9 @@
         "browser.tabs.opentabfor.middleclick" = true;
         "browser.tabs.loadInBackground" = true;
 
+        # leave browser open if i close last tabe
+        "browser.tabs.closeWindowWithLastTab" = true;
+
         # dark mode websites + settings and about:config etc
         "ui.systemUsesDarkTheme" = 1;
 
