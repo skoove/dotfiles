@@ -29,6 +29,9 @@
         # dark mode websites + settings and about:config etc
         "ui.systemUsesDarkTheme" = 1;
 
+        # this makes the pdf viewer dark mode
+        "pdfjs.viewerCssTheme" = 2;
+
         # enable scrolling using the middle mouse button 
         "general.autoScroll" = true;
 
