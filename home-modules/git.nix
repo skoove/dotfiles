@@ -11,6 +11,7 @@
       pull.rebase = true;
       user.name = "skoove";
       user.email = "zie@skoove.dev";
+      push.autoSetupRemote = true;
     };
   };
 }
