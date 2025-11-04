@@ -1,4 +1,4 @@
-{ pkgs,  ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
     ./direnv.nix
@@ -86,6 +86,12 @@
               inkscape $file & disown
           end
         '';
+      };
+
+      sys = {
+        body = ''
+            ${lib.getExe pkgs.systemd-systemd-manager-tui}
+          '';
       };
     };
   };
