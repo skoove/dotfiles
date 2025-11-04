@@ -90,7 +90,7 @@
 
       sys = {
         body = ''
-            ${lib.getExe pkgs.systemd-systemd-manager-tui}
+            ${lib.getExe pkgs.systemd-manager-tui}
           '';
       };
     };
