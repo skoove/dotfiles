@@ -4,7 +4,6 @@
     enable = true;
     settings = {
       key-bindings.spawn-terminal = "Mod1+n";
-      mouse.hide-when-typing = true;
       main.pad = "3x3 center";
 
       cursor = {
