@@ -191,7 +191,7 @@
   };
   
   home.file = {
-    ".local/share/loago/loago.json".source = config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/index/loago.json;
+    ".local/share/loago/loago.json".source = config.lib.file.mkOutOfStoreSymlink /home/zie/obsidian/documents/sync/loago.json;
     ".config/inkscape/templates/default.svg".source = ../files/inkscape/default-document.svg;
     ".config/inkscape/palettes/default.gpl".source = ../files/inkscape/gruvbox-palette.gpl;
   };
