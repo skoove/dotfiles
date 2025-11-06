@@ -23,6 +23,9 @@
         "browser.tabs.opentabfor.middleclick" = true;
         "browser.tabs.loadInBackground" = true;
 
+        # remove native firefox sidebar
+        "sidebar.revamp" = false;
+
         # leave browser open if i close last tabe
         "browser.tabs.closeWindowWithLastTab" = false;
 
