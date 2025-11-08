@@ -106,7 +106,7 @@
             urls = [{template = "https://en.wikipedia.org/wiki/Special:Search?go=Go&search={searchTerms}";}];
             icon = "https://en.wikipedia.org/favicon.ico";
             updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = ["@gh"];
+            definedAliases = ["@w"];
           };
         };
       };
