@@ -4,7 +4,6 @@
   imports = [
     ./stylix.nix
     ./gaming.nix
-    ./udev.nix
     ./cybersec.nix
 
     inputs.stylix.nixosModules.stylix
@@ -122,6 +121,7 @@
       "docker"
       "wireshark"
       "keyd"
+      "uinput"
     ];
     openssh.authorizedKeys.keys = [ 
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnGnBgccjncw0VMcpn/qjauAugKrTSzkIjLKssgVG9z zie@nixos-laptop"
@@ -153,9 +153,6 @@
     libnotify # just useful to be able to use from anywhere
   ];
 
-  services.protonmail-bridge.enable = true;
-  services.flatpak.enable = true;
-
   programs.hyprland.enable = false;
 
   programs.nix-ld = {
@@ -173,24 +170,14 @@
     package = pkgs.niri-unstable;
   };
 
-  services.xserver.windowManager.i3.enable = false;
-  services.xserver.enable = config.services.xserver.windowManager.i3.enable;
+  services.protonmail-bridge.enable = true;
+  services.flatpak.enable = true;
   services.openssh.enable = true;
   services.blueman.enable = true;
   services.tailscale.enable = true;
   services.tailscale.package = pkgs.tailscale.overrideAttrs { doCheck = false; };
+  hardware.uinput.enable = true;
 
-  # disable ly because it breaks things!
-  services.displayManager.ly.enable = false;
-  services.displayManager.ly.settings = {
-    animation = "colormix";
-    asterisk = "*";
-    box_title = "hello!";
-    colormix_col1 = "0x${config.lib.stylix.colors.base00}";
-    colormix_col2 = "0x${config.lib.stylix.colors.base01}";
-    colormix_col3 = "0x${config.lib.stylix.colors.base02}";
-  };
-  
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -234,6 +221,13 @@
         };
       };
     };
+  };
+
+  services.udev = {
+    enable = true;
+    extraRules = ''
+      KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+    '';
   };
 
   virtualisation.docker.enable = true;
