@@ -122,6 +122,7 @@
       "wireshark"
       "keyd"
       "uinput"
+      "input"
     ];
     openssh.authorizedKeys.keys = [ 
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnGnBgccjncw0VMcpn/qjauAugKrTSzkIjLKssgVG9z zie@nixos-laptop"
@@ -221,13 +222,6 @@
         };
       };
     };
-  };
-
-  services.udev = {
-    enable = true;
-    extraRules = ''
-      KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
-    '';
   };
 
   virtualisation.docker.enable = true;

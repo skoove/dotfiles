@@ -83,7 +83,6 @@
     bitwarden-cli      # password manager
     sops               # secrets management
     ripgrep            # grepper
-    vlc                # the last media player i will ever need
     tidal-hifi
     cargo-flamegraph   # flamegraph
     qbittorrent        # :D
@@ -98,10 +97,6 @@
     inetutils
     imv
     fd # better find
-    xh # http request sender
-    hyperfine # benchmarker
-    rnote # drawing tablet optimised draw note thingy
-    ov # pager
 
 
     (pkgs.inkscape-with-extensions.override {

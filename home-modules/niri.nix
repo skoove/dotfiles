@@ -11,6 +11,7 @@ let
 in {
   imports = [
     ./waybar.nix # bar
+    ./kanata.nix # keybinder thingy
   ];
 
   services.dunst.enable = true;
