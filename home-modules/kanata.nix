@@ -35,28 +35,28 @@ let
       = (tap-hold-release $tt $ht = XX)
 
       q (tap-hold-release $tt $ht q XX)
-      w (tap-hold-release $tt $ht w XX)
+      w (tap-hold-release $tt $ht w lmet)
       e (tap-hold-release $tt $ht e XX)
       r (tap-hold-release $tt $ht r XX)
       t (tap-hold-release $tt $ht t XX)
       y (tap-hold-release $tt $ht y XX)
       u (tap-hold-release $tt $ht u XX)
       i (tap-hold-release $tt $ht i XX)
-      o (tap-hold-release $tt $ht o XX)
+      o (tap-hold-release $tt $ht o rmet)
       p (tap-hold-release $tt $ht p XX)
       [ (tap-hold-release $tt $ht [ XX)
       ] (tap-hold-release $tt $ht ] XX)
       \ (tap-hold-release $tt $ht \ XX)
 
-      a (tap-hold-release $tt $ht a XX)
-      s (tap-hold-release $tt $ht s XX)
-      d (tap-hold-release $tt $ht d XX)
-      f (tap-hold-release $tt $ht f XX)
+      a (tap-hold-release $tt $ht a (layer-switch arrow))
+      s (tap-hold-release $tt $ht s lsft)
+      d (tap-hold-release $tt $ht d lctl)
+      f (tap-hold-release $tt $ht f lalt)
       g (tap-hold-release $tt $ht g XX)
       h (tap-hold-release $tt $ht h XX)
-      j (tap-hold-release $tt $ht j XX)
-      k (tap-hold-release $tt $ht k XX)
-      l (tap-hold-release $tt $ht l XX)
+      j (tap-hold-release $tt $ht j ralt)
+      k (tap-hold-release $tt $ht k rctl)
+      l (tap-hold-release $tt $ht l rsft)
       ; (tap-hold-release $tt $ht ; XX)
       ' (tap-hold-release $tt $ht ' XX)
 
@@ -70,6 +70,15 @@ let
       , (tap-hold-release $tt $ht , XX)
       . (tap-hold-release $tt $ht . XX)
       / (tap-hold-release $tt $ht / XX)
+    )
+
+    (deflayermap (arrow)
+      caps (layer-switch default)
+    
+      h left
+      j down
+      k up
+      l right
     )
   '';
 in {
