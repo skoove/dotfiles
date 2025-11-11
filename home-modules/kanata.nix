@@ -48,7 +48,7 @@ let
       ] (tap-hold-release $tt $ht ] XX)
       \ (tap-hold-release $tt $ht \ XX)
 
-      a (tap-hold-release $tt $ht a (layer-switch arrow))
+      a (tap-hold-release $tt $ht a (layer-while-held arrow))
       s (tap-hold-release $tt $ht s lsft)
       d (tap-hold-release $tt $ht d lctl)
       f (tap-hold-release $tt $ht f lalt)
