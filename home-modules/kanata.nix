@@ -15,9 +15,9 @@ let
 
     ;; tap repress time out, time out for pressing key twice and holding
     ;; causing it to hold tap action
-    (defvar tt 180)
+    (defvar tt 160)
     ;; timeout until hold action start
-    (defvar ht 180)
+    (defvar ht 160)
     
     (deflayermap (default)
       ` (tap-hold-release $tt $ht ` XX)
@@ -49,14 +49,14 @@ let
       \ (tap-hold-release $tt $ht \ XX)
 
       a (tap-hold-release $tt $ht a (layer-while-held arrow))
-      s (tap-hold-release $tt $ht s lsft)
+      s (tap-hold-release $tt $ht s lalt)
       d (tap-hold-release $tt $ht d lctl)
-      f (tap-hold-release $tt $ht f lalt)
+      f (tap-hold-release $tt $ht f lsft)
       g (tap-hold-release $tt $ht g XX)
       h (tap-hold-release $tt $ht h XX)
-      j (tap-hold-release $tt $ht j ralt)
+      j (tap-hold-release $tt $ht j rsft)
       k (tap-hold-release $tt $ht k rctl)
-      l (tap-hold-release $tt $ht l rsft)
+      l (tap-hold-release $tt $ht l ralt)
       ; (tap-hold-release $tt $ht ; XX)
       ' (tap-hold-release $tt $ht ' XX)
 
@@ -73,13 +73,16 @@ let
     )
 
     (deflayermap (arrow)
-      caps (layer-switch default)
-    
       h left
       j down
       k up
       l right
     )
+  '';
+
+  validatedConfig = pkgs.runCommand "validatd-kanata-config.kbd" {} ''
+    ${lib.getExe kanata} --cfg ${config} --check
+    cp ${config} $out
   '';
 in {
   systemd.user.services."kanata" = {
@@ -88,7 +91,7 @@ in {
 
     Service = {
       Type = "simple";
-      ExecStart = "${lib.getExe kanata} --cfg ${config}";
+      ExecStart = "${lib.getExe kanata} --cfg ${validatedConfig}";
     };
   };
 }
