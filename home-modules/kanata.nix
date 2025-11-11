@@ -46,7 +46,7 @@ let
       p (tap-hold-release $tt $ht p XX)
       [ (tap-hold-release $tt $ht [ XX)
       ] (tap-hold-release $tt $ht ] XX)
-      \ (tap-hold-release $tt $ht \ XX)
+      \ (tap-hold-release $tt $ht \ (layer-switch doublestruck))
 
       caps (tap-hold-release $tt $ht esc XX)
       a (tap-hold-release $tt $ht a (layer-while-held arrow))
@@ -79,6 +79,66 @@ let
       k up
       l right
     )
+
+    (deflayermap (doublestruck)
+      a (tap-hold-release $tt $ht (cmd wtype 𝕒) XX)
+      b (tap-hold-release $tt $ht (cmd wtype 𝕓) XX)
+      c (tap-hold-release $tt $ht (cmd wtype 𝕔) XX)
+      d (tap-hold-release $tt $ht (cmd wtype 𝕕) XX)
+      e (tap-hold-release $tt $ht (cmd wtype 𝕖) XX)
+      f (tap-hold-release $tt $ht (cmd wtype 𝕗) (layer-while-held doublestruck-upper))
+      g (tap-hold-release $tt $ht (cmd wtype 𝕘) XX)
+      h (tap-hold-release $tt $ht (cmd wtype 𝕙) (layer-while-held doublestruck-upper))
+      i (tap-hold-release $tt $ht (cmd wtype 𝕚) XX)
+      j (tap-hold-release $tt $ht (cmd wtype 𝕛) XX)
+      k (tap-hold-release $tt $ht (cmd wtype 𝕜) XX)
+      l (tap-hold-release $tt $ht (cmd wtype 𝕝) XX)
+      m (tap-hold-release $tt $ht (cmd wtype 𝕞) XX)
+      n (tap-hold-release $tt $ht (cmd wtype 𝕟) XX)
+      o (tap-hold-release $tt $ht (cmd wtype 𝕠) XX)
+      p (tap-hold-release $tt $ht (cmd wtype 𝕡) XX)
+      q (tap-hold-release $tt $ht (cmd wtype 𝕢) XX)
+      r (tap-hold-release $tt $ht (cmd wtype 𝕣) XX)
+      s (tap-hold-release $tt $ht (cmd wtype 𝕤) XX)
+      t (tap-hold-release $tt $ht (cmd wtype 𝕥) XX)
+      u (tap-hold-release $tt $ht (cmd wtype 𝕦) XX)
+      v (tap-hold-release $tt $ht (cmd wtype 𝕧) XX)
+      w (tap-hold-release $tt $ht (cmd wtype 𝕨) XX)
+      x (tap-hold-release $tt $ht (cmd wtype 𝕩) XX)
+      y (tap-hold-release $tt $ht (cmd wtype 𝕪) XX)
+      z (tap-hold-release $tt $ht (cmd wtype 𝕫) XX)
+      caps (layer-switch default)
+    )
+
+    (deflayermap (doublestruck-upper)
+      a (tap-hold-release $tt $ht (cmd wtype 𝔸) XX)
+      b (tap-hold-release $tt $ht (cmd wtype 𝔹) XX)
+      c (tap-hold-release $tt $ht (cmd wtype ℂ) XX)
+      d (tap-hold-release $tt $ht (cmd wtype 𝔻) XX)
+      e (tap-hold-release $tt $ht (cmd wtype 𝔼) XX)
+      f (tap-hold-release $tt $ht (cmd wtype 𝔽) XX)
+      g (tap-hold-release $tt $ht (cmd wtype 𝔾) XX)
+      h (tap-hold-release $tt $ht (cmd wtype ℍ) XX)
+      i (tap-hold-release $tt $ht (cmd wtype 𝕀) XX)
+      j (tap-hold-release $tt $ht (cmd wtype 𝕁) XX)
+      k (tap-hold-release $tt $ht (cmd wtype 𝕂) XX)
+      l (tap-hold-release $tt $ht (cmd wtype 𝕃) XX)
+      m (tap-hold-release $tt $ht (cmd wtype 𝕄) XX)
+      n (tap-hold-release $tt $ht (cmd wtype ℕ) XX)
+      o (tap-hold-release $tt $ht (cmd wtype 𝕆) XX)
+      p (tap-hold-release $tt $ht (cmd wtype ℙ) XX)
+      q (tap-hold-release $tt $ht (cmd wtype ℚ) XX)
+      r (tap-hold-release $tt $ht (cmd wtype ℝ) XX)
+      s (tap-hold-release $tt $ht (cmd wtype 𝕊) XX)
+      t (tap-hold-release $tt $ht (cmd wtype 𝕋) XX)
+      u (tap-hold-release $tt $ht (cmd wtype 𝕌) XX)
+      v (tap-hold-release $tt $ht (cmd wtype 𝕍) XX)
+      w (tap-hold-release $tt $ht (cmd wtype 𝕎) XX)
+      x (tap-hold-release $tt $ht (cmd wtype 𝕏) XX)
+      y (tap-hold-release $tt $ht (cmd wtype 𝕐) XX)
+      z (tap-hold-release $tt $ht (cmd wtype ℤ) XX)
+    )
+    
   '';
 
   validatedConfig = pkgs.runCommand "validatd-kanata-config.kbd" {} ''
@@ -86,6 +146,9 @@ let
     cp ${config} $out
   '';
 in {
+
+  home.packages = [ pkgs.wtype ];
+  
   systemd.user.services."kanata" = {
     Unit.description = "kanata service -- keyboard remapper";
     Install.WantedBy = [ "default.target" ];
