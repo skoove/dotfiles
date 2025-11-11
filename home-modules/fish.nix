@@ -93,6 +93,10 @@
             ${lib.getExe pkgs.systemd-manager-tui}
           '';
       };
+
+      pomodoro = {
+        body = "porsmo pomodoro custom 25m 5m 15m";
+      };
     };
   };
 }
