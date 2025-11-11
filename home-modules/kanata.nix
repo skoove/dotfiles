@@ -48,6 +48,7 @@ let
       ] (tap-hold-release $tt $ht ] XX)
       \ (tap-hold-release $tt $ht \ XX)
 
+      caps (tap-hold-release $tt $ht esc XX)
       a (tap-hold-release $tt $ht a (layer-while-held arrow))
       s (tap-hold-release $tt $ht s lalt)
       d (tap-hold-release $tt $ht d lsft)
