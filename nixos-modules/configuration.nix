@@ -19,7 +19,7 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages;
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  networking.nameservers = [ "192.168.0.254"  "1.1.1.1" "9.9.9.9" ];
   networking.networkmanager.insertNameservers = config.networking.nameservers;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
