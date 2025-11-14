@@ -71,6 +71,8 @@ let
       , (tap-hold-release $tt $ht , XX)
       . (tap-hold-release $tt $ht . XX)
       / (tap-hold-release $tt $ht / XX)
+
+      lmet (layer-while-held layer-select)
     )
 
     (deflayermap (arrow)
@@ -81,6 +83,15 @@ let
 
       u bspc
       i del
+    )
+
+    (deflayermap (layer-select)
+      e (layer-switch empty)
+    )
+
+    (deflayermap (empty)
+      rmet (layer-switch default)
+      caps f16
     )
   '';
 
