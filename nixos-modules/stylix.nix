@@ -5,8 +5,8 @@
   # stylix.image = "${inputs.wallpapers}/forest.jpg";
   stylix.fonts = {
     monospace = {
-      package = pkgs.annotation-mono;
-      name = "annotation mono";
+      package = pkgs.nerd-fonts.jetbrains-mono;
+      name = "JetBrainsMono NF";
     };
 
     sansSerif = {
