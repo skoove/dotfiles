@@ -3,7 +3,15 @@ let
   kanata = pkgs.kanata-with-cmd;
 
   layer-switch-notify = layer: "(multi (layer-switch ${layer}) (cmd notify-send \"layer: ${layer}\"))";
-  emote = emote: "(cmd wtype \"${emote}\")";
+
+  emote-script = pkgs.writeText "emote-script" ''
+    set old_clipboard (wl-paste)
+    wl-copy $argv[1]
+    wtype -M ctrl -M shift v
+    wl-copy $old_clipboard
+  '';
+
+  emote = emote: ''(cmd fish ${emote-script} "${emote}")'';
    
   config = pkgs.writeText "config.kbd" ''
     (defsrc)
