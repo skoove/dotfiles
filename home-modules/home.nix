@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./kanata
     ./bottom.nix
     ./btop.nix
     ./email.nix
