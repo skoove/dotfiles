@@ -6,9 +6,9 @@ let
 
   emote-script = pkgs.writeText "emote-script" ''
     set old_clipboard (wl-paste)
-    wl-copy $argv[1]
+    wl-copy -f $argv[1]
     wtype -M ctrl -M shift v
-    wl-copy $old_clipboard
+    wl-copy -f $old_clipboard
   '';
 
   emote = emote: ''(cmd fish ${emote-script} "${emote}")'';
