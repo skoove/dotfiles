@@ -40,9 +40,9 @@ in
       ];
 
       modules-right = [
-        "cpu"
-        "temperature"
-        "memory"
+        # "cpu"
+        # "temperature"
+        # "memory"
         "backlight"
         "pulseaudio"
         "battery"
@@ -57,8 +57,8 @@ in
       "niri/workspaces" = {
         format = "{icon}";
         format-icons = {
-          active = "";
-          default = "";
+          active = "⬤";
+          default = "◯";
         };
       };
 
@@ -80,7 +80,7 @@ in
       };
 
       battery = {
-        format = "{icon} {capacity}%";
+        format = "bat: {capacity}%";
         format-icons = bat-icons;
         tooltip-format = "{time}, {cycles} cycles, {health}% health";
       };
@@ -91,7 +91,7 @@ in
       };
 
       pulseaudio = {
-        format = "{icon}  {volume}%";
+        format = "vol: {volume}%";
         format-muted = "vol: muted";
         format-icons.default = audio-icons;
         on-click = "pavucontrol";
@@ -99,7 +99,7 @@ in
       };
 
       backlight = {
-        format = "󰖨 {icon}";
+        format = "light: {icon}";
         format-icons = generic-percent-icons;
         tooltip-format = "{percent}%";
       };
