@@ -11,7 +11,6 @@
     heroic
     openttd-jgrpp
   ] ++ (if config.networking.hostName == "nixos-desktop" then [
-    r2modman
     prismlauncher
     glfw3-minecraft
     vintagestory
