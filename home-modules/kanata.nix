@@ -1,11 +1,14 @@
 { pkgs , lib , ... }:
 let
   kanata = pkgs.kanata-with-cmd;
+
+  layer-switch-notify = layer: "(multi (layer-switch ${layer}) (cmd notify-send \"layer: ${layer}\"))";
+  emote = emote: "(cmd wtype \"${emote}\")";
    
   config = pkgs.writeText "config.kbd" ''
     (defsrc)
 
-     (defcfg
+    (defcfg
       concurrent-tap-hold yes
       danger-enable-cmd yes
       log-layer-changes no
@@ -48,7 +51,7 @@ let
       ] (tap-hold-release $tt $ht ] XX)
       \ (tap-hold-release $tt $ht \ XX)
 
-      caps (tap-hold-release $tt $ht esc XX)
+      caps (tap-hold-release $tt $ht esc (layer-while-held emotes))
       a (tap-hold-release $tt $ht a (layer-while-held arrow))
       s (tap-hold-release $tt $ht s lalt)
       d (tap-hold-release $tt $ht d lctl)
@@ -72,7 +75,7 @@ let
       . (tap-hold-release $tt $ht . XX)
       / (tap-hold-release $tt $ht / XX)
 
-      lmet (layer-while-held layer-select)
+      rmet (layer-while-held layer-select)
     )
 
     (deflayermap (arrow)
@@ -85,13 +88,24 @@ let
       i del
     )
 
+    ;; special entered layers (these ones are not layer-while-helds)
+    
     (deflayermap (layer-select)
-      e (layer-switch empty)
+      e ${layer-switch-notify "empty"}
     )
 
     (deflayermap (empty)
-      rmet (layer-switch default)
+      rmet ${layer-switch-notify "default"}
       caps f16
+    )
+
+    ;; special typing layers
+    (deflayermap (emotes)
+      u ${emote "<3"}
+      i ${emote "</3"}
+      h ${emote ":3"}
+      j ${emote ":D"}
+      k ${emote ":)"}
     )
   '';
 
