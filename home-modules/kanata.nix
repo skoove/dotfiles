@@ -8,7 +8,7 @@ let
     set old_clipboard (wl-paste)
     wl-copy -f $argv[1]
     wtype -M ctrl -M shift v
-    wl-copy -f $old_clipboard
+    wl-copy $old_clipboard
   '';
 
   emote = emote: ''(cmd fish ${emote-script} "${emote}")'';
