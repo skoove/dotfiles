@@ -84,6 +84,7 @@ let
       / (tap-hold-release $tt $ht / XX)
 
       rmet (layer-while-held layer-select)
+      spc (tap-hold-release $tt $ht spc (layer-while-held mouse))
     )
 
     (deflayermap (arrow)
@@ -94,6 +95,46 @@ let
 
       u bspc
       i del
+    )
+
+    (deflayermap (mouse)
+     h mlft
+     j mrgt
+     k mmid
+     
+     ${let
+       # mouse move config
+       directions = [
+         {dir = "up";    key = "e";}
+         {dir = "left";  key = "s";}
+         {dir = "down";  key = "d";}
+         {dir = "right"; key = "f";}
+       ];
+       
+       interval = "5";
+       acceleration-time = "1500";
+       min = "1";
+       max = "50";
+
+       mkConfigLine = {dir, key}: "${key} (movemouse-accel-${dir} ${interval} ${acceleration-time} ${min} ${max})\n";
+       mouse-move-config = lib.concatMapStrings mkConfigLine directions;
+     in "${mouse-move-config}"}
+
+     ${let
+       # mouse whell config
+       directions = [
+         {dir = "down";  key = "n";}
+         {dir = "up";    key = "m";}
+         {dir = "left";  key = ",";}
+         {dir = "right"; key = ".";}
+       ];
+
+       interval = "5";
+       distance = "20";
+
+       mkConfigLine = {dir, key}: "${key} (mwheel-${dir} ${interval} ${distance})\n";
+       mouse-wheel-config = lib.concatMapStrings mkConfigLine directions;
+     in "${mouse-wheel-config}"}
     )
 
     ;; special entered layers (these ones are not layer-while-helds)
