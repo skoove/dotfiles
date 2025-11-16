@@ -101,6 +101,10 @@ let
      h mlft
      j mrgt
      k mmid
+
+     g (cmd niri msg action screenshot)
+     v (cmd niri msg action screenshot-screen)
+     b (cmd niri msg action screenshot-window)
      
      ${let
        # mouse move config
@@ -111,8 +115,8 @@ let
          {dir = "right"; key = "f";}
        ];
        
-       interval = "5";
-       acceleration-time = "1500";
+       interval = "10";
+       acceleration-time = "1000";
        min = "1";
        max = "50";
 
