@@ -47,8 +47,6 @@
 
       language-server.tinymist.config = {
         formatterMode = "typstyle";
-        exportPdf = "onSave";
-        outputPath = "$root/target/$dir/$name";
         preview.browsing.args = ["--data-plane-host=127.0.0.1:0" "--invert-colors=never" "--open"];
       };
       
