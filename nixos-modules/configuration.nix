@@ -152,6 +152,8 @@
     ntfs3g
     grub2 # for grub-reboot
     libnotify # just useful to be able to use from anywhere
+    corefonts
+    wineWowPackages.waylandFull freetype
   ];
 
   programs.hyprland.enable = false;

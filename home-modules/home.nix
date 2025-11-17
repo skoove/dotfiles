@@ -145,6 +145,14 @@
     };
   };
 
+  programs.kakoune = {
+    enable = true;
+    # colorSchemePackage = pkgs.fetchUrl
+    config = {
+      autoReload = "yes";
+    };
+  };
+
   services.tldr-update = {
     enable = true;
     period = "daily";
