@@ -91,7 +91,7 @@
     inetutils
     imv
     fd # better find
-
+    lmms
 
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
