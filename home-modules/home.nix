@@ -39,12 +39,6 @@
     "DejaVu Sans"
   ];
 
-  nix.gc = {
-    automatic = osConfig.nix.gc.automatic;
-    persistent = osConfig.nix.gc.persistent;
-    options = osConfig.nix.gc.options;
-  };
-  
   home.packages = with pkgs; [
     # productive
     obsidian          # note taking
@@ -126,35 +120,6 @@
   );
 
   programs.bat.enable = true;
-
-  programs.mpv = {
-    enable = true;
-    config = {
-      ytdl-format = "bestvideo+bestaudio";
-      save-position-on-quit = true;
-      resume-playback = true;
-      save-watch-history = true;
-      idle = true;
-      force-window = true;
-      profile = "high-quality";
-      write-filename-in-watch-later-config = true;
-    };
-
-    scripts = with pkgs.mpvScripts; [
-        mpris
-        uosc
-        mpv-notify-send
-        mpv-playlistmanager
-        mpv-discord
-        sponsorblock-minimal
-      ];
-    };
-
-  # mpv youtube queue plugin for mpv
-  home.file.".config/mpv/scripts/mpv-youtube-queue".source = pkgs.fetchurl {
-    url = "https://gitea.suda.codes/sudacode/mpv-youtube-queue/raw/branch/master/mpv-youtube-queue.lua";
-    hash = "sha256-LBBL1bKezTNjwSzBeD2/Lrb7Fo8wUejA1+XoJhYol40=";
-  };
 
   programs.ssh = {
     enable = true;
