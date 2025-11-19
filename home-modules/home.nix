@@ -94,7 +94,6 @@
 
     # music
     reaper # daw
-    reaper-reapack-extension # package manager for reaper
     metersLv2 # lv2 plugins for a bunch of meters
     vital # incredbile synth
     sfizz
