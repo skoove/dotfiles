@@ -31,6 +31,7 @@
         "image/bmp" = "imv.desktop";
         "image/tiff" = "imv.desktop";
         "image/svg+xml" = "imv.desktop";
+        "x-scheme-handler/native-access" = "Native Access.desktop";
       };
     };
   };
