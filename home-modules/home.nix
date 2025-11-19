@@ -94,6 +94,7 @@
 
     # music
     reaper # daw
+    yabridge yabridgectl # run windows plugins in linxu
     metersLv2 # lv2 plugins for a bunch of meters
     vital # incredbile synth
     sfizz
