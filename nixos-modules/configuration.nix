@@ -51,7 +51,7 @@
     clean = {
       enable = true;
       dates = "daily";
-      extraArgs = "--keep 10 --keep-since 5d";
+      extraArgs = "--keep-since 7d";
     };
   };
 
@@ -153,7 +153,7 @@
     grub2 # for grub-reboot
     libnotify # just useful to be able to use from anywhere
     corefonts
-    wineWowPackages.waylandFull freetype
+    wineWowPackages.stable
   ];
 
   programs.hyprland.enable = false;
@@ -215,6 +215,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     audio.enable = true;
+    jack.enable = true;
     wireplumber.enable = true;
     
     extraConfig.pipewire = {

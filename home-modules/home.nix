@@ -91,7 +91,13 @@
     inetutils
     imv
     fd # better find
-    ardour
+
+    # music
+    lmms ardour reaper
+    qjackctl
+    metersLv2
+    vital
+    sfizz
 
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = [
@@ -120,6 +126,7 @@
   );
 
   programs.bat.enable = true;
+  programs.mpv.enable = true;
 
   programs.ssh = {
     enable = true;
