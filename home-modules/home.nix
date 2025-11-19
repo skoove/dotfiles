@@ -93,10 +93,10 @@
     fd # better find
 
     # music
-    lmms ardour reaper
-    qjackctl
-    metersLv2
-    vital
+    reaper # daw
+    reaper-reapack-extension # package manager for reaper
+    metersLv2 # lv2 plugins for a bunch of meters
+    vital # incredbile synth
     sfizz
 
     (pkgs.inkscape-with-extensions.override {
