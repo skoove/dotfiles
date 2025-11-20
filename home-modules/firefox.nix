@@ -70,8 +70,6 @@
           stylus
           ublock-origin
           unpaywall
-          untrap-for-youtube
-          vimium
           web-archives
         ];
       };
