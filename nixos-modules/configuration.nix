@@ -153,7 +153,7 @@
     grub2 # for grub-reboot
     libnotify # just useful to be able to use from anywhere
     corefonts
-    wineWowPackages.stable
+    wineWowPackages.stagingFull
   ];
 
   programs.hyprland.enable = false;
