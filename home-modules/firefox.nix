@@ -1,11 +1,11 @@
 { pkgs , inputs , ... }:
 {
-  stylix.targets.librewolf = {
+  stylix.targets.firefox = {
     profileNames = [ "zie" ];
     colorTheme.enable = true;
   };
 
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
 
     policies = {
@@ -64,7 +64,6 @@
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
           bitwarden
           boring-rss
-          darkreader
           shinigami-eyes
           sponsorblock
           stylus

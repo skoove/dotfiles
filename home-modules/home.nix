@@ -24,7 +24,7 @@
     ./xdg.nix
     ./yazi.nix
     ./zellij.nix
-    ./librewolf.nix
+    ./firefox.nix
 
     inputs.nur.modules.homeManager.default
    ];
