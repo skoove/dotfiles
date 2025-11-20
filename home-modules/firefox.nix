@@ -31,6 +31,7 @@
 
         # dark mode websites + settings and about:config etc
         "ui.systemUsesDarkTheme" = 1;
+        "browser.theme.native-theme" = false;
 
         # this makes the pdf viewer dark mode
         "pdfjs.viewerCssTheme" = 2;
