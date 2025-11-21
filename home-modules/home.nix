@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./kakoune.nix
     ./bottom.nix
     ./btop.nix
     ./email.nix
@@ -149,14 +150,6 @@
       controlMaster = "no";
       controlPath = "~/.ssh/master-%r@%n:%p";
       controlPersist = "no";
-    };
-  };
-
-  programs.kakoune = {
-    enable = true;
-    # colorSchemePackage = pkgs.fetchUrl
-    config = {
-      autoReload = "yes";
     };
   };
 
