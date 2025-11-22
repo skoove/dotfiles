@@ -7,7 +7,7 @@ in {
       "kak-lsp"
     ]; })
 
-    nil # nix lsp
+    pkgs.nil
   ];
 
   home.file.".config/kak/kakrc".source = pkgs.writeText "kakrc" ''
@@ -19,25 +19,10 @@ in {
     set-option global scrolloff 1,4
 
     add-highlighter global/ number-lines -hlcursor
-    add-highlighter global/ show-matching
-    add-highlighter global/ show-whitespaces
-
-    map global user b ": delete-buffer<ret>" -docstring "close current buffer"
-    map global user n ": buffer-previous<ret>" -docstring "previous buffer"
-    map global user m ": buffer-next<ret>" -docstring "next buffer"
-
-    # tab complete instead of silly complete, also makes it so tab gets entered if there are no completions
-	hook global InsertCompletionShow .* %{
-    	map global insert <tab> <c-n>
-    	map global insert <s-tab> <c-p>
-    }
-    hook global InsertCompletionHide .* %{
-    	unmap global insert <tab>
-    	unmap global insert <s-tab>
-    }
 
     lsp-enable
-    map global user l ": enter-user-mode lsp<ret>" -docstring 'lsp mode'
+    map global user l ':enter-user-mode lsp<ret>' -docstring 'lsp mode'
     map global insert <tab> '<a-;>:try lsp-snippets-select-next-placeholders catch %{ execute-keys -with-hooks <lt>tab> }<ret>' -docstring 'Select next snippet placeholder'
+	
   '';
 }
