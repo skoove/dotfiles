@@ -5,6 +5,7 @@ in {
   home.packages = with pkgs; [
     (pkgs.kakoune.override { plugins = pluginsFromList [
       "kak-lsp"
+      "kak-tree-sitter"
     ]; })
 
     nil # nix lsp
@@ -20,14 +21,13 @@ in {
 
     add-highlighter global/ number-lines -hlcursor
     add-highlighter global/ show-matching
-    add-highlighter global/ show-whitespaces
-
+    add-highlighter global/ show-whitespaces -spc ""
     map global user b ": delete-buffer<ret>" -docstring "close current buffer"
     map global user n ": buffer-previous<ret>" -docstring "previous buffer"
     map global user m ": buffer-next<ret>" -docstring "next buffer"
 
     # tab complete instead of silly complete, also makes it so tab gets entered if there are no completions
-	hook global InsertCompletionShow .* %{
+  	hook global InsertCompletionShow .* %{
     	map global insert <tab> <c-n>
     	map global insert <s-tab> <c-p>
     }
