@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./kakoune.nix
+    ./kakoune
     ./bottom.nix
     ./btop.nix
     ./email.nix
