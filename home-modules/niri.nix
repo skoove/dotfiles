@@ -26,6 +26,7 @@ in {
     fish # scripts
     libnotify # some things rely on libnotify to function
     nautilus
+    syncthingtray
   ];
 
   services.swww.enable = true;
