@@ -6,8 +6,7 @@ in pkgs.stdenv.mkDerivation {
 
   src = null;
 
-  buildInputs = [ pkgs.kakoune-lsp ];
-
+  dontUnpack = true;
   dontBuild = true;
   dontCheck = true;
 

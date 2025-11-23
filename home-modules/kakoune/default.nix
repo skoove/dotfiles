@@ -6,6 +6,7 @@ in {
     (pkgs.kakoune.override { plugins = pluginsFromList [
       "kak-lsp"
       "kak-tree-sitter"
+      "ashen-theme"
     ]; })
 
     nil # nix lsp
@@ -13,7 +14,7 @@ in {
 
   home.file.".config/kak/kakrc".source = pkgs.writeText "kakrc" ''
     eval %sh{ kak-tree-sitter -dks --init $kak_session }
-    colorscheme gruvbox-dark
+    colorscheme ashen # TODO: find gruvbox theme for kak-tree-sitter, or make one
 
     set-option global ui_options terminal_assistant=cat
     set-option global tabstop 4
@@ -22,7 +23,8 @@ in {
 
     add-highlighter global/ number-lines -hlcursor
     add-highlighter global/ show-matching
-    add-highlighter global/ show-whitespaces -spc ""
+    add-highlighter global/ show-whitespaces -spc " "
+
     map global user b ": delete-buffer<ret>" -docstring "close current buffer"
     map global user n ": buffer-previous<ret>" -docstring "previous buffer"
     map global user m ": buffer-next<ret>" -docstring "next buffer"
