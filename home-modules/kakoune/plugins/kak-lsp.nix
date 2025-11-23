@@ -22,8 +22,8 @@ in pkgs.stdenv.mkDerivation rec {
     mkdir -p $out/share/kak/autoload/kak-lsp/
     cp ./rc/* $out/share/kak/autoload/kak-lsp/
 
-    mkdir -p $out/bin
-    ln -s ${pkgs.kakoune-lsp}/bin/kak-lsp $out/bin/kak-lsp
+    mkdir -p $out/share/kak/bin
+    ln -s ${pkgs.kakoune-lsp}/bin/kak-lsp $out/share/kak/bin/kak-lsp
 
     runHook postInstall
   '';

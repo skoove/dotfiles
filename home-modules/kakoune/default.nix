@@ -12,6 +12,7 @@ in {
   ];
 
   home.file.".config/kak/kakrc".source = pkgs.writeText "kakrc" ''
+    eval %sh{ kak-tree-sitter -dks --init $kak_session }
     colorscheme gruvbox-dark
 
     set-option global ui_options terminal_assistant=cat
