@@ -28,6 +28,9 @@ in pkgs.stdenv.mkDerivation {
     mkdir -p $out/share/kak/bin
     ln -s ${rustPacakge}/bin/kak-tree-sitter $out/share/kak/bin/kak-tree-sitter
 
+    mkdir -p $out/bin
+    ln -s ${rustPacakge}/bin/ktsctl $out/bin/ktsctl
+
     runHook postInstall
   '';
 }

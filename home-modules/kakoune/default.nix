@@ -21,8 +21,11 @@ in {
     set-option global indentwidth 4
     set-option global scrolloff 1,4
 
+    define-command -override tree-sitter-user-after-highlighter %{
+      add-highlighter -override buffer/show-matching show-matching
+    }
+
     add-highlighter global/ number-lines -hlcursor
-    add-highlighter global/ show-matching
     add-highlighter global/ show-whitespaces -spc " "
 
     map global user b ": delete-buffer<ret>" -docstring "close current buffer"
