@@ -1,15 +1,10 @@
 { pkgs ? import <nixpkgs> {} }: let
   version = "18.2.0";
-in pkgs.stdenv.mkDerivation rec {
+in pkgs.stdenv.mkDerivation {
   name = "kak-lsp";
   inherit version;
 
-  src = pkgs.fetchFromGitHub {
-    owner = "kakoune-lsp";
-    repo = "kakoune-lsp";
-    tag = "v${version}";
-    hash = "sha256-71XnCHAXOcrXu0xizwdwJPkhnmfEjmVP++6mxmTcnM4=";
-  };
+  src = null;
 
   buildInputs = [ pkgs.kakoune-lsp ];
 
@@ -18,10 +13,6 @@ in pkgs.stdenv.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-
-    mkdir -p $out/share/kak/autoload/kak-lsp/
-    cp ./rc/* $out/share/kak/autoload/kak-lsp/
-
     mkdir -p $out/share/kak/bin
     ln -s ${pkgs.kakoune-lsp}/bin/kak-lsp $out/share/kak/bin/kak-lsp
 
