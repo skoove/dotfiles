@@ -42,7 +42,7 @@ in {
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
         { command = [ "${pkgs.networkmanagerapplet}/bin/nm-applet" "--indicator" ]; }
-        { command = [ "swww ${inputs.wallpapers}/forest.jpg" ]; }
+        { command = [ "swww img ${inputs.wallpapers}/forest.jpg" ]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
           { command = [ "sh" "-c" "discord --start-minimized" ]; }
