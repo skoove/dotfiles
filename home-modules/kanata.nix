@@ -168,7 +168,7 @@ let
   '';
 in {
 
-  home.packages = [ pkgs.wtype ];
+  home.packages = [ pkgs.wtype pkgs.libnotify ];
   
   systemd.user.services."kanata" = {
     Unit.description = "kanata service -- keyboard remapper";

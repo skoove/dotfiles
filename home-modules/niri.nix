@@ -43,6 +43,7 @@ in {
         { command = [ "foot" "-s" ]; }
         { command = [ "${pkgs.networkmanagerapplet}/bin/nm-applet" "--indicator" ]; }
         { command = [ "swww img ${inputs.wallpapers}/forest.jpg" ]; }
+        { command = [ "syncthingtray"]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
           { command = [ "sh" "-c" "discord --start-minimized" ]; }
