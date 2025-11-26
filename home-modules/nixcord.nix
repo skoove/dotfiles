@@ -19,7 +19,6 @@
       imageZoom.enable = true;
       loadingQuotes.enable = true;
       memberCount.enable = true;
-      moreCommands.enable = true;
       noBlockedMessages.enable = true;
       noDevtoolsWarning.enable = true;
       noF1.enable = true;
@@ -29,11 +28,6 @@
       petpet.enable = true;
       readAllNotificationsButton.enable = true;
       
-      showMeYourName = {
-        enable = true;
-        mode = "nick-user";
-      };
-
       messageLogger = {
         enable = true;
         collapseDeleted = true;
