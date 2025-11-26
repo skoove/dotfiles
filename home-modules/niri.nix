@@ -43,7 +43,7 @@ in {
         { command = [ "xwayland-satellite" ]; }
         { command = [ "foot" "-s" ]; }
         { command = [ "${pkgs.networkmanagerapplet}/bin/nm-applet" "--indicator" ]; }
-        { command = [ "swww img ${inputs.wallpapers}/forest.jpg" ]; }
+        { command = [ "swww img ${inputs.wallpapers}/omnium_gatherum.png" ]; }
         { command = [ "syncthingtray"]; }
       ] ++ (
         if hostname == "nixos-desktop" then [
