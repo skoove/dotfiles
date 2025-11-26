@@ -8,8 +8,8 @@
     protontricks
     protonup-qt
     piper # config mouse stuff
-    heroic
     openttd-jgrpp
+    osu-lazer-bin
   ] ++ (if config.networking.hostName == "nixos-desktop" then [
     prismlauncher
     glfw3-minecraft
