@@ -38,20 +38,13 @@
     NIXOS_OZONE_WL=1;
   };
 
-  # storage optimisation
-  nix.optimise = {
-    automatic = true;
-    persistent = true;
-    dates = [ "18:00" ];
-  };
-  
   programs.nh = {
     enable = true;
     flake = "/home/zie/.dotfiles";
     clean = {
       enable = true;
       dates = "daily";
-      extraArgs = "--keep-since 7d";
+      extraArgs = "--keep 5 --no-gcroots --optimise";
     };
   };
 
