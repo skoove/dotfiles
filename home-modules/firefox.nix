@@ -36,6 +36,9 @@
         # this makes the pdf viewer dark mode
         "pdfjs.viewerCssTheme" = 2;
 
+		# turn off default pssword manager
+        "browser.contextual-password-manager.enable" = false;
+
         # enable scrolling using the middle mouse button 
         "general.autoScroll" = true;
 
