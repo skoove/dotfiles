@@ -75,7 +75,7 @@ in {
       };
 
       layout = {
-        always-center-single-column = false;
+        always-center-single-column = true;
         empty-workspace-above-first = true;
         border.width = 4;
         gaps = 20;

@@ -45,6 +45,6 @@ in {
     eval %sh{kak-lsp}
     lsp-enable
     map global user l ": enter-user-mode lsp<ret>" -docstring 'lsp mode'
-    map global insert <tab> '<a-;>:try lsp-snippets-select-next-placeholders catch %{ execute-keys -with-hooks <lt>tab> }<ret>' -docstring 'Select next snippet placeholder'
+    map global insert <c-tab> '<a-;>:try lsp-snippets-select-next-placeholders catch %{ execute-keys -with-hooks <lt>tab> }<ret>' -docstring 'Select next snippet placeholder'
   '';
 }
