@@ -18,6 +18,8 @@
      enable = true;
   };
 
+  networking.networkmanager.wifi.powersave = false;
+
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true; 
